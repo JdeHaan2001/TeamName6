@@ -37,11 +37,11 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        handleMovement();
     }
 
     private void Update()
     {
+        handleMovement();
         if (Input.GetKeyDown(KeyCode.LeftShift))
             _isSprinting = true;
         else if(Input.GetKeyUp(KeyCode.LeftShift))
@@ -73,11 +73,9 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
     private bool isGrounded()
     {
-        float extraHeight = 0.01f;
+        const float extraHeight = 0.01f;
         if (Physics.Raycast(coll.bounds.center, Vector3.down, coll.bounds.extents.y + extraHeight))
-        {
             return true;
-        }
         return false;
     }
 }
