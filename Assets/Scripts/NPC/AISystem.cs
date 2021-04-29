@@ -29,6 +29,7 @@ public class AISystem : StateMachine
     #endregion
     private void Start()
     {
+        InteractionPossible = true;
         SetState(new BeginState(this));
         InteractText.SetActive(false);
         DialogueManager = GetComponent<DialogueManager>();

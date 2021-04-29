@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &978710595
 RectTransform:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You want some candy?
+  m_text: I want to greet you.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -230,7 +230,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 58aebb4010ea53548b0a67f2bd47bec5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -278,6 +278,8 @@ GameObject:
   - component: {fileID: 2265470677907323700}
   - component: {fileID: 2265470677907323691}
   - component: {fileID: 695562191}
+  - component: {fileID: 1462160015}
+  - component: {fileID: 1462160010}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -388,4 +390,42 @@ MonoBehaviour:
   Direction: {x: 0, y: 0, z: 0}
   WanderPositions: {x: 10, y: 0, z: 10}
   DialogueManager: {fileID: 0}
-  InteractText: {fileID: 0}
+  InteractText: {fileID: 978710594}
+  InteractionPossible: 0
+--- !u!95 &1462160015
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265470677907323690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 706b63bf467d0194cb65b920afb46095, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1462160010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2265470677907323690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cf50fc5e84a5a341a4cd143bdf1369f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  npc: {fileID: 11400000, guid: a0a5bb716aeba3c46910d2a55fae6045, type: 2}
+  Player: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  NpcName: {fileID: 0}
+  NpcDialogueBox: {fileID: 0}
+  PlayerResponse: {fileID: 0}
