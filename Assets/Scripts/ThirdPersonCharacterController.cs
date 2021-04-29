@@ -5,16 +5,16 @@ using UnityEngine;
 public class ThirdPersonCharacterController : MonoBehaviour
 {
     [Header("Movement Variables")]
-    [SerializeField] private float speed = 10f;
-    [SerializeField] private float jumpHeight = 5f;
-    [SerializeField] private float smoothTurnTime = 0.1f;
-    [SerializeField][Range(0f, 5f)] private float sprintMultiplier = 1.5f;
+    [SerializeField] private float _speed = 10f;
+    [SerializeField] private float _jumpHeight = 5f;
+    [SerializeField] private float _smoothTurnTime = 0.1f;
+    [SerializeField][Range(0f, 5f)] private float _sprintMultiplier = 1.5f;
     [Space]
     [Header("References")]
-    [SerializeField] private Camera cam = null;
+    [SerializeField] private Camera _cam = null;
     
-    private CapsuleCollider coll = null;
-    private Rigidbody rb = null;
+    private CapsuleCollider _coll = null;
+    private Rigidbody _rb = null;
 
     private Vector3 _velocity = Vector3.zero;
     
@@ -26,10 +26,10 @@ public class ThirdPersonCharacterController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        coll = GetComponent<CapsuleCollider>();
-        rb = GetComponent<Rigidbody>();
+        _coll = GetComponent<CapsuleCollider>();
+        _rb = GetComponent<Rigidbody>();
 
-        _constSpeed = speed;
+        _constSpeed = _speed;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -47,7 +47,7 @@ public class ThirdPersonCharacterController : MonoBehaviour
         else if(Input.GetKeyUp(KeyCode.LeftShift))
             _isSprinting = false;
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
-            rb.velocity += Vector3.up * jumpHeight;
+            _rb.velocity += Vector3.up * _jumpHeight;
     }
 
     private void handleMovement()
@@ -59,22 +59,22 @@ public class ThirdPersonCharacterController : MonoBehaviour
 
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.transform.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, smoothTurnTime);
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + _cam.transform.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref _turnSmoothVelocity, _smoothTurnTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
             Vector3 velocity = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             if(_isSprinting)
-                rb.position += velocity.normalized * speed * sprintMultiplier * Time.deltaTime;
+                _rb.position += velocity.normalized * _speed * _sprintMultiplier * Time.deltaTime;
             else
-                rb.position += velocity.normalized * speed * Time.deltaTime;
+                _rb.position += velocity.normalized * _speed * Time.deltaTime;
         }
     }
 
     private bool isGrounded()
     {
         const float extraHeight = 0.01f;
-        if (Physics.Raycast(coll.bounds.center, Vector3.down, coll.bounds.extents.y + extraHeight))
+        if (Physics.Raycast(_coll.bounds.center, Vector3.down, _coll.bounds.extents.y + extraHeight))
             return true;
         return false;
     }
