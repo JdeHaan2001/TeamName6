@@ -12,16 +12,9 @@ public class Scores : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _followerText;
     [SerializeField] private TextMeshProUGUI _moneyText;
 
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
     void Update()
     {
         _followerText.text = "Followers:" + Followers;
         _moneyText.text = "Money" + Money;
-
-        Followers++;
     }
 }

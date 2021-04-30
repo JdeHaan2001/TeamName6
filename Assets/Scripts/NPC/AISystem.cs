@@ -43,10 +43,13 @@ public class AISystem : StateMachine
         {
             if (ObjectToFollow != null)
             {
-                StartCoroutine(State.Follow());
+                if (Vector3.Distance(transform.position, ObjectToFollow.transform.position) > 4f)
+                {
+                    StartCoroutine(State.Follow());
+                }
                 if (Vector3.Distance(transform.position, ObjectToFollow.transform.position) < 10f)
                 {
-                    if(InteractionPossible == true)
+                    if (InteractionPossible == true)
                     {
                         StartCoroutine(State.Interact());
                     }
@@ -81,7 +84,7 @@ public class AISystem : StateMachine
                 if (player != null)
                 {
                     Debug.DrawRay(pos, direction * hit.distance, Color.red);
-                    return player.transform;                    
+                    return player.transform;
                 }
                 else
                 {

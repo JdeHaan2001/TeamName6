@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
-  m_Name: Andre
+  m_Script: {fileID: 11500000, guid: 936132cddca12004a9cb85aff5affc52, type: 3}
+  m_Name: GainQuest
   m_EditorClassIdentifier: 
-  Name: Andre
-  Dialogue:
-  - Hoi
-  - Doei
-  PlayerDialogue:
-  - Oke
+  IsActive: 0
+  Title: Gain Quest
+  Description: Quest is to gain power mwuahahaha
+  FollowersReward: 100
+  MoneyReward: 100

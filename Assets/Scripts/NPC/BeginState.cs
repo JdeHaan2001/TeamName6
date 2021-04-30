@@ -12,7 +12,7 @@ public class BeginState : State
 
     public override IEnumerator Start()
     {
-        Debug.Log("AI is looking what to do...");
+        //Debug.Log("AI is looking what to do...");
 
         yield return new WaitForSeconds(1f);
 

@@ -9,16 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
-  m_Name: Henk
+  m_Script: {fileID: 11500000, guid: 936132cddca12004a9cb85aff5affc52, type: 3}
+  m_Name: FirstQuest
   m_EditorClassIdentifier: 
-  Name: Henk
-  Dialogue:
-  - Hi
-  - I asked for candy
-  - U want?
-  - Ok, go on then
-  PlayerDialogue:
-  - Yo
-  - Yes, I saw.
-  - No
+  IsActive: 0
+  Title: First Followers
+  Description: This is a quest to get your first followers!
+  FollowersReward: 5
+  MoneyReward: 5

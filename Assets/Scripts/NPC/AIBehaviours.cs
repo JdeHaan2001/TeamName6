@@ -46,7 +46,7 @@ public class AIBehaviours : State
         _system.transform.LookAt(_system.ObjectToFollow.transform);
 
         //Following, but it's commented for now.
-        //_system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+        _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
 
         yield break;
     }

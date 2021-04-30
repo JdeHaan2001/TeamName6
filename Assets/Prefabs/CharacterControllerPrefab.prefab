@@ -291,11 +291,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261d6e3ac2d61264cb5c0d442231084c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpHeight: 5
-  smoothTurnTime: 0.1
-  sprintMultiplier: 1.5
-  cam: {fileID: 963194227}
+  _speed: 10
+  _jumpHeight: 5
+  _smoothTurnTime: 0.1
+  _sprintMultiplier: 1.5
+  _cam: {fileID: 0}
 --- !u!1 &2418442329404543952
 GameObject:
   m_ObjectHideFlags: 0
