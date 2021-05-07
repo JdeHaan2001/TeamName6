@@ -26,19 +26,15 @@ public abstract class State
     {
         yield break;
     }
+    public virtual IEnumerator Return()
+    {
+        yield break;
+    }
     public virtual IEnumerator Interact()
     {
         yield break;
     }
     public virtual IEnumerator Unavailable()
-    {
-        yield break;
-    }
-    public virtual IEnumerator Challenge()
-    {
-        yield break;
-    }
-    public virtual IEnumerator Connect()
     {
         yield break;
     }

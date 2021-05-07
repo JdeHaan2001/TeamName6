@@ -10,67 +10,62 @@ public class AIBehaviours : State
     {
 
     }
-
-    //public override IEnumerator Wander()
-    //{
-
-    //    if (_system.NeedsDestination())
-    //    {
-    //        _system.GetDestination();
-    //    }
-
-    //    _system.transform.rotation = _system._desiredRotation;
-
-    //    var rayColor = _system.IsPathBlocked() ? Color.red : Color.green;
-    //    Debug.DrawRay(_system.transform.position, _system._direction * _system._rayDistance, rayColor);
-
-    //    _system.transform.Translate(Vector3.forward * Time.deltaTime * _system.wanderSpeed);
-
-    //    while (_system.IsPathBlocked())
-    //    {
-    //        _system.GetDestination();
-    //    }
-    //    yield break;
-    //}
-
     public override IEnumerator Idle()
     {
-        //Idle is not yet doing anything
+        //Idle state is the same as doing nothing. Which in some cases is also considered to something you can do.
 
         yield break;
     }
-
     public override IEnumerator Follow()
     {
-        //Rotating with the object its following
-        _system.transform.LookAt(_system.ObjectToFollow.transform);
+        //Rotating with the object its following.
+        _system.transform.LookAt(_system.Player.transform);
 
-        //Following, but it's commented for now.
+        //Following the position of the player.
         _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
 
         yield break;
     }
+    public override IEnumerator Return()
+    {
+        //Rotating to the starting position.
+        _system.transform.LookAt(_system.StartPos);
 
-    private bool _isInteracting = false;
+        //Walking back to the starting position.
+        _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+
+        yield break;
+    }
     public override IEnumerator Interact()
     {
-        _system.InteractText.SetActive(true);
-
-        if (Input.GetKeyDown(KeyCode.E) && _isInteracting == false)
+        if (_system.InteractionPossible == true)
         {
-            _system.DialogueManager.StartConversation();
-            _isInteracting = true;
+            _system.InteractText.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == false)
+            {
+                _system.IsInteracting = true;
+                _system.DialogueManager.StartConversation();
+                _system.QuestGiver.OpenQuestWindow();
+            }
+            else if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == true)
+            {
+                _system.DialogueManager.EndDialogue();
+                _system.IsInteracting = false;
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.E) && _isInteracting == true)
+        else
         {
             _system.DialogueManager.EndDialogue();
-            _isInteracting = false;
+            _system.IsInteracting = false;
+            _system.InteractText.SetActive(true);
         }
         yield break;
     }
-
     public override IEnumerator Unavailable()
     {
+        _system.DialogueManager.EndDialogue();
+        _system.IsInteracting = false;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Interaction is not possible at the moment");

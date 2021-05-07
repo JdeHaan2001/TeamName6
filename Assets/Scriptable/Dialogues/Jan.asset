@@ -10,21 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
-  m_Name: Andre
+  m_Name: Jan
   m_EditorClassIdentifier: 
-  Name: Andre
+  Name: Jan
   Dialogue:
-  - Hi
-  - Do you want to do the quest 1?
-  - I don't want anything
-  - Do you want to do the quest 2?
+  - Hoi
+  - Faka 1
+  - Alles kits 2
   PlayerDialogue:
-  - Hello!
-  - I want to do this quest!
-  - I want to do this quest!
+  - "Yo\t"
+  - Doei
   Quests:
-  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
   - {fileID: 11400000, guid: 3fa0df67996863e49ba42374ab148b72, type: 2}
+  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
   ToBeReplaced:
   - 1
   - 2

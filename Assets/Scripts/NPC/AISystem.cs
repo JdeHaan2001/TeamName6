@@ -6,33 +6,43 @@ using TMPro;
 public class AISystem : StateMachine
 {
     #region Variables
-    [SerializeField] public GameObject ObjectToFollow;
+    [HideInInspector] public GameObject Player;
+    [SerializeField] public NPCInformation NPCInformation;
     [SerializeField] public int FollowSpeed = 0;
-    [SerializeField] public int WandeSpeed = 0;
     [SerializeField] public int CheckingRadius = 0;
 
-    [SerializeField] private LayerMask _layerMask;
+    [HideInInspector] private QuestKeeper _questKeeper;
 
-    [HideInInspector] public Vector3 Destination;
-    [HideInInspector] public Quaternion DesiredRotation;
-    [HideInInspector] public Vector3 Direction;
-    [SerializeField] public Vector3 WanderPositions;
-
-    [HideInInspector] public DialogueManager DialogueManager;
+    [SerializeField] public DialogueManager DialogueManager;
+    [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractText;
 
-    [HideInInspector] public bool InteractionPossible = false;
+    [HideInInspector] public bool InteractionPossible;
+    [HideInInspector] public bool IsInteracting;
+    [HideInInspector] public Vector3 StartPos;
 
-    Quaternion startingAngle = Quaternion.AngleAxis(-60, Vector3.up);
-    Quaternion stepAngle = Quaternion.AngleAxis(5, Vector3.up);
+    private Quaternion _startingAngle = Quaternion.AngleAxis(-60, Vector3.up);
+    private Quaternion _stepAngle = Quaternion.AngleAxis(5, Vector3.up);
 
     #endregion
     private void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
+        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+
         InteractionPossible = true;
         SetState(new BeginState(this));
         InteractText.SetActive(false);
-        DialogueManager = GetComponent<DialogueManager>();
+
+        StartPos = transform.position;
+    }
+
+    public string ReturnName()
+    {
+
+        string currentName = NPCInformation.Name;
+        return currentName;
     }
 
     private void Update()
@@ -41,39 +51,64 @@ public class AISystem : StateMachine
 
         if (ObjectFound != null)
         {
-            if (ObjectToFollow != null)
+            if (InteractionPossible == true)
             {
-                if (Vector3.Distance(transform.position, ObjectToFollow.transform.position) > 4f)
+                if (Vector3.Distance(transform.position, Player.transform.position) > 4f)
                 {
                     StartCoroutine(State.Follow());
                 }
-                if (Vector3.Distance(transform.position, ObjectToFollow.transform.position) < 10f)
+            }
+            if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
+            {
+                if (InteractionPossible == true)
                 {
-                    if (InteractionPossible == true)
-                    {
-                        StartCoroutine(State.Interact());
-                    }
-                    else
-                    {
-                        StartCoroutine(State.Unavailable());
-                    }
+                    StartCoroutine(State.Interact());
                 }
                 else
                 {
-                    InteractText.SetActive(false);
+                    StartCoroutine(State.Unavailable());
                 }
+            }
+            else
+            {
+
+                InteractText.SetActive(false);
             }
         }
         else
         {
             StartCoroutine(State.Idle());
         }
+
+
+        if (InteractionPossible == false)
+        {
+            InteractText.SetActive(false);
+
+            if (this.transform.position != StartPos)
+            {
+                StartCoroutine(State.Return());
+            }
+        }
+
+        if(_questKeeper.Quest != null)
+        {
+            if (_questKeeper.Quest.IsActive == true)
+            {
+                InteractionPossible = false;
+            }
+            else
+            {
+                InteractionPossible = true;
+            }
+        }
+        
     }
 
     private Transform checkEnvironment()
     {
         RaycastHit hit;
-        var angle = transform.rotation * startingAngle;
+        var angle = transform.rotation * _startingAngle;
         var direction = angle * Vector3.forward;
         var pos = transform.position;
         for (var i = 0; i < 24; i++)
@@ -95,7 +130,7 @@ public class AISystem : StateMachine
             {
                 Debug.DrawRay(pos, direction * CheckingRadius, Color.white);
             }
-            direction = stepAngle * direction;
+            direction = _stepAngle * direction;
         }
         return null;
     }
