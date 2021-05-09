@@ -37,6 +37,8 @@ public class DialogueManager : MonoBehaviour
         QuestGiver = GetComponent<QuestGiver>();
 
         AISystem = GameObject.FindGameObjectWithTag("NPC").GetComponent<AISystem>();
+
+
     }
 
     private void Start()
@@ -48,8 +50,13 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         //This is being tested rn.
-        //renderPlayerDialogue();
-        dialogueHandler();        
+
+        //dialogueHandler();
+
+        if (DialogueUI.activeInHierarchy)
+        {
+            renderPlayerDialogue();
+        }
     }
 
     /// <summary>
@@ -84,6 +91,34 @@ public class DialogueManager : MonoBehaviour
                 CurrentQuest();
             }
         }
+    }
+
+    private void renderPlayerDialogue()
+    {
+        try
+        {
+            for (int i = 0; i < npc.PlayerDialogue.Length; i++)
+            {
+                if(i < npc.PlayerDialogue.Length)
+                {
+                    Debug.LogWarning("Faka");
+                    Vector3 ResponsePanelPosition = new Vector3(DialogueUI.transform.position.x, DialogueUI.transform.position.y, DialogueUI.transform.position.z);
+                    var instantiatedPrefab = Instantiate(ResponsePanel/*, ResponsePanelPosition, DialogueUI.transform.rotation*/);
+                    instantiatedPrefab.transform.SetParent(GameObject.Find("Dialogue UI").transform);
+                    ResponsePanelPosition.y = ResponsePanelPosition.y + 50;
+                    _currentResponseTracker++;
+                    PlayerResponse.text = npc.PlayerDialogue[_currentResponseTracker];
+                }
+                
+            }
+        }
+        catch
+        {
+            Debug.Log("Not working");
+        }
+
+
+
     }
 
     public int CurrentQuest()
@@ -156,24 +191,13 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void renderPlayerDialogue()
-    {
-        for(int i = 0; i < npc.PlayerDialogue.Length; i++)
-        {
-            Debug.Log("Faka");
-            Vector3 ResponsePanelPosition = new Vector3(transform.parent.position.x, transform.parent.position.y, transform.parent.position.z);
-            Instantiate(ResponsePanel, ResponsePanelPosition, transform.rotation);
-            ResponsePanelPosition.x = +10;
-        }
-    }
-
     public void StartConversation()
     {
-            isTalking = true;
-            _currentResponseTracker = 0;
-            DialogueUI.SetActive(true);
-            NpcName.text = npc.name;
-            NpcDialogueBox.text = npc.Dialogue[0];     
+        isTalking = true;
+        _currentResponseTracker = 0;
+        DialogueUI.SetActive(true);
+        NpcName.text = npc.name;
+        NpcDialogueBox.text = npc.Dialogue[0];
     }
 
     public void EndDialogue()
