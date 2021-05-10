@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gridSizeX: 2
   gridSizeZ: 2
-  building: {fileID: 6312850341969133781, guid: 0a71079797429ab40bb92c3bed8af23a, type: 3}
+  building: {fileID: 6428447975966245203, guid: 1c5dd595afadb8f4991890ceef1628ae, type: 3}
   gridOrigin: {x: 0, y: 0, z: 0}
   gridOffset: 1
   generateOnEnable: 1

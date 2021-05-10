@@ -1,7 +1,5 @@
 ﻿//Made by Jeroen de haan
 
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 

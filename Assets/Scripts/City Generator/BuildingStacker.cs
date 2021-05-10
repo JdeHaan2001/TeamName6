@@ -53,18 +53,22 @@ public class BuildingStacker : MonoBehaviour
         BuildFloor(Roofs, HeightOffset);
     }
 
-    private float BuildFloor(List<GameObject> floorList, float HeightOffset)
+    private float BuildFloor(List<GameObject> pFloorList, float pHeightOffSet)
     {
-        Transform randomFloor = floorList[Random.Range(0, floorList.Count)].transform;
-        GameObject other = Instantiate(randomFloor.gameObject, this.transform.position + new Vector3(0, HeightOffset, 0),
-                           transform.rotation) as GameObject;
+        Transform randomFloor = pFloorList[Random.Range(0, pFloorList.Count)].transform;
+        //GameObject other = Instantiate(randomFloor.gameObject, this.transform.position + new Vector3(0, HeightOffset, 0),
+        //                   transform.rotation) as GameObject;
+        GameObject other = PrefabUtility.InstantiatePrefab(randomFloor.gameObject) as GameObject;
+        other.transform.position = this.transform.position + new Vector3(0, pHeightOffSet, 0);
+        other.transform.rotation = this.transform.rotation;
 
         Mesh otherMesh = other.GetComponentInChildren<MeshFilter>().mesh;
         Bounds bounds = otherMesh.bounds;
-        float heightOffset = bounds.size.y;
+        //float heightOffset = bounds.size.y;
+        float heightOffset = other.transform.position.y;
 
         other.transform.SetParent(this.transform);
-        BuildingLayout.Add(other);
+        //BuildingLayout.Add(other);
         return heightOffset;
     }
 }

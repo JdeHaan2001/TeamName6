@@ -16,18 +16,16 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit rayHit;
-        Color objectColor;
-        if (Physics.Raycast(ray, out rayHit))
-        {
-            objectColor = rayHit.transform.GetComponent<Renderer>().material.color;
-            rayHit.transform.GetComponent<Renderer>().material.color = new Color(objectColor.r, objectColor.g, objectColor.b, 255);
-            Debug.Log(rayHit.transform.parent.gameObject.name);
-        }
-
         if (Input.GetMouseButtonDown(0))
         {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit rayHit;
+            if (Physics.Raycast(ray, out rayHit))
+            {
+                
+                //rayHit.transform.gameObject.
+                Debug.Log(rayHit.transform.gameObject.name);
+            }
             //TODO: Add screen to change building
         }
     }

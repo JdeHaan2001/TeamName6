@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9c96d81d36c3241b2e806a00b05f94, type: 3}
+  m_Name: CityGenerator
+  m_EditorClassIdentifier: 
+  BuildingPrefabs:
+  - {fileID: 753078340640869560, guid: ea0db1607fcaa454a908447ad43a87e1, type: 3}
+  - {fileID: 2833388650915407849, guid: e38d74c4338045d4ca07e602dfe426c7, type: 3}
+  - {fileID: 6428447975966245203, guid: 1c5dd595afadb8f4991890ceef1628ae, type: 3}
