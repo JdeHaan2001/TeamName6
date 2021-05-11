@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CityGenerator
   m_EditorClassIdentifier: 
   BuildingPrefabs:
-  - {fileID: 753078340640869560, guid: ea0db1607fcaa454a908447ad43a87e1, type: 3}
-  - {fileID: 2833388650915407849, guid: e38d74c4338045d4ca07e602dfe426c7, type: 3}
-  - {fileID: 6428447975966245203, guid: 1c5dd595afadb8f4991890ceef1628ae, type: 3}
+  - {fileID: 3310783731698671445, guid: e1a575c6fba6df64090af35ab90e219e, type: 3}
+  - {fileID: 7196183599166601658, guid: 67f431f068fd00b4b9ea23f4c0cffc7f, type: 3}
+  - {fileID: 8638893839706690378, guid: b8bf11073ec6c864a83755b401e21ffd, type: 3}

@@ -5,17 +5,17 @@ using UnityEditor.SceneManagement;
 
 public class BuildingCustomizer : EditorWindow
 {
-    private List<GameObject> prefabList = new List<GameObject>();
-    private List<GameObject> buildingList = new List<GameObject>();
+    private List<GameObject> _buildingParents = new List<GameObject>();
 
-    private BuildingScriptableObject buildingSO = null;
-    private GridGenerator _generationScript = null;
+    private BuildingScriptableObject _buildingSO = null;
 
     private Vector2Int _gridSize = new Vector2Int(1, 1);
 
     private Vector3 _origin = Vector3.zero;
 
     private float _buildingOffset = 5f;
+
+    private bool _destroyLastOnGenerate = true;
 
     [MenuItem("Custom Menu/Building Customizer")]
     private static void init()
@@ -26,53 +26,66 @@ public class BuildingCustomizer : EditorWindow
         window.Show();
 
     }
-    private void Awake() => _generationScript = new GridGenerator();
 
     private void OnGUI()
     {
         GUILayout.Label("Generate Building", EditorStyles.boldLabel);
 
-        buildingSO = (BuildingScriptableObject)EditorGUILayout.ObjectField("Building List", buildingSO, typeof(BuildingScriptableObject), true);
-        if (buildingSO == null) EditorGUILayout.HelpBox("Scriptable object needs to have a reference", MessageType.Error);
+        _buildingSO = (BuildingScriptableObject)EditorGUILayout.ObjectField("Building List", _buildingSO, typeof(BuildingScriptableObject), true);
+        if (_buildingSO == null) EditorGUILayout.HelpBox("Scriptable object needs to have a reference", MessageType.Error);
 
-        if (buildingSO != null)
+        if (_buildingSO != null)
         {
-            SerializedObject serialObj = new SerializedObject(buildingSO);
+            SerializedObject serialObj = new SerializedObject(_buildingSO);
             SerializedProperty serialProp = serialObj.FindProperty("BuildingPrefabs");
             
 
             EditorGUILayout.PropertyField(serialProp, true);
             serialObj.ApplyModifiedProperties();
         }
-
-        _origin = EditorGUILayout.Vector3Field("Spawn origin", _origin);
-        _gridSize = EditorGUILayout.Vector2IntField("Grid size", _gridSize);
-        _buildingOffset = EditorGUILayout.FloatField("Building offset", Mathf.Max(1f, _buildingOffset));
-
-        if (GUILayout.Button("Generate")) Generate(_gridSize, buildingSO.BuildingPrefabs, _origin, _buildingOffset);
+        
+        _origin = EditorGUILayout.Vector3Field(new GUIContent("Spawn origin", "Position of where the building will generate"), _origin);
+        _gridSize = EditorGUILayout.Vector2IntField(new GUIContent("Grid size", "Size of the generated city"), _gridSize);
+        _buildingOffset = EditorGUILayout.FloatField(new GUIContent("Building offset", "Distance between the buildings"), Mathf.Max(1f, _buildingOffset));
+        _destroyLastOnGenerate = EditorGUILayout.Toggle(new GUIContent("Remove after generate", "If set to TRUE, " +
+                                                                       "the previously generated buildings will be destroyed " +
+                                                                       "before new buildings are generated"), _destroyLastOnGenerate);
+        EditorGUILayout.Space();
+        if (GUILayout.Button("Generate")) generate(_gridSize, _buildingSO.BuildingPrefabs, _origin, _buildingOffset);
+        EditorGUILayout.Space();
+        if (GUILayout.Button("Delete All Buildings")) deleteBuildings();
     }
 
-    public void Generate(Vector2Int pGridSize, List<GameObject> pBuildingPrefabs, Vector3 pOrigin, float pGridOffset)
+    private void generate(Vector2Int pGridSize, List<GameObject> pBuildingPrefabs, Vector3 pOrigin, float pGridOffset)
     {
-        if (buildingList.Count > 0)
-        {
-            foreach (GameObject other in buildingList)
-            {
-                DestroyImmediate(other);
-            }
-            buildingList.Clear();
-        }
+        if(_destroyLastOnGenerate) deleteBuildings();
+
+        GameObject emptyGameObj = new GameObject($"Generated City {pGridSize.x} X {pGridSize.y}");
+        emptyGameObj.transform.position = pOrigin;
+        _buildingParents.Add(emptyGameObj);
+
         for (int x = 0; x < pGridSize.x; x++)
         {
             for (int z = 0; z < pGridSize.y; z++)
             {
                 GameObject building = pBuildingPrefabs[Random.Range(0, pBuildingPrefabs.Count)];
-                GameObject other = PrefabUtility.InstantiatePrefab(building) as GameObject;
-                other.transform.position = pOrigin + new Vector3(pGridOffset * x, 0f, pGridOffset * z);
-
-                buildingList.Add(other);
+                GameObject other = PrefabUtility.InstantiatePrefab(building, emptyGameObj.transform) as GameObject;
+                other.transform.position = emptyGameObj.transform.position + new Vector3(pGridOffset * x, 0f, pGridOffset * z);
             }
         }
         EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+    }
+
+    private void deleteBuildings()
+    {
+        if (_buildingParents.Count > 0)
+        {
+            foreach (GameObject other in _buildingParents)
+                DestroyImmediate(other);
+
+            _buildingParents.Clear();
+
+            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+        }
     }
 }
