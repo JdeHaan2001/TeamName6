@@ -16,8 +16,12 @@ public class NPCInformation : ScriptableObject
     [TextArea(3, 15)]
     public string[] PlayerDialogue;
 
+    [Header("Extra Dialogue")]
+    [TextArea(3, 15)]
+    public string[] NewQuestion;
+    public int WhenToShowNewDialogue;
+
     [Header("Quests")]
     public Quest[] Quests;
     public string[] ToBeReplaced;
-
 }

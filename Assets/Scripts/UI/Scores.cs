@@ -17,7 +17,7 @@ public class Scores : MonoBehaviour
     }
     void Update()
     {
-        _followerText.text = "Followers: " + _questGetter.Followers;
-        _moneyText.text = "Money: " + _questGetter.Money;
+        _followerText.text = _questGetter.Followers.ToString();
+        _moneyText.text = _questGetter.Money.ToString();
     }
 }

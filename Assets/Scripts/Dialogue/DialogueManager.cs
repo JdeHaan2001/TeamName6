@@ -12,7 +12,8 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] private AISystem _aiSystem;
     [SerializeField] public NPCInformation npc;
 
-    [HideInInspector] private bool isTalking;
+    [HideInInspector] private bool _isTalking;
+    [HideInInspector] private bool _buttonClicked = false;
     [HideInInspector] public bool OpenQuest;
     [HideInInspector] public bool CheckNPC;
     [HideInInspector] public bool NPCChecked;
@@ -46,28 +47,15 @@ public class DialogueManager : MonoBehaviour
         changeQuestInDialogue();
     }
 
-    private bool oke = false;
+    private void Update()
+    {
+        DialogueHandler();
+    }
+
     /// <summary>
     /// This function handles the dialogue. When you scroll you can scroll trough the things you can say to the NPC.
     /// When you press enter it answers the npc with the current response.
     /// </summary>
-    public void DialogueHandler()
-    {
-        for (int i = 0; i < InstantiatedPrefab.Count; i++)
-        {
-            Button b = InstantiatedPrefab[i].GetComponent<Button>();
-            b.onClick.AddListener(delegate () { oke = true; });
-            if (oke == true)
-            {
-                Debug.Log(i);
-                NpcDialogueBox.text = npc.Dialogue[i + 1];
-                oke = false;
-                break;
-            }
-            CurrentQuest();
-        }
-    }
-
     //public void DialogueHandler()
     //{
     //    if (isTalking == true)
@@ -97,20 +85,44 @@ public class DialogueManager : MonoBehaviour
     //        }
     //    }
     //}
+
+    public void DialogueHandler()
+    {
+        if (_isTalking == true)
+        {
+            for (int i = 0; i < InstantiatedPrefab.Count; i++)
+            {
+                int textToShow = i;
+                InstantiatedPrefab[textToShow].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(textToShow));
+            }
+            CurrentQuest();
+        }
+    }
+
+    private int SpawnNewDialogue = 0;
+    private void ButtonClicked(int textToShow)
+    {
+        NpcDialogueBox.text = npc.Dialogue[textToShow + 1];
+
+        RenderExtraDialogue(textToShow);
+        SpawnNewDialogue++;
+    }
+
+    private Vector3 _lastPosition;
     private void renderPlayerDialogue()
     {
-        var lastPosition = _responsePanel.transform.position;
+        _lastPosition = _responsePanel.transform.position;
         _responsePanel.SetActive(true);
         for (int i = 0; i < npc.PlayerDialogue.Length; i++)
         {
             PlayerResponse.text = npc.PlayerDialogue[i];
-            var instantiatedGO = Instantiate(_responsePanel, lastPosition, _responsePanel.transform.rotation);
+            var instantiatedGO = Instantiate(_responsePanel, _lastPosition, _responsePanel.transform.rotation);
 
             InstantiatedPrefab.Add(instantiatedGO);
             InstantiatedPrefab[i].transform.SetParent(DialogueUI.transform, false);
-            InstantiatedPrefab[i].transform.position = lastPosition;
+            InstantiatedPrefab[i].transform.position = _lastPosition;
 
-            lastPosition.y = lastPosition.y - 30.0f;
+            _lastPosition.y = _lastPosition.y - 40.0f;
         }
         _responsePanel.SetActive(false);
     }
@@ -158,6 +170,38 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void RenderExtraDialogue(int textToShow)
+    {
+        if(SpawnNewDialogue == 1)
+        {
+            if (_aiSystem.NPCInformation.WhenToShowNewDialogue != 0)
+            {
+                _responsePanel.SetActive(true);
+                var listLength = InstantiatedPrefab.Count;
+                if (_aiSystem.NPCInformation.WhenToShowNewDialogue == textToShow)
+                {
+                    for (int i = 0; i < _aiSystem.NPCInformation.NewQuestion.Length; i++)
+                    {
+                        PlayerResponse.text = _aiSystem.NPCInformation.NewQuestion[i];
+                        var newDialogue = Instantiate(_responsePanel, _lastPosition, _responsePanel.transform.rotation);
+                        InstantiatedPrefab.Add(newDialogue);
+
+                        InstantiatedPrefab[listLength + i].transform.SetParent(DialogueUI.transform, false);
+                        if(i == 0)
+                        {
+                            _lastPosition.y = _lastPosition.y + 40f;
+                        }
+                        InstantiatedPrefab[listLength + i].transform.position = _lastPosition;
+
+                        _lastPosition.y = _lastPosition.y - 40f;
+                        Debug.LogError(InstantiatedPrefab.Count);
+                    }
+                }
+                _responsePanel.SetActive(false);
+            }
+        }
+    }
+
     /// <summary>
     /// This function will reset the names in the dialogue scriptable object to the original name to be renamed.
     /// </summary>
@@ -186,7 +230,7 @@ public class DialogueManager : MonoBehaviour
     public void StartConversation()
     {
         DestroyResponses();
-        isTalking = true;
+        _isTalking = true;
         DialogueUI.SetActive(true);
         renderPlayerDialogue();
         NpcName.text = npc.name;
@@ -207,9 +251,10 @@ public class DialogueManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        isTalking = false;
+        _isTalking = false;
         DestroyResponses();
         DialogueUI.SetActive(false);
+        SpawnNewDialogue = 0;
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;

@@ -49,11 +49,6 @@ public class QuestGiver : MonoBehaviour
             DescriptionText.text = Quest.Description;
             FollowerText.text = Quest.FollowersReward.ToString();
             MoneyText.text = Quest.MoneyReward.ToString();
-
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                AcceptQuest();
-            }
         }
         else
         {
