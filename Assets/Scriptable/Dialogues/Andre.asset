@@ -20,7 +20,7 @@ MonoBehaviour:
   - Do you want to do the quest 2?
   PlayerDialogue:
   - Hello!
-  - I want to do this quest!
+  - Do I want to do this quest?
   - I want to do this quest!
   Quests:
   - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}

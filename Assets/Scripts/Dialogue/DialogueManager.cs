@@ -9,7 +9,7 @@ using System.Linq;
 public class DialogueManager : MonoBehaviour
 {
     #region Variables
-    [SerializeField] public AISystem AISystem;
+    [HideInInspector] private AISystem _aiSystem;
     [SerializeField] public NPCInformation npc;
 
     [HideInInspector] private bool isTalking;
@@ -23,22 +23,21 @@ public class DialogueManager : MonoBehaviour
 
     [HideInInspector] private GameObject _player;
     [SerializeField] public GameObject DialogueUI;
-    [SerializeField] public GameObject ResponsePanel;
+    [HideInInspector] private GameObject _responsePanel;
 
     [SerializeField] public TextMeshProUGUI NpcName;
     [SerializeField] public TextMeshProUGUI NpcDialogueBox;
     [SerializeField] public TextMeshProUGUI PlayerResponse;
 
     [HideInInspector] public QuestGiver QuestGiver;
+    [SerializeField] public List<GameObject> InstantiatedPrefab = new List<GameObject>();
     #endregion
     private void Awake()
     {
-        _player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GetComponent<QuestGiver>();
-
-        AISystem = GameObject.FindGameObjectWithTag("NPC").GetComponent<AISystem>();
-
-
+        _responsePanel = GameObject.FindGameObjectWithTag("ResponsePanel");
+        _player = GameObject.FindGameObjectWithTag("Player");
+        _aiSystem = GameObject.FindGameObjectWithTag("NPC").GetComponent<AISystem>();
     }
 
     private void Start()
@@ -47,78 +46,73 @@ public class DialogueManager : MonoBehaviour
         changeQuestInDialogue();
     }
 
-    private void Update()
-    {
-        //This is being tested rn.
-
-        //dialogueHandler();
-
-        if (DialogueUI.activeInHierarchy)
-        {
-            renderPlayerDialogue();
-        }
-    }
-
+    private bool oke = false;
     /// <summary>
     /// This function handles the dialogue. When you scroll you can scroll trough the things you can say to the NPC.
     /// When you press enter it answers the npc with the current response.
     /// </summary>
-    private void dialogueHandler()
+    public void DialogueHandler()
     {
-        if (isTalking == true)
+        for (int i = 0; i < InstantiatedPrefab.Count; i++)
         {
-            if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+            Button b = InstantiatedPrefab[i].GetComponent<Button>();
+            b.onClick.AddListener(delegate () { oke = true; });
+            if (oke == true)
             {
-                _currentResponseTracker++;
-                if (_currentResponseTracker >= npc.PlayerDialogue.Length - 1)
-                {
-                    _currentResponseTracker = npc.PlayerDialogue.Length - 1;
-                }
+                Debug.Log(i);
+                NpcDialogueBox.text = npc.Dialogue[i + 1];
+                oke = false;
+                break;
             }
-            else if (Input.GetAxis("Mouse ScrollWheel") > 0f)
-            {
-                _currentResponseTracker--;
-                if (_currentResponseTracker < 0)
-                {
-                    _currentResponseTracker = 0;
-                }
-            }
-
-            PlayerResponse.text = npc.PlayerDialogue[_currentResponseTracker];
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                NpcDialogueBox.text = npc.Dialogue[_currentResponseTracker + 1];
-                CurrentQuest();
-            }
+            CurrentQuest();
         }
     }
 
+    //public void DialogueHandler()
+    //{
+    //    if (isTalking == true)
+    //    {
+    //        if (Input.GetAxis("Mouse ScrollWheel") < 0f)
+    //        {
+    //            _currentResponseTracker++;
+    //            if (_currentResponseTracker >= npc.PlayerDialogue.Length - 1)
+    //            {
+    //                _currentResponseTracker = npc.PlayerDialogue.Length - 1;
+    //            }
+    //        }
+    //        else if (Input.GetAxis("Mouse ScrollWheel") > 0f)
+    //        {
+    //            _currentResponseTracker--;
+    //            if (_currentResponseTracker < 0)
+    //            {
+    //                _currentResponseTracker = 0;
+    //            }
+    //        }
+
+    //        PlayerResponse.text = npc.PlayerDialogue[_currentResponseTracker];
+    //        if (Input.GetKeyDown(KeyCode.Return))
+    //        {
+    //            NpcDialogueBox.text = npc.Dialogue[_currentResponseTracker + 1];
+    //            CurrentQuest();
+    //        }
+    //    }
+    //}
     private void renderPlayerDialogue()
     {
-        try
+        var lastPosition = _responsePanel.transform.position;
+        _responsePanel.SetActive(true);
+        for (int i = 0; i < npc.PlayerDialogue.Length; i++)
         {
-            for (int i = 0; i < npc.PlayerDialogue.Length; i++)
-            {
-                if(i < npc.PlayerDialogue.Length)
-                {
-                    Debug.LogWarning("Faka");
-                    Vector3 ResponsePanelPosition = new Vector3(DialogueUI.transform.position.x, DialogueUI.transform.position.y, DialogueUI.transform.position.z);
-                    var instantiatedPrefab = Instantiate(ResponsePanel/*, ResponsePanelPosition, DialogueUI.transform.rotation*/);
-                    instantiatedPrefab.transform.SetParent(GameObject.Find("Dialogue UI").transform);
-                    ResponsePanelPosition.y = ResponsePanelPosition.y + 50;
-                    _currentResponseTracker++;
-                    PlayerResponse.text = npc.PlayerDialogue[_currentResponseTracker];
-                }
-                
-            }
+            PlayerResponse.text = npc.PlayerDialogue[i];
+            var instantiatedGO = Instantiate(_responsePanel, lastPosition, _responsePanel.transform.rotation);
+
+            InstantiatedPrefab.Add(instantiatedGO);
+            InstantiatedPrefab[i].transform.SetParent(DialogueUI.transform, false);
+            InstantiatedPrefab[i].transform.position = lastPosition;
+
+            lastPosition.y = lastPosition.y - 30.0f;
         }
-        catch
-        {
-            Debug.Log("Not working");
-        }
-
-
-
+        _responsePanel.SetActive(false);
     }
 
     public int CurrentQuest()
@@ -137,10 +131,8 @@ public class DialogueManager : MonoBehaviour
                 }
             }
         }
-
         OpenQuest = false;
         return -1;
-
     }
 
     /// <summary>
@@ -193,21 +185,39 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation()
     {
+        DestroyResponses();
         isTalking = true;
-        _currentResponseTracker = 0;
         DialogueUI.SetActive(true);
+        renderPlayerDialogue();
         NpcName.text = npc.name;
         NpcDialogueBox.text = npc.Dialogue[0];
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    private void DestroyResponses()
+    {
+        foreach (GameObject obj in InstantiatedPrefab)
+        {
+            Destroy(obj);
+        }
+        InstantiatedPrefab.Clear();
     }
 
     public void EndDialogue()
     {
         isTalking = false;
+        DestroyResponses();
         DialogueUI.SetActive(false);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OnApplicationQuit()
     {
         resetQuestInDialogue();
+        DestroyResponses();
     }
 }
