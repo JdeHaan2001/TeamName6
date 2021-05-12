@@ -5,6 +5,8 @@ using UnityEngine.Animations;
 
 public class PhoneActivation : MonoBehaviour
 {
+    [SerializeField] private PhoneFSM _PFSM = null;
+
     private bool _isActive = false;
     private Animator animator = null;
 
@@ -20,11 +22,14 @@ public class PhoneActivation : MonoBehaviour
             if (!_isActive)
             {
                 // Play activate animation
-                animator.Play("phoneActivation");
+                animator.Play("OpenPhone");
+                _isActive = true;
             }
             else
             {
                 // Play de-activate animation
+                animator.Play("ClosePhone");
+                _isActive = false;
             }
         }
     }
