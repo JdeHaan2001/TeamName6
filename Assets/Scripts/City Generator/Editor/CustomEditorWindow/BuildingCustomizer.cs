@@ -38,22 +38,21 @@ public class BuildingCustomizer : EditorWindow
         {
             SerializedObject serialObj = new SerializedObject(_buildingSO);
             SerializedProperty serialProp = serialObj.FindProperty("BuildingPrefabs");
-            
 
             EditorGUILayout.PropertyField(serialProp, true);
             serialObj.ApplyModifiedProperties();
+
+            _buildingSO.SpawnOrigin = _origin = EditorGUILayout.Vector3Field(new GUIContent("Spawn origin", "Position of where the building will generate"), _origin);
+            _buildingSO.GridSize = _gridSize = EditorGUILayout.Vector2IntField(new GUIContent("Grid size", "Size of the generated city"), _gridSize);
+            _buildingSO.BuildingOffset = _buildingOffset = EditorGUILayout.FloatField(new GUIContent("Building offset", "Distance between the buildings"), Mathf.Max(1f, _buildingOffset));
+            _buildingSO.DesetroyLastOnGenerate = _destroyLastOnGenerate = EditorGUILayout.Toggle(new GUIContent("Remove after generate", "If set to TRUE, " +
+                                                                                                                "the previously generated buildings will be destroyed " +
+                                                                                                                "before new buildings are generated"), _destroyLastOnGenerate);
+            EditorGUILayout.Space();
+            if (GUILayout.Button("Generate")) generate(_gridSize, _buildingSO.BuildingPrefabs, _origin, _buildingOffset);
+            EditorGUILayout.Space();
+            if (GUILayout.Button("Delete All Buildings")) deleteBuildings();
         }
-        
-        _origin = EditorGUILayout.Vector3Field(new GUIContent("Spawn origin", "Position of where the building will generate"), _origin);
-        _gridSize = EditorGUILayout.Vector2IntField(new GUIContent("Grid size", "Size of the generated city"), _gridSize);
-        _buildingOffset = EditorGUILayout.FloatField(new GUIContent("Building offset", "Distance between the buildings"), Mathf.Max(1f, _buildingOffset));
-        _destroyLastOnGenerate = EditorGUILayout.Toggle(new GUIContent("Remove after generate", "If set to TRUE, " +
-                                                                       "the previously generated buildings will be destroyed " +
-                                                                       "before new buildings are generated"), _destroyLastOnGenerate);
-        EditorGUILayout.Space();
-        if (GUILayout.Button("Generate")) generate(_gridSize, _buildingSO.BuildingPrefabs, _origin, _buildingOffset);
-        EditorGUILayout.Space();
-        if (GUILayout.Button("Delete All Buildings")) deleteBuildings();
     }
 
     private void generate(Vector2Int pGridSize, List<GameObject> pBuildingPrefabs, Vector3 pOrigin, float pGridOffset)
