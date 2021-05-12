@@ -48,4 +48,10 @@ public class PhoneFSM : MonoBehaviour
             _currentScreen.EnterScreen();
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+            ChangeScreen<HomeScreen>();
+    }
 }
