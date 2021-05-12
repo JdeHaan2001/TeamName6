@@ -278,7 +278,7 @@ GameObject:
   - component: {fileID: 2265470677907323700}
   - component: {fileID: 2265470677907323691}
   - component: {fileID: 695562191}
-  - component: {fileID: 129891604}
+  - component: {fileID: 1895441009}
   - component: {fileID: 1462160015}
   m_Layer: 0
   m_Name: NPC
@@ -379,16 +379,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  NPCInformation: {fileID: 11400000, guid: a0a5bb716aeba3c46910d2a55fae6045, type: 2}
-  FollowSpeed: 2
-  CheckingRadius: 15
-  DialogueManager: {fileID: 129891604}
+  FollowSpeed: 1
+  CheckingRadius: 10
+  DialogueManager: {fileID: 1895441009}
   QuestGiver: {fileID: 0}
   InteractText: {fileID: 978710594}
   InteractionPossible: 0
   IsInteracting: 0
   StartPos: {x: 0, y: 0, z: 0}
---- !u!114 &129891604
+--- !u!114 &1895441009
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -400,18 +399,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5cf50fc5e84a5a341a4cd143bdf1369f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AISystem: {fileID: 695562191}
-  npc: {fileID: 11400000, guid: a0a5bb716aeba3c46910d2a55fae6045, type: 2}
+  npc: {fileID: 11400000, guid: 55214201bf22db1478fbe84ebc0f3f33, type: 2}
+  _dialogueTextKeeper: {fileID: 0}
   OpenQuest: 0
-  CheckNPC: 0
-  NPCChecked: 0
-  QuestToShow: 0
   DialogueUI: {fileID: 0}
-  ResponsePanel: {fileID: 0}
-  NpcName: {fileID: 0}
-  NpcDialogueBox: {fileID: 0}
-  PlayerResponse: {fileID: 0}
-  QuestGiver: {fileID: 0}
+  PlayerResponsesList: []
 --- !u!95 &1462160015
 Animator:
   serializedVersion: 3

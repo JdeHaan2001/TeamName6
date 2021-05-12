@@ -1,25 +1,26 @@
 ﻿using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 //Made by: Jorrit Bos
 public class AISystem : StateMachine
 {
     #region Variables
     [HideInInspector] public GameObject Player;
-    [SerializeField] public NPCInformation NPCInformation;
     [SerializeField] public int FollowSpeed = 0;
     [SerializeField] public int CheckingRadius = 0;
 
     [HideInInspector] private QuestKeeper _questKeeper;
 
-    [SerializeField] public DialogueManager DialogueManager;
+    [HideInInspector] public DialogueManager DialogueManager;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractText;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
     [HideInInspector] public Vector3 StartPos;
+    [HideInInspector] public Quaternion StartAngle;
 
     private Quaternion _startingAngle = Quaternion.AngleAxis(-60, Vector3.up);
     private Quaternion _stepAngle = Quaternion.AngleAxis(5, Vector3.up);
@@ -27,6 +28,7 @@ public class AISystem : StateMachine
     #endregion
     private void Start()
     {
+        DialogueManager = GetComponent<DialogueManager>();
         Player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
@@ -36,13 +38,7 @@ public class AISystem : StateMachine
         InteractText.SetActive(false);
 
         StartPos = transform.position;
-    }
-
-    public string ReturnName()
-    {
-
-        string currentName = NPCInformation.Name;
-        return currentName;
+        StartAngle = transform.rotation;
     }
 
     private void Update()
@@ -80,7 +76,6 @@ public class AISystem : StateMachine
             StartCoroutine(State.Idle());
         }
 
-
         if (InteractionPossible == false)
         {
             InteractText.SetActive(false);
@@ -91,11 +86,27 @@ public class AISystem : StateMachine
             }
         }
 
+        if(DialogueManager.npc.ConversationFinished == true)
+        {
+            _questKeeper.UpdateQuest();
+            DialogueManager.npc.ConversationFinished = false;
+        }
+
         if(_questKeeper.Quest != null)
         {
             if (_questKeeper.Quest.IsActive == true)
             {
-                InteractionPossible = false;
+                for (int i = 0; i < DialogueManager.npc.Quests.Length; i++)
+                {
+                    if (DialogueManager.npc.Quests[i].Goal.npcToTalkTo.name == DialogueManager.npc.name)
+                    {
+                        InteractionPossible = true;
+                    }
+                    else
+                    {
+                        InteractionPossible = false;
+                    }
+                }            
             }
             else
             {

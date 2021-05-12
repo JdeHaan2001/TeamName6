@@ -19,9 +19,13 @@ public class QuestKeeper : MonoBehaviour
                 Quest.Goal.ItemGathered();
             }
 
-            if(Quest.Goal.goalType == GoalType.Picking)
+            if (Quest.Goal.goalType == GoalType.Picking)
             {
                 Quest.Goal.ItemPicked();
+            }
+            if(Quest.Goal.goalType == GoalType.Talking)
+            {
+                Quest.Goal.TalkedToNPC();
             }
 
             if (Quest.Goal.IsReached())

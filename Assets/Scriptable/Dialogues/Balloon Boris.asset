@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
+  m_Name: Balloon Boris
+  m_EditorClassIdentifier: 
+  Name: Balloon Boris
+  Picture: {fileID: 21300000, guid: efed0385805299c4fbbd408cdbd0411f, type: 3}
+  Dialogue:
+  - "Hmm hello, you woke me up so you better have a good reason to be here.\r"
+  - "I could have seen it coming. It is always someone being sent by Pete and they
+    always need a phone. It is never just how are you Boris it is always gets me
+    a phone. But because I am feeling nice I will get you one, just let me get it.\r\nHere
+    you go! Now go start your adventure so I can go back to bed.\r"
+  - "Ey, that is not nice is it? I am not going to give you the phone if you talk
+    to me like that. Before I give you the phone you need to apologize.\r"
+  - "That\u2019s more like it, next time you meet someone maybe don\u2019t be so
+    harsh to them, not everyone is going to accept an apology like me. But because
+    I am feeling nice I will get you one, just let me get it."
+  - "Ugh I can\u2019t be bothered, next time you come here acting like this I won\u2019t
+    give you what you want. You are lucky that I'm tired and can\u2019t be bothered."
+  PlayerDialogue:
+  - 'Prickly Pete sent me for the phone.
+
+'
+  - Give me the phone!
+  NewQuestion:
+  - '*Apologize*'
+  - '*Don''t apologize*'
+  WhenToShowNewDialogue: 1
+  Quests: []
+  ToBeReplaced: []
+  ConversationFinished: 0

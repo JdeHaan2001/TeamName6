@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Prickly Pete
   m_EditorClassIdentifier: 
   Name: Prickly Pete
+  Picture: {fileID: 21300000, guid: efed0385805299c4fbbd408cdbd0411f, type: 3}
   Dialogue:
-  - Hello! Gain Quest
+  - Hello!
   - 'You are in the biggest social city in the world, the place where the least social
     person can become an internet sensation. How have you never heard of socialite
     stad?
@@ -33,12 +34,11 @@ MonoBehaviour:
     and you get followers by doing missions/quests.
 
 '
-  - "Wanting to start already! I haven't seen someone this enthusiastic in a long
+  - 'Wanting to start already! I haven''t seen someone this enthusiastic in a long
     time. Before you actually can get started with exploring the city and starting
     getting famous, you need to get a phone to get access to social media. Lucky
     for you I know someone who can give you a phone. You will need to pick it up
-    yourself though. You will get rewarded for  \n"
-  - 'Faka
+    yourself though. You will get rewarded for  1!
 
 '
   PlayerDialogue:
@@ -48,11 +48,9 @@ MonoBehaviour:
   - Why am I here?
   NewQuestion:
   - How do I get started?
-  - Quit this motherfucking shit bitch.
   WhenToShowNewDialogue: 3
   Quests:
   - {fileID: 11400000, guid: 3fa0df67996863e49ba42374ab148b72, type: 2}
-  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
   ToBeReplaced:
   - 1
-  - 2
+  ConversationFinished: 1

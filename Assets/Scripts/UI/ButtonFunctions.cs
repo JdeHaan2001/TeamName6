@@ -11,4 +11,10 @@ public class ButtonFunctions : MonoBehaviour
         Debug.Log("Quest Accepted");
         _questGiver.AcceptQuest();
     }
+
+    public void DeclineOnClick()
+    {
+        Debug.Log("Quest Declined");
+        _questGiver.DeclineQuest();
+    }
 }

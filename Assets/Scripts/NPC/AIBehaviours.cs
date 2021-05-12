@@ -33,6 +33,7 @@ public class AIBehaviours : State
 
         //Walking back to the starting position.
         _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+        _system.transform.rotation = _system.StartAngle;
 
         yield break;
     }
