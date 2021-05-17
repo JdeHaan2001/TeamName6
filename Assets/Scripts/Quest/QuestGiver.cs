@@ -31,7 +31,10 @@ public class QuestGiver : MonoBehaviour
 
             if (_dialogueManager.npc != null)
             {
-                _quest = _dialogueManager.npc.Quests[_questNumber];
+                if (_dialogueManager.npc.Quests.Length != 0)
+                {
+                    _quest = _dialogueManager.npc.Quests[_questNumber];
+                }
             }
             OpenQuestWindow();
         }
@@ -58,7 +61,10 @@ public class QuestGiver : MonoBehaviour
         _quest.IsActive = true;
         _questKeeper.Quest = _quest;
 
-        GameObject.FindGameObjectWithTag("Phone").GetComponent<PickupBehaviour>().IsPickable = true;
+        if(_quest.Goal.goalType == GoalType.Picking)
+        {
+            GameObject.FindGameObjectWithTag("Phone").GetComponent<PickupBehaviour>().IsPickable = true;
+        }
     }
 
     public void DeclineQuest()

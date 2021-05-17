@@ -16,6 +16,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public bool OpenQuest;
 
     [HideInInspector] private int _currentCheckedString = 0;
+    [HideInInspector] private int _changedButton = -1;
     [HideInInspector] private bool SpawnNewDialogue;
 
     [SerializeField] private GameObject _dialogueUI;
@@ -40,8 +41,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        DialogueHandler();
-
+        ButtonClick();
     }
 
     /// <summary>
@@ -62,9 +62,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     /// <summary>
-    /// This function just checks which message it has to show for the NPC.
+    /// This function just checks which message it has to show for the NPC after a button has been clicked.
     /// </summary>
-    public void DialogueHandler()
+    public void ButtonClick()
     {
         if (_isTalking == true)
         {
@@ -72,7 +72,7 @@ public class DialogueManager : MonoBehaviour
             {
                 int textToShow = i;
                 _playerResponsesList[textToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => PlayerResponseClicked(textToShow));
+                _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(textToShow));
                 _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => changeButtonState(textToShow));
             }
             CurrentQuest();
@@ -83,13 +83,13 @@ public class DialogueManager : MonoBehaviour
     /// This will show the correct answer to your response of the NPC. This happens when you press on the player response.
     /// </summary>
     /// <param name="textToShow"></param>
-    private void PlayerResponseClicked(int textToShow)
+    private void ButtonClicked(int textToShow)
     {
         _dialogueTextKeeper.NPCDialogueText.text = npc.Dialogue[textToShow + 1];
 
         if (npc.WhenToShowNewDialogue == textToShow)
         {
-            if(SpawnNewDialogue == false)
+            if (SpawnNewDialogue == false)
             {
                 RenderExtraDialogue(textToShow);
             }
@@ -97,7 +97,6 @@ public class DialogueManager : MonoBehaviour
         checkExtraDialogue(textToShow);
     }
 
-    private int _changedButton = -1;
     private void changeButtonState(int textToShow)
     {
         if (_changedButton != -1)
@@ -110,7 +109,6 @@ public class DialogueManager : MonoBehaviour
         }
         _playerResponsesList[textToShow].GetComponent<Image>().color = _dialogueTextKeeper.PlayerResponseSelectColor;
         _changedButton = textToShow;
-
     }
 
     private void checkExtraDialogue(int currentButton)
@@ -119,13 +117,12 @@ public class DialogueManager : MonoBehaviour
         {
             if (currentButton > npc.PlayerDialogue.Length - 1)
             {
-                for (int i = npc.PlayerDialogue.Length; i < npc.NewQuestion.Length + npc.PlayerDialogue.Length; i++)
+                for (int i = 0/*npc.PlayerDialogue.Length*/; i < npc.NewQuestion.Length + npc.PlayerDialogue.Length; i++)
                 {
                     if (_playerResponsesList[i] != _playerResponsesList[currentButton])
                     {
                         _playerResponsesList[i].SetActive(false);
-                        //_playerResponsesList.Remove(_playerResponsesList[i]);
-                        //Destroy(_playerResponsesList[i]);
+
                     }
                 }
             }
@@ -177,111 +174,109 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-/// <summary>
-/// This function will check which quest it has to show in the dialogue system.
-/// </summary>
-/// <returns></returns>
-public int CurrentQuest()
-{
-    if (npc.Quests != null)
+    /// <summary>
+    /// This function will check which quest it has to show in the dialogue system.
+    /// </summary>
+    /// <returns></returns>
+    public int CurrentQuest()
     {
-        for (int i = 0; i < npc.Quests.Length; i++)
+        if (npc.Quests != null)
         {
-            if (_dialogueTextKeeper.NPCDialogueText.text.Contains(npc.Quests[i].Title))
+            for (int i = 0; i < npc.Quests.Length; i++)
             {
-                OpenQuest = true;
-                return i;
+                if (_dialogueTextKeeper.NPCDialogueText.text.Contains(npc.Quests[i].Title))
+                {
+                    OpenQuest = true;
+                    return i;
+                }
             }
         }
+        OpenQuest = false;
+        return -1;
     }
-    OpenQuest = false;
-    return -1;
-}
 
-/// <summary>
-/// This function will change the names in the dialogue scriptable object to the quest that is selected.
-/// In Scriptable Objects, you can't add code to the strings, so it has to be done like this.
-/// </summary>
-private void changeQuestInDialogue()
-{
-    if (npc.ToBeReplaced.Length != 0)
+    /// <summary>
+    /// This function will change the names in the dialogue scriptable object to the quest that is selected.
+    /// In Scriptable Objects, you can't add code to the strings, so it has to be done like this.
+    /// </summary>
+    private void changeQuestInDialogue()
     {
-        for (int i = 0; i < npc.Dialogue.Length; i++)
+        if (npc.ToBeReplaced.Length != 0)
         {
-            if (npc.Dialogue[i].Contains(npc.ToBeReplaced[_currentCheckedString]))
+            for (int i = 0; i < npc.Dialogue.Length; i++)
             {
-                string replacedString = npc.Dialogue[i].Replace(npc.ToBeReplaced[_currentCheckedString], npc.Quests[_currentCheckedString].Title);
-                npc.Dialogue[i] = replacedString;
-                if (_currentCheckedString < (npc.ToBeReplaced.Length - 1))
+                if (npc.Dialogue[i].Contains(npc.ToBeReplaced[_currentCheckedString]))
                 {
-                    _currentCheckedString++;
+                    string replacedString = npc.Dialogue[i].Replace(npc.ToBeReplaced[_currentCheckedString], npc.Quests[_currentCheckedString].Title);
+                    npc.Dialogue[i] = replacedString;
+                    if (_currentCheckedString < (npc.ToBeReplaced.Length - 1))
+                    {
+                        _currentCheckedString++;
+                    }
                 }
             }
         }
     }
-}
 
-/// <summary>
-/// This function will reset the names in the dialogue scriptable object to the original name to be renamed.
-/// </summary>
-private void resetQuestInDialogue()
-{
-    if (npc.ToBeReplaced.Length != 0)
+    /// <summary>
+    /// This function will reset the names in the dialogue scriptable object to the original name to be renamed.
+    /// </summary>
+    private void resetQuestInDialogue()
     {
-        for (int i = npc.Dialogue.Length - 1; i > 0; i--)
+        if (npc.ToBeReplaced.Length != 0)
         {
-            if (npc.Dialogue[i].Contains(npc.Quests[_currentCheckedString].Title))
+            for (int i = npc.Dialogue.Length - 1; i > 0; i--)
             {
-                string resetString = npc.Dialogue[i].Replace(npc.Quests[_currentCheckedString].Title, npc.ToBeReplaced[_currentCheckedString]);
-                npc.Dialogue[i] = resetString;
-
-                if (_currentCheckedString != 0)
+                if (npc.Dialogue[i].Contains(npc.Quests[_currentCheckedString].Title))
                 {
-                    _currentCheckedString--;
-                }
-            }
+                    string resetString = npc.Dialogue[i].Replace(npc.Quests[_currentCheckedString].Title, npc.ToBeReplaced[_currentCheckedString]);
+                    npc.Dialogue[i] = resetString;
 
-            if (i == 0)
-            {
-                _currentCheckedString = 0;
+                    if (_currentCheckedString != 0)
+                    {
+                        _currentCheckedString--;
+                    }
+                }
+
+                if (i == 0)
+                {
+                    _currentCheckedString = 0;
+                }
             }
         }
     }
-}
 
-/// <summary>
-/// This functions destroys all the responses of the player in the list. It will generate the new ones when you start talking with a NPC.
-/// </summary>
-private void DestroyResponses()
-{
-    foreach (GameObject obj in _playerResponsesList)
+    /// <summary>
+    /// This functions destroys all the responses of the player in the list. It will generate the new ones when you start talking with a NPC.
+    /// </summary>
+    private void DestroyResponses()
     {
-        Destroy(obj);
+        foreach (GameObject obj in _playerResponsesList)
+        {
+            Destroy(obj);
+        }
+        _playerResponsesList.Clear();
     }
-    _playerResponsesList.Clear();
-}
 
-/// <summary>
-/// This function disables everything that is needed to stop the conversation
-/// </summary>
-public void EndDialogue()
-{
-    _isTalking = false;
-    if (npc.Dialogue.Length == 1)
+    /// <summary>
+    /// This function disables everything that is needed to stop the conversation
+    /// </summary>
+    public void EndDialogue()
     {
+        _isTalking = false;
         npc.ConversationFinished = true;
+        DestroyResponses();
+        _dialogueUI.SetActive(false);
+        SpawnNewDialogue = false;
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
-    DestroyResponses();
-    _dialogueUI.SetActive(false);
-    SpawnNewDialogue = false;
 
-    Cursor.visible = false;
-    Cursor.lockState = CursorLockMode.Locked;
-}
-
-public void OnApplicationQuit()
-{
-    resetQuestInDialogue();
-    DestroyResponses();
-}
+    public void OnApplicationQuit()
+    {
+        npc.ConversationFinished = false;
+        resetQuestInDialogue();
+        DestroyResponses();
+    }
 }

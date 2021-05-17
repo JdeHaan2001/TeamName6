@@ -15,7 +15,7 @@ MonoBehaviour:
   Name: Balloon Boris
   Picture: {fileID: 21300000, guid: efed0385805299c4fbbd408cdbd0411f, type: 3}
   Dialogue:
-  - "Hmm hello, you woke me up so you better have a good reason to be here.\r"
+  - "Hmm, hello, you woke me up so you better have a good reason to be here.\r"
   - "I could have seen it coming. It is always someone being sent by Pete and they
     always need a phone. It is never just how are you Boris it is always gets me
     a phone. But because I am feeling nice I will get you one, just let me get it.\r\nHere
@@ -33,9 +33,10 @@ MonoBehaviour:
 '
   - Give me the phone!
   NewQuestion:
-  - '*Apologize*'
-  - '*Don''t apologize*'
+  - Apologize
+  - Don't apologize
   WhenToShowNewDialogue: 1
+  ChoosingDialogue: 1
   Quests: []
   ToBeReplaced: []
   ConversationFinished: 0

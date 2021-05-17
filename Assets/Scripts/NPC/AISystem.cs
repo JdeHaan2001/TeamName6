@@ -44,6 +44,7 @@ public class AISystem : StateMachine
     private void Update()
     {
         var ObjectFound = checkEnvironment();
+        checkAvailability();
 
         if (ObjectFound != null)
         {
@@ -67,7 +68,6 @@ public class AISystem : StateMachine
             }
             else
             {
-
                 InteractText.SetActive(false);
             }
         }
@@ -85,35 +85,33 @@ public class AISystem : StateMachine
                 StartCoroutine(State.Return());
             }
         }
+    }
 
-        if(DialogueManager.npc.ConversationFinished == true)
+    private void checkAvailability()
+    {
+        if (DialogueManager.npc.ConversationFinished != true)
         {
-            _questKeeper.UpdateQuest();
-            DialogueManager.npc.ConversationFinished = false;
+            InteractionPossible = true;
         }
 
-        if(_questKeeper.Quest != null)
+        if (_questKeeper.Quest != null)
         {
             if (_questKeeper.Quest.IsActive == true)
             {
                 for (int i = 0; i < DialogueManager.npc.Quests.Length; i++)
                 {
-                    if (DialogueManager.npc.Quests[i].Goal.npcToTalkTo.name == DialogueManager.npc.name)
+                    if (DialogueManager.npc.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
                     {
-                        InteractionPossible = true;
+                        _questKeeper.UpdateQuest();
+                        InteractionPossible = false;
                     }
                     else
                     {
                         InteractionPossible = false;
                     }
-                }            
-            }
-            else
-            {
-                InteractionPossible = true;
+                }
             }
         }
-        
     }
 
     private Transform checkEnvironment()
