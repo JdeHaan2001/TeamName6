@@ -15,21 +15,26 @@ public class FollowerCount : MonoBehaviour
 
     [SerializeField] private Image _statusImage = null;
 
+    [SerializeField] private Slider _slider = null;
+
     private readonly string helpText = "Status Icons and Status Names need to have the same amount of elements and they need to be in the same order. ";
-
-    private Dictionary<Sprite, string> _statusDict = new Dictionary<Sprite, string>();
-
-
-    private int _followerAmount = 2653800;
+    
+    private int _followerAmount = 0;
 
     private Animator _animator = null;
 
     public string HelpText => helpText;
 
+    private CurrentStatus _currentStatus;
+
+    private enum CurrentStatus
+    {
+        EEENZAAM = 0, BEKEND = 1, BEROEMD = 2, INTERNET_STER = 3
+    }
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        handleStatusDictionary();
     }
 
     private void Start()
@@ -40,38 +45,42 @@ public class FollowerCount : MonoBehaviour
     private void Update()
     {
         if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.J)) _animator.Play("New Animation");
+
+        if (Input.GetKey(KeyCode.F))
+            AddFollowers(100);
     }
 
-    private void handleStatusDictionary()
+    private void handleProgressBar()
     {
-        int iconCount = _statusIcons.Count;
-        int statusNamesCount = _statusNames.Count;
-
-        if (iconCount != statusNamesCount)
-            Debug.LogError("Icon count and names count are not equal. They need to be equal to be added to a dictionary");
-        else
-        {
-            for (int i = 0; i < iconCount; i++)
-            {
-                _statusDict.Add(_statusIcons[i], _statusNames[i]);
-            }
-        }
+        //Debug.Log((int)_currentStatus);
+        int statusIndex = (int)_currentStatus;
+        int followerReachAmount = _statusReachFollowersAmounts[statusIndex];
+        Debug.Log($"Status Index: {statusIndex}      Follower reach amount: {followerReachAmount}");
+        float followerPercentage = ((float)_followerAmount / (float)followerReachAmount) * 100f;
+        _slider.value = followerPercentage;
     }
 
     private void handleStatus()
     {
-        //TODO: Test this pls thank you
         if (_followerAmount < _statusReachFollowersAmounts[0])
         {
             changeStatus(_statusIcons[0], _statusNames[0]);
+            _currentStatus = CurrentStatus.EEENZAAM;
         }
         else if (_followerAmount < _statusReachFollowersAmounts[1] && _followerAmount > _statusReachFollowersAmounts[0])
         {
             changeStatus(_statusIcons[1], _statusNames[1]);
+            _currentStatus = CurrentStatus.BEKEND;
         }
         else if (_followerAmount < _statusReachFollowersAmounts[2] && _followerAmount > _statusReachFollowersAmounts[1])
         {
             changeStatus(_statusIcons[2], _statusNames[2]);
+            _currentStatus = CurrentStatus.BEROEMD;
+        }
+        else if (_followerAmount > _statusReachFollowersAmounts[2])
+        {
+            changeStatus(_statusIcons[3], _statusNames[3]);
+            _currentStatus = CurrentStatus.INTERNET_STER;
         }
     }
 
@@ -88,6 +97,9 @@ public class FollowerCount : MonoBehaviour
         }
         else
             _followerAmountText.text = _followerAmount.ToString();
+
+        handleProgressBar();
+        handleStatus();
     }
 
     private void changeStatus(Sprite pIcon, string pStatusText)
