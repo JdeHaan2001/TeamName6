@@ -1,3 +1,5 @@
+//Made by Jeroen de Haan
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -23,9 +25,9 @@ public class FollowerCount : MonoBehaviour
 
     private Animator _animator = null;
 
-    public string HelpText => helpText;
-
     private CurrentStatus _currentStatus;
+
+    public string HelpText => helpText;
 
     private enum CurrentStatus
     {
@@ -45,18 +47,14 @@ public class FollowerCount : MonoBehaviour
     private void Update()
     {
         if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.J)) _animator.Play("New Animation");
-
-        if (Input.GetKey(KeyCode.F))
-            AddFollowers(100);
     }
 
     private void handleProgressBar()
     {
-        //Debug.Log((int)_currentStatus);
         int statusIndex = (int)_currentStatus;
         int followerReachAmount = _statusReachFollowersAmounts[statusIndex];
-        Debug.Log($"Status Index: {statusIndex}      Follower reach amount: {followerReachAmount}");
         float followerPercentage = ((float)_followerAmount / (float)followerReachAmount) * 100f;
+        Debug.Log($"Status Index: {statusIndex}      Follower reach amount: {followerReachAmount}");
         _slider.value = followerPercentage;
     }
 
