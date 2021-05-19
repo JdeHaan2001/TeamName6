@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Prickly Pete
   m_EditorClassIdentifier: 
   Name: Prickly Pete
-  Picture: {fileID: 21300000, guid: efed0385805299c4fbbd408cdbd0411f, type: 3}
+  Picture: {fileID: 21300000, guid: 8c0b0d7a12e825f4a95ba887a645af91, type: 3}
   Dialogue:
   - Hello!
   - 'You are in the biggest social city in the world, the place where the least social
@@ -51,7 +51,7 @@ MonoBehaviour:
   WhenToShowNewDialogue: 3
   ChoosingDialogue: 0
   Quests:
-  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
+  - {fileID: 11400000, guid: 3fa0df67996863e49ba42374ab148b72, type: 2}
   ToBeReplaced:
   - 1
   ConversationFinished: 0

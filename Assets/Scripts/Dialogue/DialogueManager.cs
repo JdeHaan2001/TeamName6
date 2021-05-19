@@ -9,7 +9,7 @@ using System.Linq;
 public class DialogueManager : MonoBehaviour
 {
     #region Variables
-    [SerializeField] public NPCInformation npc;
+    [SerializeField] public NPCInformation Npc;
     [SerializeField] private DialogueTextKeeper _dialogueTextKeeper;
 
     [HideInInspector] private bool _isTalking;
@@ -53,9 +53,9 @@ public class DialogueManager : MonoBehaviour
         _isTalking = true;
         _dialogueUI.SetActive(true);
         renderPlayerDialogue();
-        _dialogueTextKeeper.NPCNameText.text = npc.name;
-        _dialogueTextKeeper.NPCDialogueText.text = npc.Dialogue[0];
-        _dialogueTextKeeper.NPCPicture.sprite = npc.Picture;
+        _dialogueTextKeeper.NPCNameText.text = Npc.name;
+        _dialogueTextKeeper.NPCDialogueText.text = Npc.Dialogue[0];
+        _dialogueTextKeeper.NPCPicture.sprite = Npc.Picture;
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -85,9 +85,9 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void ButtonClicked(int textToShow)
     {
-        _dialogueTextKeeper.NPCDialogueText.text = npc.Dialogue[textToShow + 1];
+        _dialogueTextKeeper.NPCDialogueText.text = Npc.Dialogue[textToShow + 1];
 
-        if (npc.WhenToShowNewDialogue == textToShow)
+        if (Npc.WhenToShowNewDialogue == textToShow)
         {
             if (SpawnNewDialogue == false)
             {
@@ -113,11 +113,11 @@ public class DialogueManager : MonoBehaviour
 
     private void checkExtraDialogue(int currentButton)
     {
-        if (npc.ChoosingDialogue == true && SpawnNewDialogue == true)
+        if (Npc.ChoosingDialogue == true && SpawnNewDialogue == true)
         {
-            if (currentButton > npc.PlayerDialogue.Length - 1)
+            if (currentButton > Npc.PlayerDialogue.Length - 1)
             {
-                for (int i = 0/*npc.PlayerDialogue.Length*/; i < npc.NewQuestion.Length + npc.PlayerDialogue.Length; i++)
+                for (int i = 0/*npc.PlayerDialogue.Length*/; i < Npc.NewQuestion.Length + Npc.PlayerDialogue.Length; i++)
                 {
                     if (_playerResponsesList[i] != _playerResponsesList[currentButton])
                     {
@@ -136,9 +136,9 @@ public class DialogueManager : MonoBehaviour
     private void renderPlayerDialogue()
     {
         _responsePanel.SetActive(true);
-        for (int i = 0; i < npc.PlayerDialogue.Length; i++)
+        for (int i = 0; i < Npc.PlayerDialogue.Length; i++)
         {
-            _dialogueTextKeeper.PlayerDialogueText.text = npc.PlayerDialogue[i];
+            _dialogueTextKeeper.PlayerDialogueText.text = Npc.PlayerDialogue[i];
             var instantiatedGO = Instantiate(_responsePanel);
 
             _playerResponsesList.Add(instantiatedGO);
@@ -154,15 +154,15 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void RenderExtraDialogue(int textToShow)
     {
-        if (npc.WhenToShowNewDialogue != 0)
+        if (Npc.WhenToShowNewDialogue != 0)
         {
             _responsePanel.SetActive(true);
             var listLength = _playerResponsesList.Count;
-            if (npc.WhenToShowNewDialogue == textToShow)
+            if (Npc.WhenToShowNewDialogue == textToShow)
             {
-                for (int i = 0; i < npc.NewQuestion.Length; i++)
+                for (int i = 0; i < Npc.NewQuestion.Length; i++)
                 {
-                    _dialogueTextKeeper.PlayerDialogueText.text = npc.NewQuestion[i];
+                    _dialogueTextKeeper.PlayerDialogueText.text = Npc.NewQuestion[i];
                     var newDialogue = Instantiate(_responsePanel);
                     _playerResponsesList.Add(newDialogue);
 
@@ -180,11 +180,11 @@ public class DialogueManager : MonoBehaviour
     /// <returns></returns>
     public int CurrentQuest()
     {
-        if (npc.Quests != null)
+        if (Npc.Quests != null)
         {
-            for (int i = 0; i < npc.Quests.Length; i++)
+            for (int i = 0; i < Npc.Quests.Length; i++)
             {
-                if (_dialogueTextKeeper.NPCDialogueText.text.Contains(npc.Quests[i].Title))
+                if (_dialogueTextKeeper.NPCDialogueText.text.Contains(Npc.Quests[i].Title))
                 {
                     OpenQuest = true;
                     return i;
@@ -201,15 +201,15 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private void changeQuestInDialogue()
     {
-        if (npc.ToBeReplaced.Length != 0)
+        if (Npc.ToBeReplaced.Length != 0)
         {
-            for (int i = 0; i < npc.Dialogue.Length; i++)
+            for (int i = 0; i < Npc.Dialogue.Length; i++)
             {
-                if (npc.Dialogue[i].Contains(npc.ToBeReplaced[_currentCheckedString]))
+                if (Npc.Dialogue[i].Contains(Npc.ToBeReplaced[_currentCheckedString]))
                 {
-                    string replacedString = npc.Dialogue[i].Replace(npc.ToBeReplaced[_currentCheckedString], npc.Quests[_currentCheckedString].Title);
-                    npc.Dialogue[i] = replacedString;
-                    if (_currentCheckedString < (npc.ToBeReplaced.Length - 1))
+                    string replacedString = Npc.Dialogue[i].Replace(Npc.ToBeReplaced[_currentCheckedString], Npc.Quests[_currentCheckedString].Title);
+                    Npc.Dialogue[i] = replacedString;
+                    if (_currentCheckedString < (Npc.ToBeReplaced.Length - 1))
                     {
                         _currentCheckedString++;
                     }
@@ -223,14 +223,14 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private void resetQuestInDialogue()
     {
-        if (npc.ToBeReplaced.Length != 0)
+        if (Npc.ToBeReplaced.Length != 0)
         {
-            for (int i = npc.Dialogue.Length - 1; i > 0; i--)
+            for (int i = Npc.Dialogue.Length - 1; i > 0; i--)
             {
-                if (npc.Dialogue[i].Contains(npc.Quests[_currentCheckedString].Title))
+                if (Npc.Dialogue[i].Contains(Npc.Quests[_currentCheckedString].Title))
                 {
-                    string resetString = npc.Dialogue[i].Replace(npc.Quests[_currentCheckedString].Title, npc.ToBeReplaced[_currentCheckedString]);
-                    npc.Dialogue[i] = resetString;
+                    string resetString = Npc.Dialogue[i].Replace(Npc.Quests[_currentCheckedString].Title, Npc.ToBeReplaced[_currentCheckedString]);
+                    Npc.Dialogue[i] = resetString;
 
                     if (_currentCheckedString != 0)
                     {
@@ -264,7 +264,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         _isTalking = false;
-        npc.ConversationFinished = true;
+        Npc.ConversationFinished = true;
         DestroyResponses();
         _dialogueUI.SetActive(false);
         SpawnNewDialogue = false;
@@ -275,7 +275,7 @@ public class DialogueManager : MonoBehaviour
 
     public void OnApplicationQuit()
     {
-        npc.ConversationFinished = false;
+        Npc.ConversationFinished = false;
         resetQuestInDialogue();
         DestroyResponses();
     }

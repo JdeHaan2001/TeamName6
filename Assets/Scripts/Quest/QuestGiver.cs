@@ -6,8 +6,8 @@ using TMPro;
 public class QuestGiver : MonoBehaviour
 {
     [HideInInspector] private DialogueManager _dialogueManager;
-    [SerializeField] private QuestKeeper _questKeeper;
-    [SerializeField] private DialogueTextKeeper _dialogueTextKeeper;
+    [HideInInspector] private QuestKeeper _questKeeper;
+    [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
 
     [SerializeField] private GameObject _questWindow;
 
@@ -16,7 +16,8 @@ public class QuestGiver : MonoBehaviour
 
     public void Awake()
     {
-        _dialogueManager = GameObject.FindGameObjectWithTag("NPC").gameObject.GetComponent<DialogueManager>();
+        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+
         _questWindow.SetActive(false);
     }
 
@@ -24,16 +25,19 @@ public class QuestGiver : MonoBehaviour
     {
         if (_dialogueManager != null)
         {
+            _dialogueManager = GameObject.FindGameObjectWithTag("NPC").gameObject.GetComponent<DialogueManager>();
+            _dialogueTextKeeper = GameObject.FindGameObjectWithTag("Dialogue").GetComponent<DialogueTextKeeper>();
+
             if (_dialogueManager.CurrentQuest() >= 0)
             {
                 _questNumber = _dialogueManager.CurrentQuest();
             }
 
-            if (_dialogueManager.npc != null)
+            if (_dialogueManager.Npc != null)
             {
-                if (_dialogueManager.npc.Quests.Length != 0)
+                if (_dialogueManager.Npc.Quests.Length != 0)
                 {
-                    _quest = _dialogueManager.npc.Quests[_questNumber];
+                    _quest = _dialogueManager.Npc.Quests[_questNumber];
                 }
             }
             OpenQuestWindow();
@@ -44,6 +48,7 @@ public class QuestGiver : MonoBehaviour
     {
         if (_dialogueManager.OpenQuest == true)
         {
+            Debug.Log("Quest should be opened");
             _questWindow.SetActive(true);
             _dialogueTextKeeper.QuestName.text = _quest.Title;
             _dialogueTextKeeper.QuestDescription.text = _quest.Description;
@@ -61,7 +66,7 @@ public class QuestGiver : MonoBehaviour
         _quest.IsActive = true;
         _questKeeper.Quest = _quest;
 
-        if(_quest.Goal.goalType == GoalType.Picking)
+        if (_quest.Goal.goalType == GoalType.Picking)
         {
             GameObject.FindGameObjectWithTag("Phone").GetComponent<PickupBehaviour>().IsPickable = true;
         }

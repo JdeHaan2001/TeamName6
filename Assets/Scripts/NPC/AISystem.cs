@@ -34,7 +34,7 @@ public class AISystem : StateMachine
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
-        SetState(new BeginState(this));
+        SetState(new AIBehaviours(this));
         InteractText.SetActive(false);
 
         StartPos = transform.position;
@@ -89,7 +89,7 @@ public class AISystem : StateMachine
 
     private void checkAvailability()
     {
-        if (DialogueManager.npc.ConversationFinished != true)
+        if (DialogueManager.Npc.ConversationFinished != true)
         {
             InteractionPossible = true;
         }
@@ -98,9 +98,9 @@ public class AISystem : StateMachine
         {
             if (_questKeeper.Quest.IsActive == true)
             {
-                for (int i = 0; i < DialogueManager.npc.Quests.Length; i++)
+                for (int i = 0; i < DialogueManager.Npc.Quests.Length; i++)
                 {
-                    if (DialogueManager.npc.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
+                    if (DialogueManager.Npc.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
                     {
                         _questKeeper.UpdateQuest();
                         InteractionPossible = false;

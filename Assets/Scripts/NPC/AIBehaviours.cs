@@ -46,7 +46,6 @@ public class AIBehaviours : State
             {
                 _system.IsInteracting = true;
                 _system.DialogueManager.StartConversation();
-                _system.QuestGiver.OpenQuestWindow();
             }
             else if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == true)
             {

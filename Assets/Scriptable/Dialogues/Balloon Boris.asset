@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Balloon Boris
   m_EditorClassIdentifier: 
   Name: Balloon Boris
-  Picture: {fileID: 21300000, guid: efed0385805299c4fbbd408cdbd0411f, type: 3}
+  Picture: {fileID: 21300000, guid: 1c3e893449b1386499a5fa63882c6c91, type: 3}
   Dialogue:
   - "Hmm, hello, you woke me up so you better have a good reason to be here.\r"
   - "I could have seen it coming. It is always someone being sent by Pete and they
