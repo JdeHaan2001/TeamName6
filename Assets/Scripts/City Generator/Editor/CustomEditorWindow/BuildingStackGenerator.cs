@@ -8,7 +8,6 @@ public class BuildingStackGenerator : EditorWindow
     private List<GameObject> _buildingParents = new List<GameObject>();
 
     private BuildingScriptableObject _buildingSO = null;
-    private BuildingGenerator _cityGen = null;
 
     private Vector2Int _gridSize = new Vector2Int(1, 1);
 
@@ -37,16 +36,12 @@ public class BuildingStackGenerator : EditorWindow
         GUILayout.Label("Generate Building", EditorStyles.boldLabel);
 
         _buildingSO = (BuildingScriptableObject)EditorGUILayout.ObjectField("Building List", _buildingSO, typeof(BuildingScriptableObject), true);
-        _cityGen = (BuildingGenerator)EditorGUILayout.ObjectField("City Generator", _cityGen, typeof(BuildingGenerator), true);
 
         if (_buildingSO == null) EditorGUILayout.HelpBox("Scriptable object needs to have a reference", MessageType.Error);
         else
         {
             SerializedObject serialObj = new SerializedObject(_buildingSO);
-            SerializedProperty serialProp = serialObj.FindProperty("BuildingPrefabs");
-
-            EditorGUILayout.PropertyField(serialProp, true);
-            serialObj.ApplyModifiedProperties();
+            
 
             _buildingSO.UseStackedBuildings = _useStackedBuildings = EditorGUILayout.Toggle(new GUIContent("Use building stacker", "If set to TRUE, " +
                                                                                                            "multiple lists wil show to add floor prefabs " +
@@ -68,8 +63,15 @@ public class BuildingStackGenerator : EditorWindow
                     _buildingSO.BuildingStackHeight = _buildingHeight = EditorGUILayout.IntField(new GUIContent("Building Height",
                                                                                                                 "Height of the stacked building"), _buildingHeight);
                 else
-                    _buildingSO.MaxBuildingStackHeight = _maxBuildingHeight = EditorGUILayout.IntField(new GUIContent("Max Building Height", 
+                    _buildingSO.MaxBuildingStackHeight = _maxBuildingHeight = EditorGUILayout.IntField(new GUIContent("Max Building Height",
                                                                                                        "Max height of the building"), _maxBuildingHeight);
+                serialObj.ApplyModifiedProperties();
+            }
+            else
+            {
+                SerializedProperty serialProp = serialObj.FindProperty("BuildingPrefabs");
+
+                EditorGUILayout.PropertyField(serialProp, true);
                 serialObj.ApplyModifiedProperties();
             }
 
@@ -82,88 +84,82 @@ public class BuildingStackGenerator : EditorWindow
                                                                                                                 "the previously generated buildings will be destroyed " +
                                                                                                                 "before new buildings are generated"), _destroyLastOnGenerate);
             EditorGUILayout.Space();
-            if (GUILayout.Button("Generate")) _buildingSO.Generate(_gridSize, _buildingSO.BuildingPrefabs, _origin, _buildingOffset);
-                //generate(_gridSize, _buildingSO.BuildingPrefabs, _origin, _buildingOffset);
+            if (GUILayout.Button("Generate")) _buildingSO.Generate(_buildingSO.BuildingPrefabs, _buildingParents);
                 EditorGUILayout.Space();
-            if (GUILayout.Button("Delete All Buildings")) _buildingSO.DeleteBuildings();
+            if (GUILayout.Button("Delete All Buildings")) _buildingSO.DeleteBuildings(_buildingParents);
         }
     }
 
-    private void generate(Vector2Int pGridSize, List<GameObject> pBuildingPrefabs, Vector3 pOrigin, float pGridOffset)
-    {
-        if(_destroyLastOnGenerate) deleteBuildings();
+    //private void generate(Vector2Int pGridSize, List<GameObject> pBuildingPrefabs, Vector3 pOrigin, float pGridOffset)
+    //{
+    //    if(_destroyLastOnGenerate) deleteBuildings();
 
-        GameObject emptyGameObj = new GameObject($"Generated City {pGridSize.x} X {pGridSize.y}");
-        emptyGameObj.transform.position = pOrigin;
-        _buildingParents.Add(emptyGameObj);
+    //    GameObject emptyGameObj = new GameObject($"Generated City {pGridSize.x} X {pGridSize.y}");
+    //    emptyGameObj.transform.position = pOrigin;
+    //    _buildingParents.Add(emptyGameObj);
 
-        for (int x = 0; x < pGridSize.x; x++)
-        {
-            for (int z = 0; z < pGridSize.y; z++)
-            {
-                if (_useStackedBuildings)
-                {
-                    int index;
-                    if (pBuildingPrefabs.Count > 0)
-                        index = Random.Range(0, pBuildingPrefabs.Count);
-                    else
-                        index = 1;
-                    if (index > pBuildingPrefabs.Count)
-                        stackBuilding(emptyGameObj.transform, pOrigin, pGridOffset, x, z);
-                    else
-                    {
-                        GameObject building = pBuildingPrefabs[index];
-                        GameObject other = PrefabUtility.InstantiatePrefab(building, emptyGameObj.transform) as GameObject;
-                        other.transform.position = emptyGameObj.transform.position + new Vector3(pGridOffset * x, 0f, pGridOffset * z);
-                    }
-                }
-            }
-        }
-        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-    }
+    //    for (int x = 0; x < pGridSize.x; x++)
+    //    {
+    //        for (int z = 0; z < pGridSize.y; z++)
+    //        {
+    //            if (_useStackedBuildings)
+    //                stackBuilding(emptyGameObj.transform, pOrigin, pGridOffset, x, z);
+    //            else
+    //                spawnBuildings(emptyGameObj.transform, x, z);
+    //        }
+    //    }
+    //    EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+    //}
 
-    private void stackBuilding(Transform pParent, Vector3 pOrigin, float pGridOffset, int pX, int pZ)
-    {
-        int height;
-        float heightOffset = 0;
-        if (_randomBuildingHeight)
-            height = Random.Range(1, _maxBuildingHeight);
-        else
-            height = _buildingHeight;
+    //private void spawnBuildings(Transform pParent, int pX, int pZ)
+    //{
+    //    int randomIndex = Random.Range(0, _buildingSO.BuildingPrefabs.Count);
+    //    GameObject building = PrefabUtility.InstantiatePrefab(_buildingSO.BuildingPrefabs[randomIndex]) as GameObject;
+    //    building.transform.position = new Vector3(pX * _buildingOffset, _origin.y, pZ * _buildingOffset);
+    //}
 
-        GameObject other = PrefabUtility.InstantiatePrefab(_buildingSO.BaseFloorPrefabs[Random.Range(0, _buildingSO.BaseFloorPrefabs.Count)], pParent) as GameObject;
-        other.transform.position = new Vector3(pGridOffset * pX, pOrigin.y, pGridOffset * pZ);
-        heightOffset += getHeightOffset(other);
+    //private void stackBuilding(Transform pParent, Vector3 pOrigin, float pGridOffset, int pX, int pZ)
+    //{
+    //    int height;
+    //    float heightOffset = 0;
+    //    if (_randomBuildingHeight)
+    //        height = Random.Range(1, _maxBuildingHeight);
+    //    else
+    //        height = _buildingHeight;
 
-        for (int i = 0; i < height; i++)
-        {
-            GameObject floor = PrefabUtility.InstantiatePrefab(_buildingSO.NormalFloorPrefabs[Random.Range(0, _buildingSO.NormalFloorPrefabs.Count)], pParent) as GameObject;
-            floor.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
-            heightOffset += getHeightOffset(floor);
-        }
+    //    GameObject other = PrefabUtility.InstantiatePrefab(_buildingSO.BaseFloorPrefabs[Random.Range(0, _buildingSO.BaseFloorPrefabs.Count)], pParent) as GameObject;
+    //    other.transform.position = new Vector3(pGridOffset * pX, pOrigin.y, pGridOffset * pZ);
+    //    heightOffset += getHeightOffset(other);
 
-        GameObject roof = PrefabUtility.InstantiatePrefab(_buildingSO.RoofPrefabs[Random.Range(0, _buildingSO.RoofPrefabs.Count)], pParent) as GameObject;
-        roof.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
-        Debug.Log(roof.transform.position.y + "       " + heightOffset);
-    }
+    //    for (int i = 0; i < height; i++)
+    //    {
+    //        GameObject floor = PrefabUtility.InstantiatePrefab(_buildingSO.NormalFloorPrefabs[Random.Range(0, _buildingSO.NormalFloorPrefabs.Count)], pParent) as GameObject;
+    //        floor.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
+    //        heightOffset += getHeightOffset(floor);
+    //    }
 
-    private float getHeightOffset(GameObject pFloor)
-    {
-        Mesh mesh = pFloor.GetComponent<MeshFilter>().sharedMesh;
-        Bounds bounds = mesh.bounds;
-        return bounds.size.y;
-    }
+    //    GameObject roof = PrefabUtility.InstantiatePrefab(_buildingSO.RoofPrefabs[Random.Range(0, _buildingSO.RoofPrefabs.Count)], pParent) as GameObject;
+    //    roof.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
+    //    Debug.Log(roof.transform.position.y + "       " + heightOffset);
+    //}
 
-    private void deleteBuildings()
-    {
-        if (_buildingParents.Count > 0)
-        {
-            foreach (GameObject other in _buildingParents)
-                DestroyImmediate(other);
+    //private float getHeightOffset(GameObject pFloor)
+    //{
+    //    Mesh mesh = pFloor.GetComponent<MeshFilter>().sharedMesh;
+    //    Bounds bounds = mesh.bounds;
+    //    return bounds.size.y;
+    //}
 
-            _buildingParents.Clear();
+    //private void deleteBuildings()
+    //{
+    //    if (_buildingParents.Count > 0)
+    //    {
+    //        foreach (GameObject other in _buildingParents)
+    //            DestroyImmediate(other);
 
-            EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-        }
-    }
+    //        _buildingParents.Clear();
+
+    //        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+    //    }
+    //}
 }
