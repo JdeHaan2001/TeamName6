@@ -5,7 +5,8 @@ using UnityEngine;
 public class DontDestroyUI : MonoBehaviour
 {
     private static DontDestroyUI _uiInstance;
-
+    
+    public List<GameObject> UIGameObjects = new List<GameObject>();
     public static DontDestroyUI UIInstance
     {
         get
@@ -25,15 +26,6 @@ public class DontDestroyUI : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //if (_uiInstance != null && _uiInstance != this)
-        //{
-        //    Destroy(this.gameObject);
-        //}
-        //else
-        //{
-        //    _uiInstance = this;
-        //}
-        //DontDestroyOnLoad(this.gameObject);
     }
 }
 

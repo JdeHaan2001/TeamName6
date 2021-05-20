@@ -10,7 +10,6 @@ public class DialogueManager : MonoBehaviour
 {
     #region Variables
     [SerializeField] public NPCInformation Npc;
-    [SerializeField] private DialogueTextKeeper _dialogueTextKeeper;
 
     [HideInInspector] private bool _isTalking;
     [HideInInspector] public bool OpenQuest;
@@ -20,30 +19,31 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] private bool SpawnNewDialogue;
 
     [SerializeField] private GameObject _dialogueUI;
-    [HideInInspector] private GameObject _responsePanel;
-    [HideInInspector] private GameObject _playerDialoguePanel;
+    [SerializeField] private GameObject _playerDialogue;
+    [SerializeField] private GameObject _playerDialoguePanel;
+    [SerializeField] private DialogueTextKeeper _dialogueTextKeeper;
 
-    [HideInInspector] private List<GameObject> _playerResponsesList = new List<GameObject>();
+    [SerializeField] private List<GameObject> _playerResponsesList = new List<GameObject>();
 
     private Vector3 _lastPosition;
     #endregion
     private void Awake()
     {
-        _dialogueUI = Resources.FindObjectsOfTypeAll<DialogueTextKeeper>()[0].gameObject;
-        _playerDialoguePanel = Resources.FindObjectsOfTypeAll<DirtyPlayerDialogue>()[0].gameObject;
-        _responsePanel = Resources.FindObjectsOfTypeAll<DirtyResponsePanel>()[0].gameObject;
+        _dialogueUI = DontDestroyUI.UIInstance.UIGameObjects[0];
+        _playerDialoguePanel = DontDestroyUI.UIInstance.UIGameObjects[1];
+        _playerDialogue = DontDestroyUI.UIInstance.UIGameObjects[2];
+        _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
 
         _dialogueUI.SetActive(false);
-    }
-
-    private void Start()
-    {
         changeQuestInDialogue();
     }
 
     private void Update()
     {
-        ButtonClick();
+        if (_isTalking == true)
+        {
+            ButtonClick();
+        }
     }
 
     /// <summary>
@@ -51,10 +51,11 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void StartConversation()
     {
-        _dialogueUI.SetActive(true);
         DestroyResponses();
         _isTalking = true;
+        _dialogueUI.SetActive(true);
         renderPlayerDialogue();
+
         _dialogueTextKeeper.NPCNameText.text = Npc.name;
         _dialogueTextKeeper.NPCDialogueText.text = Npc.Dialogue[0];
         _dialogueTextKeeper.NPCPicture.sprite = Npc.Picture;
@@ -68,7 +69,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void ButtonClick()
     {
-        if (_isTalking == true)
+        if (_playerResponsesList.Count > 0)
         {
             for (int i = 0; i < _playerResponsesList.Count; i++)
             {
@@ -77,7 +78,6 @@ public class DialogueManager : MonoBehaviour
                 _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(textToShow));
                 _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => changeButtonState(textToShow));
             }
-            CurrentQuest();
         }
     }
 
@@ -96,6 +96,7 @@ public class DialogueManager : MonoBehaviour
                 RenderExtraDialogue(textToShow);
             }
         }
+        CurrentQuest();
         checkExtraDialogue(textToShow);
     }
 
@@ -119,12 +120,11 @@ public class DialogueManager : MonoBehaviour
         {
             if (currentButton > Npc.PlayerDialogue.Length - 1)
             {
-                for (int i = 0/*npc.PlayerDialogue.Length*/; i < Npc.NewQuestion.Length + Npc.PlayerDialogue.Length; i++)
+                for (int i = 0; i < Npc.NewQuestion.Length + Npc.PlayerDialogue.Length; i++)
                 {
                     if (_playerResponsesList[i] != _playerResponsesList[currentButton])
                     {
                         _playerResponsesList[i].SetActive(false);
-
                     }
                 }
             }
@@ -137,16 +137,16 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     private void renderPlayerDialogue()
     {
-        _responsePanel.SetActive(true);
+        _playerDialogue.SetActive(true);
         for (int i = 0; i < Npc.PlayerDialogue.Length; i++)
         {
             _dialogueTextKeeper.PlayerDialogueText.text = Npc.PlayerDialogue[i];
-            var instantiatedGO = Instantiate(_responsePanel);
+            var instantiatedGO = Instantiate(_playerDialogue);
 
             _playerResponsesList.Add(instantiatedGO);
             _playerResponsesList[i].transform.SetParent(_playerDialoguePanel.transform, false);
         }
-        _responsePanel.SetActive(false);
+        _playerDialogue.SetActive(false);
     }
 
     /// <summary>
@@ -158,21 +158,21 @@ public class DialogueManager : MonoBehaviour
     {
         if (Npc.WhenToShowNewDialogue != 0)
         {
-            _responsePanel.SetActive(true);
+            _playerDialogue.SetActive(true);
             var listLength = _playerResponsesList.Count;
             if (Npc.WhenToShowNewDialogue == textToShow)
             {
                 for (int i = 0; i < Npc.NewQuestion.Length; i++)
                 {
                     _dialogueTextKeeper.PlayerDialogueText.text = Npc.NewQuestion[i];
-                    var newDialogue = Instantiate(_responsePanel);
+                    var newDialogue = Instantiate(_playerDialogue);
                     _playerResponsesList.Add(newDialogue);
 
                     _playerResponsesList[listLength + i].transform.SetParent(_playerDialoguePanel.transform, false);
                 }
             }
             SpawnNewDialogue = true;
-            _responsePanel.SetActive(false);
+            _playerDialogue.SetActive(false);
         }
     }
 

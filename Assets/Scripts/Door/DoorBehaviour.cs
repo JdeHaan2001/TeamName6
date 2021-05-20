@@ -11,9 +11,9 @@ public class DoorBehaviour : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-                SceneManager.LoadScene(SceneToGo);
-            LoadPlayer();
-            SavePlayer();
+            SceneManager.LoadScene(SceneToGo);
+            //LoadPlayer();
+            //SavePlayer();
         }
     }
 

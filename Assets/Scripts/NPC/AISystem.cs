@@ -29,9 +29,9 @@ public class AISystem : StateMachine
     private void Start()
     {
         DialogueManager = GetComponent<DialogueManager>();
-        Player = GameObject.FindGameObjectWithTag("Player");
+        Player = DontDestroyPlayer.PlayerInstance.Player;
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
-        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+        _questKeeper = DontDestroyPlayer.PlayerInstance.Player.GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));

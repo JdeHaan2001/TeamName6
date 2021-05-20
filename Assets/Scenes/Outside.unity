@@ -2337,11 +2337,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 963194228, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.0000000381679
+      value: 0.0000000381679
       objectReference: {fileID: 0}
     - target: {fileID: 963194228, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0000000048486246
+      value: 0.0000000048486246
       objectReference: {fileID: 0}
     - target: {fileID: 963194228, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2385,11 +2385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418442329404543982, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.000000008552866
+      value: 0.000000008552867
       objectReference: {fileID: 0}
     - target: {fileID: 2418442329404543982, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -9.29177e-10
+      value: 9.291771e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2418442329404543982, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.y
@@ -2425,11 +2425,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418442330429070649, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.000000019083949
+      value: 0.000000019083949
       objectReference: {fileID: 0}
     - target: {fileID: 2418442330429070649, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0000000024243123
+      value: 0.0000000024243123
       objectReference: {fileID: 0}
     - target: {fileID: 2418442330429070649, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.y
@@ -3079,6 +3079,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ba390cd5c344904bb5a38f102785d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _dialogueUI: {fileID: 0}
+  _responsePanel: {fileID: 0}
+  _playerDialoguePanel: {fileID: 0}
+  _dialogueTextKeeper: {fileID: 0}
+  UIGameObjects: []
 --- !u!114 &1366498482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4476,15 +4481,15 @@ PrefabInstance:
     - target: {fileID: 6014936317960767567, guid: 2abb9acae5a55f5438d57195f0f5fa2d, type: 3}
       propertyPath: _dialogueUI
       value: 
-      objectReference: {fileID: 1584610571}
+      objectReference: {fileID: 0}
     - target: {fileID: 6014936317960767567, guid: 2abb9acae5a55f5438d57195f0f5fa2d, type: 3}
       propertyPath: _responsePanel
       value: 
-      objectReference: {fileID: 130257972}
+      objectReference: {fileID: 0}
     - target: {fileID: 6014936317960767567, guid: 2abb9acae5a55f5438d57195f0f5fa2d, type: 3}
       propertyPath: _dialogueTextKeeper
       value: 
-      objectReference: {fileID: 1584610573}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2abb9acae5a55f5438d57195f0f5fa2d, type: 3}
 --- !u!4 &8135123147587987243 stripped

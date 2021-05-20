@@ -6,30 +6,26 @@ public class DontDestroyPlayer : MonoBehaviour
 {
     private static DontDestroyPlayer _playerInstance;
 
+    public GameObject Player;
+
     public static DontDestroyPlayer PlayerInstance
     {
         get
         {
-            if (_playerInstance == null)
-            {
-                _playerInstance = GameObject.FindObjectOfType<DontDestroyPlayer>();
-            }
-
             return _playerInstance;
         }
     }
 
     private void Awake()
     {
-        if (_playerInstance != null && _playerInstance != this)
+        if (_playerInstance == null)
         {
-            Destroy(this.gameObject);
+            _playerInstance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            _playerInstance = this;
+            Destroy(gameObject);
         }
-
-        DontDestroyOnLoad(gameObject);
     }
 }
