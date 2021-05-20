@@ -14,6 +14,7 @@ public class FollowerCount : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI _status = null;
     [SerializeField] private TextMeshProUGUI _followerAmountText = null;
+    [Space()]
 
     [SerializeField] private Image _statusImage = null;
 
@@ -47,6 +48,7 @@ public class FollowerCount : MonoBehaviour
     private void Update()
     {
         if(Input.GetKey(KeyCode.LeftControl) && Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.J)) _animator.Play("New Animation");
+        if (Input.GetKey(KeyCode.F)) AddFollowers(1000);
     }
 
     private void handleProgressBar()
@@ -89,7 +91,7 @@ public class FollowerCount : MonoBehaviour
         {
             double followerMilAmount = _followerAmount / 1000000f;
             Debug.Log(followerMilAmount + "Before Rounding");
-            followerMilAmount = Math.Round(followerMilAmount, 1);
+            followerMilAmount = Math.Round(followerMilAmount, 2);
             Debug.Log(followerMilAmount + "After Rounding");
             _followerAmountText.text = $"{followerMilAmount} Miljoen";
         }
