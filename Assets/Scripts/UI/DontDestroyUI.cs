@@ -10,26 +10,30 @@ public class DontDestroyUI : MonoBehaviour
     {
         get
         {
-            if (_uiInstance == null)
-            {
-                _uiInstance = GameObject.FindObjectOfType<DontDestroyUI>();
-            }
-
             return _uiInstance;
         }
     }
 
     private void Awake()
     {
-        if (_uiInstance != null && _uiInstance != this)
+        if (_uiInstance == null)
         {
-            Destroy(this.gameObject);
+            _uiInstance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            _uiInstance = this;
+            Destroy(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        //if (_uiInstance != null && _uiInstance != this)
+        //{
+        //    Destroy(this.gameObject);
+        //}
+        //else
+        //{
+        //    _uiInstance = this;
+        //}
+        //DontDestroyOnLoad(this.gameObject);
     }
 }
 

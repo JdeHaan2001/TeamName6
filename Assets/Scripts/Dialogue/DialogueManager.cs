@@ -29,13 +29,15 @@ public class DialogueManager : MonoBehaviour
     #endregion
     private void Awake()
     {
-        _playerDialoguePanel = GameObject.FindGameObjectWithTag("PlayerDialoguePanel");
-        _responsePanel = GameObject.FindGameObjectWithTag("ResponsePanel");
+        _dialogueUI = Resources.FindObjectsOfTypeAll<DialogueTextKeeper>()[0].gameObject;
+        _playerDialoguePanel = Resources.FindObjectsOfTypeAll<DirtyPlayerDialogue>()[0].gameObject;
+        _responsePanel = Resources.FindObjectsOfTypeAll<DirtyResponsePanel>()[0].gameObject;
+
+        _dialogueUI.SetActive(false);
     }
 
     private void Start()
     {
-        _dialogueUI.SetActive(false);
         changeQuestInDialogue();
     }
 
@@ -49,9 +51,9 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void StartConversation()
     {
+        _dialogueUI.SetActive(true);
         DestroyResponses();
         _isTalking = true;
-        _dialogueUI.SetActive(true);
         renderPlayerDialogue();
         _dialogueTextKeeper.NPCNameText.text = Npc.name;
         _dialogueTextKeeper.NPCDialogueText.text = Npc.Dialogue[0];
