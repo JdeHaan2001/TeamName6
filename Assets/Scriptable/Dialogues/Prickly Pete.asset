@@ -51,7 +51,7 @@ MonoBehaviour:
   WhenToShowNewDialogue: 3
   ChoosingDialogue: 0
   Quests:
-  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
+  - {fileID: 11400000, guid: 3fa0df67996863e49ba42374ab148b72, type: 2}
   ToBeReplaced:
   - 1
   ConversationFinished: 0

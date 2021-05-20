@@ -16,12 +16,9 @@ public class QuestGiver : MonoBehaviour
 
     public void Awake()
     {
-        _dialogueManager = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueManager>();
+        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
         _questWindow = DontDestroyUI.UIInstance.UIGameObjects[3];
         _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
-
-        _questKeeper = DontDestroyPlayer.PlayerInstance.Player.GetComponent<QuestKeeper>();
-
         _questWindow.SetActive(false);
     }
 
@@ -55,7 +52,6 @@ public class QuestGiver : MonoBehaviour
 
     public void OpenQuestWindow()
     {
-        Debug.Log("Quest should be opened");
         _questWindow.SetActive(true);
 
         _dialogueTextKeeper.QuestName.text = _quest.Title;

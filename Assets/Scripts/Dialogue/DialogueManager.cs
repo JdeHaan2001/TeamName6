@@ -96,7 +96,7 @@ public class DialogueManager : MonoBehaviour
                 RenderExtraDialogue(textToShow);
             }
         }
-        CurrentQuest();
+        //CurrentQuest();
         checkExtraDialogue(textToShow);
     }
 

@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class QuestButtonFunctions : MonoBehaviour
 {
-    [SerializeField] private QuestGiver _questGiver;
+    [HideInInspector] private QuestGiver _questGiver;
 
+    public void Awake()
+    {
+        _questGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
+    }
     public void AcceptOnClick()
     {
         Debug.Log("Quest Accepted");

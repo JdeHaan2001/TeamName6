@@ -26,11 +26,15 @@ public class AISystem : StateMachine
     private Quaternion _stepAngle = Quaternion.AngleAxis(5, Vector3.up);
 
     #endregion
+
+    private void Awake()
+    {
+        QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
+    }
     private void Start()
     {
         DialogueManager = GetComponent<DialogueManager>();
         Player = DontDestroyPlayer.PlayerInstance.Player;
-        QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
         _questKeeper = DontDestroyPlayer.PlayerInstance.Player.GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
