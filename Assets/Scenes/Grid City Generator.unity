@@ -325,7 +325,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418442330571101783, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.000020599366
+      value: 0.00015563966
       objectReference: {fileID: 0}
     - target: {fileID: 2418442330571101783, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.x
@@ -563,6 +563,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -0.000030517578
       objectReference: {fileID: 0}
+    - target: {fileID: 5414147727487290952, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 262.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414147727487290952, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -95.4714
+      objectReference: {fileID: 0}
     - target: {fileID: 5414147727705206329, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -1.499939
@@ -602,6 +610,14 @@ PrefabInstance:
     - target: {fileID: 5414147727946296707, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
       propertyPath: m_Name
       value: Image_FollowerCount_Background
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414147728039168583, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 152.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5414147728039168583, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -47.19
       objectReference: {fileID: 0}
     - target: {fileID: 5414147728359561084, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
       propertyPath: m_AnchorMax.x
