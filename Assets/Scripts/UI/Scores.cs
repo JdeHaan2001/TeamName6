@@ -14,6 +14,7 @@ public class Scores : MonoBehaviour
     private void Awake()
     {
         _questGetter = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+
     }
     void Update()
     {

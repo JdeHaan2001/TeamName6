@@ -5,62 +5,71 @@ using TMPro;
 
 public class QuestGiver : MonoBehaviour
 {
-    [HideInInspector] public DialogueManager DialogueManager;
-    [SerializeField] public QuestKeeper QuestKeeper;
+    [SerializeField] private DialogueManager _dialogueManager;
+    [SerializeField] private QuestKeeper _questKeeper;
+    [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
 
-    [SerializeField] public GameObject QuestWindow;
-    [SerializeField] public TextMeshProUGUI TitleText;
-    [SerializeField] public TextMeshProUGUI DescriptionText;
-    [SerializeField] public TextMeshProUGUI FollowerText;
-    [SerializeField] public TextMeshProUGUI MoneyText;
+    [HideInInspector] private GameObject _questWindow;
 
-    [HideInInspector] public Quest Quest;
-    [HideInInspector] public int QuestNumber;
+    [HideInInspector] private Quest _quest;
+    [HideInInspector] private int _questNumber;
 
     public void Awake()
     {
-        DialogueManager = GameObject.FindGameObjectWithTag("NPC").gameObject.GetComponent<DialogueManager>();
-        QuestWindow.SetActive(false);
+        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+        _questWindow = DontDestroyUI.UIInstance.UIGameObjects[3];
+        _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
+        _questWindow.SetActive(false);
     }
 
     public void Update()
     {
-        if(DialogueManager != null)
+        if(_questKeeper != null)
         {
-            if(DialogueManager.CurrentQuest() >= 0)
+            if (_dialogueManager.CurrentQuest() >= 0)
             {
-                QuestNumber = DialogueManager.CurrentQuest();
+                _questNumber = _dialogueManager.CurrentQuest();
             }
-            
-            if (DialogueManager.npc != null)
+        }
+        
+        if (_dialogueManager.Npc != null)
+        {
+            if (_dialogueManager.Npc.Quests.Length != 0)
             {
-                Quest = DialogueManager.npc.Quests[QuestNumber];
+                _quest = _dialogueManager.Npc.Quests[_questNumber];
             }
+        }
+
+        if (_dialogueManager.OpenQuest == true)
+        {
             OpenQuestWindow();
-        }        
-    }
-    
-    public void OpenQuestWindow()
-    {
-        if(DialogueManager.OpenQuest == true)
-        {
-            QuestWindow.SetActive(true);
-            TitleText.text = Quest.Title;
-            DescriptionText.text = Quest.Description;
-            FollowerText.text = Quest.FollowersReward.ToString();
-            MoneyText.text = Quest.MoneyReward.ToString();
         }
         else
         {
-            QuestWindow.SetActive(false);
-        }                 
+            _questWindow.SetActive(false);
+        }
+    }
+
+    public void OpenQuestWindow()
+    {
+        _questWindow.SetActive(true);
+
+        _dialogueTextKeeper.QuestName.text = _quest.Title;
+        _dialogueTextKeeper.QuestDescription.text = _quest.Description;
+        _dialogueTextKeeper.RewardsFollowers.text = "Followers: +" + _quest.FollowersReward;
+        _dialogueTextKeeper.RewardsMoney.text = "Money: +" + _quest.MoneyReward;
+
+        _dialogueManager.OpenQuest = false;
     }
     public void AcceptQuest()
     {
-        QuestWindow.SetActive(false);
-        Quest.IsActive = true;
-        QuestKeeper.Quest = Quest;
+        _questWindow.SetActive(false);
+        _quest.IsActive = true;
+        _questKeeper.Quest = _quest;
+    }
 
-        GameObject.FindGameObjectWithTag("Phone").GetComponent<PickupBehaviour>().IsPickable = true;
+    public void DeclineQuest()
+    {
+        _questWindow.SetActive(false);
     }
 }

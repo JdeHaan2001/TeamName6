@@ -11,6 +11,7 @@ public class QuestGoal
     public int requiredAmount;
     public int currentAmount;
     public string ItemToGet;
+    public NPCInformation npcToTalkTo;
 
     public bool IsReached()
     {
@@ -33,11 +34,32 @@ public class QuestGoal
         }
     }
 
+    public void TalkedToNPC()
+    {
+        if(goalType == GoalType.Talking)
+        {
+            if(npcToTalkTo.ConversationFinished == true)
+            {
+                currentAmount++;
+            }
+        }
+    }
+
+    public void ItemGiven()
+    {
+        if(goalType == GoalType.Talking)
+        {
+                currentAmount++;
+        }
+    }
+
 }
 
 
 public enum GoalType
 {
     Picking,
-    Gathering
+    Gathering,
+    Talking,
+    Giving
 }

@@ -1,53 +1,54 @@
 ﻿using System.Linq;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 //Made by: Jorrit Bos
 public class AISystem : StateMachine
 {
     #region Variables
     [HideInInspector] public GameObject Player;
-    [SerializeField] public NPCInformation NPCInformation;
     [SerializeField] public int FollowSpeed = 0;
     [SerializeField] public int CheckingRadius = 0;
 
     [HideInInspector] private QuestKeeper _questKeeper;
 
-    [SerializeField] public DialogueManager DialogueManager;
+    [HideInInspector] public DialogueManager DialogueManager;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractText;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
     [HideInInspector] public Vector3 StartPos;
+    [HideInInspector] public Quaternion StartAngle;
 
     private Quaternion _startingAngle = Quaternion.AngleAxis(-60, Vector3.up);
     private Quaternion _stepAngle = Quaternion.AngleAxis(5, Vector3.up);
 
     #endregion
+
+    private void Awake()
+    {
+        QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
+    }
     private void Start()
     {
-        Player = GameObject.FindGameObjectWithTag("Player");
-        QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
-        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+        DialogueManager = GetComponent<DialogueManager>();
+        Player = DontDestroyPlayer.PlayerInstance.Player;
+        _questKeeper = DontDestroyPlayer.PlayerInstance.Player.GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
-        SetState(new BeginState(this));
+        SetState(new AIBehaviours(this));
         InteractText.SetActive(false);
 
         StartPos = transform.position;
-    }
-
-    public string ReturnName()
-    {
-
-        string currentName = NPCInformation.Name;
-        return currentName;
+        StartAngle = transform.rotation;
     }
 
     private void Update()
     {
         var ObjectFound = checkEnvironment();
+        checkAvailability();
 
         if (ObjectFound != null)
         {
@@ -71,7 +72,6 @@ public class AISystem : StateMachine
             }
             else
             {
-
                 InteractText.SetActive(false);
             }
         }
@@ -79,7 +79,6 @@ public class AISystem : StateMachine
         {
             StartCoroutine(State.Idle());
         }
-
 
         if (InteractionPossible == false)
         {
@@ -90,19 +89,33 @@ public class AISystem : StateMachine
                 StartCoroutine(State.Return());
             }
         }
+    }
 
-        if(_questKeeper.Quest != null)
+    private void checkAvailability()
+    {
+        if (DialogueManager.Npc.ConversationFinished != true)
+        {
+            InteractionPossible = true;
+        }
+
+        if (_questKeeper.Quest != null)
         {
             if (_questKeeper.Quest.IsActive == true)
             {
-                InteractionPossible = false;
-            }
-            else
-            {
-                InteractionPossible = true;
+                for (int i = 0; i < DialogueManager.Npc.Quests.Length; i++)
+                {
+                    if (DialogueManager.Npc.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
+                    {
+                        _questKeeper.UpdateQuest();
+                        InteractionPossible = false;
+                    }
+                    else
+                    {
+                        InteractionPossible = false;
+                    }
+                }
             }
         }
-        
     }
 
     private Transform checkEnvironment()

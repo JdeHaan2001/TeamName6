@@ -11,6 +11,11 @@ TagManager:
   - NPCManager
   - PickupManager
   - ResponsePanel
+  - PlayerDialoguePanel
+  - PlayerCustomization
+  - PlayerChooser
+  - PlayerCharacter
+  - QuestPanel
   layers:
   - Default
   - TransparentFX
