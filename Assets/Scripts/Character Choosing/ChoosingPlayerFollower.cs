@@ -14,12 +14,12 @@ public class ChoosingPlayerFollower : MonoBehaviour
         float interpolation = speed * Time.deltaTime;
         if(_objectToFollow != null)
         {
-            //Vector3 position = this.transform.position;
-            //position.y = Mathf.Lerp(this.transform.position.y, _objectToFollow.transform.position.y, interpolation);
-            //position.x = Mathf.Lerp(this.transform.position.x, _objectToFollow.transform.position.x, interpolation);
-            //position.z = Mathf.Lerp(this.transform.position.z, _objectToFollow.transform.position.z - 10, interpolation);
+            Vector3 position = this.transform.position;
+            position.y = Mathf.Lerp(this.transform.position.y, _objectToFollow.transform.position.y, interpolation);
+            position.x = Mathf.Lerp(this.transform.position.x, _objectToFollow.transform.position.x, interpolation);
+            position.z = Mathf.Lerp(this.transform.position.z, _objectToFollow.transform.position.z, interpolation);
 
-            this.transform.LookAt(_objectToFollow.transform);
+            //this.transform.LookAt(_objectToFollow.transform);
         }        
     }
 }

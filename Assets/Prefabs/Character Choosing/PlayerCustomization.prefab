@@ -44,27 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Players:
-  - Name: 
-    Looks: {fileID: 0}
-    Health: 0
-    Speed: 0
-    Attack: 0
-    JumpHeight: 0
-  - Name: 
-    Looks: {fileID: 0}
-    Health: 0
-    Speed: 0
-    Attack: 0
-    JumpHeight: 0
-  - Name: 
-    Looks: {fileID: 0}
-    Health: 0
-    Speed: 0
-    Attack: 0
-    JumpHeight: 0
-  - Name: 
-    Looks: {fileID: 0}
-    Health: 0
-    Speed: 0
-    Attack: 0
-    JumpHeight: 0
+  - Name: Player 1
+    Looks: {fileID: 4662355468715660301, guid: a493212b331009947938e2a8355386fe, type: 3}
+  - Name: Player 2
+    Looks: {fileID: 4268156501908387313, guid: 0fbb91b766c5e8d4a9dfc411aead2acf, type: 3}
