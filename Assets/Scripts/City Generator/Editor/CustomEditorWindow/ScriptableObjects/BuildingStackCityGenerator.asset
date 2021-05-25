@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be9c96d81d36c3241b2e806a00b05f94, type: 3}
+  m_Name: BuildingStackCityGenerator
+  m_EditorClassIdentifier: 
+  BuildingPrefabs:
+  - {fileID: 919132149155446097, guid: 8960356da1dddc84482c2c4860180c9e, type: 3}
+  - {fileID: 919132149155446097, guid: cbee9c0f4a7b8e34f9dfb669e79134c6, type: 3}
+  - {fileID: 919132149155446097, guid: 0568d347b1bb6cd428e7e6ea7147879d, type: 3}
+  - {fileID: 919132149155446097, guid: a14a7ba8f3e08a54c9bdfa4b10686f15, type: 3}
+  BaseFloorPrefabs:
+  - {fileID: 919132149155446097, guid: 91755baf00722c147a7bb50eccce4111, type: 3}
+  NormalFloorPrefabs:
+  - {fileID: 919132149155446097, guid: 75183dde297f28d4d9cd7403b8f2d438, type: 3}
+  RoofPrefabs:
+  - {fileID: 919132149155446097, guid: ce8bb561139fe2c44be4d878526f4b3f, type: 3}
+  BuildingParent: []
+  SpawnOrigin: {x: 0, y: 1, z: 0}
+  GridSize: {x: 2, y: 5}
+  BuildingOffset: 20
+  BuildingStackHeight: 1
+  MaxBuildingStackHeight: 5
+  DesetroyLastOnGenerate: 1
+  UseStackedBuildings: 0
+  RandomHeight: 1

@@ -3,7 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Phone
+  - Test
+  - NPC
+  - Dialogue
+  - NPCManager
+  - PickupManager
+  - ResponsePanel
+  - PlayerDialoguePanel
+  - PlayerCustomization
+  - PlayerChooser
+  - PlayerCharacter
+  - QuestPanel
   layers:
   - Default
   - TransparentFX

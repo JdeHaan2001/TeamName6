@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
+  m_Name: Prickly Pete
+  m_EditorClassIdentifier: 
+  Name: Prickly Pete
+  Picture: {fileID: 21300000, guid: 8c0b0d7a12e825f4a95ba887a645af91, type: 3}
+  Dialogue:
+  - Hello!
+  - 'You are in the biggest social city in the world, the place where the least social
+    person can become an internet sensation. How have you never heard of socialite
+    stad?
+
+'
+  - 'Did you forget my name already? I am Prickly Pete. I will be your guide and
+    will help you through the city.
+
+'
+  - 'I could not tell you even if I wanted to, people just appear in this city every
+    now and then and no one knows how.
+
+'
+  - 'Ahh straight to the point, I like it! You are here because you need to become
+    the biggest sensation in this world, you need to do this by getting followers
+    and you get followers by doing missions/quests.
+
+'
+  - 'Wanting to start already! I haven''t seen someone this enthusiastic in a long
+    time. Before you actually can get started with exploring the city and starting
+    getting famous, you need to get a phone to get access to social media. Lucky
+    for you I know someone who can give you a phone. You will need to pick it up
+    yourself though. You will get rewarded for  1!
+
+'
+  PlayerDialogue:
+  - Where am I?
+  - Who are you?
+  - How did I get here?
+  - Why am I here?
+  NewQuestion:
+  - How do I get started?
+  WhenToShowNewDialogue: 3
+  ChoosingDialogue: 0
+  Quests:
+  - {fileID: 11400000, guid: 3fa0df67996863e49ba42374ab148b72, type: 2}
+  ToBeReplaced:
+  - 1
+  ConversationFinished: 0
