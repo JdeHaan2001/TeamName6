@@ -1,0 +1,61 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SpawnCVert : MonoBehaviour
+{
+
+    public bool goUp = false;
+    public bool goDown = false;
+
+    public List<GameObject> items = new List<GameObject>();
+    public List<SpawnerVert> spawnerUp = new List<SpawnerVert>();
+    public List<SpawnerVert> spawnerDown = new List<SpawnerVert>();
+
+
+    void Start()
+    {
+
+        int itemId = Random.Range(0, items.Count);
+        GameObject item = items[itemId];
+
+        int direction = Random.Range(0, 2);
+
+
+        if (direction > 0)
+        {
+
+            goUp = false;
+            goDown = true;
+
+        }
+        else
+        {
+            goUp = true;
+            goDown = false;
+
+        }
+
+
+        for (int i = 0; i < spawnerUp.Count; i++)
+        {
+
+            spawnerUp[i].item = item;
+            spawnerUp[i].goUp = goUp;
+            spawnerUp[i].gameObject.SetActive(goUp);
+            spawnerUp[i].spawnLPos = spawnerUp[i].transform.position.x;
+
+        }
+
+        for (int i = 0; i < spawnerDown.Count; i++)
+        {
+
+            spawnerDown[i].item = item;
+            spawnerDown[i].goDown = goDown;
+            spawnerDown[i].gameObject.SetActive(goDown);
+            spawnerDown[i].spawnRPos = spawnerDown[i].transform.position.x;
+
+        }
+
+    }
+}
