@@ -375,7 +375,7 @@ GameObject:
   - component: {fileID: 5735500329335525533}
   - component: {fileID: -7409800950093904347}
   m_Layer: 0
-  m_Name: Variant1
+  m_Name: Varient5
   m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -808,7 +808,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2e4aa488f11738a42924e415c943547d, type: 2}
+  - {fileID: 5561349426305759274, guid: a7f0509108d29ee48b146ea982c05306, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -833,7 +833,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 0
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: 6622264641530768373, guid: 54871efbf0cc0794281f70c2b31b2afa, type: 3}
+  m_Mesh: {fileID: 6622264641530768373, guid: a7f0509108d29ee48b146ea982c05306, type: 3}
   m_Bones:
   - {fileID: 1799449784338242563}
   - {fileID: 9025883914799970422}

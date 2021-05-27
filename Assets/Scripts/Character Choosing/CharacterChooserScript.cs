@@ -31,9 +31,6 @@ public class CharacterChooserScript : MonoBehaviour
 
     [SerializeField] private UIButtonFunctions _uiButtonFunctions;
 
-    [HideInInspector] private bool _chooseNextPlayer;
-    [HideInInspector] private bool _playerCanSpawn;
-
     [HideInInspector] public int playerToShow;
 
     private void Awake()
@@ -62,7 +59,6 @@ public class CharacterChooserScript : MonoBehaviour
         if (_uiButtonFunctions.playerChosen == true)
         {
             PlayerPrefs.SetInt("playerToPlay", playerToShow);
-            _playerCanSpawn = true;
             _uiButtonFunctions.playerChosen = false;
         }
     }
@@ -169,6 +165,7 @@ public class CharacterChooserScript : MonoBehaviour
         }
         return null;
     }
+
     private void spawnOtherPlayer()
     {
         Destroy(GameObject.FindWithTag("PlayerCharacter"));
