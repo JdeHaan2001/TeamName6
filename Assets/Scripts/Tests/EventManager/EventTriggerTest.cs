@@ -11,17 +11,23 @@ public class EventTriggerTest : MonoBehaviour
             EventManager.TriggerEvent("test");
         }
 
-        if (Input.GetKey("w"))
+        if (Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d"))
         {
             EventManager.TriggerEvent("walk");
+
+            if (Input.GetKey("left shift"))
+            {
+                EventManager.TriggerEvent("sprint");
+            }
         }
-        else if (Input.GetKeyDown(KeyCode.Space))
+        else if (Input.GetKeyDown("space"))
         {
-            EventManager.TriggerEvent("Jump");
+            EventManager.TriggerEvent("jump");
         }
         else
         {
             EventManager.TriggerEvent("idle");
         }
+
     }
 }
