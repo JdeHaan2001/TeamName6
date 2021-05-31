@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    [SerializeField] private AudioMixer masterMixer = null;
-
     FMOD.Studio.Bus _master;
     FMOD.Studio.Bus _music;
     FMOD.Studio.Bus _SFX;
@@ -56,6 +54,20 @@ public class SettingsMenu : MonoBehaviour
         {
             pButton.gameObject.SetActive(true);
             _SFX.setMute(true);
+        }
+    }
+
+    public void SetReadActive(Image pImage)
+    {
+        if (pImage.gameObject.activeInHierarchy)
+        {
+            pImage.gameObject.SetActive(false);
+            _readAloud.setMute(false);
+        }
+        else
+        {
+            pImage.gameObject.SetActive(true);
+            _readAloud.setMute(true);
         }
     }
 }
