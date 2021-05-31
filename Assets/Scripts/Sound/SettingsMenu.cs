@@ -28,8 +28,6 @@ public class SettingsMenu : MonoBehaviour
     public void SetVolume(float pVolume)
     {
         _music.setVolume(pVolume);
-        //masterMixer.SetFloat("Volume", pVolume);
-        //lastVolume = pVolume;
         Debug.Log(pVolume);
     }
 
@@ -38,12 +36,12 @@ public class SettingsMenu : MonoBehaviour
         if (pButton.gameObject.activeInHierarchy)
         {
             pButton.gameObject.SetActive(false);
-            _music.setMute(false);
+            _music.setMute(true);
         }
         else
         {
             pButton.gameObject.SetActive(true);
-            _music.setMute(true);
+            _music.setMute(false);
         }
     }
 
