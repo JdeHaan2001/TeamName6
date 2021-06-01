@@ -47,7 +47,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (_animator.GetBool("isWalking") == false)
         {
-            Debug.Log("EventManager enabled walking.");
+            //Debug.Log("EventManager enabled walking.");
             _animator.SetBool("isWalking", true);
         }
 
@@ -69,7 +69,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (_animator.GetBool("isSprinting") == false)
         {
-            Debug.Log("EventManager enabled running.");
+            //Debug.Log("EventManager enabled running.");
             _animator.SetBool("isSprinting", true);
         }
 
@@ -84,7 +84,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (_animator.GetBool("isIdle") == false)
         {
-            Debug.Log("EventManager enabled idle.");
+            //Debug.Log("EventManager enabled idle.");
             _animator.SetBool("isIdle", true);
         }
 
@@ -102,7 +102,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (_animator.GetBool("isJumping") == false)
         {
-            Debug.Log("EventManager enabled jumping.");
+            //Debug.Log("EventManager enabled jumping.");
             _animator.SetBool("isJumping", true);
         }
 
