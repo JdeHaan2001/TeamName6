@@ -24,12 +24,16 @@ public class PhoneActivation : MonoBehaviour
                 // Play activate animation
                 animator.Play("OpenPhone");
                 _isActive = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
             }
             else
             {
                 // Play de-activate animation
                 animator.Play("ClosePhone");
                 _isActive = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
             }
         }
     }
