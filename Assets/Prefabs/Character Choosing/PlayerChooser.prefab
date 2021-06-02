@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2191957884210638701}
   - component: {fileID: 8756554686509991819}
   - component: {fileID: 312530650010777810}
+  - component: {fileID: 677831302}
   m_Layer: 0
   m_Name: PlayerChooser
   m_TagString: PlayerChooser
@@ -126,6 +127,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 0}
-  Explosion: {fileID: 0}
-  StartButton: {fileID: 0}
+  ButtonTitle: {fileID: 0}
+  GOSkinButtons: {fileID: 0}
+  GOHairButtons: {fileID: 0}
+  _uiButtonFunctions: {fileID: 0}
   playerToShow: 0
+--- !u!114 &677831302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331515408553971608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15734556660720848abaa193d536a14e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
