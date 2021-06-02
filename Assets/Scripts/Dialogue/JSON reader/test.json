@@ -1,5 +1,5 @@
-{
-    "Name": "Prickly Pete",
+  {
+    "Name": "Prickly Pete test",
 
     "Dialogue": [
                 "Hello!",
@@ -26,7 +26,7 @@
                 "How do I get started?"
             ],
 
-    "NewDialogueFile": "test",
+    "NewDialogueFile": "test.json",
     "WhenToShowNewDialogue": 3,
     "ChoosingDialogue": false,
     "ToBeReplaced": [

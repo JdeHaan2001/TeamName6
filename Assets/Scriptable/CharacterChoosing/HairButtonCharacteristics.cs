@@ -9,6 +9,8 @@ public class HairButtonCharacteristics
     public string Title;
 
     public HairTypes HairTypes;
+
+    public Color ButtonColor;
 }
 
 public enum HairTypes

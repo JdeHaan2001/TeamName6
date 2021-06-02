@@ -14,6 +14,7 @@ public class JsonNpc
     public string[] PlayerDialogue;
 
     public string[] ExtraDialogue;
+    public TextAsset NewDialogueFile;
     public int WhenToShowNewDialogue;
     public bool ChoosingDialogue;
 
@@ -22,27 +23,6 @@ public class JsonNpc
 
 public class JsonReader : MonoBehaviour
 {
-    //=================== Set from Unity editor =======================
-    // file to read npc from
-    public TextAsset jsonFile;
-    public static JsonNpc NPC;
-
-
-    void Awake()
-    {
-        //jsonFile = GameObject.FindGameObjectWithTag("NPC").GetComponent<DialogueManager>().Npc.NpcDialogue;
-    }
-
-    //=================== MonoBehavior interface =======================
-    void Start()
-    {
-        NPC = LoadNpcFromFile();
-    }
-
-    //======================= public API =================================
-
-
-    // create one instance of the TrialController for the app
     private static JsonReader jsonReader;
     public static JsonReader Instance()
     {
@@ -59,7 +39,7 @@ public class JsonReader : MonoBehaviour
         return jsonReader;
     }
 
-    private JsonNpc LoadNpcFromFile()
+    public static JsonNpc LoadNpcFromFile(TextAsset jsonFile)
     {
         Assert.IsNotNull(jsonFile);
 

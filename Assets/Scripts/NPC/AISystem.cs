@@ -58,6 +58,10 @@ public class AISystem : StateMachine
                 {
                     StartCoroutine(State.Follow());
                 }
+                else if (Vector3.Distance(transform.position, Player.transform.position) > 10f && transform.position != StartPos)
+                {
+                    StartCoroutine(State.Return());
+                }
             }
             if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
             {

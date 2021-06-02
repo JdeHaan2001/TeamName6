@@ -127,6 +127,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScript: {fileID: 0}
+  ButtonTitle: {fileID: 0}
+  GOSkinButtons: {fileID: 0}
+  GOHairButtons: {fileID: 0}
   _uiButtonFunctions: {fileID: 0}
   playerToShow: 0
 --- !u!114 &677831302

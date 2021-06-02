@@ -3327,11 +3327,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2418442329404543982, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000008560947
+      value: 0.000000008560945
       objectReference: {fileID: 0}
     - target: {fileID: 2418442329404543982, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 8.5152807e-10
+      value: -8.515279e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2418442329665755098, guid: e7f0aae7a9170d94d90599274af69fd1, type: 3}
       propertyPath: m_RootOrder
@@ -4084,7 +4084,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76b34a22f3b10fc49a44f906029e7eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jsonFile: {fileID: 4900000, guid: c3f157a15e9e24a41ac4eda855a60041, type: 3}
 --- !u!4 &2265470678938857890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8135123147444538722, guid: 8f7cc072f83bfa446868c100e6874d21, type: 3}

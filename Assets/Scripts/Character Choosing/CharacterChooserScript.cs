@@ -16,6 +16,7 @@ public class CharacterChooserScript : MonoBehaviour
     [HideInInspector] private ChoosingButtonManager _buttonManager;
     [HideInInspector] private GameObject _buttonTemplate;
     [SerializeField] public TextMeshProUGUI ButtonTitle;
+    [SerializeField] public Sprite ButtonBackground;
 
     [HideInInspector] private List<GameObject> _skinButtonsList = new List<GameObject>();
     [HideInInspector] private List<GameObject> _hairButtonsList = new List<GameObject>();
@@ -72,6 +73,7 @@ public class CharacterChooserScript : MonoBehaviour
                 for (int i = 0; i < _buttonManager.SkinTypesButton.Length; i++)
                 {
                     ButtonTitle.text = _buttonManager.SkinTypesButton[i].Title;
+                    _buttonTemplate.GetComponent<Image>().color = _buttonManager.SkinTypesButton[i].ButtonColor;
                     var InstantiatedSkinButtons = Instantiate(_buttonTemplate);
 
                     _skinButtonsList.Add(InstantiatedSkinButtons);
@@ -82,6 +84,7 @@ public class CharacterChooserScript : MonoBehaviour
                 for (int i = 0; i < _buttonManager.HairTypesButton.Length; i++)
                 {
                     ButtonTitle.text = _buttonManager.HairTypesButton[i].Title;
+                    _buttonTemplate.GetComponent<Image>().color = _buttonManager.HairTypesButton[i].ButtonColor;
                     var InstantiatedHairButtons = Instantiate(_buttonTemplate);
 
                     _hairButtonsList.Add(InstantiatedHairButtons);
@@ -131,10 +134,10 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_currentSkinType != buttonNumber)
             {
-                _skinButtonsList[_currentSkinType].GetComponent<Image>().color = Color.white;
+                _skinButtonsList[_currentSkinType].GetComponent<Image>().color = _buttonManager.SkinTypesButton[_currentSkinType].ButtonColor;
             }
         }
-        _skinButtonsList[buttonNumber].GetComponent<Image>().color = Color.red;
+        _skinButtonsList[buttonNumber].GetComponent<Image>().color = Color.green;
         _currentSkinType = buttonNumber;
     }
 
@@ -144,10 +147,10 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_currentHairType != buttonNumber)
             {
-                _hairButtonsList[_currentHairType].GetComponent<Image>().color = Color.white;
+                _hairButtonsList[_currentHairType].GetComponent<Image>().color = _buttonManager.HairTypesButton[_currentHairType].ButtonColor;
             }
         }
-        _hairButtonsList[buttonNumber].GetComponent<Image>().color = Color.red;
+        _hairButtonsList[buttonNumber].GetComponent<Image>().color = Color.green;
         _currentHairType = buttonNumber;
     }
 

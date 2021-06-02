@@ -9,6 +9,8 @@ public class SkinButtonCharacteristics
     public string Title;
 
     public SkinTypes SkinTypes;
+
+    public Color ButtonColor;
 }
 
 public enum SkinTypes
