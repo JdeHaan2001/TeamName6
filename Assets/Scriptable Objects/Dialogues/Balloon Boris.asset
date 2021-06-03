@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Balloon Boris
   m_EditorClassIdentifier: 
   Picture: {fileID: 21300000, guid: 1c3e893449b1386499a5fa63882c6c91, type: 3}
-  NpcDialogue: {fileID: 4900000, guid: c3f157a15e9e24a41ac4eda855a60041, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: 92f3f1d50548ddb4baba794f59aaa4f5, type: 3}
   Quests: []
   ConversationFinished: 0
