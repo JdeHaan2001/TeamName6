@@ -70,7 +70,7 @@ public class BuildingScriptableObject : ScriptableObject
         GameObject other = PrefabUtility.InstantiatePrefab(BaseFloorPrefabs[Random.Range(0, BaseFloorPrefabs.Count)], buildingParent.transform) as GameObject;
         other.transform.position = new Vector3(pGridOffset * pX, pOrigin.y, pGridOffset * pZ);
         heightOffset += getHeightOffset(other);
-        other.tag = "Floor";
+        other.tag = "BaseFloor";
 
         for (int i = 0; i < pHeight; i++)
         {
@@ -83,7 +83,7 @@ public class BuildingScriptableObject : ScriptableObject
         GameObject roof = PrefabUtility.InstantiatePrefab(RoofPrefabs[Random.Range(0, RoofPrefabs.Count)], buildingParent.transform) as GameObject;
         roof.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
         Debug.Log(roof.transform.position.y + "       " + heightOffset);
-        roof.tag = "Floor";
+        roof.tag = "Roof";
     }
 
     private float getHeightOffset(GameObject pFloor)

@@ -131,7 +131,10 @@ public class BuildingStackGenerator : EditorWindow
         GUILayout.Label("Building Customizer", EditorStyles.boldLabel);
 
         _newHeight = EditorGUILayout.IntField("New Building Height", _newHeight);
+        foreach (GameObject obj in Selection.gameObjects)
+        {
 
+        }
         _selectedBaseFloorInt = EditorGUILayout.Popup("Base Floors", _selectedBaseFloorInt, _baseFloorNames.ToArray(), EditorStyles.popup);
         _selectedFloorInt = EditorGUILayout.Popup("Floors", _selectedFloorInt, _floorNames.ToArray(), EditorStyles.popup);
         _selectedRoofInt = EditorGUILayout.Popup("Roofs", _selectedRoofInt, _roofNames.ToArray(), EditorStyles.popup);
@@ -157,7 +160,7 @@ public class BuildingStackGenerator : EditorWindow
     {
         foreach (GameObject obj in Selection.gameObjects)
         {
-            if (obj.tag == "Building")
+            if (obj.tag == "Building" && _selectedBuildingInt <= _buildingSO.BuildingPrefabs.Count)
             {
                 Vector3 newPosition = obj.transform.position;
                 GameObject newObj = PrefabUtility.InstantiatePrefab(_buildingSO.BuildingPrefabs[_selectedBuildingInt], obj.transform.parent) as GameObject;
@@ -180,9 +183,29 @@ public class BuildingStackGenerator : EditorWindow
                 _buildingSO.StackBuilding(obj.transform.parent, obj.transform.position, _buildingOffset, 0, 0, _newHeight);
                 DestroyImmediate(obj);
             }
-            else if (obj.tag == "Floor")
+            else if (obj.tag == "BaseFloor" && _selectedBaseFloorInt <= _buildingSO.BaseFloorPrefabs.Count)
             {
-
+                GameObject newFloor = PrefabUtility.InstantiatePrefab(_buildingSO.BaseFloorPrefabs[_selectedBaseFloorInt], obj.transform.parent) as GameObject;
+                newFloor.transform.position = obj.transform.position;
+                newFloor.transform.rotation = obj.transform.rotation;
+                newFloor.tag = obj.tag;
+                DestroyImmediate(obj);
+            }
+            else if (obj.tag == "Floor" && _selectedFloorInt <= _buildingSO.NormalFloorPrefabs.Count)
+            {
+                GameObject newFloor = PrefabUtility.InstantiatePrefab(_buildingSO.NormalFloorPrefabs[_selectedFloorInt], obj.transform.parent) as GameObject;
+                newFloor.transform.position = obj.transform.position;
+                newFloor.transform.rotation = obj.transform.rotation;
+                newFloor.tag = obj.tag;
+                DestroyImmediate(obj);
+            }
+            else if (obj.tag == "Roof" && _selectedRoofInt <= _buildingSO.RoofPrefabs.Count)
+            {
+                GameObject newRoof = PrefabUtility.InstantiatePrefab(_buildingSO.NormalFloorPrefabs[_selectedRoofInt], obj.transform.parent) as GameObject;
+                newRoof.transform.position = obj.transform.position;
+                newRoof.transform.rotation = obj.transform.rotation;
+                newRoof.tag = obj.tag;
+                DestroyImmediate(obj);
             }
         }
     }
@@ -191,17 +214,29 @@ public class BuildingStackGenerator : EditorWindow
     {
         if (!_useStackedBuildings)
         {
-            foreach (GameObject obj in _buildingSO.BuildingPrefabs)
-                _buildingPrefabNames.Add(obj.name);
+            if (_buildingSO.BuildingPrefabs != null && _buildingSO.BuildingPrefabs.Count > 0)
+            {
+                foreach (GameObject obj in _buildingSO.BuildingPrefabs)
+                    _buildingPrefabNames.Add(obj.name);
+            }
         }
         else
         {
-            foreach (GameObject obj in _buildingSO.BaseFloorPrefabs)
-                _baseFloorNames.Add(obj.name);
-            foreach (GameObject obj in _buildingSO.NormalFloorPrefabs)
-                _floorNames.Add(obj.name);
-            foreach (GameObject obj in _buildingSO.RoofPrefabs)
-                _roofNames.Add(obj.name);
+            if (_buildingSO.BaseFloorPrefabs != null && _buildingSO.BaseFloorPrefabs.Count > 0)
+            {
+                foreach (GameObject obj in _buildingSO.BaseFloorPrefabs)
+                    _baseFloorNames.Add(obj.name);
+            }
+            if (_buildingSO.NormalFloorPrefabs != null && _buildingSO.NormalFloorPrefabs.Count > 0)
+            {
+                foreach (GameObject obj in _buildingSO.NormalFloorPrefabs)
+                    _floorNames.Add(obj.name);
+            }
+            if (_buildingSO.RoofPrefabs != null && _buildingSO.RoofPrefabs.Count > 0)
+            {
+                foreach (GameObject obj in _buildingSO.RoofPrefabs)
+                    _roofNames.Add(obj.name);
+            }
         }
     }
 }
