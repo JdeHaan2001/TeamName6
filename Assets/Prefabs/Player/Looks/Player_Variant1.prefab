@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 5844932809260336613}
   - component: {fileID: -3067729935706507281}
   m_Layer: 0
-  m_Name: TestVariant1
+  m_Name: Player_Variant1
   m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2261,7 +2261,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2e4aa488f11738a42924e415c943547d, type: 2}
+  - {fileID: 2100000, guid: 31aae3a2a1053594ebaf7bce8441cd82, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

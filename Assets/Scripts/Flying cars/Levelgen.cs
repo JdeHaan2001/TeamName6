@@ -8,6 +8,8 @@ public class Levelgen : MonoBehaviour
     public List<GameObject> levelGround = new List<GameObject>();
     public List<float> height = new List<float>();
 
+    [SerializeField] public GameObject Cars;
+
     private int randomRange = 0;
     private float lastPos = 0;
     private float lastScale = 0;
@@ -44,6 +46,8 @@ public class Levelgen : MonoBehaviour
             lastScale = go.transform.localScale.z;
 
             go.transform.parent = this.transform;
+
+            go.transform.SetParent(Cars.transform, false);
 
         }
 

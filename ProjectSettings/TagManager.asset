@@ -18,6 +18,7 @@ TagManager:
   - Test
   - ChooseButtonManager
   - ChoosingButtonTemplate
+  - Cars
   layers:
   - Default
   - TransparentFX
