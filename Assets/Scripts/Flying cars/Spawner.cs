@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
+    [SerializeField] public GameObject Cars;
 
     public Transform startPos = null;
     public float delayMin = 1.5f;
@@ -24,27 +25,32 @@ public class Spawner : MonoBehaviour
     [HideInInspector] public float spawnLPos = 10;
     [HideInInspector] public float spawnRPos = 10;
 
+    void Awake()
+    {
+        Cars = GameObject.FindGameObjectWithTag("Cars");
+    }
+
     void Start()
     {
 
-        if (spawnPlace)
-        {
+        //if (spawnPlace)
+        //{
 
-            int spawnCount = Random.Range(spawnCountMin, spawnCountMax);
+        int spawnCount = Random.Range(spawnCountMin, spawnCountMax);
 
-            for (int i=0; i < spawnCount; i++)
-            {
+        //    for (int i=0; i < spawnCount; i++)
+        //    {
 
-                SpawnItem();
+        //        SpawnItem();
 
-            }
-        }
-        else
-        {
+        //    }
+        //}
+        //else
+        //{
 
-            speed = Random.Range(speedMin, speedMax);
+        //    speed = Random.Range(speedMin, speedMax);
 
-        }
+        //}
     }
 
     void Update()
@@ -82,6 +88,8 @@ public class Spawner : MonoBehaviour
 
             obj.transform.rotation = obj.transform.rotation * Quaternion.Euler(0, direction, 0);
         }
+
+        obj.transform.SetParent(Cars.transform, false);
     }
 
     Vector3 GetSpawnPos()

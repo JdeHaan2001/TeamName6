@@ -15,5 +15,5 @@ MonoBehaviour:
   Picture: {fileID: 21300000, guid: 8c0b0d7a12e825f4a95ba887a645af91, type: 3}
   NpcDialogue: {fileID: 4900000, guid: c3f157a15e9e24a41ac4eda855a60041, type: 3}
   Quests:
-  - {fileID: 11400000, guid: 3fa0df67996863e49ba42374ab148b72, type: 2}
+  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
   ConversationFinished: 0
