@@ -3,29 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - NPC
-  - Dialogue
-  - NPCManager
-  - PickupManager
-  - ResponsePanel
-<<<<<<< HEAD
-  - StackBuilding
-  - Building
-  - Floor
-  - BaseFloor
-  - Roof
-=======
-  - PlayerDialoguePanel
-  - PlayerCustomization
-  - PlayerChooser
-  - ChooseButtons
-  - PlayerCharacter
-  - QuestPanel
-  - Test
-  - ChooseButtonManager
-  - ChoosingButtonTemplate
->>>>>>> Testing
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -35,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Not in Reflection
+  - 
+  - 
   - 
   - 
   - 
