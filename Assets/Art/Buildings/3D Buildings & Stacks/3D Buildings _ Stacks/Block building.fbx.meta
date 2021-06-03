@@ -3,7 +3,12 @@ guid: 884ed5025ba4100499c796322c263050
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Strider_Moore_Building
+    second: {fileID: 2100000, guid: 3651e639d1005e441983c44c62639d04, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

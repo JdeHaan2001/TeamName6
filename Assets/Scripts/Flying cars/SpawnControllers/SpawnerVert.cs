@@ -40,24 +40,24 @@ public class SpawnerVert : MonoBehaviour
     void Start()
     {
 
-        //if (spawnPlace)
-        //{
+        if (spawnPlace)
+        {
 
-         int spawnCount = Random.Range(spawnCountMin, spawnCountMax);
+            int spawnCount = Random.Range(spawnCountMin, spawnCountMax);
 
-        //    for (int i = 0; i < spawnCount; i++)
-        //    {
+            for (int i = 0; i < spawnCount; i++)
+            {
 
-        //        SpawnItem();
+                SpawnItem();
 
-        //    }
-        //}
-        //else
-        //{
+            }
+        }
+        else
+        {
 
-        //    speed = Random.Range(speedMin, speedMax);
+            speed = Random.Range(speedMin, speedMax);
 
-        //}
+        }
     }
 
     void Update()
