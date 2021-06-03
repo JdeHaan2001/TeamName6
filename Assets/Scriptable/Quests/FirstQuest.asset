@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 936132cddca12004a9cb85aff5affc52, type: 3}
   m_Name: FirstQuest
   m_EditorClassIdentifier: 
-  IsActive: 0
-  Title: First Followers
-  Description: This is a quest to get your first followers!
-  FollowersReward: 5
-  MoneyReward: 5
+  IsActive: 1
+  Title: First Quest
+  Description: You have to get the phone so that your social adventure can start!
+  FollowersReward: 100
+  MoneyReward: 0
   Goal:
-    goalType: 0
+    goalType: 2
     requiredAmount: 1
     currentAmount: 0
-    ItemToGet: Phone
+    ItemToGet: 
+    npcToTalkTo: {fileID: 11400000, guid: 55214201bf22db1478fbe84ebc0f3f33, type: 2}

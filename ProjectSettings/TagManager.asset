@@ -4,18 +4,28 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Phone
-  - Test
   - NPC
   - Dialogue
   - NPCManager
   - PickupManager
   - ResponsePanel
+<<<<<<< HEAD
   - StackBuilding
   - Building
   - Floor
   - BaseFloor
   - Roof
+=======
+  - PlayerDialoguePanel
+  - PlayerCustomization
+  - PlayerChooser
+  - ChooseButtons
+  - PlayerCharacter
+  - QuestPanel
+  - Test
+  - ChooseButtonManager
+  - ChoosingButtonTemplate
+>>>>>>> Testing
   layers:
   - Default
   - TransparentFX

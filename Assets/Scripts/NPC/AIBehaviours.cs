@@ -23,6 +23,12 @@ public class AIBehaviours : State
 
         //Following the position of the player.
         _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+        
+
+        //new Implementation to lock the x and z axis, so it can't go up/down
+        //Vector3 difference = _system.transform.position - _system.Player.transform.position;
+        //float rotationY = Mathf.Atan2(difference.z, difference.x) * Mathf.Rad2Deg;
+        //_system.transform.rotation = Quaternion.Euler(0.0f, rotationY, 0.0f);
 
         yield break;
     }
@@ -33,6 +39,7 @@ public class AIBehaviours : State
 
         //Walking back to the starting position.
         _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
+        _system.transform.rotation = _system.StartAngle;
 
         yield break;
     }
@@ -45,7 +52,6 @@ public class AIBehaviours : State
             {
                 _system.IsInteracting = true;
                 _system.DialogueManager.StartConversation();
-                _system.QuestGiver.OpenQuestWindow();
             }
             else if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == true)
             {

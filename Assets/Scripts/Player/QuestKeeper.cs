@@ -12,24 +12,31 @@ public class QuestKeeper : MonoBehaviour
 
     public void UpdateQuest()
     {
-        if (Quest.IsActive == true)
+        if (Quest != null)
         {
-            if(Quest.Goal.goalType == GoalType.Gathering)
+            if (Quest.IsActive == true)
             {
-                Quest.Goal.ItemGathered();
-            }
+                if (Quest.Goal.goalType == GoalType.Gathering)
+                {
+                    Quest.Goal.ItemGathered();
+                }
 
-            if(Quest.Goal.goalType == GoalType.Picking)
-            {
-                Quest.Goal.ItemPicked();
-            }
+                if (Quest.Goal.goalType == GoalType.Picking)
+                {
+                    Quest.Goal.ItemPicked();
+                }
+                if (Quest.Goal.goalType == GoalType.Talking)
+                {
+                    Quest.Goal.TalkedToNPC();
+                }
 
-            if (Quest.Goal.IsReached())
-            {
-                Followers += Quest.FollowersReward;
-                Money += Quest.MoneyReward;
-                Quest.Complete();
-                Quest.IsActive = false;
+                if (Quest.Goal.IsReached())
+                {
+                    Followers += Quest.FollowersReward;
+                    Money += Quest.MoneyReward;
+                    Quest.Complete();
+                    Quest.IsActive = false;
+                }
             }
         }
     }
