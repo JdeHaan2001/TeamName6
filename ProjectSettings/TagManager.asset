@@ -11,6 +11,9 @@ TagManager:
   - NPCManager
   - PickupManager
   - ResponsePanel
+  - StackBuilding
+  - Building
+  - Floor
   layers:
   - Default
   - TransparentFX

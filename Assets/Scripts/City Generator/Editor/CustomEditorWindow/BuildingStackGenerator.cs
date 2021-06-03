@@ -1,11 +1,17 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.SceneManagement;
 
 public class BuildingStackGenerator : EditorWindow
 {
     private List<GameObject> _buildingParents = new List<GameObject>();
+
+    private List<string> _buildingPrefabNames = new List<string>();
+    private List<string> _baseFloorNames = new List<string>();
+    private List<string> _floorNames = new List<string>();
+    private List<string> _roofNames = new List<string>();
 
     private BuildingScriptableObject _buildingSO = null;
 
@@ -18,9 +24,16 @@ public class BuildingStackGenerator : EditorWindow
     private bool _destroyLastOnGenerate = true;
     private bool _useStackedBuildings = false;
     private bool _randomBuildingHeight = false;
+    private bool _hasBuildingsSelected = false;
+    private bool _hasRepainted = false;
 
     private int _buildingHeight = 1;
     private int _maxBuildingHeight = 3;
+    private int _selectedBuildingInt = 0;
+    private int _selectedBaseFloorInt = 0;
+    private int _selectedFloorInt = 0;
+    private int _selectedRoofInt = 0;
+    private int _newHeight = 0;
 
     [MenuItem("Custom Menu/City Generator/Stack Buildings")]
     private static void init()
@@ -30,6 +43,8 @@ public class BuildingStackGenerator : EditorWindow
         window.maxSize = new Vector3(600, 400);
         window.Show();
     }
+
+    private void OnEnable() => resetList();
 
     private void OnGUI()
     {
@@ -41,13 +56,13 @@ public class BuildingStackGenerator : EditorWindow
         else
         {
             SerializedObject serialObj = new SerializedObject(_buildingSO);
-            
 
             _buildingSO.UseStackedBuildings = _useStackedBuildings = EditorGUILayout.Toggle(new GUIContent("Use building stacker", "If set to TRUE, " +
                                                                                                            "multiple lists wil show to add floor prefabs " +
                                                                                                            "for the building stacker"), _useStackedBuildings);
             if (_useStackedBuildings)
             {
+                resetList();
                 GUILayout.Label("Stacked Building", EditorStyles.boldLabel);
                 SerializedProperty serialBaseFloor = serialObj.FindProperty("BaseFloorPrefabs");
                 EditorGUILayout.PropertyField(serialBaseFloor, true);
@@ -69,6 +84,7 @@ public class BuildingStackGenerator : EditorWindow
             }
             else
             {
+                resetList();
                 SerializedProperty serialProp = serialObj.FindProperty("BuildingPrefabs");
 
                 EditorGUILayout.PropertyField(serialProp, true);
@@ -84,82 +100,108 @@ public class BuildingStackGenerator : EditorWindow
                                                                                                                 "the previously generated buildings will be destroyed " +
                                                                                                                 "before new buildings are generated"), _destroyLastOnGenerate);
             EditorGUILayout.Space();
-            if (GUILayout.Button("Generate")) _buildingSO.Generate(_buildingSO.BuildingPrefabs, _buildingParents);
-                EditorGUILayout.Space();
+            if (GUILayout.Button("Generate"))
+            {
+                _buildingSO.Generate(_buildingSO.BuildingPrefabs, _buildingParents);
+                resetList();
+            }
+            EditorGUILayout.Space();
             if (GUILayout.Button("Delete All Buildings")) _buildingSO.DeleteBuildings(_buildingParents);
+            EditorGUILayout.Space();
+            EditorGUILayout.Space();
+
+            if (Selection.gameObjects != null && Selection.gameObjects.Length > 0)
+            {
+                if (!_useStackedBuildings)
+                    normalBuildingEditor();
+                else
+                    stackedBuildingEditor();
+            }
+            else
+            {
+                _hasRepainted = false;
+                EditorGUILayout.HelpBox("You need to select a game object", MessageType.Info);
+                Repaint();
+            }
         }
     }
 
-    //private void generate(Vector2Int pGridSize, List<GameObject> pBuildingPrefabs, Vector3 pOrigin, float pGridOffset)
-    //{
-    //    if(_destroyLastOnGenerate) deleteBuildings();
+    private void stackedBuildingEditor()
+    {
+        GUILayout.Label("Building Customizer", EditorStyles.boldLabel);
 
-    //    GameObject emptyGameObj = new GameObject($"Generated City {pGridSize.x} X {pGridSize.y}");
-    //    emptyGameObj.transform.position = pOrigin;
-    //    _buildingParents.Add(emptyGameObj);
+        _newHeight = EditorGUILayout.IntField("New Building Height", _newHeight);
 
-    //    for (int x = 0; x < pGridSize.x; x++)
-    //    {
-    //        for (int z = 0; z < pGridSize.y; z++)
-    //        {
-    //            if (_useStackedBuildings)
-    //                stackBuilding(emptyGameObj.transform, pOrigin, pGridOffset, x, z);
-    //            else
-    //                spawnBuildings(emptyGameObj.transform, x, z);
-    //        }
-    //    }
-    //    EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-    //}
+        _selectedBaseFloorInt = EditorGUILayout.Popup("Base Floors", _selectedBaseFloorInt, _baseFloorNames.ToArray(), EditorStyles.popup);
+        _selectedFloorInt = EditorGUILayout.Popup("Floors", _selectedFloorInt, _floorNames.ToArray(), EditorStyles.popup);
+        _selectedRoofInt = EditorGUILayout.Popup("Roofs", _selectedRoofInt, _roofNames.ToArray(), EditorStyles.popup);
 
-    //private void spawnBuildings(Transform pParent, int pX, int pZ)
-    //{
-    //    int randomIndex = Random.Range(0, _buildingSO.BuildingPrefabs.Count);
-    //    GameObject building = PrefabUtility.InstantiatePrefab(_buildingSO.BuildingPrefabs[randomIndex]) as GameObject;
-    //    building.transform.position = new Vector3(pX * _buildingOffset, _origin.y, pZ * _buildingOffset);
-    //}
+        if (GUILayout.Button("Apply Change")) regenerateStackedBuilding();
+    }
 
-    //private void stackBuilding(Transform pParent, Vector3 pOrigin, float pGridOffset, int pX, int pZ)
-    //{
-    //    int height;
-    //    float heightOffset = 0;
-    //    if (_randomBuildingHeight)
-    //        height = Random.Range(1, _maxBuildingHeight);
-    //    else
-    //        height = _buildingHeight;
+    private void normalBuildingEditor()
+    {
+        GUILayout.Label("Building Customizer", EditorStyles.boldLabel);
 
-    //    GameObject other = PrefabUtility.InstantiatePrefab(_buildingSO.BaseFloorPrefabs[Random.Range(0, _buildingSO.BaseFloorPrefabs.Count)], pParent) as GameObject;
-    //    other.transform.position = new Vector3(pGridOffset * pX, pOrigin.y, pGridOffset * pZ);
-    //    heightOffset += getHeightOffset(other);
+        _selectedBuildingInt = EditorGUILayout.Popup("Buildings", _selectedBuildingInt, _buildingPrefabNames.ToArray(), EditorStyles.popup);
 
-    //    for (int i = 0; i < height; i++)
-    //    {
-    //        GameObject floor = PrefabUtility.InstantiatePrefab(_buildingSO.NormalFloorPrefabs[Random.Range(0, _buildingSO.NormalFloorPrefabs.Count)], pParent) as GameObject;
-    //        floor.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
-    //        heightOffset += getHeightOffset(floor);
-    //    }
+        EditorGUILayout.Space();
+        if (GUILayout.Button("Apply Change"))
+        {
+            regenerateBuilding();
+            Repaint();
+        }
+    }
 
-    //    GameObject roof = PrefabUtility.InstantiatePrefab(_buildingSO.RoofPrefabs[Random.Range(0, _buildingSO.RoofPrefabs.Count)], pParent) as GameObject;
-    //    roof.transform.position = new Vector3(pGridOffset * pX, heightOffset, pGridOffset * pZ);
-    //    Debug.Log(roof.transform.position.y + "       " + heightOffset);
-    //}
+    private void regenerateBuilding()
+    {
+        foreach (GameObject obj in Selection.gameObjects)
+        {
+            if (obj.tag == "Building")
+            {
+                Vector3 newPosition = obj.transform.position;
+                GameObject newObj = PrefabUtility.InstantiatePrefab(_buildingSO.BuildingPrefabs[_selectedBuildingInt], obj.transform.parent) as GameObject;
+                newObj.transform.position = newPosition;
+                newObj.tag = "Building";
+                DestroyImmediate(obj);
+            }
+            else
+                Debug.LogError($"{obj.name} is not a building, select an object with the Building tag");
+        }
+        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
+    }
 
-    //private float getHeightOffset(GameObject pFloor)
-    //{
-    //    Mesh mesh = pFloor.GetComponent<MeshFilter>().sharedMesh;
-    //    Bounds bounds = mesh.bounds;
-    //    return bounds.size.y;
-    //}
+    private void regenerateStackedBuilding()
+    {
+        foreach (GameObject obj in Selection.gameObjects)
+        {
+            if (obj.tag == "StackBuilding")
+            {
+                _buildingSO.StackBuilding(obj.transform.parent, obj.transform.position, _buildingOffset, 0, 0, _newHeight);
+                DestroyImmediate(obj);
+            }
+            else if (obj.tag == "Floor")
+            {
 
-    //private void deleteBuildings()
-    //{
-    //    if (_buildingParents.Count > 0)
-    //    {
-    //        foreach (GameObject other in _buildingParents)
-    //            DestroyImmediate(other);
+            }
+        }
+    }
 
-    //        _buildingParents.Clear();
-
-    //        EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
-    //    }
-    //}
+    private void resetList()
+    {
+        if (!_useStackedBuildings)
+        {
+            foreach (GameObject obj in _buildingSO.BuildingPrefabs)
+                _buildingPrefabNames.Add(obj.name);
+        }
+        else
+        {
+            foreach (GameObject obj in _buildingSO.BaseFloorPrefabs)
+                _baseFloorNames.Add(obj.name);
+            foreach (GameObject obj in _buildingSO.NormalFloorPrefabs)
+                _floorNames.Add(obj.name);
+            foreach (GameObject obj in _buildingSO.RoofPrefabs)
+                _roofNames.Add(obj.name);
+        }
+    }
 }
