@@ -621,7 +621,7 @@ MonoBehaviour:
       enableBigTilePrepass: 0
       isFptlEnabled: 0
   clearColorMode: 0
-  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
+  backgroundColorHDR: {r: 0.0018211621, g: 0.14995982, b: 0.3813261, a: 1}
   clearDepth: 1
   volumeLayerMask:
     serializedVersion: 2
@@ -2407,27 +2407,27 @@ PrefabInstance:
       objectReference: {fileID: 902156417568634532, guid: 140ac02da6f3457478e4d3dd4763c9bd, type: 3}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[1].HairTypes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[1].SkinTypes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[2].HairTypes
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
-      propertyPath: Players.Array.data[2].SkinTypes
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
+      propertyPath: Players.Array.data[2].SkinTypes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[3].HairTypes
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[3].SkinTypes
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[4].HairTypes
@@ -2439,27 +2439,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[5].HairTypes
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[5].SkinTypes
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[6].HairTypes
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
-      propertyPath: Players.Array.data[6].SkinTypes
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
-      propertyPath: Players.Array.data[7].HairTypes
+      propertyPath: Players.Array.data[6].SkinTypes
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
-      propertyPath: Players.Array.data[7].SkinTypes
+      propertyPath: Players.Array.data[7].HairTypes
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
+      propertyPath: Players.Array.data[7].SkinTypes
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
       propertyPath: Players.Array.data[8].HairTypes
@@ -2724,23 +2724,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SkinTypesButton:
-  - Title: Pale
+  - Title: Licht
     SkinTypes: 0
     ButtonColor: {r: 0.9921569, g: 0.8078432, b: 0.7568628, a: 1}
-  - Title: Fair
+  - Title: Licht Getint
     SkinTypes: 1
     ButtonColor: {r: 0.8352942, g: 0.60784316, b: 0.56078434, a: 1}
-  - Title: Tan
+  - Title: Bruin
     SkinTypes: 2
     ButtonColor: {r: 0.32941177, g: 0.227451, b: 0.22352943, a: 1}
   HairTypesButton:
-  - Title: Straight
+  - Title: Blond
     HairTypes: 0
     ButtonColor: {r: 0.882353, g: 0.7568628, b: 0.38823533, a: 1}
-  - Title: Curly
+  - Title: Bruin
     HairTypes: 1
     ButtonColor: {r: 0.34509805, g: 0.2627451, b: 0.2509804, a: 1}
-  - Title: Wavy
+  - Title: Donker
     HairTypes: 2
     ButtonColor: {r: 0.11764707, g: 0.10980393, b: 0.10980393, a: 1}
 --- !u!1 &2086373907

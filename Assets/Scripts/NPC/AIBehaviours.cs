@@ -47,7 +47,7 @@ public class AIBehaviours : State
     {
         if (_system.InteractionPossible == true)
         {
-            _system.InteractText.SetActive(true);
+            _system.InteractIcon.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == false)
             {
                 _system.IsInteracting = true;
@@ -63,7 +63,7 @@ public class AIBehaviours : State
         {
             _system.DialogueManager.EndDialogue();
             _system.IsInteracting = false;
-            _system.InteractText.SetActive(true);
+            _system.InteractIcon.SetActive(true);
         }
         yield break;
     }

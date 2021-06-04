@@ -15,7 +15,7 @@ public class HairButtonCharacteristics
 
 public enum HairTypes
 {
-    Straight, 
-    Curly,
-    Wavy
+    Blond, 
+    Bruin,
+    Donker
 }

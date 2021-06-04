@@ -21,8 +21,8 @@ public class CharacterChooserScript : MonoBehaviour
     [HideInInspector] private List<GameObject> _skinButtonsList = new List<GameObject>();
     [HideInInspector] private List<GameObject> _hairButtonsList = new List<GameObject>();
 
-    [HideInInspector] private int _currentSkinType = -1;
-    [HideInInspector] private int _currentHairType = -1;
+    [HideInInspector] private int _currentSkinType = 0;
+    [HideInInspector] private int _currentHairType = 0;
 
     [HideInInspector] private SkinTypes _skinTypes;
     [HideInInspector] private HairTypes _hairTypes;
@@ -38,7 +38,7 @@ public class CharacterChooserScript : MonoBehaviour
     {
         _buttonManager = GameObject.FindGameObjectWithTag("ChooseButtons").GetComponent<ChoosingButtonManager>();
         _buttonTemplate = GameObject.FindGameObjectWithTag("ChoosingButtonTemplate");
-        playerToShow = PlayerPrefs.GetInt("playerToPlay");
+        playerToShow = 0;
 
         SpawnButtons();
     }
@@ -59,7 +59,7 @@ public class CharacterChooserScript : MonoBehaviour
     {
         if (_uiButtonFunctions.playerChosen == true)
         {
-            PlayerPrefs.SetInt("playerToPlay", playerToShow);
+             PlayerPrefs.SetInt("playerToPlay", getPlayer());
             _uiButtonFunctions.playerChosen = false;
         }
     }
@@ -104,7 +104,7 @@ public class CharacterChooserScript : MonoBehaviour
             {
                 int buttonToShow = i;
                 _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => buttonClicked(buttonToShow));
+                _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => skinButtonClicked(buttonToShow));
                 _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => changeSkinButtonState(buttonToShow));
             }
         }
@@ -115,16 +115,21 @@ public class CharacterChooserScript : MonoBehaviour
             {
                 int buttonToShow = i;
                 _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => buttonClicked(buttonToShow));
+                _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => hairButtonClicked(buttonToShow));
                 _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => changeHairButtonState(buttonToShow));
             }
         }
     }
 
-    private void buttonClicked(int buttonNumber)
+    private void skinButtonClicked(int skinButtonNumber)
     {
-        _skinTypes = _buttonManager.SkinTypesButton[buttonNumber].SkinTypes;
-        _hairTypes = _buttonManager.HairTypesButton[buttonNumber].HairTypes;
+        _skinTypes = _buttonManager.SkinTypesButton[skinButtonNumber].SkinTypes;
+        spawnOtherPlayer();
+    }
+
+    private void hairButtonClicked(int hairButtonNumber)
+    {
+        _hairTypes = _buttonManager.HairTypesButton[hairButtonNumber].HairTypes;
         spawnOtherPlayer();
     }
 
@@ -154,7 +159,7 @@ public class CharacterChooserScript : MonoBehaviour
         _currentHairType = buttonNumber;
     }
 
-    private GameObject getPlayer()
+    private int getPlayer()
     {
         for (int i = 0; i < playerScript.Players.Length; i++)
         {
@@ -162,17 +167,17 @@ public class CharacterChooserScript : MonoBehaviour
             {
                 if (playerScript.Players[i].HairTypes == _hairTypes)
                 {
-                    return playerScript.Players[i].Looks;
+                    return i;
                 }
             }
         }
-        return null;
+        return 0;
     }
 
     private void spawnOtherPlayer()
     {
         Destroy(GameObject.FindWithTag("PlayerCharacter"));
-        var parentObject = Instantiate(getPlayer(), transform.position, transform.rotation);
+        var parentObject = Instantiate(playerScript.Players[getPlayer()].Looks, transform.position, transform.rotation);
         parentObject.transform.parent = transform;
     }
 }

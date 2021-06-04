@@ -1,5 +1,5 @@
 {
-    "Name": "Balon Boris",
+    "Name": "Ballon Boris",
 
     "Dialogue": [
                 "Hallo? Je hebt me wakker gemaakt, dus ik hoop dat je een goede reden hebt om hier te zijn. Heeft Sjoerd je gestuurd?",
@@ -9,7 +9,8 @@
                 "Hey! Dat is nou niet aardig hè? Ik ga je niks geven als je zo onaardig bent.",
 
                 "Dat is beter. De volgende keer dat je iemand tegenkomt mag je wel wat vriendelijker tegen ze zijn.",
-                "Hier heb je de telefoon, en nu wegwezen!"
+
+                "Hier heb je de telefoon, en nu wegwezen! Je kunt de telefoon openen door op i te klikken"
             ],
 
     "PlayerDialogue": [

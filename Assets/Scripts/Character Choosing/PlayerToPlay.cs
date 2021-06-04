@@ -10,8 +10,9 @@ public class PlayerToPlay : MonoBehaviour
     private void Awake()
     {
         _playerScript = GameObject.FindGameObjectWithTag("PlayerCustomization").GetComponent<Player>();
-        _prefab = _playerScript.Players[0].Looks;
+        _prefab = _playerScript.Players[PlayerPrefs.GetInt("playerToPlay")].Looks;
     }
+
     void Start()
     {
         var instantiatedPlayer = Instantiate(_prefab);

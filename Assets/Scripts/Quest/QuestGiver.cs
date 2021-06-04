@@ -10,6 +10,7 @@ public class QuestGiver : MonoBehaviour
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
 
     [HideInInspector] private GameObject _questWindow;
+    [HideInInspector] private Waypoint _waypoint;
 
     [HideInInspector] private Quest _quest;
     [HideInInspector] private int _questNumber;
@@ -19,6 +20,7 @@ public class QuestGiver : MonoBehaviour
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
         _questWindow = DontDestroyUI.UIInstance.UIGameObjects[3];
         _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
+        _waypoint = GameObject.FindGameObjectWithTag("WayPoint").GetComponent<Waypoint>();
         _questWindow.SetActive(false);
     }
 
@@ -66,6 +68,7 @@ public class QuestGiver : MonoBehaviour
         _questWindow.SetActive(false);
         _quest.IsActive = true;
         _questKeeper.Quest = _quest;
+        _waypoint.WayPointIcon.SetActive(true);
     }
 
     public void DeclineQuest()

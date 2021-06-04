@@ -17,6 +17,7 @@ MonoBehaviour:
   Description: You have to get the phone so that your social adventure can start!
   FollowersReward: 100
   MoneyReward: 0
+  WhereToGoTo: {fileID: 7777048274901909605, guid: 7b534159a2769484fa0dbe4958965d17, type: 3}
   Goal:
     goalType: 2
     requiredAmount: 1

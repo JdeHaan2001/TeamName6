@@ -15,7 +15,7 @@ public class AISystem : StateMachine
 
     [HideInInspector] public DialogueManager DialogueManager;
     [HideInInspector] public QuestGiver QuestGiver;
-    [SerializeField] public GameObject InteractText;
+    [SerializeField] public GameObject InteractIcon;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
@@ -39,7 +39,7 @@ public class AISystem : StateMachine
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));
-        InteractText.SetActive(false);
+        InteractIcon.SetActive(false);
 
         StartPos = transform.position;
         StartAngle = transform.rotation;
@@ -54,11 +54,11 @@ public class AISystem : StateMachine
         {
             if (InteractionPossible == true)
             {
-                if (Vector3.Distance(transform.position, Player.transform.position) > 4f)
+                if (Vector3.Distance(transform.position, Player.transform.position) > 2f)
                 {
                     StartCoroutine(State.Follow());
                 }
-                else if (Vector3.Distance(transform.position, Player.transform.position) > 10f && transform.position != StartPos)
+                else if (Vector3.Distance(transform.position, Player.transform.position) > 20f && transform.position != StartPos)
                 {
                     StartCoroutine(State.Return());
                 }
@@ -76,7 +76,7 @@ public class AISystem : StateMachine
             }
             else
             {
-                InteractText.SetActive(false);
+                InteractIcon.SetActive(false);
             }
         }
         else
@@ -86,7 +86,7 @@ public class AISystem : StateMachine
 
         if (InteractionPossible == false)
         {
-            InteractText.SetActive(false);
+            InteractIcon.SetActive(false);
 
             if (this.transform.position != StartPos)
             {

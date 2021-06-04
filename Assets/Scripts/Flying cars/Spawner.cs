@@ -73,9 +73,6 @@ public class Spawner : MonoBehaviour
 
     void SpawnItem()
     {
-
-        Debug.Log("spawned");
-
         GameObject obj = Instantiate(item) as GameObject;
 
         obj.transform.position = GetSpawnPos();

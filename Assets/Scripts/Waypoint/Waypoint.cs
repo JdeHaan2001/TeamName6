@@ -5,25 +5,18 @@ using UnityEngine.UI;
 
 public class Waypoint : MonoBehaviour
 {
-    private Image iconImg;
-    private Text distanceText;
+    public Text distanceText;
 
     public Transform player;
     public Transform target;
     public Camera cam;
+    public GameObject WayPointIcon;
 
     public float closeEnoughDist;
 
-    private void Start()
-    {
-        iconImg = GetComponent<Image>();
-        distanceText = GetComponentInChildren<Text>();
-    }
-
-
     private void Update()
     {
-        if (target != null)
+        if (target != null && WayPointIcon != null)
         {
             GetDistance();
             CheckOnScreen();
@@ -37,7 +30,7 @@ public class Waypoint : MonoBehaviour
 
         if (dist < closeEnoughDist)
         {
-            Destroy(gameObject);
+            WayPointIcon.SetActive(false);
         }
     }
 
@@ -45,21 +38,15 @@ public class Waypoint : MonoBehaviour
     {
         float thing = Vector3.Dot((target.position - cam.transform.position).normalized, cam.transform.forward);
 
-        if (thing <= 0)
+        if(thing >= 0)
         {
-            ToggleUI(false);
-        }
-        else
-        {
-            ToggleUI(true);
             transform.position = cam.WorldToScreenPoint(target.position);
         }
     }
 
     private void ToggleUI(bool _value)
     {
-        iconImg.enabled = _value;
-        distanceText.enabled = _value;
+        WayPointIcon.SetActive(_value);
     }
 
 
