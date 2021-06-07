@@ -12,7 +12,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] public NPCInformation Npc;
 
     [HideInInspector] public JsonNpc readNpcDialogue;
-    [HideInInspector] private bool _isTalking;
+    [HideInInspector] public bool IsTalking;
     [HideInInspector] public bool OpenQuest;
 
     [HideInInspector] private int _currentCheckedString = 0;
@@ -22,33 +22,50 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject _dialogueUI;
     [SerializeField] private GameObject _playerDialogue;
     [SerializeField] private GameObject _playerDialoguePanel;
+    [SerializeField] private GameObject _player;
     [SerializeField] private DialogueTextKeeper _dialogueTextKeeper;
 
     [HideInInspector] private List<GameObject> _playerResponsesList = new List<GameObject>();
 
-    private Vector3 _lastPosition;
     #endregion
     private void Awake()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
+
+        Npc = GameObject.FindGameObjectWithTag("Dialogue").GetComponent<DialogueManager>().Npc;
+
+
         _dialogueUI = DontDestroyUI.UIInstance.UIGameObjects[0];
         _playerDialoguePanel = DontDestroyUI.UIInstance.UIGameObjects[1];
         _playerDialogue = DontDestroyUI.UIInstance.UIGameObjects[2];
         _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
 
-        readNpcDialogue = JsonReader.LoadNpcFromFile(Npc.NpcDialogue);
-
         _dialogueUI.SetActive(false);
-        changeQuestInDialogue();
     }
 
     private void Update()
     {
-        if (_isTalking == true)
+        if (IsTalking == true)
         {
+            readNpcDialogue = JsonReader.LoadNpcFromFile(Npc.NpcDialogue);
             ButtonClick();
         }
 
         openNewDialogue();
+    }
+
+    public NPCInformation GetNPC()
+    {
+        var NpcArray = GameObject.FindGameObjectsWithTag("NPC");
+
+        for (int i = 0; i < NpcArray.Length; i++)
+        {
+            if (Vector3.Distance(_player.transform.position, NpcArray[i].transform.position) < 5f)
+            {
+                return NpcArray[i].GetComponent<AISystem>().NpcInfo;
+            }
+        }
+        return null;
     }
 
     /// <summary>
@@ -57,13 +74,15 @@ public class DialogueManager : MonoBehaviour
     public void StartConversation()
     {
         destroyResponses();
-        _isTalking = true;
+        IsTalking = true;
         _dialogueUI.SetActive(true);
         renderPlayerDialogue();
 
         _dialogueTextKeeper.NPCNameText.text = readNpcDialogue.Name;
         _dialogueTextKeeper.NPCDialogueText.text = readNpcDialogue.Dialogue[0];
         _dialogueTextKeeper.NPCPicture.sprite = Npc.Picture;
+
+        changeQuestInDialogue();
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -256,7 +275,7 @@ public class DialogueManager : MonoBehaviour
                         }
                     }
                 }
-               
+
 
                 if (i == 0)
                 {
@@ -280,7 +299,7 @@ public class DialogueManager : MonoBehaviour
 
     private void openNewDialogue()
     {
-        if (_isTalking == true)
+        if (IsTalking == true)
         {
             if (Input.GetKeyDown("q"))
             {
@@ -295,7 +314,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void EndDialogue()
     {
-        _isTalking = false;
+        IsTalking = false;
         Npc.ConversationFinished = true;
         destroyResponses();
         _dialogueUI.SetActive(false);

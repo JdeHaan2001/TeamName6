@@ -14,6 +14,7 @@ public class AISystem : StateMachine
     [HideInInspector] private QuestKeeper _questKeeper;
 
     [HideInInspector] public DialogueManager DialogueManager;
+    [SerializeField] public NPCInformation NpcInfo;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
 
@@ -29,13 +30,13 @@ public class AISystem : StateMachine
 
     private void Awake()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
     }
     private void Start()
     {
-        DialogueManager = GetComponent<DialogueManager>();
-        Player = DontDestroyPlayer.PlayerInstance.Player;
-        _questKeeper = DontDestroyPlayer.PlayerInstance.Player.GetComponent<QuestKeeper>();
+        DialogueManager = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueManager>();
+        _questKeeper = Player.GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));
@@ -97,9 +98,12 @@ public class AISystem : StateMachine
 
     private void checkAvailability()
     {
-        if (DialogueManager.Npc.ConversationFinished != true)
+        if (DialogueManager.Npc != null)
         {
-            InteractionPossible = true;
+            if (DialogueManager.Npc.ConversationFinished != true)
+            {
+                InteractionPossible = true;
+            }
         }
 
         if (_questKeeper.Quest != null)
