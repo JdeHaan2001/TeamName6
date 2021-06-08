@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerVariants : MonoBehaviour
 {
-    private static Player _instance;
-    public static Player Instance { get { return _instance; } }
+    private static PlayerVariants _instance;
+    public static PlayerVariants Instance { get { return _instance; } }
     public PlayerStats[] Players;
 
     private void Awake()

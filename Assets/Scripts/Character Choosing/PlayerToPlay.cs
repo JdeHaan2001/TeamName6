@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerToPlay : MonoBehaviour
 {
-    [HideInInspector] private Player _playerScript;
+    [HideInInspector] private PlayerVariants _playerScript;
     [HideInInspector] private GameObject _prefab;
 
     private void Awake()
     {
-        _playerScript = GameObject.FindGameObjectWithTag("PlayerCustomization").GetComponent<Player>();
+        _playerScript = GameObject.FindGameObjectWithTag("PlayerCustomization").GetComponent<PlayerVariants>();
         _prefab = _playerScript.Players[PlayerPrefs.GetInt("playerToPlay")].Looks;
     }
 

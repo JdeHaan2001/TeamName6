@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Made by: Jorrit Bos
 public class DontDestroyPlayer : MonoBehaviour
 {
     private static DontDestroyPlayer _playerInstance;

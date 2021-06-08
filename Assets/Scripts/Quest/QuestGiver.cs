@@ -5,6 +5,7 @@ using TMPro;
 
 public class QuestGiver : MonoBehaviour
 {
+    #region Variables
     [SerializeField] private DialogueManager _dialogueManager;
     [SerializeField] private QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
@@ -15,6 +16,7 @@ public class QuestGiver : MonoBehaviour
 
     [HideInInspector] private Quest _quest;
     [HideInInspector] private int _questNumber;
+    #endregion
 
     public void Awake()
     {
@@ -63,6 +65,9 @@ public class QuestGiver : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Opens the quest window
+    /// </summary>
     public void OpenQuestWindow()
     {
         _questWindow.SetActive(true);
@@ -74,12 +79,13 @@ public class QuestGiver : MonoBehaviour
 
         _dialogueManager.OpenQuest = false;
     }
+
     public void AcceptQuest()
     {
         _questWindow.SetActive(false);
         _quest.IsActive = true;
         _questKeeper.Quest = _quest;
-        _waypoint.WayPointIcon.SetActive(true);
+        //_waypoint.WayPointIcon.SetActive(true);
     }
 
     public void DeclineQuest()

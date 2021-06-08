@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class CharacterChooserText : MonoBehaviour
 {
-    public Player playerScript;
+    public PlayerVariants playerScript;
     public CharacterChooserScript characterChooserScript;
 
     public Text MyTextPlayerName;

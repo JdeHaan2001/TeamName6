@@ -40,7 +40,6 @@ public class AISystem : StateMachine
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));
-        InteractIcon.SetActive(false);
 
         StartPos = transform.position;
         StartAngle = transform.rotation;
@@ -55,52 +54,39 @@ public class AISystem : StateMachine
         {
             if (InteractionPossible == true)
             {
-                if (Vector3.Distance(transform.position, Player.transform.position) > 2f)
+                if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 9f)
                 {
                     StartCoroutine(State.Follow());
                 }
-                else if (Vector3.Distance(transform.position, Player.transform.position) > 20f && transform.position != StartPos)
-                {
-                    StartCoroutine(State.Return());
-                }
-            }
-            if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
-            {
-                if (InteractionPossible == true)
+                else if (Vector3.Distance(transform.position, Player.transform.position) < 9f)
                 {
                     StartCoroutine(State.Interact());
                 }
-                else
-                {
-                    StartCoroutine(State.Unavailable());
-                }
             }
-            else
+            else if (InteractionPossible == false)
             {
+                if (transform.position != StartPos)
+                {
+                    StartCoroutine(State.Return());
+                }
                 InteractIcon.SetActive(false);
+                StartCoroutine(State.Unavailable());
             }
         }
         else
         {
             StartCoroutine(State.Idle());
         }
-
-        if (InteractionPossible == false)
-        {
-            InteractIcon.SetActive(false);
-
-            if (this.transform.position != StartPos)
-            {
-                StartCoroutine(State.Return());
-            }
-        }
     }
 
+    /// <summary>
+    /// Checks if NPC is available for talking
+    /// </summary>
     private void checkAvailability()
     {
-        if (DialogueManager.Npc != null)
+        if (NpcInfo != null)
         {
-            if (DialogueManager.Npc.ConversationFinished != true)
+            if (NpcInfo.ConversationFinished != true)
             {
                 InteractionPossible = true;
             }
@@ -110,37 +96,41 @@ public class AISystem : StateMachine
         {
             if (_questKeeper.Quest.IsActive == true)
             {
-                for (int i = 0; i < DialogueManager.Npc.Quests.Length; i++)
+                for (int i = 0; i < NpcInfo.Quests.Length; i++)
                 {
-                    if (DialogueManager.Npc.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
+                    if (NpcInfo.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
                     {
                         _questKeeper.UpdateQuest();
                         InteractionPossible = false;
                     }
                     else
                     {
-                        InteractionPossible = false;
+                        InteractionPossible = true;
                     }
                 }
             }
         }
     }
 
+    /// <summary>
+    /// Checks if the NPC sees something
+    /// </summary>
+    /// <returns></returns>
     private Transform checkEnvironment()
     {
         RaycastHit hit;
         var angle = transform.rotation * _startingAngle;
         var direction = angle * Vector3.forward;
-        var pos = transform.position;
+        var pos = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
         for (var i = 0; i < 24; i++)
         {
             if (Physics.Raycast(pos, direction, out hit, CheckingRadius))
             {
-                var player = hit.collider.GetComponent<ThirdPersonCharacterController>();
-                if (player != null)
+
+                if (hit.collider.tag == "Player")
                 {
                     Debug.DrawRay(pos, direction * hit.distance, Color.red);
-                    return player.transform;
+                    return Player.transform;
                 }
                 else
                 {

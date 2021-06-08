@@ -13,8 +13,7 @@ public class JsonNpc
 
     public string[] PlayerDialogue;
 
-    public string[] ExtraDialogue;
-    public TextAsset NewDialogueFile;
+    public string NewDialogueFile;
     public int WhenToShowNewDialogue;
     public bool ChoosingDialogue;
 
