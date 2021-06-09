@@ -2,7 +2,7 @@
   "Name": "Prickly Pete test",
 
   "Dialogue": [
-    "Eerst moet je een telefoon halen van Boris Ballon zodat je sociale media kunt gebruiken en volgers kan krijgen! De beloning die je krijgt is 1 !",
+    "Eerst moet je een telefoon halen van Boris Ballon zodat je sociale media kunt gebruiken en volgers kan krijgen! De beloning die je krijgt is 1!",
     "Ja, euh, wollah hoe moet ik dat weten a sahbi!"
   ],
 
@@ -11,7 +11,7 @@
     "Hoe de fok doe ik dat dan drerrie?"
   ],
 
-  "NewDialogueFile": "nothing",
+  "NewDialogueFile": "StekeligeSjoerdQuest2",
   "WhenToShowNewDialogue": 1,
   "ChoosingDialogue": false,
   "ToBeReplaced": [ "1" ]

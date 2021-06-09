@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
 
 
 //Made by: Jorrit Bos
@@ -11,10 +11,10 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public NPCInformation Npc;
 
     [HideInInspector] public JsonNpc readNpcDialogue;
-    [HideInInspector] private JsonNpc newReadNpcDialogue;
     [HideInInspector] public bool IsTalking;
     [HideInInspector] public bool OpenQuest;
 
+    [HideInInspector] private int _oldDialogueAmount = 0;
     [HideInInspector] private int _currentCheckedString = 0;
     [HideInInspector] private int _changedButton = -1;
 
@@ -122,9 +122,10 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void buttonClicked(int textToShow)
     {
+        checkChoosingStatus(textToShow);
+
         loadNewJson(textToShow);
         _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
-        checkChoosingStatus(textToShow);
     }
 
     /// <summary>
@@ -137,6 +138,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (_changedButton != textToShow)
             {
+                _playerResponsesList[_changedButton].SetActive(false);
                 _playerResponsesList[_changedButton].GetComponent<Button>().interactable = false;
                 _playerResponsesList[_changedButton].GetComponent<Image>().color = Color.white;
             }
@@ -173,10 +175,10 @@ public class DialogueManager : MonoBehaviour
             _playerResponsesList.Add(instantiatedGO);
             _playerResponsesList[listLength + i].transform.SetParent(_playerDialoguePanel.transform, false);
         }
-        readNpcDialogue = readJsonNpc;
-
         _playerDialogue.SetActive(false);
 
+        _oldDialogueAmount = _oldDialogueAmount + readNpcDialogue.PlayerDialogue.Length;
+        readNpcDialogue = readJsonNpc;
     }
 
     /// <summary>
@@ -185,14 +187,13 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void loadNewJson(int textToShow)
     {
-            if (readNpcDialogue.WhenToShowNewDialogue == textToShow)
-            {
-                var newJson = readNpcDialogue.NewDialogueFile;
+        if (readNpcDialogue.WhenToShowNewDialogue == textToShow - _oldDialogueAmount)
+        {
+            var newJson = readNpcDialogue.NewDialogueFile;
 
-                TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
-
-                renderDialogue(jsonAsset);
-            }
+            TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
+            renderDialogue(jsonAsset);
+        }
     }
 
     #endregion
@@ -205,14 +206,12 @@ public class DialogueManager : MonoBehaviour
     {
         if (readNpcDialogue.ChoosingDialogue == true)
         {
-            if (currentButton > readNpcDialogue.PlayerDialogue.Length - 1)
+            Debug.Log(readNpcDialogue.Dialogue[0]);
+            for (int i = 0; i < _playerResponsesList.Count; i++)
             {
-                for (int i = 0; i < readNpcDialogue.PlayerDialogue.Length + readNpcDialogue.PlayerDialogue.Length; i++)
+                if (_playerResponsesList[i] != _playerResponsesList[currentButton])
                 {
-                    if (_playerResponsesList[i] != _playerResponsesList[currentButton])
-                    {
-                        _playerResponsesList[i].SetActive(false);
-                    }
+                    _playerResponsesList[i].SetActive(false);
                 }
             }
         }
