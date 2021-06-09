@@ -1,0 +1,23 @@
+{
+    "Name": "Creditcard Cas",
+
+    "Dialogue": [
+                "Hey, wil je weten hoe je heel snel volgers kan krijgen?",
+
+                "Gewoon volgers kopen! Ik heb een actie speciaal voor jou. Je krijgt 10.000 volgers als je mij 10 munten geeft!"
+            ],
+
+    "PlayerDialogue": [
+                "Hoe dan?"
+
+
+            ],
+
+
+
+    "NewDialogueFile": "CreditCasAccept",
+    "WhenToShowNewDialogue": 0,
+    "ChoosingDialogue": true,
+    "ToBeReplaced": ["1"
+        ]
+}

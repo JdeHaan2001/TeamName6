@@ -1,0 +1,24 @@
+{
+    "Name": "Ballon Boris",
+
+    "Dialogue": [
+
+                "Zolang niemand er achter komt mag je het gerust meenemen!",
+
+                "Goed idee! Misschien komt de eigenaar nog terug!"
+            ],
+
+    "PlayerDialogue": [
+                "Niks mis met wat extra munten, ik hou hem wel.",
+                "Nee, ik laat hem wel liggen."
+
+            ],
+
+
+
+    "NewDialogueFile": "nothing",
+    "WhenToShowNewDialogue": -1,
+    "ChoosingDialogue": false,
+    "ToBeReplaced": ["1"
+        ]
+}

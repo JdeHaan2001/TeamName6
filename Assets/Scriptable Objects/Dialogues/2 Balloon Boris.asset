@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
+  m_Name: 2 Balloon Boris
+  m_EditorClassIdentifier: 
+  Picture: {fileID: 21300000, guid: 1c3e893449b1386499a5fa63882c6c91, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: 043baf453c44f8b46ba260a9520a0e9a, type: 3}
+  Quests: []
+  ConversationFinished: 0
