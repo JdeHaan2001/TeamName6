@@ -11,11 +11,7 @@ public class SettingsMenu : MonoBehaviour
     FMOD.Studio.Bus _SFX;
     FMOD.Studio.Bus _readAloud;
 
-    private float _masterVolume = 1f;
-    private float _musicVolume = 1f;
-
     private float _lastVolume;
-    private bool _isActive = true;
 
     private void Awake()
     {

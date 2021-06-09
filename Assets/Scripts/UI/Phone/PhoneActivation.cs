@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Animations;
 
 public class PhoneActivation : MonoBehaviour
 {
-    [SerializeField] private PhoneFSM _PFSM = null;
-
     private bool _isActive = false;
     private Animator animator = null;
 

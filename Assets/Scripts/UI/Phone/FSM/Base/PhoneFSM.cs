@@ -28,6 +28,7 @@ public class PhoneFSM : MonoBehaviour
 
     public void ChangeScreen<T>() where T : PhoneScreen
     {
+        Debug.Log("ChangeScreen<T>");
         ChangeScreen(typeof(T));
     }
 
@@ -52,6 +53,6 @@ public class PhoneFSM : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F1))
-            ChangeScreen<HomeScreen>();
+            ChangeScreen<SettingsScreen>();
     }
 }
