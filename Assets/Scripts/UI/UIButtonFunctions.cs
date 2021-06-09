@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Made By: Jorrit Bos
 public class UIButtonFunctions : MonoBehaviour
 {
     private string _sceneName;
@@ -20,7 +21,7 @@ public class UIButtonFunctions : MonoBehaviour
     //This is part of the Invoke.
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("CityGray");
+        SceneManager.LoadScene("Inside");
     }
 
     public void LoadScene(string sceneName)

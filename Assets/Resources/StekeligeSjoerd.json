@@ -10,9 +10,7 @@
 
                 "Mensen verschijnen zo nu en dan ineens in deze stad en niemand weet waarom.",
 
-                "Je bent hier om zoveel mogelijk volgers te krijgen door personen in de stad te helpen.",
-
-                "Eerst moet je een telefoon halen van Boris Ballon zodat je sociale media kunt gebruiken en volgers kan krijgen! De beloning die je krijgt is 1!"
+                "Je bent hier om zoveel mogelijk volgers te krijgen door personen in de stad te helpen."                
             ],
 
     "PlayerDialogue": [
@@ -22,14 +20,8 @@
                 "Waarom ben ik hier?"
             ],
 
-    "ExtraDialogue": [
-                "Hoe moet ik beginnen?"
-            ],
-
-    "NewDialogueFile": "test",
+    "NewDialogueFile": "StekeligeSjoerdQuest",
     "WhenToShowNewDialogue": 3,
     "ChoosingDialogue": false,
-    "ToBeReplaced": [
-            "1"
-        ]
+    "ToBeReplaced": []
 }

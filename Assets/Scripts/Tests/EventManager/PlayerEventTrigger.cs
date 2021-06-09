@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventTriggerTest : MonoBehaviour
+//Made by: Jorrit Bos
+public class PlayerEventTrigger : MonoBehaviour
 {
     void Update()
     {
@@ -19,10 +20,11 @@ public class EventTriggerTest : MonoBehaviour
             {
                 EventManager.TriggerEvent("sprint");
             }
-        }
-        else if (Input.GetKeyDown("space"))
-        {
-            EventManager.TriggerEvent("jump");
+
+            if (Input.GetKeyDown("space"))
+            {
+                EventManager.TriggerEvent("jump");
+            }
         }
         else
         {

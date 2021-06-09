@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 
+// Made By: Jorrit Bos
 public class CharacterChooserScript : MonoBehaviour
 {
     private static CharacterChooserScript _instance;
     public static CharacterChooserScript instance => _instance;
 
-    [SerializeField] public Player playerScript;
+    [SerializeField] public PlayerVariants playerScript;
 
     //Used determining which and where to spawn choosing buttons
     [HideInInspector] private ChoosingButtonManager _buttonManager;
