@@ -3,7 +3,27 @@ guid: 75068153fc7701d46a1950cb83277f03
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 8556262120643298411, guid: ddec3dfb6cfedc94f924df518d21154c, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface2
+    second: {fileID: 5955844840416208063, guid: 0568d347b1bb6cd428e7e6ea7147879d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: aiStandardSurface3
+    second: {fileID: -1294058508819152814, guid: 29155023cc244bf4fbd94ce6c1513a8e, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 5561349426305759274, guid: 75068153fc7701d46a1950cb83277f03, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerToPlay : MonoBehaviour
 {
-    [HideInInspector] private Player _playerScript;
+    [HideInInspector] private PlayerVariants _playerScript;
     [HideInInspector] private GameObject _prefab;
 
     private void Awake()
     {
-        _playerScript = GameObject.FindGameObjectWithTag("PlayerCustomization").GetComponent<Player>();
-        _prefab = _playerScript.Players[0].Looks;
+        _playerScript = GameObject.FindGameObjectWithTag("PlayerCustomization").GetComponent<PlayerVariants>();
+        _prefab = _playerScript.Players[PlayerPrefs.GetInt("playerToPlay")].Looks;
     }
+
     void Start()
     {
         var instantiatedPlayer = Instantiate(_prefab);

@@ -3,7 +3,42 @@ guid: 2bcd3968c4af6bf478bb0a145e52719c
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: -7805965318761107941, guid: 2bcd3968c4af6bf478bb0a145e52719c, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black roof
+    second: {fileID: 372271545489706973, guid: 2bcd3968c4af6bf478bb0a145e52719c, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete
+    second: {fileID: 4404839247605695133, guid: 2bcd3968c4af6bf478bb0a145e52719c, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main
+    second: {fileID: 2781410738928257789, guid: 2bcd3968c4af6bf478bb0a145e52719c, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Neon
+    second: {fileID: 5033703511601670329, guid: 2bcd3968c4af6bf478bb0a145e52719c, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roof
+    second: {fileID: -5396234901987582864, guid: a426eea3b6cb1854b9c17f265fe34b2d, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Windows
+    second: {fileID: -7184292951177722594, guid: 2bcd3968c4af6bf478bb0a145e52719c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

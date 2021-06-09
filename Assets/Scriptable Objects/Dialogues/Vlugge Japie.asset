@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
+  m_Name: Vlugge Japie
+  m_EditorClassIdentifier: 
+  Name: Vlugge Japie
+  Picture: {fileID: 21300000, guid: d870173fbeca1684b80b5d467ab316eb, type: 3}
+  Dialogue:
+  - Sentence 1
+  - Sentence 2
+  - Do you want this?
+  - Okay nice
+  - Okay nevermind then
+  PlayerDialogue:
+  - Answer 1
+  - What is your question?
+  NewQuestion:
+  - Yes
+  - No
+  WhenToShowNewDialogue: 1
+  ChoosingDialogue: 1
+  Quests: []
+  ToBeReplaced: []
+  ConversationFinished: 0

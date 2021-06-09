@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4405854094395563810}
   m_Layer: 0
-  m_Name: CarRoad (20)
+  m_Name: GoingUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fdb522c3a0ebd94db16baa85ad09df4, type: 2}
+  - {fileID: 2100000, guid: 0208d84ad07c63445b58b8e641d0e75a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -239,7 +239,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 14c8329fc4af44a4996e921d7a3c0c8f, type: 2}
+  - {fileID: 2100000, guid: 6fd6b4abf28885f4ba16f614a7856103, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -334,7 +334,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2fdb522c3a0ebd94db16baa85ad09df4, type: 2}
+  - {fileID: 2100000, guid: 0208d84ad07c63445b58b8e641d0e75a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -412,6 +412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d86702bba7a92b40a2a97779e20807e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cars: {fileID: 7670446281014427111, guid: ea66e732c664cb54a90508dd2d1bfa89, type: 3}
   startPos: {fileID: 6716692563017430729}
   delayMin: 10
   delayMax: 15
@@ -471,6 +472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d86702bba7a92b40a2a97779e20807e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Cars: {fileID: 7670446281014427111, guid: ea66e732c664cb54a90508dd2d1bfa89, type: 3}
   startPos: {fileID: 21228463969144276}
   delayMin: 10
   delayMax: 15

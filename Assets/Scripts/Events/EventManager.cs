@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+//Made by: Jorrit Bos
 public class EventManager : MonoBehaviour
 {
     private Dictionary<string, UnityEvent> _eventDictionary;
