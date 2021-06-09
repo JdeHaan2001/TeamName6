@@ -6,11 +6,7 @@
 
                 "Het is altijd weer iemand die door Sjoerd gestuurd is en ze hebben altijd iets nodig.",
 
-                "Hey! Dat is nou niet aardig hè? Ik ga je niks geven als je zo onaardig bent.",
-
-                "Dat is beter. De volgende keer dat je iemand tegenkomt mag je wel wat vriendelijker tegen ze zijn.",
-
-                "Hier heb je de telefoon, en nu wegwezen! Je kunt de telefoon openen door op i te klikken"
+                "Hey! Dat is nou niet aardig hè? Ik ga je niks geven als je zo onaardig bent."
             ],
 
     "PlayerDialogue": [
@@ -19,12 +15,9 @@
 
             ],
 
-    "ExtraDialogue": [
-                "Sorry Boris, dat was niet aardig van me.",
-                "Dat maakt mij niets uit."
-            ],
 
-    "NewDialogueFile": "test",
+
+    "NewDialogueFile": "BalloonQuest",
     "WhenToShowNewDialogue": 1,
     "ChoosingDialogue": true,
     "ToBeReplaced": ["1"

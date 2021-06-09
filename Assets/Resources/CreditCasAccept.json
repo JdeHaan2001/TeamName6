@@ -1,0 +1,24 @@
+{
+    "Name": "Creditcard Cas",
+
+    "Dialogue": [
+                "Bedankt voor je aankoop!",
+
+                "Mijn aanbod blijft altijd staan!"
+            ],
+
+    "PlayerDialogue": [
+                "Goede deal, ik doe het!",
+        "Nee, heb ik niet nodig!"
+
+
+            ],
+
+
+
+    "NewDialogueFile": "nothing",
+    "WhenToShowNewDialogue": -1,
+    "ChoosingDialogue": false,
+    "ToBeReplaced": ["1"
+        ]
+}

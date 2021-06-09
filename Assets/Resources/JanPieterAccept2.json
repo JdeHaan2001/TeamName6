@@ -1,0 +1,24 @@
+{
+    "Name": "Jan Pieter Prullenbak",
+
+    "Dialogue": [
+                "Onthou om gemeen te klinken!",
+
+                "Wauw, je bent nog saaier dan ik dacht!"
+            ],
+
+    "PlayerDialogue": [
+                "Oeh! Dan ga ik dat doen!",
+                "Nee, dat wil ik niet!"
+
+
+            ],
+
+
+
+    "NewDialogueFile": "nothing",
+    "WhenToShowNewDialogue": -1,
+    "ChoosingDialogue": false,
+    "ToBeReplaced": ["1"
+        ]
+}
