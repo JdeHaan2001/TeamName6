@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
 
+
 //Made by: Jorrit Bos
 public class DialogueManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] private GameObject _playerDialogue;
     [HideInInspector] private GameObject _playerDialoguePanel;
     [HideInInspector] private GameObject _player;
+    [SerializeField] public MonoBehaviour Camera;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
 
     [HideInInspector] private List<GameObject> _playerResponsesList = new List<GameObject>();
@@ -39,11 +41,22 @@ public class DialogueManager : MonoBehaviour
         _dialogueUI.SetActive(false);
     }
 
+    void OnEnable()
+    {
+        Camera.enabled = false;
+    }
+
+    void OnDisable()
+    {
+        Camera.enabled = true;
+    }
+
     private void Update()
     {
         if (IsTalking == true)
         {
             ButtonClick();
+
         }
     }
 

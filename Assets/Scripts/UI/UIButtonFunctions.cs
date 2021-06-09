@@ -21,7 +21,7 @@ public class UIButtonFunctions : MonoBehaviour
     //This is part of the Invoke.
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("Inside");
+        SceneManager.LoadScene("CityGray");
     }
 
     public void LoadScene(string sceneName)
