@@ -81,6 +81,7 @@ public class QuestGiver : MonoBehaviour
 
     public void AcceptQuest()
     {
+        _dialogueManager.EndDialogue();
         _questWindow.SetActive(false);
         _quest.IsActive = true;
         _questKeeper.Quest = _quest;

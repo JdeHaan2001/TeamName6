@@ -56,7 +56,6 @@ public class DialogueManager : MonoBehaviour
         if (IsTalking == true)
         {
             ButtonClick();
-
         }
     }
 
@@ -84,6 +83,8 @@ public class DialogueManager : MonoBehaviour
     public void StartConversation()
     {
         Npc = GetNPC();
+
+        _oldDialogueAmount = 0;
 
         destroyResponses();
         IsTalking = true;
@@ -123,8 +124,8 @@ public class DialogueManager : MonoBehaviour
     private void buttonClicked(int textToShow)
     {
         checkChoosingStatus(textToShow);
-
         loadNewJson(textToShow);
+
         _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
     }
 
@@ -187,12 +188,15 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void loadNewJson(int textToShow)
     {
-        if (readNpcDialogue.WhenToShowNewDialogue == textToShow - _oldDialogueAmount)
+        for(int i =0; i < readNpcDialogue.WhenToShowNewDialogue.Length; i++)
         {
-            var newJson = readNpcDialogue.NewDialogueFile;
+            if (readNpcDialogue.WhenToShowNewDialogue[i] == textToShow - _oldDialogueAmount)
+            {
+                var newJson = readNpcDialogue.NewDialogueFile[i];
 
-            TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
-            renderDialogue(jsonAsset);
+                TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
+                renderDialogue(jsonAsset);
+            }
         }
     }
 
@@ -206,7 +210,6 @@ public class DialogueManager : MonoBehaviour
     {
         if (readNpcDialogue.ChoosingDialogue == true)
         {
-            Debug.Log(readNpcDialogue.Dialogue[0]);
             for (int i = 0; i < _playerResponsesList.Count; i++)
             {
                 if (_playerResponsesList[i] != _playerResponsesList[currentButton])
@@ -309,6 +312,7 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (GameObject obj in _playerResponsesList)
         {
+            obj.SetActive(true);
             Destroy(obj);
         }
         _playerResponsesList.Clear();
@@ -321,12 +325,20 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         IsTalking = false;
-        Npc.ConversationFinished = true;
+        resetQuestInDialogue();
         destroyResponses();
         _dialogueUI.SetActive(false);
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+
+        if(_player.GetComponent<QuestKeeper>().Quest != null)
+        {
+            if (_player.GetComponent<QuestKeeper>().Quest.IsActive)
+            {
+                Npc.ConversationFinished = true;
+            }
+        }
     }
 
     public void OnApplicationQuit()

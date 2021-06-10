@@ -1,0 +1,16 @@
+{
+  "Name": "Prickly Pete test2",
+
+  "Dialogue": [
+    "Ah no man, u got me man."
+  ],
+
+  "PlayerDialogue": [
+    "This is the second test on the second response"
+  ],
+
+  "NewDialogueFile": ["nothing"],
+  "WhenToShowNewDialogue": [-1],
+  "ChoosingDialogue": false,
+  "ToBeReplaced": ["1"]
+}

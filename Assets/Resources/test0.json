@@ -1,0 +1,19 @@
+{
+    "Name": "Prickly Pete test",
+
+    "Dialogue": [
+    "Good day!",
+    "Wollah hollah gimme a dollah!",
+    "Nah dude."
+  ],
+
+    "PlayerDialogue": [
+    "Yes",
+    "No"
+  ],
+
+    "NewDialogueFile": ["test1", "test2"],
+    "WhenToShowNewDialogue": [0, 1],
+    "ChoosingDialogue": true,
+    "ToBeReplaced": ["1"]
+}
