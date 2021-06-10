@@ -53,11 +53,11 @@ public class AISystem : StateMachine
         {
             if (InteractionPossible == true)
             {
-                if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 9f)
+                if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 15f)
                 {
                     StartCoroutine(State.Follow());
                 }
-                else if (Vector3.Distance(transform.position, Player.transform.position) < 9f)
+                else if (Vector3.Distance(transform.position, Player.transform.position) < 15f)
                 {
                     StartCoroutine(State.Interact());
                 }
@@ -125,8 +125,7 @@ public class AISystem : StateMachine
         {
             if (Physics.Raycast(pos, direction, out hit, CheckingRadius))
             {
-
-                if (hit.collider.tag == "Player")
+                if (hit.collider.gameObject.tag == "Player")
                 {
                     Debug.DrawRay(pos, direction * hit.distance, Color.red);
                     return Player.transform;

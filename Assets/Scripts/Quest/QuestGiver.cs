@@ -44,7 +44,7 @@ public class QuestGiver : MonoBehaviour
                 }
             }
 
-            if (_dialogueManager.readNpcDialogue != null)
+            if (_dialogueManager.newestNpcDialogue != null)
             {
                 if (Npc.Quests.Length != 0)
                 {
@@ -60,8 +60,7 @@ public class QuestGiver : MonoBehaviour
             {
                 _questWindow.SetActive(false);
             }
-        }
-        
+        }        
     }
 
     /// <summary>

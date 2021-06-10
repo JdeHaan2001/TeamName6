@@ -12,5 +12,5 @@
   "NewDialogueFile": ["nothing"],
   "WhenToShowNewDialogue": [-1],
   "ChoosingDialogue": false,
-  "ToBeReplaced": ["1"]
+  "ToBeReplaced": []
 }

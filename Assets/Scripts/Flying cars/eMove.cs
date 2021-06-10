@@ -42,8 +42,6 @@ public class eMove : MonoBehaviour
         if (!renderer.isVisible && isVisible)
         {
 
-            Debug.Log("Remove. not on screen");
-
             Destroy(this.gameObject);
 
         }
