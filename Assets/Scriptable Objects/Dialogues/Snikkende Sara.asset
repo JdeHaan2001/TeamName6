@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
   m_Name: Snikkende Sara
   m_EditorClassIdentifier: 
-  Picture: {fileID: 0}
-  NpcDialogue: {fileID: 0}
-  Quests: []
+  Picture: {fileID: 21300000, guid: 12caae36a88fcf84bba5124d06a1c96a, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: e0b33c8b2ae4c534097c1cb31cfab70a, type: 3}
+  Quests:
+  - {fileID: 11400000, guid: cacacc823bb35354a9ee2a5c582aa44d, type: 2}
   ConversationFinished: 0
