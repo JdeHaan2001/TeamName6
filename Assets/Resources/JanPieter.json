@@ -1,0 +1,27 @@
+{
+    "Name": "Jan Pieter Prullenbak",
+
+    "Dialogue": [
+                "Hey, ik heb je hier wel rond zien lopen in de stad de afgelopen tijd, je bent echt saai.",
+                "Boeien, Ik weet wel iets wat je leuker maakt!",
+                "Boeien, Ik weet wel iets wat je leuker maakt!"
+
+
+
+            ],
+
+    "PlayerDialogue": [
+                "Ik vind van niet.",
+                "Nee, jij bent saai!"
+
+
+            ],
+
+
+
+    "NewDialogueFile": "JanPieterAccept",
+    "WhenToShowNewDialogue": 0,
+    "ChoosingDialogue": true,
+    "ToBeReplaced": [
+        ]
+}

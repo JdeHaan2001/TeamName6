@@ -1,0 +1,24 @@
+{
+    "Name": "Jan Pieter Prullenbak",
+
+    "Dialogue": [
+
+
+                "Je moet gemeen praten over anderen, mensen vinden dat leuk om te zien. Geloof me, je zult meer volgers krijgen als je dat doet."
+            ],
+
+    "PlayerDialogue": [
+                "Owh wat is dat dan voor leuks?"
+
+
+
+            ],
+
+
+
+    "NewDialogueFile": "JanPieterAccept2",
+    "WhenToShowNewDialogue": 0,
+    "ChoosingDialogue": false,
+    "ToBeReplaced": [
+        ]
+}

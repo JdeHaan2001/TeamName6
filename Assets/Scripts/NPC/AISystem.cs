@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 //Made by: Jorrit Bos

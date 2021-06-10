@@ -1,0 +1,24 @@
+{
+    "Name": "Ballon Boris",
+
+    "Dialogue": [
+
+                "Dat is beter. De volgende keer dat je iemand tegenkomt mag je wel wat vriendelijker tegen ze zijn.",
+
+                "Hier heb je de telefoon, en nu wegwezen! Je kunt de telefoon openen door op i te klikken"
+            ],
+
+    "PlayerDialogue": [
+                "Sorry Boris, dat was niet aardig van me.",
+                "Dat maakt mij niets uit."
+
+            ],
+
+
+
+    "NewDialogueFile": "BalloonQuest",
+    "WhenToShowNewDialogue": 1,
+    "ChoosingDialogue": true,
+    "ToBeReplaced": ["1"
+        ]
+}

@@ -1,0 +1,21 @@
+{
+    "Name": "Bella Beer",
+
+  "Dialogue": [
+    "Misschien bedenk je je nog!",
+    "Dankjewel! Iets leuks doen voor anderen voelt goed om te doen!"
+
+  ],
+
+  "PlayerDialogue": [
+
+    "Goed idee! Zijn ze vast blij mee!",
+    "Pff, nee dat is mijn eigen geld dat ik zelf heb gespaard!"
+  ],
+
+    "NewDialogueFile": "nothing",
+    "WhenToShowNewDialogue": -1,
+    "ChoosingDialogue": "true",
+    "ToBeReplaced": [
+        ]
+}
