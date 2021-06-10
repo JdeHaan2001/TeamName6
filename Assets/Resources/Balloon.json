@@ -19,7 +19,7 @@
 
     "NewDialogueFile": "BalloonQuest",
     "WhenToShowNewDialogue": 1,
-    "ChoosingDialogue": true,
-    "ToBeReplaced": ["1"
+    "ChoosingDialogue": false,
+    "ToBeReplaced": [
         ]
 }

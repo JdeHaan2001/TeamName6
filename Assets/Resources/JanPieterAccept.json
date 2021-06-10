@@ -17,7 +17,7 @@
 
 
     "NewDialogueFile": "JanPieterAccept2",
-    "WhenToShowNewDialogue": 2,
+    "WhenToShowNewDialogue": 0,
     "ChoosingDialogue": false,
     "ToBeReplaced": [
         ]
