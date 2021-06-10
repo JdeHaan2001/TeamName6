@@ -15,8 +15,11 @@ public class QuestsScreen : PhoneScreenWithView<QuestsView>
 
     private void setActiveQuestValues()
     {
-        phoneView.MissionName.text = _questKeeper.Quest.Title;
-        phoneView.FollowerReward.text = _questKeeper.Quest.FollowersReward.ToString();
-        phoneView.MoneyReward.text = _questKeeper.Quest.MoneyReward.ToString();
+        if (_questKeeper != null)
+        {
+            phoneView.MissionName.text = _questKeeper.Quest.Title;
+            phoneView.FollowerReward.text = _questKeeper.Quest.FollowersReward.ToString();
+            phoneView.MoneyReward.text = _questKeeper.Quest.MoneyReward.ToString();
+        }
     }
 }
