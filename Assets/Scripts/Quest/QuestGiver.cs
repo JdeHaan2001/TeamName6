@@ -44,7 +44,7 @@ public class QuestGiver : MonoBehaviour
                 }
             }
 
-            if (_dialogueManager.newestNpcDialogue != null)
+            if (_dialogueManager.currentNpcDialogue != null)
             {
                 if (Npc.Quests.Length != 0)
                 {

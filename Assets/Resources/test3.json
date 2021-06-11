@@ -2,11 +2,11 @@
   "Name": "Prickly Pete test2",
 
   "Dialogue": [
-    "Man, that's really nice."
+    "Oh yeah, then I can understand, feel better soon!"
   ],
 
   "PlayerDialogue": [
-    "I just feel great! Can't really explain."
+    "I think I'm ill."
   ],
 
   "NewDialogueFile": ["nothing"],
