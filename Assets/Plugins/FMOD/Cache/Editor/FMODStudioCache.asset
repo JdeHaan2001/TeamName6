@@ -22,11 +22,7 @@ MonoBehaviour:
   - {fileID: 7559215867333206516}
   StringsBanks:
   - {fileID: 5769557308442873456}
-<<<<<<< HEAD
-  stringsBankWriteTime: 637583190557823859
-=======
   stringsBankWriteTime: 637583411322655251
->>>>>>> Jorrit
   cacheVersion: 6
 --- !u!114 &5769557308442873456
 MonoBehaviour:
@@ -43,11 +39,7 @@ MonoBehaviour:
   Path: FMOD/testBanksThing/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-<<<<<<< HEAD
-  lastModified: 637583190557823859
-=======
   lastModified: 637583411322655251
->>>>>>> Jorrit
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -68,11 +60,7 @@ MonoBehaviour:
   Path: FMOD/testBanksThing/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-<<<<<<< HEAD
-  lastModified: 637583190557823859
-=======
   lastModified: 637583411322655251
->>>>>>> Jorrit
   LoadResult: 0
   FileSizes: []
   Exists: 1

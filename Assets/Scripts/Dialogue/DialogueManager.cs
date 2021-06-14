@@ -1,7 +1,7 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Linq;
 
 
 //Made by: Jorrit Bos
@@ -10,20 +10,12 @@ public class DialogueManager : MonoBehaviour
     #region Variables
     [HideInInspector] public NPCInformation Npc;
 
-<<<<<<< HEAD
-    [HideInInspector] public JsonNpc readNpcDialogue;
-    [HideInInspector] private JsonNpc newReadNpcDialogue;
-    [HideInInspector] public bool IsTalking;
-    [HideInInspector] public bool OpenQuest;
-
-=======
     [HideInInspector] public JsonNpc currentNpcDialogue;
 
     [HideInInspector] public bool IsTalking;
     [HideInInspector] public bool OpenQuest;
 
     [HideInInspector] private int _oldPlayerDialogueAmount = 0;
->>>>>>> Jorrit
     [HideInInspector] private int _currentCheckedString = 0;
     [HideInInspector] private int _changedButton = -1;
 
@@ -65,7 +57,6 @@ public class DialogueManager : MonoBehaviour
         if (IsTalking == true)
         {
             ButtonClick();
-
         }
     }
 
@@ -130,16 +121,10 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void ButtonClicked(int textToShow)
     {
-<<<<<<< HEAD
-        loadNewJson(textToShow);
-        _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
-        checkChoosingStatus(textToShow);
-=======
         _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
 
         checkChoosingStatus(textToShow);
         loadNewJson(textToShow);
->>>>>>> Jorrit
     }
 
     /// <summary>
@@ -152,6 +137,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (_changedButton != buttonClicked)
             {
+                _playerResponsesList[_changedButton].SetActive(false);
                 _playerResponsesList[_changedButton].GetComponent<Button>().interactable = false;
                 _playerResponsesList[_changedButton].GetComponent<Image>().color = Color.white;
             }
@@ -186,14 +172,9 @@ public class DialogueManager : MonoBehaviour
             _playerResponsesList.Add(instantiatedGO);
             _playerResponsesList[listLength + i].transform.SetParent(_playerDialoguePanel.transform, false);
         }
-        readNpcDialogue = readJsonNpc;
-
         _playerDialogue.SetActive(false);
 
-<<<<<<< HEAD
-=======
         currentNpcDialogue = readJsonNpc;
->>>>>>> Jorrit
     }
 
     /// <summary>
@@ -202,11 +183,6 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void loadNewJson(int textToShow)
     {
-<<<<<<< HEAD
-            if (readNpcDialogue.WhenToShowNewDialogue == textToShow)
-            {
-                var newJson = readNpcDialogue.NewDialogueFile;
-=======
         _oldPlayerDialogueAmount = _playerResponsesList.Count;
 
         for (int i = 0; i < currentNpcDialogue.WhenToShowNewDialogue.Length; i++)
@@ -214,12 +190,11 @@ public class DialogueManager : MonoBehaviour
             if (currentNpcDialogue.WhenToShowNewDialogue[i] == textToShow /*- _oldPlayerDialogueAmount*/)
             {
                 var newJson = currentNpcDialogue.NewDialogueFile[i];
->>>>>>> Jorrit
 
                 TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
-
                 renderDialogue(jsonAsset);
             }
+        }
     }
 
     /// <summary>
@@ -230,14 +205,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentNpcDialogue.ChoosingDialogue == true)
         {
-            if (currentButton > readNpcDialogue.PlayerDialogue.Length - 1)
+            for (int i = 0; i < _playerResponsesList.Count; i++)
             {
-                for (int i = 0; i < readNpcDialogue.PlayerDialogue.Length + readNpcDialogue.PlayerDialogue.Length; i++)
+                if (_playerResponsesList[i] != _playerResponsesList[currentButton])
                 {
-                    if (_playerResponsesList[i] != _playerResponsesList[currentButton])
-                    {
-                        _playerResponsesList[i].SetActive(false);
-                    }
+                    _playerResponsesList[i].SetActive(false);
                 }
             }
         }
@@ -334,6 +306,7 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (GameObject obj in _playerResponsesList)
         {
+            obj.SetActive(true);
             Destroy(obj);
         }
 
@@ -348,14 +321,12 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         IsTalking = false;
-        Npc.ConversationFinished = true;
+        resetQuestInDialogue();
         destroyResponses();
         _dialogueUI.SetActive(false);
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-<<<<<<< HEAD
-=======
 
         if (_player.GetComponent<QuestKeeper>().Quest != null)
         {
@@ -366,7 +337,6 @@ public class DialogueManager : MonoBehaviour
         }
 
         Npc = null;
->>>>>>> Jorrit
     }
 
     public void OnApplicationQuit()
