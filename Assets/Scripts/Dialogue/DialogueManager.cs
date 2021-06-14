@@ -107,10 +107,10 @@ public class DialogueManager : MonoBehaviour
         {
             for (int i = 0; i < _playerResponsesList.Count; i++)
             {
-                int textToShow = i;
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => buttonClicked(textToShow));
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => changeButtonState(textToShow));
+                int buttonClicked = i;
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.RemoveAllListeners();
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(buttonClicked));
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => changeButtonState(buttonClicked));
             }
         }
     }
@@ -119,7 +119,7 @@ public class DialogueManager : MonoBehaviour
     /// This will show the correct answer to your response of the NPC. This happens when you press on the player response.
     /// </summary>
     /// <param name="textToShow"></param>
-    private void buttonClicked(int textToShow)
+    private void ButtonClicked(int textToShow)
     {
         _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
 
@@ -130,21 +130,20 @@ public class DialogueManager : MonoBehaviour
     /// <summary>
     /// Will change the state of the button (Color and interaction)
     /// </summary>
-    /// <param name="textToShow"></param>
-    private void changeButtonState(int textToShow)
+    /// <param name="buttonClicked"></param>
+    private void changeButtonState(int buttonClicked)
     {
-        Debug.Log(_changedButton);
-        //if (_changedButton != -1)
-        //{
-            if (_changedButton != textToShow)
+        if (_changedButton != -1)
+        {
+            if (_changedButton != buttonClicked)
             {
                 _playerResponsesList[_changedButton].SetActive(false);
                 _playerResponsesList[_changedButton].GetComponent<Button>().interactable = false;
                 _playerResponsesList[_changedButton].GetComponent<Image>().color = Color.white;
             }
-        //}
-        _playerResponsesList[textToShow].GetComponent<Image>().color = _dialogueTextKeeper.PlayerResponseSelectColor;
-        _changedButton = textToShow;
+        }
+        _playerResponsesList[buttonClicked].GetComponent<Image>().color = _dialogueTextKeeper.PlayerResponseSelectColor;
+        _changedButton = buttonClicked;
     }
 
     /// <summary>
@@ -313,6 +312,7 @@ public class DialogueManager : MonoBehaviour
 
         _playerResponsesList.Clear();
         _npcDialogueList.Clear();
+        _changedButton = -1;
     }
 
     /// <summary>
