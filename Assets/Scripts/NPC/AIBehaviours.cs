@@ -14,6 +14,11 @@ public class AIBehaviours : State
     {
         //Idle state is the same as doing nothing. Which in some cases is also considered to something you can do.
 
+        if (_system.IsInteracting == true)
+        {
+            _system.DialogueManager.EndDialogue();
+        }
+
         yield break;
     }
     public override IEnumerator Follow()
