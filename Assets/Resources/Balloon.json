@@ -17,8 +17,8 @@
 
 
 
-    "NewDialogueFile": "BalloonQuest",
-    "WhenToShowNewDialogue": 1,
+    "NewDialogueFile": ["BalloonQuest"],
+    "WhenToShowNewDialogue": [1],
     "ChoosingDialogue": false,
     "ToBeReplaced": [
         ]

@@ -10,7 +10,7 @@
 
                 "Mensen verschijnen zo nu en dan ineens in deze stad en niemand weet waarom.",
 
-                "Je bent hier om zoveel mogelijk volgers te krijgen door personen in de stad te helpen."                
+                "Je bent hier om zoveel mogelijk volgers te krijgen door personen in de stad te helpen."
             ],
 
     "PlayerDialogue": [
@@ -20,8 +20,8 @@
                 "Waarom ben ik hier?"
             ],
 
-    "NewDialogueFile": "StekeligeSjoerdQuest",
-    "WhenToShowNewDialogue": 3,
+    "NewDialogueFile": ["StekeligeSjoerdQuest"],
+    "WhenToShowNewDialogue": [3],
     "ChoosingDialogue": false,
     "ToBeReplaced": []
 }

@@ -15,8 +15,8 @@
 
 
 
-    "NewDialogueFile": "Ballon Boris 2 Accept",
-    "WhenToShowNewDialogue": 0,
+    "NewDialogueFile": ["Ballon Boris 2 Accept"],
+    "WhenToShowNewDialogue": [0],
     "ChoosingDialogue": false,
     "ToBeReplaced": [
         ]
