@@ -1,0 +1,17 @@
+{
+    "Name": "Snikkende Sara",
+
+    "Dialogue": [
+                "Je moet 3 dingen vinden, een berichtje, een geluidje van zijn stem en een foto van de pestkop. quest Dit kan je in de stad vinden. Je moet ze alle drie vinden om de internet pestkop aan te kunnen pakken en de pestkop te laten zien wat de gevolgen van pesten zijn."               
+            ],
+
+  "PlayerDialogue": [
+    "Geen probleem!"
+  ],
+
+    "NewDialogueFile": "SnikkendeSaraInformation",
+    "WhenToShowNewDialogue": -1,
+    "ChoosingDialogue": false,
+    "ToBeReplaced": ["quest"
+        ]
+}

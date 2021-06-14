@@ -1,0 +1,25 @@
+{
+    "Name": "Karel Camera",
+
+    "Dialogue": [
+                "Jij daar, wil je een foto van iemand maken voor mij?",
+
+                "*Valse, rare, gemene lach - maar wel kort*",
+
+                "Jammer, ik zoek wel iemand anders."
+            ],
+
+    "PlayerDialogue": [
+                "Ja, is goed!",
+                "Nee, dat wil ik niet!"
+
+            ],
+
+
+
+    "NewDialogueFile": ["nothing"],
+    "WhenToShowNewDialogue": [-1],
+    "ChoosingDialogue": true,
+    "ToBeReplaced": [
+        ]
+}

@@ -1,0 +1,25 @@
+{
+    "Name": "Ballon Boris",
+
+    "Dialogue": [
+                "Hallo? Je hebt me wakker gemaakt, dus ik hoop dat je een goede reden hebt om hier te zijn. Heeft Sjoerd je gestuurd?",
+
+                "Het is altijd weer iemand die door Sjoerd gestuurd is en ze hebben altijd iets nodig.",
+
+                "Hey! Dat is nou niet aardig hè? Ik ga je niks geven als je zo onaardig bent."
+            ],
+
+    "PlayerDialogue": [
+                "Ja, dat klopt.",
+                "Jij klinkt niet zo blij."
+
+            ],
+
+
+
+    "NewDialogueFile": ["BalloonQuest"],
+    "WhenToShowNewDialogue": [1],
+    "ChoosingDialogue": false,
+    "ToBeReplaced": [
+        ]
+}

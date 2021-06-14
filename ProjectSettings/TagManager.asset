@@ -4,18 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Phone
-  - Test
-  - NPC
-  - Dialogue
-  - NPCManager
-  - PickupManager
-  - ResponsePanel
-  - PlayerDialoguePanel
-  - PlayerCustomization
+  - ChoosingButtonTemplate
+  - ChooseButtons
   - PlayerChooser
+  - PlayerCustomization
   - PlayerCharacter
+  - ResponsePanel
   - QuestPanel
+  - PlayerDialoguePanel
+  - Dialogue
+  - Cars
+  - NPCManager
+  - NPC
+  - WayPoint
   layers:
   - Default
   - TransparentFX
@@ -25,8 +26,8 @@ TagManager:
   - UI
   - 
   - 
-  - PostProcessing
-  - Not in Reflection
+  - 
+  - 
   - 
   - 
   - 

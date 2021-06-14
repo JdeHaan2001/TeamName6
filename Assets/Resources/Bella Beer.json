@@ -1,0 +1,20 @@
+{
+    "Name": "Bella Beer",
+
+  "Dialogue": [
+    "Hey! Jij hebt echt al best veel volgers.",
+    "Dan is het tijd om wat terug te doen voor anderen door 50 munten te geven aan een goed doel.."
+
+  ],
+
+  "PlayerDialogue": [
+    "Ja he, vind ik ook."
+    
+  ],
+
+    "NewDialogueFile": "BellaBeer2",
+    "WhenToShowNewDialogue": 0,
+    "ChoosingDialogue": false,
+    "ToBeReplaced": [
+        ]
+}

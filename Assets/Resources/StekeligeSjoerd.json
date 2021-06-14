@@ -1,0 +1,27 @@
+{
+    "Name": "Stekelige Sjoerd",
+
+    "Dialogue": [
+                "Hallo daar, welkom! Ik ben Stekelige Sjoerd.",
+
+                "Je bent in de grootste sociale stad in de wereld, waar volgers het belangrijkste zijn.",
+
+                "Ik ben Stekelige Sjoerd, en ik zal je helpen met je eerste missie.",
+
+                "Mensen verschijnen zo nu en dan ineens in deze stad en niemand weet waarom.",
+
+                "Je bent hier om zoveel mogelijk volgers te krijgen door personen in de stad te helpen."
+            ],
+
+    "PlayerDialogue": [
+                "Waar ben ik?",
+                "Wie ben jij?",
+                "Hoe ben ik hier gekomen?",
+                "Waarom ben ik hier?"
+            ],
+
+    "NewDialogueFile": ["StekeligeSjoerdQuest"],
+    "WhenToShowNewDialogue": [3],
+    "ChoosingDialogue": false,
+    "ToBeReplaced": []
+}

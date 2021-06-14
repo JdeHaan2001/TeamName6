@@ -1,0 +1,16 @@
+{
+  "Name": "Prickly Pete test2",
+
+  "Dialogue": [
+    "Oh yeah, then I can understand, feel better soon!"
+  ],
+
+  "PlayerDialogue": [
+    "I think I'm ill."
+  ],
+
+  "NewDialogueFile": ["nothing"],
+  "WhenToShowNewDialogue": [-1],
+  "ChoosingDialogue": false,
+  "ToBeReplaced": []
+}

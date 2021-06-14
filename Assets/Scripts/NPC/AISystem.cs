@@ -1,6 +1,5 @@
 ﻿using System.Linq;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
 
 //Made by: Jorrit Bos
@@ -14,8 +13,9 @@ public class AISystem : StateMachine
     [HideInInspector] private QuestKeeper _questKeeper;
 
     [HideInInspector] public DialogueManager DialogueManager;
+    [SerializeField] public NPCInformation NpcInfo;
     [HideInInspector] public QuestGiver QuestGiver;
-    [SerializeField] public GameObject InteractText;
+    [SerializeField] public GameObject InteractIcon;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
@@ -29,17 +29,16 @@ public class AISystem : StateMachine
 
     private void Awake()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
     }
     private void Start()
     {
-        DialogueManager = GetComponent<DialogueManager>();
-        Player = DontDestroyPlayer.PlayerInstance.Player;
-        _questKeeper = DontDestroyPlayer.PlayerInstance.Player.GetComponent<QuestKeeper>();
+        DialogueManager = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueManager>();
+        _questKeeper = Player.GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));
-        InteractText.SetActive(false);
 
         StartPos = transform.position;
         StartAngle = transform.rotation;
@@ -54,85 +53,82 @@ public class AISystem : StateMachine
         {
             if (InteractionPossible == true)
             {
-                if (Vector3.Distance(transform.position, Player.transform.position) > 4f)
+                if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 15f)
                 {
                     StartCoroutine(State.Follow());
                 }
-            }
-            if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
-            {
-                if (InteractionPossible == true)
+                else if (Vector3.Distance(transform.position, Player.transform.position) < 15f)
                 {
                     StartCoroutine(State.Interact());
                 }
-                else
-                {
-                    StartCoroutine(State.Unavailable());
-                }
             }
-            else
+            else if (InteractionPossible == false)
             {
-                InteractText.SetActive(false);
+                if (transform.position != StartPos)
+                {
+                    StartCoroutine(State.Return());
+                }
+                InteractIcon.SetActive(false);
+                StartCoroutine(State.Unavailable());
             }
         }
         else
         {
             StartCoroutine(State.Idle());
         }
-
-        if (InteractionPossible == false)
-        {
-            InteractText.SetActive(false);
-
-            if (this.transform.position != StartPos)
-            {
-                StartCoroutine(State.Return());
-            }
-        }
     }
 
+    /// <summary>
+    /// Checks if NPC is available for talking
+    /// </summary>
     private void checkAvailability()
     {
-        if (DialogueManager.Npc.ConversationFinished != true)
+        if (NpcInfo != null)
         {
-            InteractionPossible = true;
+            if (NpcInfo.ConversationFinished != true)
+            {
+                InteractionPossible = true;
+            }
         }
 
         if (_questKeeper.Quest != null)
         {
             if (_questKeeper.Quest.IsActive == true)
             {
-                for (int i = 0; i < DialogueManager.Npc.Quests.Length; i++)
+                for (int i = 0; i < NpcInfo.Quests.Length; i++)
                 {
-                    if (DialogueManager.Npc.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
+                    if (NpcInfo.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
                     {
                         _questKeeper.UpdateQuest();
                         InteractionPossible = false;
                     }
                     else
                     {
-                        InteractionPossible = false;
+                        InteractionPossible = true;
                     }
                 }
             }
         }
     }
 
+    /// <summary>
+    /// Checks if the NPC sees something
+    /// </summary>
+    /// <returns></returns>
     private Transform checkEnvironment()
     {
         RaycastHit hit;
         var angle = transform.rotation * _startingAngle;
         var direction = angle * Vector3.forward;
-        var pos = transform.position;
+        var pos = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
         for (var i = 0; i < 24; i++)
         {
             if (Physics.Raycast(pos, direction, out hit, CheckingRadius))
             {
-                var player = hit.collider.GetComponent<ThirdPersonCharacterController>();
-                if (player != null)
+                if (hit.collider.gameObject.tag == "Player")
                 {
                     Debug.DrawRay(pos, direction * hit.distance, Color.red);
-                    return player.transform;
+                    return Player.transform;
                 }
                 else
                 {

@@ -1,0 +1,17 @@
+{
+    "Name": "Prickly Pete test",
+
+    "Dialogue": [
+    "Good day!",
+    "How are you doing?"
+  ],
+
+    "PlayerDialogue": [
+    "Hello!"
+  ],
+
+    "NewDialogueFile": ["test1"],
+    "WhenToShowNewDialogue": [0],
+    "ChoosingDialogue": false,
+    "ToBeReplaced": []
+}

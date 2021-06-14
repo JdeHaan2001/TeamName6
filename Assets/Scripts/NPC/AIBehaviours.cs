@@ -14,6 +14,11 @@ public class AIBehaviours : State
     {
         //Idle state is the same as doing nothing. Which in some cases is also considered to something you can do.
 
+        if (_system.IsInteracting == true)
+        {
+            _system.DialogueManager.EndDialogue();
+        }
+
         yield break;
     }
     public override IEnumerator Follow()
@@ -41,7 +46,7 @@ public class AIBehaviours : State
     {
         if (_system.InteractionPossible == true)
         {
-            _system.InteractText.SetActive(true);
+            _system.InteractIcon.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == false)
             {
                 _system.IsInteracting = true;
@@ -57,7 +62,7 @@ public class AIBehaviours : State
         {
             _system.DialogueManager.EndDialogue();
             _system.IsInteracting = false;
-            _system.InteractText.SetActive(true);
+            _system.InteractIcon.SetActive(true);
         }
         yield break;
     }

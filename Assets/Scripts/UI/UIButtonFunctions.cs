@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//Made By: Jorrit Bos
 public class UIButtonFunctions : MonoBehaviour
 {
     private string _sceneName;
