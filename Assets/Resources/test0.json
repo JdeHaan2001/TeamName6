@@ -3,17 +3,15 @@
 
     "Dialogue": [
     "Good day!",
-    "Wollah hollah gimme a dollah!",
-    "Nah dude."
+    "How are you doing?"
   ],
 
     "PlayerDialogue": [
-    "Yes",
-    "No"
+    "Hello!"
   ],
 
-    "NewDialogueFile": ["test1", "test2"],
-    "WhenToShowNewDialogue": [0, 1],
-    "ChoosingDialogue": true,
-    "ToBeReplaced": ["1"]
+    "NewDialogueFile": ["test1"],
+    "WhenToShowNewDialogue": [0],
+    "ChoosingDialogue": false,
+    "ToBeReplaced": []
 }

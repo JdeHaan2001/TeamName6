@@ -409,7 +409,7 @@ MonoBehaviour:
   HasSourceProject: 1
   HasPlatforms: 1
   sourceProjectPath: FMOD/testBanksThing/testBanksThing.fspro
-  sourceBankPath: FMOD\testBanksThing\Build
+  sourceBankPath: FMOD/testBanksThing/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

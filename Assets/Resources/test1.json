@@ -2,15 +2,17 @@
   "Name": "Prickly Pete test1",
 
   "Dialogue": [
-    "No way!!!!!!!!!!!!!!!"
+    "Great!, why exactly?",
+    "Oh man, what's going on?"
   ],
 
   "PlayerDialogue": [
-    "This is just a test lmao"
+    "I'm doing good!",
+    "It's not going very well..."
   ],
 
-  "NewDialogueFile": ["nothing"],
-  "WhenToShowNewDialogue": [-1],
-  "ChoosingDialogue": false,
-  "ToBeReplaced": ["1"]
+  "NewDialogueFile": ["test2", "test3"],
+  "WhenToShowNewDialogue": [1, 2],
+  "ChoosingDialogue": true,
+  "ToBeReplaced": []
 }

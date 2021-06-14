@@ -10,11 +10,20 @@ public class DialogueManager : MonoBehaviour
     #region Variables
     [HideInInspector] public NPCInformation Npc;
 
+<<<<<<< HEAD
     [HideInInspector] public JsonNpc readNpcDialogue;
     [HideInInspector] private JsonNpc newReadNpcDialogue;
     [HideInInspector] public bool IsTalking;
     [HideInInspector] public bool OpenQuest;
 
+=======
+    [HideInInspector] public JsonNpc currentNpcDialogue;
+
+    [HideInInspector] public bool IsTalking;
+    [HideInInspector] public bool OpenQuest;
+
+    [HideInInspector] private int _oldPlayerDialogueAmount = 0;
+>>>>>>> Jorrit
     [HideInInspector] private int _currentCheckedString = 0;
     [HideInInspector] private int _changedButton = -1;
 
@@ -90,15 +99,14 @@ public class DialogueManager : MonoBehaviour
         _dialogueUI.SetActive(true);
         renderDialogue(Npc.NpcDialogue);
 
-        _dialogueTextKeeper.NPCNameText.text = readNpcDialogue.Name;
-        _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[0];
+        _dialogueTextKeeper.NPCNameText.text = currentNpcDialogue.Name;
+        _dialogueTextKeeper.NPCDialogueText.text = currentNpcDialogue.Dialogue[0];
         _dialogueTextKeeper.NPCPicture.sprite = Npc.Picture;
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
 
-    #region buttonFunctions
     /// <summary>
     /// Checks which message it has to show based on what button you clicked
     /// </summary>
@@ -108,10 +116,10 @@ public class DialogueManager : MonoBehaviour
         {
             for (int i = 0; i < _playerResponsesList.Count; i++)
             {
-                int textToShow = i;
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => buttonClicked(textToShow));
-                _playerResponsesList[textToShow].GetComponent<Button>().onClick.AddListener(() => changeButtonState(textToShow));
+                int buttonClicked = i;
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.RemoveAllListeners();
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(buttonClicked));
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => changeButtonState(buttonClicked));
             }
         }
     }
@@ -120,41 +128,46 @@ public class DialogueManager : MonoBehaviour
     /// This will show the correct answer to your response of the NPC. This happens when you press on the player response.
     /// </summary>
     /// <param name="textToShow"></param>
-    private void buttonClicked(int textToShow)
+    private void ButtonClicked(int textToShow)
     {
+<<<<<<< HEAD
         loadNewJson(textToShow);
         _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
         checkChoosingStatus(textToShow);
+=======
+        _dialogueTextKeeper.NPCDialogueText.text = _npcDialogueList[textToShow + 1];
+
+        checkChoosingStatus(textToShow);
+        loadNewJson(textToShow);
+>>>>>>> Jorrit
     }
 
     /// <summary>
     /// Will change the state of the button (Color and interaction)
     /// </summary>
-    /// <param name="textToShow"></param>
-    private void changeButtonState(int textToShow)
+    /// <param name="buttonClicked"></param>
+    private void changeButtonState(int buttonClicked)
     {
         if (_changedButton != -1)
         {
-            if (_changedButton != textToShow)
+            if (_changedButton != buttonClicked)
             {
                 _playerResponsesList[_changedButton].GetComponent<Button>().interactable = false;
                 _playerResponsesList[_changedButton].GetComponent<Image>().color = Color.white;
             }
         }
-        _playerResponsesList[textToShow].GetComponent<Image>().color = _dialogueTextKeeper.PlayerResponseSelectColor;
-        _changedButton = textToShow;
+        _playerResponsesList[buttonClicked].GetComponent<Image>().color = _dialogueTextKeeper.PlayerResponseSelectColor;
+        _changedButton = buttonClicked;
     }
-
-    #endregion
-
-    #region RenderDialogues
 
     /// <summary>
     /// Will render the dialogue. 
     /// </summary>
     private void renderDialogue(TextAsset jsonNpc)
     {
+        _oldPlayerDialogueAmount = _playerResponsesList.Count;
         _playerDialogue.SetActive(true);
+
         var readJsonNpc = JsonReader.LoadNpcFromFile(jsonNpc);
         changeQuestInDialogue(readJsonNpc);
 
@@ -177,6 +190,10 @@ public class DialogueManager : MonoBehaviour
 
         _playerDialogue.SetActive(false);
 
+<<<<<<< HEAD
+=======
+        currentNpcDialogue = readJsonNpc;
+>>>>>>> Jorrit
     }
 
     /// <summary>
@@ -185,9 +202,19 @@ public class DialogueManager : MonoBehaviour
     /// <param name="textToShow"></param>
     private void loadNewJson(int textToShow)
     {
+<<<<<<< HEAD
             if (readNpcDialogue.WhenToShowNewDialogue == textToShow)
             {
                 var newJson = readNpcDialogue.NewDialogueFile;
+=======
+        _oldPlayerDialogueAmount = _playerResponsesList.Count;
+
+        for (int i = 0; i < currentNpcDialogue.WhenToShowNewDialogue.Length; i++)
+        {
+            if (currentNpcDialogue.WhenToShowNewDialogue[i] == textToShow /*- _oldPlayerDialogueAmount*/)
+            {
+                var newJson = currentNpcDialogue.NewDialogueFile[i];
+>>>>>>> Jorrit
 
                 TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
 
@@ -195,15 +222,13 @@ public class DialogueManager : MonoBehaviour
             }
     }
 
-    #endregion
-
     /// <summary>
     /// Will check if a choice has been made when the dialogue is a choice.
     /// </summary>
     /// <param name="currentButton"></param>
     private void checkChoosingStatus(int currentButton)
     {
-        if (readNpcDialogue.ChoosingDialogue == true)
+        if (currentNpcDialogue.ChoosingDialogue == true)
         {
             if (currentButton > readNpcDialogue.PlayerDialogue.Length - 1)
             {
@@ -272,22 +297,21 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    #region ResettingDialogue
     /// <summary>
     /// This will replace the Quest titles back to the "ToBeReplaced" string.
     /// </summary>
     private void resetQuestInDialogue()
     {
-        if (readNpcDialogue.ToBeReplaced.Length != 0)
+        if (currentNpcDialogue.ToBeReplaced.Length != 0)
         {
-            for (int i = readNpcDialogue.Dialogue.Length - 1; i > 0; i--)
+            for (int i = currentNpcDialogue.Dialogue.Length - 1; i > 0; i--)
             {
                 if (Npc.Quests.Length != 0)
                 {
-                    if (readNpcDialogue.Dialogue[i].Contains(Npc.Quests[_currentCheckedString].Title))
+                    if (currentNpcDialogue.Dialogue[i].Contains(Npc.Quests[_currentCheckedString].Title))
                     {
-                        string resetString = readNpcDialogue.Dialogue[i].Replace(Npc.Quests[_currentCheckedString].Title, readNpcDialogue.ToBeReplaced[_currentCheckedString]);
-                        readNpcDialogue.Dialogue[i] = resetString;
+                        string resetString = currentNpcDialogue.Dialogue[i].Replace(Npc.Quests[_currentCheckedString].Title, currentNpcDialogue.ToBeReplaced[_currentCheckedString]);
+                        currentNpcDialogue.Dialogue[i] = resetString;
 
                         if (_currentCheckedString != 0)
                         {
@@ -312,8 +336,10 @@ public class DialogueManager : MonoBehaviour
         {
             Destroy(obj);
         }
+
         _playerResponsesList.Clear();
         _npcDialogueList.Clear();
+        _changedButton = -1;
     }
 
     /// <summary>
@@ -328,6 +354,19 @@ public class DialogueManager : MonoBehaviour
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+<<<<<<< HEAD
+=======
+
+        if (_player.GetComponent<QuestKeeper>().Quest != null)
+        {
+            if (_player.GetComponent<QuestKeeper>().Quest.IsActive)
+            {
+                Npc.ConversationFinished = true;
+            }
+        }
+
+        Npc = null;
+>>>>>>> Jorrit
     }
 
     public void OnApplicationQuit()
@@ -337,4 +376,3 @@ public class DialogueManager : MonoBehaviour
         destroyResponses();
     }
 }
-#endregion
