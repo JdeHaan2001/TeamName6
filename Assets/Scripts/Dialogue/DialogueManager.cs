@@ -328,15 +328,12 @@ public class DialogueManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
 
-        if (_player.GetComponent<QuestKeeper>().Quest != null)
-        {
-            if (_player.GetComponent<QuestKeeper>().Quest.IsActive)
-            {
-                Npc.ConversationFinished = true;
-            }
-        }
-
         Npc = null;
+
+        if(_npcDialogueList[_npcDialogueList.Count] == _dialogueTextKeeper.NPCDialogueText.text)
+        {
+            Npc.ConversationFinished = true;
+        }
     }
 
     public void OnApplicationQuit()

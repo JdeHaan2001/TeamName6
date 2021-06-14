@@ -9,8 +9,8 @@
     "Hoe moet ik beginnen?"
   ],
 
-    "NewDialogueFile": "StekeligeSjoerdQuest2",
-    "WhenToShowNewDialogue": 1,
+    "NewDialogueFile": ["StekeligeSjoerdQuest2"],
+    "WhenToShowNewDialogue": [1],
     "ChoosingDialogue": false,
     "ToBeReplaced": ["1"]
 }
