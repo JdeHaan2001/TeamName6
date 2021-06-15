@@ -9,7 +9,7 @@
     "Geen probleem!"
   ],
 
-  "NewDialogueFile": [ "SnikkendeSara" ],
+  "NewDialogueFile": [ "nothing" ],
   "WhenToShowNewDialogue": [ -100 ],
     "ChoosingDialogue": false,
     "ToBeReplaced": [

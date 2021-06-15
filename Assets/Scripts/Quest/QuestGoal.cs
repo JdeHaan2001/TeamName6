@@ -11,7 +11,7 @@ public class QuestGoal
     public int requiredAmount;
     public int currentAmount;
     public string ItemToGet;
-    public NPCInformation npcToTalkTo;
+    public GameObject npcToTalkTo;
 
     public bool IsReached()
     {
@@ -38,7 +38,7 @@ public class QuestGoal
     {
         if(goalType == GoalType.Talking)
         {
-            if(npcToTalkTo.ConversationFinished == true)
+            if(npcToTalkTo.GetComponent<NpcInformation>().ConversationFinished == true)
             {
                 currentAmount++;
             }

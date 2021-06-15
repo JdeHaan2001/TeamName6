@@ -13,7 +13,7 @@ public class AISystem : StateMachine
     [HideInInspector] private QuestKeeper _questKeeper;
 
     [HideInInspector] public DialogueManager DialogueManager;
-    [SerializeField] public NPCInformation NpcInfo;
+    [SerializeField] public NpcInformation NpcInfo;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
 
@@ -53,13 +53,24 @@ public class AISystem : StateMachine
         {
             if (InteractionPossible == true)
             {
-                if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 15f)
+                if (Vector3.Distance(transform.position, StartPos) < 40)
                 {
-                    StartCoroutine(State.Follow());
+                    if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 5f)
+                    {
+                        StartCoroutine(State.Follow());
+                    }
+                    else if (Vector3.Distance(transform.position, Player.transform.position) < 5f)
+                    {
+                        StartCoroutine(State.Interact());
+                    }
+                    else
+                    {
+                        StartCoroutine(State.Return());
+                    }
                 }
-                else if (Vector3.Distance(transform.position, Player.transform.position) < 15f)
+                else
                 {
-                    StartCoroutine(State.Interact());
+                    StartCoroutine(State.Return());
                 }
             }
             else if (InteractionPossible == false)
@@ -91,24 +102,24 @@ public class AISystem : StateMachine
             }
         }
 
-        if (_questKeeper.Quest != null)
-        {
-            if (_questKeeper.Quest.IsActive == true)
-            {
-                for (int i = 0; i < NpcInfo.Quests.Length; i++)
-                {
-                    if (NpcInfo.Quests[i].Goal.npcToTalkTo.ConversationFinished == true)
-                    {
-                        _questKeeper.UpdateQuest();
-                        InteractionPossible = false;
-                    }
-                    else
-                    {
-                        InteractionPossible = true;
-                    }
-                }
-            }
-        }
+        //if (_questKeeper.Quest != null)
+        //{
+        //    if (_questKeeper.Quest.IsActive == true)
+        //    {
+        //        for (int i = 0; i < NpcInfo.Quests.Length; i++)
+        //        {
+        //            if (NpcInfo.Quests[i].Goal.npcToTalkTo.NpcInfo.ConversationFinished == true)
+        //            {
+        //                _questKeeper.UpdateQuest();
+        //                InteractionPossible = false;
+        //            }
+        //            else
+        //            {
+        //                InteractionPossible = true;
+        //            }
+        //        }
+        //    }
+        //}
     }
 
     /// <summary>
