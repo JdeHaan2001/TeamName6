@@ -9,7 +9,7 @@ public class QuestsScreen : PhoneScreenWithView<QuestsView>
     public override void EnterScreen()
     {
         base.EnterScreen();
-        //phoneView.SelectButton.onClick.AddListener(_PFSM.ChangeScreen<>);
+        phoneView.SelectButton.onClick.AddListener(_PFSM.ChangeScreen<SpecificQuestScreen>);
         setActiveQuestValues();
     }
 
