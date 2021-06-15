@@ -23,10 +23,14 @@ public class AIBehaviours : State
     }
     public override IEnumerator Follow()
     {
-        //Rotating with the object its following.
-        _system.transform.LookAt(_system.Player.transform);
 
-        //Following the position of the player.
+        //Rotates with the object which is being followed
+        var lookPos = _system.Player.transform.position - _system.transform.position;
+        lookPos.y = 0;
+        var rotation = Quaternion.LookRotation(lookPos);
+        _system.transform.rotation = Quaternion.Slerp(_system.transform.rotation, rotation, Time.deltaTime * 5f);
+
+        //Moves the NPC to the position of the player
         _system.transform.Translate(Vector3.forward * Time.deltaTime * 5f);
 
         yield break;
@@ -46,7 +50,6 @@ public class AIBehaviours : State
     {
         if (_system.InteractionPossible == true)
         {
-            _system.InteractIcon.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == false)
             {
                 _system.IsInteracting = true;

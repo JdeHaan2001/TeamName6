@@ -8,7 +8,7 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private DialogueManager _dialogueManager;
     [SerializeField] private QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
-    [SerializeField] private NPCInformation Npc;
+    [SerializeField] public NpcInformation Npc;
 
     [HideInInspector] private GameObject _questWindow;
     [HideInInspector] private Waypoint _waypoint;
@@ -23,7 +23,6 @@ public class QuestGiver : MonoBehaviour
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
         _questWindow = DontDestroyUI.UIInstance.UIGameObjects[3];
         _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
-        //_waypoint = GameObject.FindGameObjectWithTag("WayPoint").GetComponent<Waypoint>();
         _questWindow.SetActive(false);
     }
 
@@ -80,15 +79,15 @@ public class QuestGiver : MonoBehaviour
 
     public void AcceptQuest()
     {
+        _questKeeper.Quest = _quest;
         _dialogueManager.EndDialogue();
         _questWindow.SetActive(false);
         _quest.IsActive = true;
-        _questKeeper.Quest = _quest;
-        //_waypoint.WayPointIcon.SetActive(true);
     }
 
     public void DeclineQuest()
     {
         _questWindow.SetActive(false);
+        _dialogueManager.EndDialogue();
     }
 }

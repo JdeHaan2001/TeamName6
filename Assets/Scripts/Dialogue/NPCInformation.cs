@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 //Made by: Jorrit Bos
 [CreateAssetMenu(fileName = "NPC File", menuName = "NPC Files Archive")]
-public class NPCInformation : ScriptableObject
+public class NpcInformation : ScriptableObject
 {
     [Header("Name of the NPC")]
     public Sprite Picture;

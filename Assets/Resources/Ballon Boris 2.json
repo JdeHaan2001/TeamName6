@@ -1,28 +1,19 @@
 {
-    "Name": "Ballon Boris",
+  "Name": "Ballon Boris",
 
-    "Dialogue": [
-                "Hey kijk! Een spaarpot. Er zit vast veel geld in.",
+  "Dialogue": [
+    "Hey kijk! Een spaarpot. Er zit vast veel geld in.",
 
-                "Zeker wel. Je kunt het houden als je wilt, niemand die het zal merken."
-            ],
+    "Zeker wel. Je kunt het houden als je wilt, niemand die het zal merken."
+  ],
 
-    "PlayerDialogue": [
-                "Denk je?"
+  "PlayerDialogue": [
+    "Denk je?"
+  ],
 
-
-            ],
-
-
-
-//<<<<<<< HEAD
-    "NewDialogueFile": ["Ballon Boris 2 Accept"],
-    "WhenToShowNewDialogue": [0],
-//=======
   "NewDialogueFile": [ "Ballon Boris 2 Accept" ],
   "WhenToShowNewDialogue": [ 0 ],
-//>>>>>>> Vera
-    "ChoosingDialogue": false,
-    "ToBeReplaced": [
-        ]
+
+  "ChoosingDialogue": false,
+  "ToBeReplaced": []
 }
