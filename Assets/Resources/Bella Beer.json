@@ -12,8 +12,8 @@
     
   ],
 
-    "NewDialogueFile": "BellaBeer2",
-    "WhenToShowNewDialogue": 0,
+  "NewDialogueFile": [ "BellaBeer2" ],
+  "WhenToShowNewDialogue": [ 0 ],
     "ChoosingDialogue": false,
     "ToBeReplaced": [
         ]

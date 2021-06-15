@@ -11,8 +11,8 @@
      "Ja natuurlijk help ik je!"
   ],
 
-    "NewDialogueFile": "SnikkendeSaraInformation",
-    "WhenToShowNewDialogue": 0,
+  "NewDialogueFile": [ "SnikkendeSaraInformation" ],
+  "WhenToShowNewDialogue": [ 0 ],
     "ChoosingDialogue": false,
     "ToBeReplaced": [
         ]

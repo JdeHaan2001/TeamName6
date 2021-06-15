@@ -13,8 +13,8 @@
     "Pff, nee dat is mijn eigen geld dat ik zelf heb gespaard!"
   ],
 
-    "NewDialogueFile": "nothing",
-    "WhenToShowNewDialogue": -1,
+  "NewDialogueFile": [ "nothing" ],
+  "WhenToShowNewDialogue": [ -1 ],
     "ChoosingDialogue": "true",
     "ToBeReplaced": [
         ]
