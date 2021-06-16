@@ -14,10 +14,10 @@ public class AIBehaviours : State
     {
         //Idle state is the same as doing nothing. Which in some cases is also considered to something you can do.
 
-        if (_system.IsInteracting == true)
-        {
-            _system.DialogueManager.EndDialogue();
-        }
+        //if (_system.IsInteracting == true)
+        //{
+        //    _system.DialogueManager.EndDialogue();
+        //}
 
         yield break;
     }
@@ -48,37 +48,24 @@ public class AIBehaviours : State
     }
     public override IEnumerator Interact()
     {
-        if (_system.InteractionPossible == true)
+        if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == false)
         {
-            if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == false)
-            {
-                _system.IsInteracting = true;
-                _system.DialogueManager.StartConversation();
-            }
-            else if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == true)
-            {
-                _system.DialogueManager.EndDialogue();
-                _system.IsInteracting = false;
-            }
+            _system.IsInteracting = true;
+            _system.DialogueManager.StartConversation();
         }
-        else
+        else if (Input.GetKeyDown(KeyCode.E) && _system.IsInteracting == true)
         {
             _system.DialogueManager.EndDialogue();
             _system.IsInteracting = false;
-            _system.InteractIcon.SetActive(true);
+
+            if(_system.QuestKeeper.Quest != null)
+            {
+                if(_system.QuestKeeper.Quest.Goal.goalType == GoalType.Talking)
+                {
+                    _system.QuestKeeper.UpdateQuest();
+                }
+            }
         }
         yield break;
     }
-    public override IEnumerator Unavailable()
-    {
-        _system.DialogueManager.EndDialogue();
-        _system.IsInteracting = false;
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("Interaction is not possible at the moment");
-        }
-        yield break;
-    }
-
 }

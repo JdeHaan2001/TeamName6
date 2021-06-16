@@ -8,6 +8,7 @@ public class Quest : ScriptableObject
 {
     [Header("Quest Information")]
     public bool IsActive;
+    public bool IsFinished;
 
     public string Title;
     public string Description;
@@ -20,6 +21,7 @@ public class Quest : ScriptableObject
     public void Complete()
     {
         IsActive = false;
+        IsFinished = true;
         Debug.Log(Title + " is completed!");        
     }
 }
