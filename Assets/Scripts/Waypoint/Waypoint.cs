@@ -1,22 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Waypoint : MonoBehaviour
 {
-    public Text distanceText;
+    public TextMeshProUGUI distanceText;
 
-    public Transform player;
-    public Transform target;
-    public Camera cam;
-    public GameObject WayPointIcon;
+    [HideInInspector] private Transform _player;
+    [SerializeField] public GameObject Target;
+    [SerializeField] private Camera _camera;
+    [SerializeField] private GameObject _wayPointIcon;
 
-    public float closeEnoughDist;
+    [SerializeField] public float CloseEnoughDist;
+
+    public void Awake()
+    {
+        _player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
 
     private void Update()
     {
-        if (target != null && WayPointIcon != null)
+        if (Target != null)
         {
             GetDistance();
             CheckOnScreen();
@@ -25,30 +28,26 @@ public class Waypoint : MonoBehaviour
 
     private void GetDistance()
     {
-        float dist = Vector3.Distance(player.position, target.position);
-        distanceText.text = dist.ToString("f0") + "m";
+        float dist = Vector3.Distance(_player.position, Target.transform.position);
+        distanceText.text = dist.ToString("f0") + "m"; 
 
-        if (dist < closeEnoughDist)
+        if (dist < CloseEnoughDist)
         {
-            WayPointIcon.SetActive(false);
+            _wayPointIcon.SetActive(false);
+        }
+        else
+        {
+            _wayPointIcon.SetActive(true);
         }
     }
 
     private void CheckOnScreen()
     {
-        float thing = Vector3.Dot((target.position - cam.transform.position).normalized, cam.transform.forward);
+        float thing = Vector3.Dot((Target.transform.position - _camera.transform.position).normalized, _camera.transform.forward);
 
-        if(thing >= 0)
+        if (thing >= 0)
         {
-            transform.position = cam.WorldToScreenPoint(target.position);
+            transform.position = _camera.WorldToScreenPoint(Target.transform.position);
         }
     }
-
-    private void ToggleUI(bool _value)
-    {
-        WayPointIcon.SetActive(_value);
-    }
-
-
-
 }

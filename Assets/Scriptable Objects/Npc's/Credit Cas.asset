@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
-  m_Name: 2 Balloon Boris
+  m_Script: {fileID: 11500000, guid: 25f5da6292c534947b5612fe73ee074b, type: 3}
+  m_Name: Credit Cas
   m_EditorClassIdentifier: 
-  Picture: {fileID: 21300000, guid: 1c3e893449b1386499a5fa63882c6c91, type: 3}
-  NpcDialogue: {fileID: 4900000, guid: 043baf453c44f8b46ba260a9520a0e9a, type: 3}
+  Picture: {fileID: 21300000, guid: 9c68b3dc9d4f6d04783fc0e69e9d5673, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: 2147ed542a6b1e24997a8fa07b1f9f9c, type: 3}
   Quests: []
   ConversationFinished: 0

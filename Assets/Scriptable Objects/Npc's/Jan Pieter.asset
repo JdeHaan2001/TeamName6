@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 754b59fde8b8db14393c20b184862c22, type: 3}
-  m_Name: Credit Cas
+  m_Script: {fileID: 11500000, guid: 25f5da6292c534947b5612fe73ee074b, type: 3}
+  m_Name: Jan Pieter
   m_EditorClassIdentifier: 
-  Picture: {fileID: 21300000, guid: 9c68b3dc9d4f6d04783fc0e69e9d5673, type: 3}
-  NpcDialogue: {fileID: 4900000, guid: 2147ed542a6b1e24997a8fa07b1f9f9c, type: 3}
+  Picture: {fileID: 21300000, guid: e43e7aaa95623694dae41e61cd7ec2b0, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: 0d12aabf8b3259344a52276420ae2188, type: 3}
   Quests: []
   ConversationFinished: 0

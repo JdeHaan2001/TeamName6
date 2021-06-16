@@ -53,6 +53,7 @@ Transform:
   m_LocalPosition: {x: -3.17, y: 0, z: 23.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 4827517832849138420}
   - {fileID: 3672280405770100492}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -152,9 +153,9 @@ MonoBehaviour:
   FollowSpeed: 1
   CheckingRadius: 10
   DialogueManager: {fileID: 8040423913139590181}
-  NpcInfo: {fileID: 0}
+  NpcInfo: {fileID: 11400000, guid: 701149f1bda62604aa6d35fe943cb707, type: 2}
   QuestGiver: {fileID: 0}
-  InteractIcon: {fileID: 0}
+  InteractIcon: {fileID: 5311179136329742414}
   InteractionPossible: 0
   IsInteracting: 0
   StartPos: {x: 0, y: 0, z: 0}
@@ -172,22 +173,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Npc: {fileID: 11400000, guid: 701149f1bda62604aa6d35fe943cb707, type: 2}
-  readNpcDialogue:
+  currentNpcDialogue:
     Name: 
     Dialogue: []
     PlayerDialogue: []
-    ExtraDialogue: []
-    NewDialogueFile: {fileID: 0}
-    WhenToShowNewDialogue: 0
+    NewDialogueFile: []
+    WhenToShowNewDialogue: 
+    ChoosingDialogue: 0
+    ToBeReplaced: []
+  firstNpcDialogue:
+    Name: 
+    Dialogue: []
+    PlayerDialogue: []
+    NewDialogueFile: []
+    WhenToShowNewDialogue: 
     ChoosingDialogue: 0
     ToBeReplaced: []
   IsTalking: 0
   OpenQuest: 0
-  _dialogueUI: {fileID: 0}
-  _playerDialogue: {fileID: 0}
-  _playerDialoguePanel: {fileID: 0}
-  _player: {fileID: 0}
-  _dialogueTextKeeper: {fileID: 0}
+  Camera: {fileID: 0}
 --- !u!95 &8040423912663760091
 Animator:
   serializedVersion: 3
@@ -216,7 +220,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 26dc71bf966f09146b94c412d4323529, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 26dc71bf966f09146b94c412d4323529, type: 3}
       propertyPath: m_LocalScale.x
@@ -285,4 +289,71 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7620835090651094966, guid: 26dc71bf966f09146b94c412d4323529, type: 3}
   m_PrefabInstance: {fileID: 3854015785327442151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8019040287942398151
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 8135123147444538722}
+    m_Modifications:
+    - target: {fileID: 2809194963047032969, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_Name
+      value: QuestIcon 3D Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17.571573
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.6499996
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.163341
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.9109647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.41248435
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+--- !u!1 &5311179136329742414 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2809194963047032969, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+  m_PrefabInstance: {fileID: 8019040287942398151}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4827517832849138420 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3294263572704293427, guid: de8443dce5a89a54bb9b18a43961d736, type: 3}
+  m_PrefabInstance: {fileID: 8019040287942398151}
   m_PrefabAsset: {fileID: 0}
