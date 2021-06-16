@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goDown: 0
   items:
-  - {fileID: 7670446281014427111, guid: ea66e732c664cb54a90508dd2d1bfa89, type: 3}
+  - {fileID: 8050073934669405848, guid: c5b3fabeaff0aa34da32472893d03b13, type: 3}
   spawnerUp:
   - {fileID: 1094436285580601875}
 --- !u!1 &3097125132777538811

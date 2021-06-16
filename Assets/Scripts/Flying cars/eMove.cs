@@ -23,7 +23,7 @@ public class eMove : MonoBehaviour
     void Update()
     {
 
-        this.transform.Translate(speed * Time.deltaTime, 0, 0);
+        this.transform.Translate(speed *    Time.deltaTime, 0, 0);
 
         IsVisible();
 
