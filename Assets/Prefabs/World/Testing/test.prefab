@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3fd4b9e9e202cb34e9bd7dcce27c92f3, type: 2}
+  - {fileID: 2100000, guid: 16a586a741b48704089752e925fb5531, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,4 +112,4 @@ MonoBehaviour:
   mDirection: 1
   parentOnTrigger: 1
   boxOnTrigger: 0
-  enemyObject: {fileID: 7670446281014427111}
+  enemyObject: {fileID: 8563203670838987996, guid: 1cd2e7c56247603498a75cc0d1b877f9, type: 3}
