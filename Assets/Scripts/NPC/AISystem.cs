@@ -60,14 +60,14 @@ public class AISystem : StateMachine
             InteractIcon.SetActive(true);
             if (ObjectFound != null)
             {
-                    if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 10f)
-                    {
-                        StartCoroutine(State.Follow());
-                    }
-                    else if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
-                    {
-                        StartCoroutine(State.Interact());
-                    }
+                if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 10f)
+                {
+                    StartCoroutine(State.Follow());
+                }
+                else if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
+                {
+                    StartCoroutine(State.Interact());
+                }
             }
             else
             {
@@ -97,7 +97,7 @@ public class AISystem : StateMachine
     {
         if (QuestKeeper.Quest != null)
         {
-            if (gameObject.name != QuestKeeper.Quest.Goal.npcToTalkTo.gameObject.name)
+            if (gameObject.name != QuestKeeper.Quest.Goal.NpcToInteractWith.gameObject.name)
             {
                 if (NpcInformation.ConversationFinished == true)
                 {
@@ -106,7 +106,7 @@ public class AISystem : StateMachine
                 return false;
             }
         }
-        
+
         if (QuestKeeper.Quest == null)
         {
             if (NpcInformation.ConversationFinished == true)
@@ -155,7 +155,8 @@ public class AISystem : StateMachine
         NpcInformation.ConversationFinished = false;
         for (int i = 0; i < NpcInformation.Quests.Length; i++)
         {
-            NpcInformation.Quests[i].IsFinished = false;
+            NpcInformation.Quests[i].IsActive = false;
+            NpcInformation.Quests[i].Goal.CurrentAmount = 0;
         }
     }
 }

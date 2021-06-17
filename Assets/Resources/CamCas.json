@@ -4,9 +4,9 @@
     "Dialogue": [
                 "Jij daar, wil je een foto van iemand maken voor mij?",
 
-                "*Valse, rare, gemene lach - maar wel kort*",
+                "*Valse, rare, gemene lach - maar wel kort* showquest",
 
-                "Jammer, ik zoek wel iemand anders. 1"
+                "Jammer, ik zoek wel iemand anders."
             ],
 
     "PlayerDialogue": [
@@ -20,5 +20,5 @@
     "NewDialogueFile": ["nothing"],
     "WhenToShowNewDialogue": [-1],
     "ChoosingDialogue": true,
-    "ToBeReplaced": ["1"]
+    "ToBeReplaced": ["showquest"]
 }

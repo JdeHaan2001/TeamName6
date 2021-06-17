@@ -8,6 +8,7 @@ public class QuestGiver : MonoBehaviour
     [SerializeField] private DialogueManager _dialogueManager;
     [SerializeField] private QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
+    [HideInInspector] private QuestManager _questManager;
     [SerializeField] public NpcInformation Npc;
 
     [HideInInspector] private GameObject _questWindow;
@@ -21,6 +22,7 @@ public class QuestGiver : MonoBehaviour
     {
         _dialogueManager = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueManager>();
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+        _questManager = GameObject.FindGameObjectWithTag("QuestManager").GetComponent<QuestManager>();
         _questWindow = DontDestroyUI.UIInstance.UIGameObjects[3];
         _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
         _questWindow.SetActive(false);
@@ -47,7 +49,7 @@ public class QuestGiver : MonoBehaviour
             {
                 if (Npc.Quests.Length != 0)
                 {
-                    _quest = Npc.Quests[_questNumber];
+                    _quest = _dialogueManager.GetNPC().NpcInformation.Quests[_questNumber];
                 }
             }
 
@@ -80,14 +82,21 @@ public class QuestGiver : MonoBehaviour
     public void AcceptQuest()
     {
         _questKeeper.Quest = _quest;
+        _quest.IsActive = true;
         _dialogueManager.EndDialogue();
         _questWindow.SetActive(false);
-        _quest.IsActive = true;
+        Npc.ConversationFinished = true;
     }
 
     public void DeclineQuest()
     {
+        _questKeeper.Followers = -_quest.FollowersDecrease;
+        _questKeeper.Money = -_quest.MoneyDecrease;
         _questWindow.SetActive(false);
         _dialogueManager.EndDialogue();
+        if(_quest.SideQuest == true)
+        {
+            Npc.ConversationFinished = true;
+        }
     }
 }

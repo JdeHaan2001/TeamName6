@@ -4,12 +4,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //Made by: Jorrit Bos
+[Serializable]
+public class QuestConnection
+{
+    public Quest CurrentQuest;
+    public Quest NextQuest;
+}
+
 public class QuestManager : MonoBehaviour
 {
     [HideInInspector] private QuestKeeper _questKeeper;
     [HideInInspector] private Quest _quest;
-    [HideInInspector] private Quest _latestQuest;
-    [SerializeField] private List<Quest> _questOrder;
+    [HideInInspector] private Quest _currentTrackedQuest;
+    [SerializeField] private QuestConnection[] _questConnections;
 
     [HideInInspector] private GameObject _wayPoint;
     [SerializeField] private Waypoint _wayPointScript;
@@ -26,30 +33,24 @@ public class QuestManager : MonoBehaviour
         checkWayPoint();
     }
 
-    private Quest questChecker()
+    public Quest QuestChecker()
     {
         if (_questKeeper.Quest != null)
         {
-            _latestQuest = _questKeeper.Quest;
+            _currentTrackedQuest = _questKeeper.Quest;
         }
 
-        for (int i = 0; i < _questOrder.Count; i++)
+        for (int i = 0; i < _questConnections.Length; i++)
         {
-            if (_latestQuest != null && _questKeeper.Quest != null)
+            if (_questConnections[i].CurrentQuest == _currentTrackedQuest)
             {
-                if (_latestQuest.IsFinished != true)
+                if (_currentTrackedQuest.IsActive == true)
                 {
-                    if (_questOrder[i] == _latestQuest)
-                    {
-                        return _questOrder[i];
-                    }
+                    return _questConnections[i].CurrentQuest;
                 }
-            }
-            else if (_latestQuest != null && _questKeeper.Quest == null)
-            {
-                if (_latestQuest.IsFinished == true)
+                else if (_currentTrackedQuest.IsActive != true)
                 {
-                    return _questOrder[i + 1];
+                    return _questConnections[i].NextQuest;
                 }
             }
         }
@@ -59,33 +60,36 @@ public class QuestManager : MonoBehaviour
     #region WayPoint
     private void checkWayPoint()
     {
-        _quest = questChecker();
+        _quest = QuestChecker();
+
+        Debug.Log(_quest);
 
         if (_quest != null)
         {
-            if (_quest.Goal.goalType == GoalType.Talking)
+            if (_quest.Goal.goalType == GoalType.Talking || _quest.Goal.goalType == GoalType.TakingPicture || _quest.Goal.goalType == GoalType.Giving)
             {
                 GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
 
                 for (int i = 0; i < Npc.Length; i++)
                 {
-                    if (Npc[i].gameObject.name == _quest.Goal.npcToTalkTo.gameObject.name)
+                    if (_quest.IsActive != true)
                     {
-                        _wayPoint.SetActive(true);
-                        _wayPointScript.GetWayPoint(Npc[i]);
+                        for (int j = 0; j < Npc[i].GetComponent<AISystem>().NpcInformation.Quests.Length; j++)
+                        {
+                            if (Npc[i].GetComponent<AISystem>().NpcInformation.Quests[j].name == _quest.name)
+                            {
+                                _wayPoint.SetActive(true);
+                                _wayPointScript.GetWayPoint(Npc[i]);
+                            }
+                        }
                     }
-                }
-            }
-            else if (_quest.Goal.goalType == GoalType.Picking)
-            {
-                GameObject[] Pickup = GameObject.FindGameObjectsWithTag("Pickup");
-
-                for (int i = 0; i < Pickup.Length; i++)
-                {
-                    if (Pickup[i].gameObject.name == _quest.Goal.ItemToGet)
+                    else if (_quest.IsActive == true)
                     {
-                        _wayPoint.SetActive(true);
-                        _wayPointScript.GetWayPoint(Pickup[i]);
+                        if (Npc[i].gameObject.name == _quest.Goal.NpcToInteractWith.gameObject.name)
+                        {
+                            _wayPoint.SetActive(true);
+                            _wayPointScript.GetWayPoint(Npc[i]);
+                        }
                     }
                 }
             }

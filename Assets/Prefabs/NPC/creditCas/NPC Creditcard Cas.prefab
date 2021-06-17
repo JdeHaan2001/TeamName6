@@ -68,8 +68,9 @@ MonoBehaviour:
   Player: {fileID: 0}
   FollowSpeed: 1
   CheckingRadius: 25
+  QuestKeeper: {fileID: 0}
   DialogueManager: {fileID: 8040423913139590181, guid: 8f7cc072f83bfa446868c100e6874d21, type: 3}
-  NpcInfo: {fileID: 11400000, guid: aac89ce2aa27a8b49a69aed59847fcd7, type: 2}
+  NpcInformation: {fileID: 11400000, guid: aac89ce2aa27a8b49a69aed59847fcd7, type: 2}
   QuestGiver: {fileID: 0}
   InteractIcon: {fileID: 6920063800087868228}
   InteractionPossible: 0

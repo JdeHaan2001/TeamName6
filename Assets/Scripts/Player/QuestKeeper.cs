@@ -16,9 +16,14 @@ public class QuestKeeper : MonoBehaviour
         {
             if (Quest.IsActive == true)
             {
-                if (Quest.Goal.goalType == GoalType.Gathering)
+                if (Quest.Goal.goalType == GoalType.Giving)
                 {
-                    Quest.Goal.ItemGathered();
+                    Quest.Goal.ItemGiven();
+                }
+
+                if (Quest.Goal.goalType == GoalType.TakingPicture)
+                {
+                    Quest.Goal.PictureTaken();
                 }
 
                 if (Quest.Goal.goalType == GoalType.Picking)
@@ -37,8 +42,7 @@ public class QuestKeeper : MonoBehaviour
                     Money += Quest.MoneyReward;
                     Quest.Complete();
                     Quest.IsActive = false;
-                    Quest = null;
-                    
+                    Quest = null;                    
                 }
             }
         }
