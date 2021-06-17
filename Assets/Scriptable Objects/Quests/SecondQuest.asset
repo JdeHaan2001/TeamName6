@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: SecondQuest
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Second Quest
   Description: Description
   FollowersReward: 1
   MoneyReward: 1
   Goal:
-    goalType: 0
-    requiredAmount: 5
+    goalType: 2
+    requiredAmount: 1
     currentAmount: 0
-    ItemToGet: Flowers
-    npcToTalkTo: {fileID: 0}
+    ItemToGet: 
+    npcToTalkTo: {fileID: 6392525522974485648, guid: 34ffcd8fc4387494dbbad5f2daf4a26f, type: 3}

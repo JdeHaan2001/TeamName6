@@ -25,6 +25,7 @@ public class QuestKeeper : MonoBehaviour
                 {
                     Quest.Goal.ItemPicked();
                 }
+
                 if (Quest.Goal.goalType == GoalType.Talking)
                 {
                     Quest.Goal.TalkedToNPC();
@@ -36,6 +37,8 @@ public class QuestKeeper : MonoBehaviour
                     Money += Quest.MoneyReward;
                     Quest.Complete();
                     Quest.IsActive = false;
+                    Quest = null;
+                    
                 }
             }
         }

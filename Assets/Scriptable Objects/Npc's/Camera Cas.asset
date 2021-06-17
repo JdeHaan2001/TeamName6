@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Picture: {fileID: 21300000, guid: 246fd20ce5b8e064bb4e8b853f104736, type: 3}
   NpcDialogue: {fileID: 4900000, guid: f37f57f7978dce14b9f704b32994918f, type: 3}
-  Quests: []
+  Quests:
+  - {fileID: 11400000, guid: 641d3f820c21853409ab1f61be281ccd, type: 2}
   ConversationFinished: 0

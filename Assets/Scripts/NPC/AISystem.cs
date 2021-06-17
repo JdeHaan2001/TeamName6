@@ -10,10 +10,10 @@ public class AISystem : StateMachine
     [SerializeField] public int FollowSpeed = 0;
     [SerializeField] public int CheckingRadius = 0;
 
-    [HideInInspector] private QuestKeeper _questKeeper;
+    [HideInInspector] public QuestKeeper QuestKeeper;
 
     [HideInInspector] public DialogueManager DialogueManager;
-    [SerializeField] public NpcInformation NpcInfo;
+    [SerializeField] public NpcInformation NpcInformation;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
 
@@ -27,15 +27,12 @@ public class AISystem : StateMachine
 
     #endregion
 
-    private void Awake()
+    public void Awake()
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
-    }
-    private void Start()
-    {
-        DialogueManager = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueManager>();
-        _questKeeper = Player.GetComponent<QuestKeeper>();
+
+        QuestKeeper = Player.GetComponent<QuestKeeper>();
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));
@@ -43,48 +40,52 @@ public class AISystem : StateMachine
         StartPos = transform.position;
         StartAngle = transform.rotation;
     }
+    public void Start()
+    {
+        DialogueManager = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueManager>();
+    }
 
-    private void Update()
+    public void Update()
+    {
+        checkState();
+    }
+
+    private void checkState()
     {
         var ObjectFound = checkEnvironment();
-        checkAvailability();
+        var interactionPossible = checkAvailability();
 
-        if (ObjectFound != null)
+        if (interactionPossible == true)
         {
-            if (InteractionPossible == true)
+            InteractIcon.SetActive(true);
+            if (ObjectFound != null)
             {
-                if (Vector3.Distance(transform.position, StartPos) < 40)
-                {
-                    if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 5f)
+                    if (Vector3.Distance(transform.position, Player.transform.position) < CheckingRadius && Vector3.Distance(transform.position, Player.transform.position) > 10f)
                     {
                         StartCoroutine(State.Follow());
                     }
-                    else if (Vector3.Distance(transform.position, Player.transform.position) < 5f)
+                    else if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
                     {
                         StartCoroutine(State.Interact());
                     }
-                    else
-                    {
-                        StartCoroutine(State.Return());
-                    }
-                }
-                else
-                {
-                    StartCoroutine(State.Return());
-                }
             }
-            else if (InteractionPossible == false)
+            else
             {
                 if (transform.position != StartPos)
                 {
                     StartCoroutine(State.Return());
                 }
-                InteractIcon.SetActive(false);
-                StartCoroutine(State.Unavailable());
+                StartCoroutine(State.Idle());
             }
         }
-        else
+        else if (interactionPossible == false)
         {
+            InteractIcon.SetActive(false);
+
+            if (transform.position != StartPos)
+            {
+                StartCoroutine(State.Return());
+            }
             StartCoroutine(State.Idle());
         }
     }
@@ -92,34 +93,28 @@ public class AISystem : StateMachine
     /// <summary>
     /// Checks if NPC is available for talking
     /// </summary>
-    private void checkAvailability()
+    private bool checkAvailability()
     {
-        if (NpcInfo != null)
+        if (QuestKeeper.Quest != null)
         {
-            if (NpcInfo.ConversationFinished != true)
+            if (gameObject.name != QuestKeeper.Quest.Goal.npcToTalkTo.gameObject.name)
             {
-                InteractionPossible = true;
+                if (NpcInformation.ConversationFinished == true)
+                {
+                    return false;
+                }
+                return false;
             }
         }
-
-        //if (_questKeeper.Quest != null)
-        //{
-        //    if (_questKeeper.Quest.IsActive == true)
-        //    {
-        //        for (int i = 0; i < NpcInfo.Quests.Length; i++)
-        //        {
-        //            if (NpcInfo.Quests[i].Goal.npcToTalkTo.NpcInfo.ConversationFinished == true)
-        //            {
-        //                _questKeeper.UpdateQuest();
-        //                InteractionPossible = false;
-        //            }
-        //            else
-        //            {
-        //                InteractionPossible = true;
-        //            }
-        //        }
-        //    }
-        //}
+        
+        if (QuestKeeper.Quest == null)
+        {
+            if (NpcInformation.ConversationFinished == true)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     /// <summary>
@@ -153,5 +148,14 @@ public class AISystem : StateMachine
             direction = _stepAngle * direction;
         }
         return null;
+    }
+
+    public void OnApplicationQuit()
+    {
+        NpcInformation.ConversationFinished = false;
+        for (int i = 0; i < NpcInformation.Quests.Length; i++)
+        {
+            NpcInformation.Quests[i].IsFinished = false;
+        }
     }
 }

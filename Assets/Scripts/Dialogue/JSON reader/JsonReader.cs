@@ -13,8 +13,6 @@ public class JsonNpc
 
     public string[] PlayerDialogue;
 
-    //public string NewDialogueFile;
-
     public string[] NewDialogueFile;
 
     public int[] WhenToShowNewDialogue;

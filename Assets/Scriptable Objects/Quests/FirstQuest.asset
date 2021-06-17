@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: FirstQuest
   m_EditorClassIdentifier: 
   IsActive: 1
+  IsFinished: 0
   Title: First Quest
   Description: You have to get the phone so that your social adventure can start!
   FollowersReward: 100
@@ -20,6 +21,6 @@ MonoBehaviour:
   Goal:
     goalType: 2
     requiredAmount: 1
-    currentAmount: 0
+    currentAmount: 2
     ItemToGet: 
-    npcToTalkTo: {fileID: 1064041978220023753, guid: 2abb9acae5a55f5438d57195f0f5fa2d, type: 3}
+    npcToTalkTo: {fileID: 3706887861474733436, guid: 9aba9d88fd5b1984f8a61b2592fedc9e, type: 3}

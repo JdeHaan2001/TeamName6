@@ -36,30 +36,37 @@ public class QuestGoal
 
     public void TalkedToNPC()
     {
-        if(goalType == GoalType.Talking)
+        if (goalType == GoalType.Talking)
         {
-            if(npcToTalkTo.GetComponent<NpcInformation>().ConversationFinished == true)
+            GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
+
+            for (int j = 0; j < Npc.Length; j++)
             {
-                currentAmount++;
+                if (Npc[j].name == npcToTalkTo.name)
+                {
+                    NpcInformation npcInformaton = Npc[j].GetComponent<AISystem>().NpcInformation;
+
+                    if (npcInformaton.ConversationFinished == true)
+                    {
+                        currentAmount++;
+                    }
+                }
             }
         }
     }
 
     public void ItemGiven()
     {
-        if(goalType == GoalType.Talking)
+        if (goalType == GoalType.Talking)
         {
-                currentAmount++;
+            currentAmount++;
         }
     }
-
 }
-
-
-public enum GoalType
-{
-    Picking,
-    Gathering,
-    Talking,
-    Giving
-}
+    public enum GoalType
+    {
+        Picking,
+        Gathering,
+        Talking,
+        Giving
+    }

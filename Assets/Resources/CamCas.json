@@ -6,7 +6,7 @@
 
                 "*Valse, rare, gemene lach - maar wel kort*",
 
-                "Jammer, ik zoek wel iemand anders."
+                "Jammer, ik zoek wel iemand anders. 1"
             ],
 
     "PlayerDialogue": [
@@ -20,6 +20,5 @@
     "NewDialogueFile": ["nothing"],
     "WhenToShowNewDialogue": [-1],
     "ChoosingDialogue": true,
-    "ToBeReplaced": [
-        ]
+    "ToBeReplaced": ["1"]
 }

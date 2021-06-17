@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour
 
         for (int i = 0; i < NpcArray.Length; i++)
         {
-            if (Vector3.Distance(_player.transform.position, NpcArray[i].transform.position) < 5f)
+            if (Vector3.Distance(_player.transform.position, NpcArray[i].transform.position) < 10f)
             {
                 return NpcArray[i].GetComponent<AISystem>();
             }
@@ -84,7 +84,7 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void StartConversation()
     {
-        Npc = GetNPC().NpcInfo;
+        Npc = GetNPC().NpcInformation;
 
         destroyResponses();
         IsTalking = true;
@@ -350,19 +350,14 @@ public class DialogueManager : MonoBehaviour
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
 
-            if (Npc != null)
-            {
-                Npc.ConversationFinished = true;
-            }
-
-            Npc = null;
+            Npc.ConversationFinished = true;
         }
         catch
         {
             Debug.LogWarning("Could not properly end the dialogue.");
         }
     }
-        
+
 
     public void OnApplicationQuit()
     {
