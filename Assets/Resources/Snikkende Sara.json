@@ -1,0 +1,19 @@
+{
+    "Name": "Snikkende Sara",
+
+    "Dialogue": [
+                "H-hoi, kan je me misschien helpen? Een internet pestkop heeft vandaag mijn glas kapot gemaakt en ik vroeg me af of jij mij misschien kan helpen om hem te vinden en te zorgen dat hij stopt met pesten.",
+                 "Dankje, Ik hoop dat je hem kan vinden en hem laat zien dat pesten niet mag en dat het grote gevolgen heeft!"
+               
+            ],
+
+  "PlayerDialogue": [
+     "Ja natuurlijk help ik je!"
+  ],
+
+  "NewDialogueFile": [ "SnikkendeSaraInformation" ],
+  "WhenToShowNewDialogue": [ 0 ],
+    "ChoosingDialogue": false,
+    "ToBeReplaced": [
+        ]
+}

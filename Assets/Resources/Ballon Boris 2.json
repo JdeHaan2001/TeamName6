@@ -1,0 +1,19 @@
+{
+  "Name": "Ballon Boris",
+
+  "Dialogue": [
+    "Hey kijk! Een spaarpot. Er zit vast veel geld in.",
+
+    "Zeker wel. Je kunt het houden als je wilt, niemand die het zal merken."
+  ],
+
+  "PlayerDialogue": [
+    "Denk je?"
+  ],
+
+  "NewDialogueFile": [ "Ballon Boris 2 Accept" ],
+  "WhenToShowNewDialogue": [ 0 ],
+
+  "ChoosingDialogue": false,
+  "ToBeReplaced": []
+}
