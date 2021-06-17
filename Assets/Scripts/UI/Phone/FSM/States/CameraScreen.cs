@@ -16,6 +16,6 @@ public class CameraScreen : PhoneScreenWithView<CameraView>
 
     private void takePicture()
     {
-        ScreenCapture.CaptureScreenshot("/Screenshots/");
+        ScreenCapture.CaptureScreenshot("ScreenShots/Screenshot.png");
     }
 }
