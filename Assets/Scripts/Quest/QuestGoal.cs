@@ -8,29 +8,21 @@ public class QuestGoal
 {
     public GoalType goalType;
 
-    public int requiredAmount;
-    public int currentAmount;
+    public int RequiredAmount;
+    public int CurrentAmount;
     public string ItemToGet;
-    public GameObject npcToTalkTo;
+    public GameObject NpcToInteractWith;
 
     public bool IsReached()
     {
-        return (currentAmount >= requiredAmount);
+        return (CurrentAmount >= RequiredAmount);
     }
 
     public void ItemPicked()
     {
         if (goalType == GoalType.Picking)
         {
-            currentAmount++;
-        }
-    }
-
-    public void ItemGathered()
-    {
-        if (goalType == GoalType.Gathering)
-        {
-            currentAmount++;
+            CurrentAmount++;
         }
     }
 
@@ -42,13 +34,13 @@ public class QuestGoal
 
             for (int j = 0; j < Npc.Length; j++)
             {
-                if (Npc[j].name == npcToTalkTo.name)
+                if (Npc[j].name == NpcToInteractWith.name)
                 {
                     NpcInformation npcInformaton = Npc[j].GetComponent<AISystem>().NpcInformation;
 
                     if (npcInformaton.ConversationFinished == true)
                     {
-                        currentAmount++;
+                        CurrentAmount++;
                     }
                 }
             }
@@ -57,16 +49,24 @@ public class QuestGoal
 
     public void ItemGiven()
     {
-        if (goalType == GoalType.Talking)
+        if (goalType == GoalType.Giving)
         {
-            currentAmount++;
+            CurrentAmount++;
+        }
+    }
+
+    public void PictureTaken()
+    {
+        if(goalType == GoalType.TakingPicture)
+        {
+            CurrentAmount++;
         }
     }
 }
     public enum GoalType
     {
         Picking,
-        Gathering,
         Talking,
-        Giving
+        Giving,
+        TakingPicture
     }

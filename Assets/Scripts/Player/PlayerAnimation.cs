@@ -47,7 +47,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (_animator.GetBool("isWalking") == false)
         {
-            //Debug.Log("EventManager enabled walking.");
             _animator.SetBool("isWalking", true);
         }
 

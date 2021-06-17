@@ -45,11 +45,13 @@ public class DialogueManager : MonoBehaviour
 
     void OnEnable()
     {
+        _player.GetComponent<ThirdPersonCharacterController>().enabled = false;
         Camera.enabled = false;
     }
 
     void OnDisable()
     {
+        _player.GetComponent<ThirdPersonCharacterController>().enabled = true;
         Camera.enabled = true;
     }
 
@@ -342,6 +344,11 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
+            if(Npc.Quests.Length == 0)
+            {
+                Npc.ConversationFinished = true;
+            }
+
             IsTalking = false;
             resetQuestInDialogue();
             destroyResponses();
@@ -349,8 +356,6 @@ public class DialogueManager : MonoBehaviour
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
-
-            Npc.ConversationFinished = true;
         }
         catch
         {

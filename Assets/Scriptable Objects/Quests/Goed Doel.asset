@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 936132cddca12004a9cb85aff5affc52, type: 3}
+  m_Name: Goed Doel
+  m_EditorClassIdentifier: 
+  IsActive: 0
+  Title: Goed Doel
+  Description: Ben je bereid om een deel van je geld af te staan aan het goede doel?
+  SideQuest: 0
+  FollowersReward: 10000
+  MoneyReward: 50
+  FollowersDecrease: 5000
+  MoneyDecrease: 0
+  Goal:
+    goalType: 2
+    RequiredAmount: 1
+    CurrentAmount: 0
+    ItemToGet: 
+    NpcToInteractWith: {fileID: 6246516759456723895, guid: 060c3ac5edcc73c4abdfb74fd88e2992, type: 3}
