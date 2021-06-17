@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6312850341969133781
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6312850341969133783}
+  - component: {fileID: 6312850341969133782}
+  m_Layer: 0
+  m_Name: Building Generator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6312850341969133783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312850341969133781}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6312850341969133782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6312850341969133781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2da30ee1d18ab24fb7daa9a63116cd0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GenerateOnEnable: 1
+  minFloors: 3
+  maxFloors: 5
+  GroundFloors:
+  - {fileID: 2833388650915407849, guid: e38d74c4338045d4ca07e602dfe426c7, type: 3}
+  - {fileID: 1129944495034242182, guid: 961d8cebe4d751d40a961668d3524140, type: 3}
+  - {fileID: 841417288949769082, guid: c43420edbe3e35a4ea5008c15402e397, type: 3}
+  NormalFloors:
+  - {fileID: 753078340640869560, guid: ea0db1607fcaa454a908447ad43a87e1, type: 3}
+  - {fileID: 3310783731698671445, guid: e1a575c6fba6df64090af35ab90e219e, type: 3}
+  - {fileID: 1814806400836178342, guid: 878145bcccb9f6b4e9cc05a3445b515d, type: 3}
+  Roofs:
+  - {fileID: 6428447975966245203, guid: 1c5dd595afadb8f4991890ceef1628ae, type: 3}
+  - {fileID: 7196183599166601658, guid: 67f431f068fd00b4b9ea23f4c0cffc7f, type: 3}
+  - {fileID: 8638893839706690378, guid: b8bf11073ec6c864a83755b401e21ffd, type: 3}
+  BuildingLayout: []
