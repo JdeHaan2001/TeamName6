@@ -10,6 +10,7 @@ public class QuestsScreen : PhoneScreenWithView<QuestsView>
     {
         base.EnterScreen();
         phoneView.SelectButton.onClick.AddListener(_PFSM.ChangeScreen<SpecificQuestScreen>);
+        phoneView.HomeButton.onClick.AddListener(_PFSM.ChangeScreen<HomeScreen>);
         setActiveQuestValues();
     }
 
