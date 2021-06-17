@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/Scenes/CityGray.unity
     guid: 25aa107075dc734438df15e1272627aa
   - enabled: 1
-    path: Assets/Scenes/SplashScreen+Credits.unity
+    path: Assets/Scenes/Credits.unity
     guid: cd3d54a1433bbae48887964172656742
   m_configObjects: {}
