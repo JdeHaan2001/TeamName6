@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f5da6292c534947b5612fe73ee074b, type: 3}
+  m_Name: Bella Beer
+  m_EditorClassIdentifier: 
+  Picture: {fileID: 21300000, guid: aa2ee01dfbca0ad42bd6af69104c5358, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: fd2403d8ddf00914ebd00220846a1ff7, type: 3}
+  Quests: []
+  ConversationFinished: 0

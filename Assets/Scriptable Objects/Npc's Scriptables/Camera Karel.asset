@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f5da6292c534947b5612fe73ee074b, type: 3}
+  m_Name: Camera Karel
+  m_EditorClassIdentifier: 
+  Picture: {fileID: 21300000, guid: 38aa2b3ef8d730849936081f93913d4f, type: 3}
+  NpcDialogue: {fileID: 4900000, guid: f37f57f7978dce14b9f704b32994918f, type: 3}
+  Quests:
+  - {fileID: 11400000, guid: 80d23488a69fc8f409ddc8c239ce6215, type: 2}
+  ConversationFinished: 0
