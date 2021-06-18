@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Made by: Jorrit Bos
 [Serializable]
@@ -30,6 +31,7 @@ public class QuestManager : MonoBehaviour
 
     public void Update()
     {
+        getScene();
         checkWayPoint();
     }
 
@@ -56,13 +58,27 @@ public class QuestManager : MonoBehaviour
         }
         return null;
     }
+    private void getScene()
+    {
+        for (int i = 0; i < _questConnections.Length; i++)
+        {
+            if (_questConnections[i].CurrentQuest == _quest)
+            {
+                if(_quest.IsActive == false)
+                {
+                    if (_questConnections[i].NextQuest == null)
+                    {
+                        SceneManager.LoadScene("ResultScreen");
+                    }
+                }
+            }
+        }
+    }
 
     #region WayPoint
     private void checkWayPoint()
     {
         _quest = QuestChecker();
-
-        Debug.Log(_quest);
 
         if (_quest != null)
         {
