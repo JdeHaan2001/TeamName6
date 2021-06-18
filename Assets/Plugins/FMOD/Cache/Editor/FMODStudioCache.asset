@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9135134016995539769
+--- !u!114 &-9098461594332337662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,12 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q5 - Ja he vind ik ook
+  m_Name: event:/Voiceovers/Moral Scores/Gefeliciteerd je hebt alles gedaan wat socialeven
+    te bieden heeft
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q5 - Ja he vind ik ook
-  guid: c77021d2213a7e409f2c9c78641ca9de
+  Path: event:/Voiceovers/Moral Scores/Gefeliciteerd je hebt alles gedaan wat socialeven
+    te bieden heeft
+  guid: c30aea478abab743b75cd9852e80d373
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -23,7 +25,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-9111610638933268702
+--- !u!114 &-9065478570646913603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -33,12 +35,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence5
+  m_Name: event:/Sound Effects/Footsteps/Footstep1_zapsplat_cartoon_footstep_single_barefoot_wet_001_26839
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence5
-  guid: 56f2285e015f0448a839ac1c697df4f8
+  Path: event:/Sound Effects/Footsteps/Footstep1_zapsplat_cartoon_footstep_single_barefoot_wet_001_26839
+  guid: f566895cf3ca804e8b826f14b728fc97
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -46,1157 +48,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-9084313407357726889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Money_gain_pickup, freesound.org
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Money_gain_pickup, freesound.org
-  guid: 43a427cbe94cfc489769dd0c6d51a86c
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-9048781041459167355
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Quest-Finished_zapsplat_multimedia_game_sound_zen_game_chime_positive_soft_003_60715
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Quest-Finished_zapsplat_multimedia_game_sound_zen_game_chime_positive_soft_003_60715
-  guid: 6b29c9d689be8140bb1b2bfc91cae1bc
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-9001365998559386648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/UI/Buttons_zapsplat_multimedia_game_sound_vibraphone_glassy_style_mallet_ping_high_pitched_002_61326
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/UI/Buttons_zapsplat_multimedia_game_sound_vibraphone_glassy_style_mallet_ping_high_pitched_002_61326
-  guid: 86ecca97a0c46742b57426c332f5b02f
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8953016860180654208
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Karel/Karel Camera Sentence2
-  guid: 97fa6e0d1b2e9e43a43114b20f53abc6
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8845973360841332508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence1
-  guid: 69a1dbb31553594084c4240217f7c43e
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8808689951655978316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence1
-  guid: 644fad684a940344bfff9ef008fd4c71
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8721738860672733475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q7 - Niks mis met wat extra munten
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q7 - Niks mis met wat extra munten
-  guid: 04d76a12643c7b4e8e35a3f837125103
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8691055347777142774
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence1
-  guid: 69a1dbb31553594084c4240217f7c43e
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8682461350461374413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q3 - Ja is goed
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q3 - Ja is goed
-  guid: 37d1670b98432246a521c2a443828669
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8502174512220936699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence2
-  guid: 690de71c36db194fb3bde6085e7ab7d3
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8436961656630647321
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- buy followers 2 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- buy followers 2 of 2
-  guid: 69a2c43146743a489f23da0869d21bb9
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8406234621089045016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence6
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence6
-  guid: e0581f989f0850439eae46eabc65bad6
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8357768484714282433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence3
-  guid: 28298927621a5f4f8af5ffcdcef9bdb1
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8295808299512557424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence5
-  guid: df6cf42a0effd14ba2675bf8215b238e
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8282341991152369426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Menu_background_music_Gliding
-  m_EditorClassIdentifier: 
-  Path: event:/Background Music/Menu_background_music_Gliding
-  guid: 15276434c4cbef49b0cb8f9907353b2a
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8215848944409760673
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence 1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence 1
-  guid: 03d0cbec05365649a0c859715b62b89b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8126629228563826709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence4
-  guid: b196f34c0b83b143830dfc678387d98d
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-8024007183503399009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence5
-  guid: fcb69bbb3c1f5b448fc8ff1417a98952
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7919709705428303189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence5
-  guid: fa19f062437bdc418dbf0fc064439878
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7900243672677130823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence2
-  guid: e4aaaaece62ff348b2126f60f994e406
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7857884632348012169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 2 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 2 of 2
-  guid: 6aa2cbcaa97b6f4d8c7c82da78cc7044
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7816382974920225318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep4 edited from 2
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep4 edited from 2
-  guid: 28b6f23858240047a493415ff2b19b57
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7292928573235329010
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/UI/Quest_deny_zapsplat_multimedia_game_tone_negative_error_mallet_hit_001_63881
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/UI/Quest_deny_zapsplat_multimedia_game_tone_negative_error_mallet_hit_001_63881
-  guid: 501286f97bc3b043905abfb1a13497d6
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-7183779749418224000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence1
-  guid: f10209dd73fda0438ed204887800fe6c
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6964090894077474445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence4
-  guid: 4d1be4c52517184cb59539ecd82b314b
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6952290319801847501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad - took picture
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad - took picture
-  guid: 29f571fdce80c34d9238ac9c1ffeeb47
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6933911546649092600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence 1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence 1
-  guid: 03d0cbec05365649a0c859715b62b89b
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6919495173390258874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- trash talk back 1 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- trash talk back 1 of 2
-  guid: c0a0fa67800b1449af0e810025b00c09
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6688739320052553999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 2 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 2 of 2
-  guid: 7376071b8607164db8ce4c235dbc9602
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6653550061616160394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q7 - Ik hou hem wel
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q7 - Ik hou hem wel
-  guid: 646f02077e363e48bc0dd7161e371803
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6554185380704025759
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence4
-  guid: 5b5df61f411ce84da48c90b3e2f351f8
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6538579916183905974
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Pickup-Item-Sound-zapsplat_cartoon_pop_mouth_002_46665
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Pickup-Item-Sound-zapsplat_cartoon_pop_mouth_002_46665
-  guid: e907b564d84ed04693dc36d13c26ce99
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6516010787154869606
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence1
-  guid: 644fad684a940344bfff9ef008fd4c71
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6382756982825120605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence2
-  guid: 0a33872f3dff9d40ad639f1d99e3f3cd
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6363351339291446960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence4
-  guid: 11631ad123ac994fa8a645720387b078
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6251618882947942097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence5
-  guid: 56f2285e015f0448a839ac1c697df4f8
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-6238960225904799151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence3
-  guid: 064f24bf80bf884989740d4cbd0fa8a5
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5986335390537394132
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- promote charity
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- promote charity
-  guid: 9739b0ad86706e4fb7fecb17d4f0dda2
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5911620812387266681
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence1
-  guid: ece3fac455b2974d9ec718a7e46c5d00
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5671490991163904356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q4 - Ik vind van niet
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q4 - Ik vind van niet
-  guid: 43e461c0c6889843bb5186f344d13c05
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5658987667220665354
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/UI/Quest_Accept_zapsplat_multimedia_game_sound_positive_chime_bright_warm_synth_005_60707
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/UI/Quest_Accept_zapsplat_multimedia_game_sound_positive_chime_bright_warm_synth_005_60707
-  guid: 077b8461bd291443b966e21d1d89fef4
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5649535348846899298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Karel/Karel Camera Sentence1
-  guid: c086c67971558c4a80ed29465d34f11b
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5380638981762297070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Quest-Finished_zapsplat_multimedia_game_sound_zen_game_chime_positive_soft_003_60715
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Quest-Finished_zapsplat_multimedia_game_sound_zen_game_chime_positive_soft_003_60715
-  guid: 6b29c9d689be8140bb1b2bfc91cae1bc
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5254950051278480898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence3
-  guid: 08b62ba920f7dd4b90da823a3b6da621
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5226635544739327028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence4
-  guid: e311d1461ab1a942996cf8ed25f9ec97
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-5118184655463815408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence1
-  guid: f0f741d352488046bd8f676a41abed10
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4727001649009412527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- return wallet Reflection
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- return wallet Reflection
-  guid: bb157feceab3184e84b9299e5cb0abf9
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4658035659317888516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- not apologizing 2 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- not apologizing 2 of 2
-  guid: c8b16ae3b67c2848ac8857d55a6159a1
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4631456359797632310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Pickup-Item-Sound-zapsplat_cartoon_pop_mouth_002_46665
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Pickup-Item-Sound-zapsplat_cartoon_pop_mouth_002_46665
-  guid: e907b564d84ed04693dc36d13c26ce99
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4612500971333759921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Messages SFX/in-chat_Incoming-message-zapsplat_cartoon_pop_001_46047
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Messages SFX/in-chat_Incoming-message-zapsplat_cartoon_pop_001_46047
-  guid: 951c238601a98f4f852810c545cab93a
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-4421346612755963781
+--- !u!114 &-9032654261903133263
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1211,7 +63,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Moral Scores/Bad- buy followers 1of 2
   guid: 33b7b6beb42193428404336ec80fe688
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1219,7 +71,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-4388861444577385452
+--- !u!114 &-9027468276523702958
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1229,12 +81,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Background Music
+  m_Name: event:/Sound Effects/Footsteps/Footstep3 edited from 1
   m_EditorClassIdentifier: 
-  Path: event:/Background Music/Background Music
-  guid: dbc6dacf3ae8cf4a8bbd661bf6d89655
+  Path: event:/Sound Effects/Footsteps/Footstep3 edited from 1
+  guid: f141dd9c034bff46b09815ed7c440e8b
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1242,7 +94,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3934896034217036506
+--- !u!114 &-8950087039720575774
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1252,12 +104,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence9
+  m_Name: event:/Voiceovers/Player Voice/Q1 - Hoe moet ik beginnen
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence9
-  guid: 2eb43cce1e99c84ba45c1c5a59ff5979
+  Path: event:/Voiceovers/Player Voice/Q1 - Hoe moet ik beginnen
+  guid: 5c9c601eebb15a4bac7ec335b546e5e5
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1265,7 +117,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3718551333717500517
+--- !u!114 &-8926788135817019566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1275,12 +127,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence2
+  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence1
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence2
-  guid: 6fddd04fc2fc054a84bd491d826eb53a
+  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence1
+  guid: f0f741d352488046bd8f676a41abed10
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1288,7 +140,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3687653182887323367
+--- !u!114 &-8667066859962019214
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1298,12 +150,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Background_before&after_game
+  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence4
   m_EditorClassIdentifier: 
-  Path: event:/Background Music/Background_before&after_game
-  guid: 68cf8f30cd882343ac171cc74560a0f9
+  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence4
+  guid: b196f34c0b83b143830dfc678387d98d
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1311,7 +163,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3571561569889633835
+--- !u!114 &-8597620443878789986
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1321,12 +173,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q1 - Hoe ben ik hier gekomen
+  m_Name: event:/Sound Effects/UI/Buttons_zapsplat_multimedia_game_sound_vibraphone_glassy_style_mallet_ping_high_pitched_002_61326
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q1 - Hoe ben ik hier gekomen
-  guid: 69f9534124f1a3418bcce087686af0dc
+  Path: event:/Sound Effects/UI/Buttons_zapsplat_multimedia_game_sound_vibraphone_glassy_style_mallet_ping_high_pitched_002_61326
+  guid: 86ecca97a0c46742b57426c332f5b02f
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1334,7 +186,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3474296171780500638
+--- !u!114 &-8543105866485178123
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1344,12 +196,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence4
+  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence3
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence4
-  guid: 11631ad123ac994fa8a645720387b078
+  Path: event:/Voiceovers/Bella/Bella Beer Sentence3
+  guid: 08b62ba920f7dd4b90da823a3b6da621
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1357,7 +209,214 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3342884861440834886
+--- !u!114 &-8526241595011371704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence3
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Karel/Karel Camera Sentence3
+  guid: 05b558abfb58c348b6e9760687c6a810
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8343572988978862878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q2 - Dat maakt me niks uit
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q2 - Dat maakt me niks uit
+  guid: b869fcf0e000b44f816eb7af7d646bc0
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8183741726820121227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence6
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence6
+  guid: e0581f989f0850439eae46eabc65bad6
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7626182083707937518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence2
+  guid: 690de71c36db194fb3bde6085e7ab7d3
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7541553844838416475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence6
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence6
+  guid: 99df26feb9579349b34f3a23da69f5a6
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7455631158050889995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q6 - Goede deal ik doe het
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q6 - Goede deal ik doe het
+  guid: c6b4906fe2e6e64e83128cbd29fa3ad7
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-7012311656832941371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence4
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence4
+  guid: ca8f4e9579d0d842abed0c3ab2de5ec9
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6943428243376887887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Good- confront cyberbully 1 of 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Good- confront cyberbully 1 of 2
+  guid: 88d25f1a342d674ab5d1d59158eb983b
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6896329961690458619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Money_gain_pickup, freesound.org
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Money_gain_pickup, freesound.org
+  guid: 43a427cbe94cfc489769dd0c6d51a86c
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-6768096296484336231
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1374,7 +433,7 @@ MonoBehaviour:
     or bad choices)
   guid: 8706305b138d4c4e9ded0c016c6991a9
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1382,7 +441,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3203019445002553596
+--- !u!114 &-6075046148909170544
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1392,12 +451,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence7
+  m_Name: event:/Voiceovers/Moral Scores/Good- confront cyberbully 2 of 2
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence7
-  guid: 1d111059b5120a489ae7f4a71a1ca005
+  Path: event:/Voiceovers/Moral Scores/Good- confront cyberbully 2 of 2
+  guid: 95372f0ba748b6408ffec1bab9edb4e4
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1405,7 +464,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-3081423891786362945
+--- !u!114 &-6031912250601062980
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1415,12 +474,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/UI/Quest_deny_zapsplat_multimedia_game_tone_negative_error_mallet_hit_001_63881
+  m_Name: event:/Voiceovers/End of Game outro/Start outro
   m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/UI/Quest_deny_zapsplat_multimedia_game_tone_negative_error_mallet_hit_001_63881
-  guid: 501286f97bc3b043905abfb1a13497d6
+  Path: event:/Voiceovers/End of Game outro/Start outro
+  guid: 25ab30ff1f86bb418b3167c42394400a
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1428,214 +487,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-2894155311859484255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence4
-  guid: e311d1461ab1a942996cf8ed25f9ec97
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-2484341430015005539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Heb je doorgehad wat we allemaal stiekem
-    in de gaten hebben gehouden wat je hebt gedaan om volgers te krijgen
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Heb je doorgehad wat we allemaal stiekem in
-    de gaten hebben gehouden wat je hebt gedaan om volgers te krijgen
-  guid: a072740bc734c345ab0c28ec548e805e
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-2308726733043109575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q6 - Hoe dan
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q6 - Hoe dan
-  guid: c86b1f1b69fe0a4281d8122649db1f9e
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-2111844565169254419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence3
-  guid: 064f24bf80bf884989740d4cbd0fa8a5
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1855504447949090095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/UI/Quest_Accept_zapsplat_multimedia_game_sound_positive_chime_bright_warm_synth_005_60707
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/UI/Quest_Accept_zapsplat_multimedia_game_sound_positive_chime_bright_warm_synth_005_60707
-  guid: 077b8461bd291443b966e21d1d89fef4
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1846261925602232393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: Assets/Socialeven FMOD Files/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637596296643588870
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 7496
-  Exists: 1
---- !u!114 &-1670524257105415521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 1 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 1 of 2
-  guid: e40821977fad774cb8139fc33b8a3318
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1648701594349548779
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence5
-  guid: fa19f062437bdc418dbf0fc064439878
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1560106887239296702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q4 - Oh wat is dat dan voor leuks
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q4 - Oh wat is dat dan voor leuks
-  guid: b6b46f2be7a6304cbea448dc13e4c686
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-1539932157930200364
+--- !u!114 &-6010166489823426552
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1650,7 +502,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Player Voice/Q5 - Goed idee zijn ze vast blij mee
   guid: 669cb7ac46a3724b89ae2e988579ce90
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1658,7 +510,308 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-1432298119116270522
+--- !u!114 &-5964012870140806932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q7 - Nee ik laat hem wel liggen
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q7 - Nee ik laat hem wel liggen
+  guid: d25d2373511a1d488524bdb2e380d3c4
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5900208356180153053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Floating_Car_Sound
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Floating_Car_Sound
+  guid: f7bfc151909c8d44b9b88e427fe8b4f4
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5666380995532846199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Good- return wallet
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Good- return wallet
+  guid: 59230ed10aaec749bbf95b75773cf5d4
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5560559570792072082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Good- promote charity
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Good- promote charity
+  guid: 9739b0ad86706e4fb7fecb17d4f0dda2
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5453881748778093543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence2
+  guid: cb9f331bc81c454f8567f5b138979429
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5323563444881848146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q5 - Pff nee dat is mijn eigen geld dat
+    heb ik zelf gespaard
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q5 - Pff nee dat is mijn eigen geld dat heb
+    ik zelf gespaard
+  guid: ff2ae0531d4eb94498927cb9afcf4a24
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5253894295971613253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Put-Down-Item-Sound-zapsplat_cartoon_pop_mouth_001_46664
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Put-Down-Item-Sound-zapsplat_cartoon_pop_mouth_001_46664
+  guid: ffb29ea47237b540a15b8b71ce9d4ebe
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5218961883512346935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 2 of 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 2 of 2
+  guid: 7376071b8607164db8ce4c235dbc9602
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4684869704091449289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- not apologizing 2 of 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- not apologizing 2 of 2
+  guid: c8b16ae3b67c2848ac8857d55a6159a1
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4652941738184073075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/UI/Quest_deny_zapsplat_multimedia_game_tone_negative_error_mallet_hit_001_63881
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/UI/Quest_deny_zapsplat_multimedia_game_tone_negative_error_mallet_hit_001_63881
+  guid: 501286f97bc3b043905abfb1a13497d6
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4629253845628421800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence5
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence5
+  guid: fa19f062437bdc418dbf0fc064439878
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4483507427131020688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence1
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence1
+  guid: f10209dd73fda0438ed204887800fe6c
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4234470206720296312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Quest-Finished_zapsplat_multimedia_game_sound_zen_game_chime_positive_soft_003_60715
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Quest-Finished_zapsplat_multimedia_game_sound_zen_game_chime_positive_soft_003_60715
+  guid: 6b29c9d689be8140bb1b2bfc91cae1bc
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-4200620762807369553
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1673,7 +826,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence2
   guid: 450822d05bef4d4ca08c92a00050a2b7
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1681,7 +834,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-1388975587927743409
+--- !u!114 &-4165611546327512136
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1691,12 +844,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q4 - Oeh ja dat ga ik doen
+  m_Name: event:/Voiceovers/Player Voice/Q7 - Niks mis met wat extra munten
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q4 - Oeh ja dat ga ik doen
-  guid: eddf721e00f7c7409ccaf5bea9f2bde8
+  Path: event:/Voiceovers/Player Voice/Q7 - Niks mis met wat extra munten
+  guid: 04d76a12643c7b4e8e35a3f837125103
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1704,7 +857,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-1305547913545572452
+--- !u!114 &-3960653522149673195
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1714,12 +867,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence9
+  m_Name: event:/Voiceovers/Player Voice/Q6 - Nee heb ik niet nodig
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence9
-  guid: 2eb43cce1e99c84ba45c1c5a59ff5979
+  Path: event:/Voiceovers/Player Voice/Q6 - Nee heb ik niet nodig
+  guid: c6fb38d00d35d74f8017e6bcfff0b015
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1727,7 +880,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-1147506572760384094
+--- !u!114 &-3922897029916789399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1737,12 +890,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep4 edited from 2
+  m_Name: event:/Sound Effects/UI/Quest_Accept_zapsplat_multimedia_game_sound_positive_chime_bright_warm_synth_005_60707
   m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep4 edited from 2
-  guid: 28b6f23858240047a493415ff2b19b57
+  Path: event:/Sound Effects/UI/Quest_Accept_zapsplat_multimedia_game_sound_positive_chime_bright_warm_synth_005_60707
+  guid: 077b8461bd291443b966e21d1d89fef4
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1750,7 +903,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-1000071801420998679
+--- !u!114 &-3676516971560461416
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1760,12 +913,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q8 - Ja natuurlijk help ik je
+  m_Name: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 2 of 2
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q8 - Ja natuurlijk help ik je
-  guid: 278b97f10e65694080c40a73ca0039a1
+  Path: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 2 of 2
+  guid: 6aa2cbcaa97b6f4d8c7c82da78cc7044
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1773,7 +926,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-970363555806038929
+--- !u!114 &-3497834574143304096
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1783,13 +936,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q2 - Sorry boris dat was niet aardig van
-    me
+  m_Name: event:/Voiceovers/Moral Scores/Bad - took picture
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q2 - Sorry boris dat was niet aardig van me
-  guid: f0250164b906cb46835ad136a70131b8
+  Path: event:/Voiceovers/Moral Scores/Bad - took picture
+  guid: 29f571fdce80c34d9238ac9c1ffeeb47
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1797,7 +949,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-946026066522520936
+--- !u!114 &-3470788562393452684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1807,12 +959,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Credits_background_music_audio_hero_Pleasure-Drive_SIPML_C-0417
+  m_Name: event:/Sound Effects/Messages SFX/incomign-message_zapsplat_multimedia_alert_notification_ui_ping_chime_mallet_like_positive_002_65670
   m_EditorClassIdentifier: 
-  Path: event:/Background Music/Credits_background_music_audio_hero_Pleasure-Drive_SIPML_C-0417
-  guid: f5131577c58fef4d873867510c8416b1
+  Path: event:/Sound Effects/Messages SFX/incomign-message_zapsplat_multimedia_alert_notification_ui_ping_chime_mallet_like_positive_002_65670
+  guid: 3f434774d962f6498274570f0a58d68a
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1820,99 +972,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-771746466840444196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q4 - Nee jij bent saai
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q4 - Nee jij bent saai
-  guid: b16431587187054d836ccb8bfc9f55dd
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-608044255414688113
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence5
-  guid: df6cf42a0effd14ba2675bf8215b238e
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-569438062816899335
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence7
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence7
-  guid: 1d111059b5120a489ae7f4a71a1ca005
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-420005050432720752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q2 - Ja dat klopt
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q2 - Ja dat klopt
-  guid: b4b21b240f46e44aa49bebaac6e16d25
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &-284247380691591244
+--- !u!114 &-3323836898479157940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1927,7 +987,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Moral Scores/Good- apologize to Boris
   guid: a7c2581a032aca4bbf5d033c9c05a7b6
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1935,7 +995,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-247009696128750300
+--- !u!114 &-2814203886207911892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1945,12 +1005,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence2
+  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence4
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence2
-  guid: cb9f331bc81c454f8567f5b138979429
+  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence4
+  guid: 5b5df61f411ce84da48c90b3e2f351f8
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1958,7 +1018,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-103812995944447191
+--- !u!114 &-2535879744971960933
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1968,12 +1028,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence2
+  m_Name: event:/Voiceovers/Player Voice/Q4 - Ik vind van niet
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence2
-  guid: cb9f331bc81c454f8567f5b138979429
+  Path: event:/Voiceovers/Player Voice/Q4 - Ik vind van niet
+  guid: 43e461c0c6889843bb5186f344d13c05
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1981,7 +1041,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-36352681941310182
+--- !u!114 &-2480758042141226911
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1991,12 +1051,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence1
+  m_Name: event:/Voiceovers/Player Voice/Q1 - Hoe ben ik hier gekomen
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence1
-  guid: ece3fac455b2974d9ec718a7e46c5d00
+  Path: event:/Voiceovers/Player Voice/Q1 - Hoe ben ik hier gekomen
+  guid: 69f9534124f1a3418bcce087686af0dc
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2004,7 +1064,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &-23389325773033860
+--- !u!114 &-2411950139374939687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2014,12 +1074,353 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence4
+  m_Name: event:/Voiceovers/Moral Scores/Good- apologize to Boris reflection
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence4
-  guid: ca8f4e9579d0d842abed0c3ab2de5ec9
+  Path: event:/Voiceovers/Moral Scores/Good- apologize to Boris reflection
+  guid: 5d8bbd864773d64bb15e033fee2c0d19
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2288980233761520618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence1
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Karel/Karel Camera Sentence1
+  guid: c086c67971558c4a80ed29465d34f11b
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1947312041154199887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Socialeven FMOD Files/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 637596322813866489
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-1589687765394361314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence1
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Bella/Bella Beer Sentence1
+  guid: 69a1dbb31553594084c4240217f7c43e
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1585647984355481085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- buy followers 2 of 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- buy followers 2 of 2
+  guid: 69a2c43146743a489f23da0869d21bb9
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1579692647182749815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Good- no trash talk
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Good- no trash talk
+  guid: 812647ed8ce63b448bf93da2aec58f18
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1563024482978589348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- keep wallet
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- keep wallet
+  guid: 1448fa6b262a3b4a85e0dd8346518564
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1531802498871095284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence5
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence5
+  guid: df6cf42a0effd14ba2675bf8215b238e
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1528774994312346685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence5
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence5
+  guid: fcb69bbb3c1f5b448fc8ff1417a98952
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-1337304595488965634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q7 - Ik hou hem wel
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q7 - Ik hou hem wel
+  guid: 646f02077e363e48bc0dd7161e371803
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-913525364722473983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence5
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence5
+  guid: 56f2285e015f0448a839ac1c697df4f8
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-828647964871704075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q2 - Jij klinkt niet zo blij
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q2 - Jij klinkt niet zo blij
+  guid: 8c18a7c4a4592047a7f28185b8ba53c9
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-566230723155896382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Footsteps/Footstep4 edited from 2
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Footsteps/Footstep4 edited from 2
+  guid: 28b6f23858240047a493415ff2b19b57
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-537044952918246831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence4
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence4
+  guid: 11631ad123ac994fa8a645720387b078
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-291387857460992485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Karel/Karel Camera Sentence2
+  guid: 97fa6e0d1b2e9e43a43114b20f53abc6
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-12651739834162772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 1 of 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 1 of 2
+  guid: 327a77cac8c71e4e840a7e0d38e8f289
+  Banks:
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2040,957 +1441,129 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -1846261925602232393}
-  - {fileID: 7198363182552100242}
+  - {fileID: 5288188762125688306}
+  - {fileID: -1947312041154199887}
   EditorEvents:
-  - {fileID: -8215848944409760673}
-  - {fileID: -8721738860672733475}
-  - {fileID: 2309915335445305827}
-  - {fileID: -6238960225904799151}
-  - {fileID: -1855504447949090095}
-  - {fileID: 7384964955713712037}
-  - {fileID: -6382756982825120605}
-  - {fileID: -3474296171780500638}
-  - {fileID: 1882461464618079468}
-  - {fileID: 5084202604093756145}
-  - {fileID: -3203019445002553596}
-  - {fileID: 1320394634963082153}
-  - {fileID: 2856924986641260796}
-  - {fileID: 3787008372371478416}
-  - {fileID: -1000071801420998679}
-  - {fileID: 966884202546340734}
-  - {fileID: -7816382974920225318}
-  - {fileID: -6952290319801847501}
-  - {fileID: 1579429582411512669}
-  - {fileID: -3934896034217036506}
-  - {fileID: 6565619086712838533}
-  - {fileID: 8067038384807948031}
-  - {fileID: -4421346612755963781}
-  - {fileID: -8682461350461374413}
-  - {fileID: 2870855306699286734}
-  - {fileID: 8272349953752807}
-  - {fileID: 6503577344476716915}
-  - {fileID: -9084313407357726889}
-  - {fileID: -5671490991163904356}
-  - {fileID: -1432298119116270522}
-  - {fileID: 8234489141860448277}
-  - {fileID: 3008651002144425016}
-  - {fileID: 7168125921316154929}
-  - {fileID: -7292928573235329010}
-  - {fileID: -6251618882947942097}
-  - {fileID: 8985201541779588024}
-  - {fileID: -6554185380704025759}
-  - {fileID: 2531261208036631508}
-  - {fileID: 2124904358469797413}
-  - {fileID: -8808689951655978316}
-  - {fileID: -6653550061616160394}
-  - {fileID: -1539932157930200364}
-  - {fileID: 1729445892021115770}
-  - {fileID: -8502174512220936699}
-  - {fileID: -8845973360841332508}
-  - {fileID: -8436961656630647321}
-  - {fileID: -3571561569889633835}
-  - {fileID: 8866171403686472690}
-  - {fileID: -7857884632348012169}
-  - {fileID: -9048781041459167355}
-  - {fileID: -3718551333717500517}
-  - {fileID: 996942694134865411}
-  - {fileID: -6688739320052553999}
-  - {fileID: 1277249434275797956}
-  - {fileID: 418620628452871936}
-  - {fileID: -9001365998559386648}
-  - {fileID: -3342884861440834886}
-  - {fileID: 6063719584579590863}
-  - {fileID: 3426821736176736585}
-  - {fileID: 6073274934609553459}
-  - {fileID: -4612500971333759921}
-  - {fileID: 1196389185943807536}
-  - {fileID: -5986335390537394132}
-  - {fileID: -8953016860180654208}
-  - {fileID: 5614629537670089108}
-  - {fileID: -2484341430015005539}
-  - {fileID: 3089398198729810945}
-  - {fileID: 3473523587505603339}
-  - {fileID: -284247380691591244}
-  - {fileID: -771746466840444196}
-  - {fileID: -8126629228563826709}
-  - {fileID: -420005050432720752}
-  - {fileID: -1560106887239296702}
-  - {fileID: 7117737306258015136}
-  - {fileID: -4727001649009412527}
-  - {fileID: 3387884233445711228}
-  - {fileID: 4611536843575710448}
-  - {fileID: -6919495173390258874}
-  - {fileID: 7594092402505497880}
-  - {fileID: 8282462963164800109}
-  - {fileID: 5928669257129129071}
-  - {fileID: -9135134016995539769}
-  - {fileID: -2308726733043109575}
-  - {fileID: -4658035659317888516}
-  - {fileID: 5194081509877209736}
-  - {fileID: -103812995944447191}
-  - {fileID: 6592232491958993597}
-  - {fileID: 8237501956105794803}
-  - {fileID: 2145580711037702328}
-  - {fileID: 748635122215434718}
-  - {fileID: 2355529686897716147}
-  - {fileID: -8295808299512557424}
-  - {fileID: -8406234621089045016}
-  - {fileID: -2894155311859484255}
-  - {fileID: -1670524257105415521}
-  - {fileID: -7900243672677130823}
-  - {fileID: -4631456359797632310}
-  - {fileID: -36352681941310182}
-  - {fileID: 8865872310567618052}
-  - {fileID: -1388975587927743409}
-  - {fileID: -970363555806038929}
-  - {fileID: 6549307244517045376}
-  - {fileID: 4116622162230328724}
-  - {fileID: 4893403999165574777}
-  - {fileID: -946026066522520936}
-  - {fileID: 6939847856418898660}
-  - {fileID: 5216301899483065333}
-  - {fileID: 5817516470143761577}
-  - {fileID: -7919709705428303189}
-  - {fileID: -8024007183503399009}
-  - {fileID: 8075494567968962897}
-  - {fileID: 1115520645145111310}
+  - {fileID: 8464040364585295312}
+  - {fileID: -4165611546327512136}
+  - {fileID: -8526241595011371704}
+  - {fileID: 668796440362194881}
+  - {fileID: -3922897029916789399}
+  - {fileID: -8543105866485178123}
+  - {fileID: 4242404999334719546}
+  - {fileID: -537044952918246831}
+  - {fileID: -1563024482978589348}
+  - {fileID: 153217726641994316}
+  - {fileID: 1008804474580866038}
+  - {fileID: 3000393741042785718}
+  - {fileID: -6031912250601062980}
+  - {fileID: 7341664794604248336}
+  - {fileID: 8255052802024666769}
+  - {fileID: 144157133904920919}
+  - {fileID: -566230723155896382}
+  - {fileID: -3497834574143304096}
+  - {fileID: 1076093331795726533}
+  - {fileID: 6662687352923330143}
+  - {fileID: 6227164281872638087}
+  - {fileID: -12651739834162772}
+  - {fileID: -9032654261903133263}
+  - {fileID: 1943668696606996171}
+  - {fileID: 3087598612542544232}
+  - {fileID: 7051767042913263566}
+  - {fileID: -3470788562393452684}
+  - {fileID: -6896329961690458619}
+  - {fileID: -2535879744971960933}
+  - {fileID: -4200620762807369553}
+  - {fileID: 6334977628548998473}
+  - {fileID: 8222775773936707903}
+  - {fileID: 2381271566036040356}
+  - {fileID: -4652941738184073075}
+  - {fileID: -913525364722473983}
+  - {fileID: -5666380995532846199}
+  - {fileID: -2814203886207911892}
+  - {fileID: -8950087039720575774}
+  - {fileID: -2411950139374939687}
+  - {fileID: 8071448943573804644}
+  - {fileID: -1337304595488965634}
+  - {fileID: -6010166489823426552}
+  - {fileID: 9088716859981474975}
+  - {fileID: -7626182083707937518}
+  - {fileID: -1589687765394361314}
+  - {fileID: -1585647984355481085}
+  - {fileID: -2480758042141226911}
+  - {fileID: 3515856088112411069}
+  - {fileID: -3676516971560461416}
+  - {fileID: -4234470206720296312}
+  - {fileID: 5426432090168076157}
+  - {fileID: 4744604665101276213}
+  - {fileID: -5218961883512346935}
+  - {fileID: 6688268040317600417}
+  - {fileID: -1579692647182749815}
+  - {fileID: -8597620443878789986}
+  - {fileID: -6768096296484336231}
+  - {fileID: -6943428243376887887}
+  - {fileID: -828647964871704075}
+  - {fileID: 1405507007049346283}
+  - {fileID: 186646871656826948}
+  - {fileID: -6075046148909170544}
+  - {fileID: -5560559570792072082}
+  - {fileID: -291387857460992485}
+  - {fileID: -7541553844838416475}
+  - {fileID: 1951093441913309705}
+  - {fileID: 4442543019494045846}
+  - {fileID: 94030967419727987}
+  - {fileID: -3323836898479157940}
+  - {fileID: 117278563081208824}
+  - {fileID: -8667066859962019214}
+  - {fileID: 5463732943542942418}
+  - {fileID: 2429312581544266251}
+  - {fileID: -8343572988978862878}
+  - {fileID: 4777160863910528771}
+  - {fileID: 9073631617927047250}
+  - {fileID: -2288980233761520618}
+  - {fileID: 1281916795365282301}
+  - {fileID: -9098461594332337662}
+  - {fileID: -7455631158050889995}
+  - {fileID: -3960653522149673195}
+  - {fileID: 583709426547112339}
+  - {fileID: 3283061954117834222}
+  - {fileID: -4684869704091449289}
+  - {fileID: -7012311656832941371}
+  - {fileID: -5453881748778093543}
+  - {fileID: 2168489415118457809}
+  - {fileID: -5964012870140806932}
+  - {fileID: 5169100195250532085}
+  - {fileID: 6814274343529588840}
+  - {fileID: 2818709781789019049}
+  - {fileID: -1531802498871095284}
+  - {fileID: -8183741726820121227}
+  - {fileID: 8121106089853846339}
+  - {fileID: 5825778665705426156}
+  - {fileID: 1620445766944137970}
+  - {fileID: 5475393876567119185}
+  - {fileID: 7094362112068804724}
+  - {fileID: 967067850084270931}
+  - {fileID: 7598406345516984995}
+  - {fileID: 1660279849351011696}
+  - {fileID: -8926788135817019566}
+  - {fileID: -4483507427131020688}
+  - {fileID: -9027468276523702958}
+  - {fileID: 4145941879118037536}
+  - {fileID: -9065478570646913603}
+  - {fileID: 2982832571844616281}
+  - {fileID: -5900208356180153053}
+  - {fileID: -4629253845628421800}
+  - {fileID: -1528774994312346685}
+  - {fileID: -5323563444881848146}
+  - {fileID: -5253894295971613253}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   StringsBanks:
-  - {fileID: -1846261925602232393}
-  stringsBankWriteTime: 637596296643588870
+  - {fileID: 5288188762125688306}
+  stringsBankWriteTime: 637596322813886446
   cacheVersion: 6
---- !u!114 &1470753001813098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep2_zapsplat_cartoon_footstep_single_barefoot_wet_002_26689
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep2_zapsplat_cartoon_footstep_single_barefoot_wet_002_26689
-  guid: d8030063f0f6fa419db4e437fb1b18c5
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &8272349953752807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence3
-  guid: 3e43a2ad12bc38459ed6d2e5640d1fcf
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &163739008069118635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence3
-  guid: ccaf46e89c1c584785180a4b054c7634
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &267379566933714252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence2
-  guid: e4aaaaece62ff348b2126f60f994e406
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &418620628452871936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- no trash talk
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- no trash talk
-  guid: 812647ed8ce63b448bf93da2aec58f18
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &748635122215434718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Background Music
-  m_EditorClassIdentifier: 
-  Path: event:/Background Music/Background Music
-  guid: dbc6dacf3ae8cf4a8bbd661bf6d89655
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &750022819063267515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Messages SFX/incomign-message_zapsplat_multimedia_alert_notification_ui_ping_chime_mallet_like_positive_002_65670
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Messages SFX/incomign-message_zapsplat_multimedia_alert_notification_ui_ping_chime_mallet_like_positive_002_65670
-  guid: 3f434774d962f6498274570f0a58d68a
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &966884202546340734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence3
-  guid: 28298927621a5f4f8af5ffcdcef9bdb1
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &996942694134865411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/End of Game outro/Bad choices outro
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/End of Game outro/Bad choices outro
-  guid: 721107c50170124bb569304a90a7460b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1115520645145111310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Put-Down-Item-Sound-zapsplat_cartoon_pop_mouth_001_46664
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Put-Down-Item-Sound-zapsplat_cartoon_pop_mouth_001_46664
-  guid: ffb29ea47237b540a15b8b71ce9d4ebe
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1181433068769668761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/UI/Buttons_zapsplat_multimedia_game_sound_vibraphone_glassy_style_mallet_ping_high_pitched_002_61326
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/UI/Buttons_zapsplat_multimedia_game_sound_vibraphone_glassy_style_mallet_ping_high_pitched_002_61326
-  guid: 86ecca97a0c46742b57426c332f5b02f
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1196389185943807536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- confront cyberbully 2 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- confront cyberbully 2 of 2
-  guid: 95372f0ba748b6408ffec1bab9edb4e4
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1265024920647531065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Put-Down-Item-Sound-zapsplat_cartoon_pop_mouth_001_46664
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Put-Down-Item-Sound-zapsplat_cartoon_pop_mouth_001_46664
-  guid: ffb29ea47237b540a15b8b71ce9d4ebe
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1277249434275797956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q1 - Waarom ben ik hier
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q1 - Waarom ben ik hier
-  guid: 7f3d28108fe5cb4b9a4b6b30eebed3a5
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1320394634963082153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/End of Game outro/Good choices outro
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/End of Game outro/Good choices outro
-  guid: 22b6f471fed35543983b8ad2f01f4ca1
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1499703939308370235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep1_zapsplat_cartoon_footstep_single_barefoot_wet_001_26839
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep1_zapsplat_cartoon_footstep_single_barefoot_wet_001_26839
-  guid: f566895cf3ca804e8b826f14b728fc97
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1579429582411512669
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence3
-  guid: 2e2cef2c36764d448bc6c9027cd712ea
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1729445892021115770
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Background_before&after_game
-  m_EditorClassIdentifier: 
-  Path: event:/Background Music/Background_before&after_game
-  guid: 68cf8f30cd882343ac171cc74560a0f9
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1773270104609136697
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Floating_Car_Sound
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Floating_Car_Sound
-  guid: f7bfc151909c8d44b9b88e427fe8b4f4
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &1816056487072161566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence4
-  guid: 5b5df61f411ce84da48c90b3e2f351f8
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1882461464618079468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- keep wallet
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- keep wallet
-  guid: 1448fa6b262a3b4a85e0dd8346518564
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &1922710380752539417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence6
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence6
-  guid: e0581f989f0850439eae46eabc65bad6
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2124904358469797413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- apologize to Boris reflection
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- apologize to Boris reflection
-  guid: 5d8bbd864773d64bb15e033fee2c0d19
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2145580711037702328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep2_zapsplat_cartoon_footstep_single_barefoot_wet_002_26689
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep2_zapsplat_cartoon_footstep_single_barefoot_wet_002_26689
-  guid: d8030063f0f6fa419db4e437fb1b18c5
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2220350833752001144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence3
-  guid: 2e2cef2c36764d448bc6c9027cd712ea
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2309915335445305827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Karel/Karel Camera Sentence3
-  guid: 05b558abfb58c348b6e9760687c6a810
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2355529686897716147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q1 - Wie ben jij
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q1 - Wie ben jij
-  guid: dcdf9069d3d9974d8a2aff3c242e4a9d
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2531261208036631508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q1 - Hoe moet ik beginnen
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q1 - Hoe moet ik beginnen
-  guid: 5c9c601eebb15a4bac7ec335b546e5e5
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2562199016308023899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence2
-  guid: 0a33872f3dff9d40ad639f1d99e3f3cd
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2856924986641260796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/End of Game outro/Start outro
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/End of Game outro/Start outro
-  guid: 25ab30ff1f86bb418b3167c42394400a
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &2870855306699286734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- keep wallet Reflection
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- keep wallet Reflection
-  guid: 3ba36379a9df6a449e33870412a8431b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3008651002144425016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Messages SFX/Message_sent
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Messages SFX/Message_sent
-  guid: 47d09d10d54ecd4986c2172f213cff0b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3089398198729810945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Game introduction/Game Introduction
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Game introduction/Game Introduction
-  guid: a549c3cf0f432641b6e8b4b8bc4c13dc
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3262301797445702077
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence2
-  guid: 690de71c36db194fb3bde6085e7ab7d3
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3387884233445711228
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence8
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence8
-  guid: bb80ee3afe08674f96de72f062b4b3e1
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3426821736176736585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q2 - Jij klinkt niet zo blij
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q2 - Jij klinkt niet zo blij
-  guid: 8c18a7c4a4592047a7f28185b8ba53c9
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &3473523587505603339
+--- !u!114 &94030967419727987
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3005,7 +1578,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Moral Scores/Bad- trash talk back 2 of 2
   guid: a708f5e6cbaa5b44b9790c7d59c7eb83
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3013,7 +1586,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &3750576143944364375
+--- !u!114 &117278563081208824
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3023,12 +1596,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence5
+  m_Name: event:/Voiceovers/Player Voice/Q4 - Nee jij bent saai
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Boris/Boris Ballon Sentence5
-  guid: fcb69bbb3c1f5b448fc8ff1417a98952
+  Path: event:/Voiceovers/Player Voice/Q4 - Nee jij bent saai
+  guid: b16431587187054d836ccb8bfc9f55dd
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3036,7 +1609,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &3787008372371478416
+--- !u!114 &144157133904920919
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3046,12 +1619,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence5
+  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence3
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence5
-  guid: 2738e2ea3efee143a7c3aa010d81566d
+  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence3
+  guid: 28298927621a5f4f8af5ffcdcef9bdb1
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3059,143 +1632,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &3801229474700174056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep3 edited from 1
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep3 edited from 1
-  guid: f141dd9c034bff46b09815ed7c440e8b
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &4116622162230328724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence1
-  guid: f10209dd73fda0438ed204887800fe6c
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &4160225170344696612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence2
-  guid: 6fddd04fc2fc054a84bd491d826eb53a
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &4528126080534021956
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../SAXION CMGT/CMGT Y2/TERM 4/Socialeven/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 637595436164458040
-  LoadResult: 0
-  FileSizes:
-  - Name: Desktop
-    Value: 4104
-  Exists: 1
---- !u!114 &4611536843575710448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence1
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Karel/Karel Camera Sentence1
-  guid: c086c67971558c4a80ed29465d34f11b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &4893403999165574777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep3 edited from 1
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep3 edited from 1
-  guid: f141dd9c034bff46b09815ed7c440e8b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5084202604093756145
+--- !u!114 &153217726641994316
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3210,7 +1647,7 @@ MonoBehaviour:
   Path: event:/Background Music/Menu_background_music_Gliding
   guid: 15276434c4cbef49b0cb8f9907353b2a
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3218,260 +1655,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &5106396785814034898
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence3
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence3
-  guid: 3e43a2ad12bc38459ed6d2e5640d1fcf
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5194081509877209736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence4
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence4
-  guid: ca8f4e9579d0d842abed0c3ab2de5ec9
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5216301899483065333
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q7 - Denk je
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q7 - Denk je
-  guid: f5cddc142e3ac64998f3bd58632247aa
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5256875400037235904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence5
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence5
-  guid: 2738e2ea3efee143a7c3aa010d81566d
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5312428889999687366
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Money_gain_pickup, freesound.org
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Money_gain_pickup, freesound.org
-  guid: 43a427cbe94cfc489769dd0c6d51a86c
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5614629537670089108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence6
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence6
-  guid: 99df26feb9579349b34f3a23da69f5a6
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5762585038149268591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Messages SFX/Message_sent
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Messages SFX/Message_sent
-  guid: 47d09d10d54ecd4986c2172f213cff0b
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &5817516470143761577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Floating_Car_Sound
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Floating_Car_Sound
-  guid: f7bfc151909c8d44b9b88e427fe8b4f4
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5928669257129129071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q6 - Nee heb ik niet nodig
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q6 - Nee heb ik niet nodig
-  guid: c6fb38d00d35d74f8017e6bcfff0b015
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &6063719584579590863
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- confront cyberbully 1 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- confront cyberbully 1 of 2
-  guid: 88d25f1a342d674ab5d1d59158eb983b
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &6073274934609553459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q1 - Waar ben ik
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q1 - Waar ben ik
-  guid: 9133fbe26816e14d8378599498dafc7d
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &6372331072952286864
+--- !u!114 &186646871656826948
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3486,7 +1670,7 @@ MonoBehaviour:
   Path: event:/Sound Effects/Messages SFX/in-chat_Incoming-message-zapsplat_cartoon_pop_001_46047
   guid: 951c238601a98f4f852810c545cab93a
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3494,7 +1678,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &6503577344476716915
+--- !u!114 &583709426547112339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3504,12 +1688,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Messages SFX/incomign-message_zapsplat_multimedia_alert_notification_ui_ping_chime_mallet_like_positive_002_65670
+  m_Name: event:/Voiceovers/Player Voice/Q5 - Ja he vind ik ook
   m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Messages SFX/incomign-message_zapsplat_multimedia_alert_notification_ui_ping_chime_mallet_like_positive_002_65670
-  guid: 3f434774d962f6498274570f0a58d68a
+  Path: event:/Voiceovers/Player Voice/Q5 - Ja he vind ik ook
+  guid: c77021d2213a7e409f2c9c78641ca9de
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3517,7 +1701,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &6549307244517045376
+--- !u!114 &668796440362194881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3527,12 +1711,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence1
+  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence3
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence1
-  guid: f0f741d352488046bd8f676a41abed10
+  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence3
+  guid: 064f24bf80bf884989740d4cbd0fa8a5
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3540,7 +1724,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &6565619086712838533
+--- !u!114 &967067850084270931
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3550,12 +1734,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- not apologizing 1 of 2
+  m_Name: event:/Voiceovers/Player Voice/Q3 - Nee dat wil ik niet
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- not apologizing 1 of 2
-  guid: 3150784faf588042a9f5c0dce59454ba
+  Path: event:/Voiceovers/Player Voice/Q3 - Nee dat wil ik niet
+  guid: ed3356412f9d494b8e38e343a5f3616b
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3563,7 +1747,194 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &6592232491958993597
+--- !u!114 &1008804474580866038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence7
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence7
+  guid: 1d111059b5120a489ae7f4a71a1ca005
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1076093331795726533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence3
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence3
+  guid: 2e2cef2c36764d448bc6c9027cd712ea
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1281916795365282301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- trash talk back 1 of 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- trash talk back 1 of 2
+  guid: c0a0fa67800b1449af0e810025b00c09
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1405507007049346283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q1 - Waar ben ik
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q1 - Waar ben ik
+  guid: 9133fbe26816e14d8378599498dafc7d
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1620445766944137970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Bella/Bella Beer Sentence2
+  guid: e4aaaaece62ff348b2126f60f994e406
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1660279849351011696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q2 - Sorry boris dat was niet aardig van
+    me
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q2 - Sorry boris dat was niet aardig van me
+  guid: f0250164b906cb46835ad136a70131b8
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1943668696606996171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q3 - Ja is goed
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q3 - Ja is goed
+  guid: 37d1670b98432246a521c2a443828669
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &1951093441913309705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Heb je doorgehad wat we allemaal stiekem
+    in de gaten hebben gehouden wat je hebt gedaan om volgers te krijgen
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Heb je doorgehad wat we allemaal stiekem in
+    de gaten hebben gehouden wat je hebt gedaan om volgers te krijgen
+  guid: a072740bc734c345ab0c28ec548e805e
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2168489415118457809
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3578,7 +1949,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Boris/Boris Ballon Sentence3
   guid: ccaf46e89c1c584785180a4b054c7634
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3586,53 +1957,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &6939847856418898660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Sound Effects/Footsteps/Footstep1_zapsplat_cartoon_footstep_single_barefoot_wet_001_26839
-  m_EditorClassIdentifier: 
-  Path: event:/Sound Effects/Footsteps/Footstep1_zapsplat_cartoon_footstep_single_barefoot_wet_001_26839
-  guid: f566895cf3ca804e8b826f14b728fc97
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &7117737306258015136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q2 - Dat maakt me niks uit
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q2 - Dat maakt me niks uit
-  guid: b869fcf0e000b44f816eb7af7d646bc0
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &7168125921316154929
+--- !u!114 &2381271566036040356
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3647,7 +1972,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Bella/Bella Beer Sentence4
   guid: 4d1be4c52517184cb59539ecd82b314b
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3655,7 +1980,306 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &7198363182552100242
+--- !u!114 &2429312581544266251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q4 - Oh wat is dat dan voor leuks
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q4 - Oh wat is dat dan voor leuks
+  guid: b6b46f2be7a6304cbea448dc13e4c686
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2818709781789019049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q1 - Wie ben jij
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q1 - Wie ben jij
+  guid: dcdf9069d3d9974d8a2aff3c242e4a9d
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2982832571844616281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q7 - Denk je
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q7 - Denk je
+  guid: f5cddc142e3ac64998f3bd58632247aa
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3000393741042785718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/End of Game outro/Good choices outro
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/End of Game outro/Good choices outro
+  guid: 22b6f471fed35543983b8ad2f01f4ca1
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3087598612542544232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Bad- keep wallet Reflection
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Bad- keep wallet Reflection
+  guid: 3ba36379a9df6a449e33870412a8431b
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3283061954117834222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q6 - Hoe dan
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q6 - Hoe dan
+  guid: c86b1f1b69fe0a4281d8122649db1f9e
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &3515856088112411069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q4 - Nee dat wil ik niet 2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q4 - Nee dat wil ik niet 2
+  guid: 6a6eca7a8943654fbf3d31d185fec35d
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4145941879118037536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Background Music/Credits_background_music_audio_hero_Pleasure-Drive_SIPML_C-0417
+  m_EditorClassIdentifier: 
+  Path: event:/Background Music/Credits_background_music_audio_hero_Pleasure-Drive_SIPML_C-0417
+  guid: f5131577c58fef4d873867510c8416b1
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4242404999334719546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence2
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence2
+  guid: 0a33872f3dff9d40ad639f1d99e3f3cd
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4442543019494045846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Game introduction/Game Introduction
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Game introduction/Game Introduction
+  guid: a549c3cf0f432641b6e8b4b8bc4c13dc
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4744604665101276213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/End of Game outro/Bad choices outro
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/End of Game outro/Bad choices outro
+  guid: 721107c50170124bb569304a90a7460b
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &4777160863910528771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Moral Scores/Good- return wallet Reflection
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Moral Scores/Good- return wallet Reflection
+  guid: bb157feceab3184e84b9299e5cb0abf9
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5169100195250532085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Footsteps/Footstep2_zapsplat_cartoon_footstep_single_barefoot_wet_002_26689
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Footsteps/Footstep2_zapsplat_cartoon_footstep_single_barefoot_wet_002_26689
+  guid: d8030063f0f6fa419db4e437fb1b18c5
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &5288188762125688306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3665,16 +2289,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: Assets/Socialeven FMOD Files/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637596296643478403
+  Path: Assets/Socialeven FMOD Files/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 637596322813886446
   LoadResult: 0
-  FileSizes: []
+  FileSizes:
+  - Name: Desktop
+    Value: 7496
   Exists: 1
---- !u!114 &7384964955713712037
+--- !u!114 &5426432090168076157
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3684,12 +2310,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Bella/Bella Beer Sentence3
+  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence2
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Bella/Bella Beer Sentence3
-  guid: 08b62ba920f7dd4b90da823a3b6da621
+  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence2
+  guid: 6fddd04fc2fc054a84bd491d826eb53a
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3697,7 +2323,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &7594092402505497880
+--- !u!114 &5463732943542942418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3707,14 +2333,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Gefeliciteerd je hebt alles gedaan wat socialeven
-    te bieden heeft
+  m_Name: event:/Voiceovers/Player Voice/Q2 - Ja dat klopt
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Gefeliciteerd je hebt alles gedaan wat socialeven
-    te bieden heeft
-  guid: c30aea478abab743b75cd9852e80d373
+  Path: event:/Voiceovers/Player Voice/Q2 - Ja dat klopt
+  guid: b4b21b240f46e44aa49bebaac6e16d25
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3722,7 +2346,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &7692100227643048894
+--- !u!114 &5475393876567119185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3732,12 +2356,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence3
+  m_Name: event:/Sound Effects/Pickup-Item-Sound-zapsplat_cartoon_pop_mouth_002_46665
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Karel/Karel Camera Sentence3
-  guid: 05b558abfb58c348b6e9760687c6a810
+  Path: event:/Sound Effects/Pickup-Item-Sound-zapsplat_cartoon_pop_mouth_002_46665
+  guid: e907b564d84ed04693dc36d13c26ce99
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3745,7 +2369,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &7918185259239097694
+--- !u!114 &5825778665705426156
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3755,12 +2379,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Karel/Karel Camera Sentence2
+  m_Name: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 1 of 2
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Karel/Karel Camera Sentence2
-  guid: 97fa6e0d1b2e9e43a43114b20f53abc6
+  Path: event:/Voiceovers/Moral Scores/Bad- took picture Reflection 1 of 2
+  guid: e40821977fad774cb8139fc33b8a3318
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3768,7 +2392,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &7961683773768525193
+--- !u!114 &6227164281872638087
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3778,12 +2402,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence4
+  m_Name: event:/Voiceovers/Moral Scores/Bad- not apologizing 1 of 2
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence4
-  guid: b196f34c0b83b143830dfc678387d98d
+  Path: event:/Voiceovers/Moral Scores/Bad- not apologizing 1 of 2
+  guid: 3150784faf588042a9f5c0dce59454ba
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3791,78 +2415,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &8057341097257970826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence2
-  guid: 450822d05bef4d4ca08c92a00050a2b7
-  Banks:
-  - {fileID: 8603807539865670381}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &8067038384807948031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 1 of 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Bad- trash talk back reflection 1 of 2
-  guid: 327a77cac8c71e4e840a7e0d38e8f289
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &8075494567968962897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q5 - Pff nee dat is mijn eigen geld dat
-    heb ik zelf gespaard
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q5 - Pff nee dat is mijn eigen geld dat heb
-    ik zelf gespaard
-  guid: ff2ae0531d4eb94498927cb9afcf4a24
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &8234489141860448277
+--- !u!114 &6334977628548998473
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3878,7 +2431,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Moral Scores/Hier zie je hoe goed of slecht je keuzes waren
   guid: 4611d2ae55f6a34a933142e9bf8b841b
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3886,7 +2439,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &8237501956105794803
+--- !u!114 &6662687352923330143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3896,12 +2449,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q7 - Nee ik laat hem wel liggen
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence9
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q7 - Nee ik laat hem wel liggen
-  guid: d25d2373511a1d488524bdb2e380d3c4
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence9
+  guid: 2eb43cce1e99c84ba45c1c5a59ff5979
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3909,7 +2462,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &8282462963164800109
+--- !u!114 &6688268040317600417
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3919,12 +2472,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q6 - Goede deal ik doe het
+  m_Name: event:/Voiceovers/Player Voice/Q1 - Waarom ben ik hier
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q6 - Goede deal ik doe het
-  guid: c6b4906fe2e6e64e83128cbd29fa3ad7
+  Path: event:/Voiceovers/Player Voice/Q1 - Waarom ben ik hier
+  guid: 7f3d28108fe5cb4b9a4b6b30eebed3a5
   Banks:
-  - {fileID: 7198363182552100242}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3932,7 +2485,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &8519565367413579709
+--- !u!114 &6814274343529588840
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3942,12 +2495,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Background Music/Credits_background_music_audio_hero_Pleasure-Drive_SIPML_C-0417
+  m_Name: event:/Background Music/Background Music
   m_EditorClassIdentifier: 
-  Path: event:/Background Music/Credits_background_music_audio_hero_Pleasure-Drive_SIPML_C-0417
-  guid: f5131577c58fef4d873867510c8416b1
+  Path: event:/Background Music/Background Music
+  guid: dbc6dacf3ae8cf4a8bbd661bf6d89655
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3955,7 +2508,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &8603807539865670381
+--- !u!114 &7051767042913263566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3964,17 +2517,205 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence3
   m_EditorClassIdentifier: 
-  Path: ../../SAXION CMGT/CMGT Y2/TERM 4/Socialeven/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 637595436164412964
-  LoadResult: 0
-  FileSizes: []
-  Exists: 1
---- !u!114 &8848173096143963268
+  Path: event:/Voiceovers/Jan Pieter/Jan Pieter Prullenbak Sentence3
+  guid: 3e43a2ad12bc38459ed6d2e5640d1fcf
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7094362112068804724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Sarah/Snikkende Sarah Sentence1
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Sarah/Snikkende Sarah Sentence1
+  guid: ece3fac455b2974d9ec718a7e46c5d00
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7341664794604248336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence5
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence5
+  guid: 2738e2ea3efee143a7c3aa010d81566d
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &7598406345516984995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q4 - Oeh ja dat ga ik doen
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q4 - Oeh ja dat ga ik doen
+  guid: eddf721e00f7c7409ccaf5bea9f2bde8
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8071448943573804644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence1
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence1
+  guid: 644fad684a940344bfff9ef008fd4c71
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8121106089853846339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Boris/Boris Ballon Sentence4
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Boris/Boris Ballon Sentence4
+  guid: e311d1461ab1a942996cf8ed25f9ec97
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8222775773936707903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Sound Effects/Messages SFX/Message_sent
+  m_EditorClassIdentifier: 
+  Path: event:/Sound Effects/Messages SFX/Message_sent
+  guid: 47d09d10d54ecd4986c2172f213cff0b
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8255052802024666769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Player Voice/Q8 - Ja natuurlijk help ik je
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Player Voice/Q8 - Ja natuurlijk help ik je
+  guid: 278b97f10e65694080c40a73ca0039a1
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &8464040364585295312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Voiceovers/Cas/Cas de Creditcard Sentence 1
+  m_EditorClassIdentifier: 
+  Path: event:/Voiceovers/Cas/Cas de Creditcard Sentence 1
+  guid: 03d0cbec05365649a0c859715b62b89b
+  Banks:
+  - {fileID: -1947312041154199887}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &9073631617927047250
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3989,7 +2730,7 @@ MonoBehaviour:
   Path: event:/Voiceovers/Boris/Boris Ballon Sentence8
   guid: bb80ee3afe08674f96de72f062b4b3e1
   Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3997,7 +2738,7 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
---- !u!114 &8865872310567618052
+--- !u!114 &9088716859981474975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4007,81 +2748,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q3 - Nee dat wil ik niet
+  m_Name: event:/Background Music/Background_before&after_game
   m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q3 - Nee dat wil ik niet
-  guid: ed3356412f9d494b8e38e343a5f3616b
+  Path: event:/Background Music/Background_before&after_game
+  guid: 68cf8f30cd882343ac171cc74560a0f9
   Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &8866171403686472690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Player Voice/Q4 - Nee dat wil ik niet 2
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Player Voice/Q4 - Nee dat wil ik niet 2
-  guid: 6a6eca7a8943654fbf3d31d185fec35d
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &8985201541779588024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Moral Scores/Good- return wallet
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Moral Scores/Good- return wallet
-  guid: 59230ed10aaec749bbf95b75773cf5d4
-  Banks:
-  - {fileID: 7198363182552100242}
-  IsStream: 0
-  Is3D: 0
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 0
-  MaxDistance: 0
-  Length: 0
---- !u!114 &9218350943911464833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence6
-  m_EditorClassIdentifier: 
-  Path: event:/Voiceovers/Sjoerd/Steklige Sjoerd Sentence6
-  guid: 99df26feb9579349b34f3a23da69f5a6
-  Banks:
-  - {fileID: 8603807539865670381}
+  - {fileID: -1947312041154199887}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
