@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Introduction
   m_EditorClassIdentifier: 
   IsActive: 0
-  Title: First Quest
-  Description: You have to get the phone so that your social adventure can start!
+  Title: Introductie
+  Description: Haal de telefoon op bij Boris Ballon, zodat je avontuur kan beginnen!
   SideQuest: 0
   FollowersReward: 100
   MoneyReward: 0
