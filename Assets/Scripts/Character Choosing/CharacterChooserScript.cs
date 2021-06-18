@@ -16,7 +16,6 @@ public class CharacterChooserScript : MonoBehaviour
     //Used determining which and where to spawn choosing buttons
     [HideInInspector] private ChoosingButtonManager _buttonManager;
     [HideInInspector] private GameObject _buttonTemplate;
-    [SerializeField] public TextMeshProUGUI ButtonTitle;
     [SerializeField] public Sprite ButtonBackground;
 
     [HideInInspector] private List<GameObject> _skinButtonsList = new List<GameObject>();
@@ -73,7 +72,6 @@ public class CharacterChooserScript : MonoBehaviour
             {
                 for (int i = 0; i < _buttonManager.SkinTypesButton.Length; i++)
                 {
-                    ButtonTitle.text = _buttonManager.SkinTypesButton[i].Title;
                     _buttonTemplate.GetComponent<Image>().color = _buttonManager.SkinTypesButton[i].ButtonColor;
                     var InstantiatedSkinButtons = Instantiate(_buttonTemplate);
 
@@ -84,7 +82,6 @@ public class CharacterChooserScript : MonoBehaviour
 
                 for (int i = 0; i < _buttonManager.HairTypesButton.Length; i++)
                 {
-                    ButtonTitle.text = _buttonManager.HairTypesButton[i].Title;
                     _buttonTemplate.GetComponent<Image>().color = _buttonManager.HairTypesButton[i].ButtonColor;
                     var InstantiatedHairButtons = Instantiate(_buttonTemplate);
 
