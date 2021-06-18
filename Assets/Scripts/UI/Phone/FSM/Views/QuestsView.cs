@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class QuestsView : PhoneView
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TextMeshProUGUI _missionName = null;
+    [SerializeField] private TextMeshProUGUI _followerReward = null;
+    [SerializeField] private TextMeshProUGUI _moneyReward = null;
+    [SerializeField] private Button _selectButton = null;
+    [SerializeField] private Button _homeButton = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public TextMeshProUGUI MissionName { get => _missionName; }
+    public TextMeshProUGUI FollowerReward { get => _followerReward; }
+    public TextMeshProUGUI MoneyReward { get => _moneyReward; }
+    public Button SelectButton { get => _selectButton; }
+    public Button HomeButton { get => _homeButton; }
 }

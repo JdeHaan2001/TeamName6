@@ -24,8 +24,6 @@ public class BuildingStackGenerator : EditorWindow
     private bool _destroyLastOnGenerate = true;
     private bool _useStackedBuildings = false;
     private bool _randomBuildingHeight = false;
-    private bool _hasBuildingsSelected = false;
-    private bool _hasRepainted = false;
 
     private int _buildingHeight = 1;
     private int _maxBuildingHeight = 3;
@@ -119,7 +117,6 @@ public class BuildingStackGenerator : EditorWindow
             }
             else
             {
-                _hasRepainted = false;
                 EditorGUILayout.HelpBox("You need to select a game object", MessageType.Info);
                 Repaint();
             }
@@ -212,30 +209,33 @@ public class BuildingStackGenerator : EditorWindow
 
     private void resetList()
     {
-        if (!_useStackedBuildings)
+        if (_buildingSO != null)
         {
-            if (_buildingSO.BuildingPrefabs != null && _buildingSO.BuildingPrefabs.Count > 0)
+            if (!_useStackedBuildings)
             {
-                foreach (GameObject obj in _buildingSO.BuildingPrefabs)
-                    _buildingPrefabNames.Add(obj.name);
+                if (_buildingSO.BuildingPrefabs != null && _buildingSO.BuildingPrefabs.Count > 0)
+                {
+                    foreach (GameObject obj in _buildingSO.BuildingPrefabs)
+                        _buildingPrefabNames.Add(obj.name);
+                }
             }
-        }
-        else
-        {
-            if (_buildingSO.BaseFloorPrefabs != null && _buildingSO.BaseFloorPrefabs.Count > 0)
+            else
             {
-                foreach (GameObject obj in _buildingSO.BaseFloorPrefabs)
-                    _baseFloorNames.Add(obj.name);
-            }
-            if (_buildingSO.NormalFloorPrefabs != null && _buildingSO.NormalFloorPrefabs.Count > 0)
-            {
-                foreach (GameObject obj in _buildingSO.NormalFloorPrefabs)
-                    _floorNames.Add(obj.name);
-            }
-            if (_buildingSO.RoofPrefabs != null && _buildingSO.RoofPrefabs.Count > 0)
-            {
-                foreach (GameObject obj in _buildingSO.RoofPrefabs)
-                    _roofNames.Add(obj.name);
+                if (_buildingSO.BaseFloorPrefabs != null && _buildingSO.BaseFloorPrefabs.Count > 0)
+                {
+                    foreach (GameObject obj in _buildingSO.BaseFloorPrefabs)
+                        _baseFloorNames.Add(obj.name);
+                }
+                if (_buildingSO.NormalFloorPrefabs != null && _buildingSO.NormalFloorPrefabs.Count > 0)
+                {
+                    foreach (GameObject obj in _buildingSO.NormalFloorPrefabs)
+                        _floorNames.Add(obj.name);
+                }
+                if (_buildingSO.RoofPrefabs != null && _buildingSO.RoofPrefabs.Count > 0)
+                {
+                    foreach (GameObject obj in _buildingSO.RoofPrefabs)
+                        _roofNames.Add(obj.name);
+                }
             }
         }
     }

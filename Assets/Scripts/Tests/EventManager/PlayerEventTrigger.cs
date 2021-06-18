@@ -14,11 +14,6 @@ public class PlayerEventTrigger : MonoBehaviour
             if (Input.GetKey("left shift"))
             {
                 EventManager.TriggerEvent("sprint");
-
-                if (Input.GetKeyDown("space"))
-                {
-                    EventManager.TriggerEvent("jump");
-                }
             }
             else
             {

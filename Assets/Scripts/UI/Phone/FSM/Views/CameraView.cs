@@ -1,18 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CameraView : PhoneView
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Button _takePicBtn = null;
+    [SerializeField] private Button _flipCambtn = null;
+    [SerializeField] private Button _prevPicBtn = null;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public Button TakePicBtn { get => _takePicBtn; }
+    public Button FlipCamBtn { get => _flipCambtn; }
+    public Button PrevPicBtn { get => _prevPicBtn; }
 }
