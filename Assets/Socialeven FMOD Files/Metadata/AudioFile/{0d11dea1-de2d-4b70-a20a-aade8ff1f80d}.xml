@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{0d11dea1-de2d-4b70-a20a-aade8ff1f80d}">
+		<property name="assetPath">
+			<value>En het zorgt er voor dat mensen je minder vertrouwen.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.6015833333333331</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{00ed932c-adaa-4673-bc4a-db71375a7f75}</destination>
+		</relationship>
+	</object>
+</objects>

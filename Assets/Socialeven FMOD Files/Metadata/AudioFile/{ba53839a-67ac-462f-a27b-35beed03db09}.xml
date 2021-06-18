@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{ba53839a-67ac-462f-a27b-35beed03db09}">
+		<property name="assetPath">
+			<value>Snikkende Sarah Sentence1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.5458958333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{00ed932c-adaa-4673-bc4a-db71375a7f75}</destination>
+		</relationship>
+	</object>
+</objects>

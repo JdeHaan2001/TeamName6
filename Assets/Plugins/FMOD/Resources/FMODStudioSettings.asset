@@ -399,8 +399,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../SAXION CMGT/CMGT Y2/TERM 4/Socialeven/Socialeven.fspro
-  sourceBankPath: ../../SAXION CMGT/CMGT Y2/TERM 4/Socialeven/Build
+  sourceProjectPath: Assets/Socialeven FMOD Files/Socialeven.fspro
+  sourceBankPath: Assets/Socialeven FMOD Files/Build
   SourceBankPathUnformatted: 
   BankRefreshCooldown: 5
   ShowBankRefreshWindow: 1

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{853bd808-22c2-4e97-943c-09bef8c4b10c}">
+		<property name="assetPath">
+			<value>Incoming-message-in-chat-zapsplat_cartoon_pop_001_46047.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.1471875</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{00ed932c-adaa-4673-bc4a-db71375a7f75}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{74c723cb-3236-4ac9-a88d-600f887f0538}">
+		<property name="assetPath">
+			<value>coin_pickup, freesound.org.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.31927437641723355</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{00ed932c-adaa-4673-bc4a-db71375a7f75}</destination>
+		</relationship>
+	</object>
+</objects>
