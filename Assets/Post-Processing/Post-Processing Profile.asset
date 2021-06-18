@@ -84,7 +84,7 @@ MonoBehaviour:
     m_Value: 0
   exposure:
     m_OverrideState: 1
-    m_Value: 17
+    m_Value: 16.5
   multiplier:
     m_OverrideState: 0
     m_Value: 1
@@ -590,14 +590,14 @@ MonoBehaviour:
     m_Value: 500
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 725
+    m_Value: 300
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
     m_Value: 1
   albedo:
     m_OverrideState: 1
-    m_Value: {r: 0.42052332, g: 0.8490566, b: 0.75382704, a: 1}
+    m_Value: {r: 0.48900855, g: 0.9339623, b: 0.86276966, a: 1}
     hdr: 0
     showAlpha: 1
     showEyeDropper: 1
