@@ -1,3 +1,4 @@
+//Made by Jeroen de Haan
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
