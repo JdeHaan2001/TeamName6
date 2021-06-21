@@ -1,3 +1,5 @@
+//Made by Jeroen de Haan
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -48,11 +50,5 @@ public class PhoneFSM : MonoBehaviour
             _currentScreen = _screenMap[pType];
             _currentScreen.EnterScreen();
         }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.F1))
-            ChangeScreen<SettingsScreen>();
     }
 }
