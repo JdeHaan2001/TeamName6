@@ -10,8 +10,7 @@ public class DialogueManager : MonoBehaviour
     #region Variables
     [HideInInspector] public NpcInformation Npc;
 
-    [HideInInspector] public JsonNpc currentNpcDialogue;
-    [HideInInspector] public JsonNpc firstNpcDialogue;
+    [HideInInspector] public JsonNpc CurrentNpcDialogue;
 
     [HideInInspector] public bool IsTalking;
     [HideInInspector] public bool OpenQuest;
@@ -92,10 +91,9 @@ public class DialogueManager : MonoBehaviour
         IsTalking = true;
         _dialogueUI.SetActive(true);
         renderDialogue(Npc.NpcDialogue);
-        firstNpcDialogue = JsonReader.LoadNpcFromFile(Npc.NpcDialogue);
 
-        _dialogueTextKeeper.NPCNameText.text = currentNpcDialogue.Name;
-        _dialogueTextKeeper.NPCDialogueText.text = currentNpcDialogue.Dialogue[0];
+        _dialogueTextKeeper.NPCNameText.text = CurrentNpcDialogue.Name;
+        _dialogueTextKeeper.NPCDialogueText.text = CurrentNpcDialogue.Dialogue[0];
         _dialogueTextKeeper.NPCPicture.sprite = Npc.Picture;
 
         Cursor.visible = true;
@@ -114,6 +112,7 @@ public class DialogueManager : MonoBehaviour
                 int buttonClicked = i;
                 _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.RemoveAllListeners();
                 _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(buttonClicked));
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => checkVoiceOver(buttonClicked));
                 _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => changeButtonState(buttonClicked));
             }
         }
@@ -129,6 +128,15 @@ public class DialogueManager : MonoBehaviour
 
         checkChoosingStatus(textToShow);
         loadNewJson(textToShow);
+    }
+
+    private void checkVoiceOver(int voiceToActivate)
+    {
+        //SoundManager.PlaySound(Npc.PlayerSound[voiceToActivate])
+        //If(CurrentSound = done playing)
+        //{
+        //  SoundManager.PlaySound(Npc.NpcSound[voiceToActivate])
+        //}
     }
 
     /// <summary>
@@ -179,7 +187,7 @@ public class DialogueManager : MonoBehaviour
         }
         _playerDialogue.SetActive(false);
 
-        currentNpcDialogue = readJsonNpc;
+        CurrentNpcDialogue = readJsonNpc;
     }
 
     /// <summary>
@@ -190,13 +198,13 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
-            if (currentNpcDialogue.NewDialogueFile[0].Contains("nothing") != true)
+            if (CurrentNpcDialogue.NewDialogueFile[0].Contains("nothing") != true)
             {
-                for (int i = 0; i < currentNpcDialogue.WhenToShowNewDialogue.Length; i++)
+                for (int i = 0; i < CurrentNpcDialogue.WhenToShowNewDialogue.Length; i++)
                 {
-                    if (currentNpcDialogue.WhenToShowNewDialogue[i] == buttonClicked - _oldPlayerDialogueAmount)
+                    if (CurrentNpcDialogue.WhenToShowNewDialogue[i] == buttonClicked - _oldPlayerDialogueAmount)
                     {
-                        var newJson = currentNpcDialogue.NewDialogueFile[i];
+                        var newJson = CurrentNpcDialogue.NewDialogueFile[i];
 
                         TextAsset jsonAsset = Resources.Load(newJson) as TextAsset;
                         renderDialogue(jsonAsset);
@@ -217,7 +225,7 @@ public class DialogueManager : MonoBehaviour
     /// <param name="currentButton"></param>
     private void checkChoosingStatus(int currentButton)
     {
-        if (currentNpcDialogue.ChoosingDialogue == true)
+        if (CurrentNpcDialogue.ChoosingDialogue == true)
         {
             for (int i = 0; i < _playerResponsesList.Count; i++)
             {
@@ -290,16 +298,16 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
-            if (currentNpcDialogue.ToBeReplaced.Length != 0)
+            if (CurrentNpcDialogue.ToBeReplaced.Length != 0)
             {
-                for (int i = currentNpcDialogue.Dialogue.Length - 1; i > 0; i--)
+                for (int i = CurrentNpcDialogue.Dialogue.Length - 1; i > 0; i--)
                 {
                     if (Npc.Quests.Length != 0)
                     {
-                        if (currentNpcDialogue.Dialogue[i].Contains(Npc.Quests[_currentCheckedString].Title))
+                        if (CurrentNpcDialogue.Dialogue[i].Contains(Npc.Quests[_currentCheckedString].Title))
                         {
-                            string resetString = currentNpcDialogue.Dialogue[i].Replace(Npc.Quests[_currentCheckedString].Title, currentNpcDialogue.ToBeReplaced[_currentCheckedString]);
-                            currentNpcDialogue.Dialogue[i] = resetString;
+                            string resetString = CurrentNpcDialogue.Dialogue[i].Replace(Npc.Quests[_currentCheckedString].Title, CurrentNpcDialogue.ToBeReplaced[_currentCheckedString]);
+                            CurrentNpcDialogue.Dialogue[i] = resetString;
 
                             if (_currentCheckedString != 0)
                             {

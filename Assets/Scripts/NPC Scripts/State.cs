@@ -10,10 +10,6 @@ public abstract class State
     {
         _system = system;
     }
-    public virtual IEnumerator Wander()
-    {
-        yield break;
-    }
     public virtual IEnumerator Idle()
     {
         yield break;
@@ -27,10 +23,6 @@ public abstract class State
         yield break;
     }
     public virtual IEnumerator Interact()
-    {
-        yield break;
-    }
-    public virtual IEnumerator Unavailable()
     {
         yield break;
     }
