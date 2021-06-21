@@ -1,3 +1,4 @@
+//Made by Jeroen de Haan
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,9 +16,9 @@ public class ResetSettings : MonoBehaviour
     public void ResetSetting()
     {
         volumeSlider.value = volumeSlider.maxValue;
-        _menuSettings.SetVolume(volumeSlider.maxValue);
-        if (!_sfxButton.gameObject.activeInHierarchy) _menuSettings.SetSFXActive(_sfxButton);
-        if (!_musicButton.gameObject.activeInHierarchy) _menuSettings.SetMusicActive(_musicButton);
-        if (!_readButton.gameObject.activeInHierarchy) _menuSettings.SetReadActive(_readButton);
+        //_menuSettings.SetVolume(volumeSlider.maxValue);
+        //if (!_sfxButton.gameObject.activeInHierarchy) _menuSettings.SetSFXActive(_sfxButton);
+        //if (!_musicButton.gameObject.activeInHierarchy) _menuSettings.SetMusicActive(_musicButton);
+        //if (!_readButton.gameObject.activeInHierarchy) _menuSettings.SetReadActive(_readButton);
     }
 }
