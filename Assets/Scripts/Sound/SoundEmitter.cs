@@ -16,41 +16,34 @@ public class SoundEmitter : MonoBehaviour
 
     private void Awake()
     {
-        //Debug.Log(_playEvent);
         setSourceValues();
-        //if (_playEvent == playEvent.Awake)
-        //{
-        //    Debug.Log("Jghjhdgasjhdhfgasghjrdft");
-        //    _sound.Source.Play();
-        //}
-    }
-
-    private void Start()
-    {
-        Debug.Log(_sound.Clip.loadState);
-        //if(!_sound.Source.isPlaying)
-        //    _sound.Source.Play();
+        if (_playEvent == playEvent.Awake)
+        {
+            _sound.Source.Play();
+        }
     }
 
     private void Update()
     {
-        //switch (_playEvent)
-        //{
-        //    case (playEvent) 1:
-        //        if (EventSystem.current.IsPointerOverGameObject())
-        //        {
-        //            _sound.Source.Play();
-        //            break;
-        //        }
-        //        break;
-        //    case (playEvent) 2:
-        //        if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
-        //        {
-        //            _sound.Source.Play();
-        //            break;
-        //        }
-        //        break;
-        //}
+        switch (_playEvent)
+        {
+            case (playEvent)1:
+                if (EventSystem.current.IsPointerOverGameObject())
+                {
+                    if(!_sound.Source.isPlaying)
+                        _sound.Source.Play();
+                    break;
+                }
+                break;
+            case (playEvent)2:
+                if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
+                {
+                    if (!_sound.Source.isPlaying)
+                        _sound.Source.Play();
+                    break;
+                }
+                break;
+        }
     }
 
     private void setSourceValues()
