@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -8,7 +9,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     #region Variables
-    [HideInInspector] public NpcInformation Npc;
+    [HideInInspector] public NPCInformation Npc;
 
     [HideInInspector] public JsonNpc CurrentNpcDialogue;
 
@@ -95,6 +96,7 @@ public class DialogueManager : MonoBehaviour
         _dialogueTextKeeper.NPCNameText.text = CurrentNpcDialogue.Name;
         _dialogueTextKeeper.NPCDialogueText.text = CurrentNpcDialogue.Dialogue[0];
         _dialogueTextKeeper.NPCPicture.sprite = Npc.Picture;
+        Sound.PlaySound(Npc.voiceOvers.NpcClips[0], this.gameObject);
 
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
@@ -112,7 +114,7 @@ public class DialogueManager : MonoBehaviour
                 int buttonClicked = i;
                 _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.RemoveAllListeners();
                 _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => ButtonClicked(buttonClicked));
-                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => checkVoiceOver(buttonClicked));
+                _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => checkPlayerVoiceOver(buttonClicked));
                 _playerResponsesList[buttonClicked].GetComponent<Button>().onClick.AddListener(() => changeButtonState(buttonClicked));
             }
         }
@@ -130,13 +132,17 @@ public class DialogueManager : MonoBehaviour
         loadNewJson(textToShow);
     }
 
-    private void checkVoiceOver(int voiceToActivate)
+    private void checkPlayerVoiceOver(int voiceToActivate)
     {
-        //SoundManager.PlaySound(Npc.PlayerSound[voiceToActivate])
-        //If(CurrentSound = done playing)
-        //{
-        //  SoundManager.PlaySound(Npc.NpcSound[voiceToActivate])
-        //}
+        Sound.PlaySound(Npc.voiceOvers.PlayerClips[voiceToActivate], this.gameObject);
+
+        StartCoroutine(checkNpcVoiceOver(voiceToActivate, Npc.voiceOvers.PlayerClips[voiceToActivate].length));
+    }
+
+    IEnumerator checkNpcVoiceOver(int voiceToActivate, float delay)
+    {
+        yield return new WaitForSeconds(delay + 0.5f);
+        Sound.PlaySound(Npc.voiceOvers.NpcClips[voiceToActivate + 1], this.gameObject);
     }
 
     /// <summary>

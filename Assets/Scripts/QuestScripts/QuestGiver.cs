@@ -9,7 +9,7 @@ public class QuestGiver : MonoBehaviour
     [HideInInspector] private QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
     [HideInInspector] private QuestManager _questManager;
-    [HideInInspector] public NpcInformation Npc;
+    [HideInInspector] public NPCInformation Npc;
 
     [HideInInspector] private GameObject _questWindow;
     [HideInInspector] private Waypoint _waypoint;
@@ -92,6 +92,8 @@ public class QuestGiver : MonoBehaviour
     {
         _questKeeper.Followers = -_quest.FollowersDecrease;
         _questKeeper.Money = -_quest.MoneyDecrease;
+        _questKeeper.Moral = _quest.DeclineMoralPoints;
+
         _questWindow.SetActive(false);
         _dialogueManager.EndDialogue();
         if(_quest.SideQuest == true)

@@ -14,7 +14,7 @@ public class AISystem : StateMachine
     [HideInInspector] public QuestManager QuestManager;
 
     [HideInInspector] public DialogueManager DialogueManager;
-    [SerializeField] public NpcInformation NpcInformation;
+    [SerializeField] public NPCInformation NpcInformation;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
 
@@ -112,25 +112,28 @@ public class AISystem : StateMachine
 
         if (QuestKeeper.Quest == null)
         {
-            if (NpcInformation.Quests[0].SideQuest != true)
+            //    if (NpcInformation.Quests.Length != 0)
+            //    {
+            //        if (NpcInformation.Quests[0].SideQuest != true)
+            //        {
+            //            if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
+            //            {
+            //                return false;
+            //            }
+            if (NpcInformation.ConversationFinished == true)
             {
-                if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
-                {
-                    return false;
-                }
-                if (NpcInformation.ConversationFinished == true)
-                {
-                    return false;
-                }
+                return false;
+            }
 
-            }
-            else if(NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
-            {
-                if (NpcInformation.ConversationFinished == true)
-                {
-                    return false;
-                }
-            }
+            //        }
+            //        else if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
+            //        {
+            //            if (NpcInformation.ConversationFinished == true)
+            //            {
+            //                return false;
+            //            }
+            //        }
+            //    }
         }
         return true;
     }
