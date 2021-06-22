@@ -36,7 +36,7 @@ public class QuestGoal
             {
                 if (Npc[j].name == NpcToInteractWith.name)
                 {
-                    NpcInformation npcInformaton = Npc[j].GetComponent<AISystem>().NpcInformation;
+                    NPCInformation npcInformaton = Npc[j].GetComponent<AISystem>().NpcInformation;
 
                     if (npcInformaton.ConversationFinished == true)
                     {

@@ -5,11 +5,11 @@ using UnityEngine;
 public class QuestGiver : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private DialogueManager _dialogueManager;
-    [SerializeField] private QuestKeeper _questKeeper;
+    [HideInInspector] private DialogueManager _dialogueManager;
+    [HideInInspector] private QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
     [HideInInspector] private QuestManager _questManager;
-    [SerializeField] public NpcInformation Npc;
+    [HideInInspector] public NPCInformation Npc;
 
     [HideInInspector] private GameObject _questWindow;
     [HideInInspector] private Waypoint _waypoint;
@@ -45,7 +45,7 @@ public class QuestGiver : MonoBehaviour
                 }
             }
 
-            if (_dialogueManager.currentNpcDialogue != null)
+            if (_dialogueManager.CurrentNpcDialogue != null)
             {
                 if (Npc.Quests.Length != 0)
                 {
@@ -92,6 +92,8 @@ public class QuestGiver : MonoBehaviour
     {
         _questKeeper.Followers = -_quest.FollowersDecrease;
         _questKeeper.Money = -_quest.MoneyDecrease;
+        _questKeeper.Moral = _quest.DeclineMoralPoints;
+
         _questWindow.SetActive(false);
         _dialogueManager.EndDialogue();
         if(_quest.SideQuest == true)

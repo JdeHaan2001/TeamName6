@@ -17,5 +17,24 @@ public class Sound
     [Range(0f, 1f)] public float SpatialBlend = 0f;
 
     [HideInInspector] public AudioSource Source = null;
+
+    /// <summary>
+    /// Static function to play a sound through script. This funciton will add an audio source to the gameobject that is given.
+    /// </summary>
+    public static void PlaySound(AudioClip pAudioClip, GameObject pGameObject)
+    {
+        AudioSource source;
+        if (pGameObject.GetComponent<AudioSource>() == null)
+            source = pGameObject.AddComponent<AudioSource>();
+        else
+            source = pGameObject.GetComponent<AudioSource>();
+
+        if (pAudioClip != null && pGameObject != null)
+        {
+            source.clip = pAudioClip;
+            if (!source.isPlaying)
+                source.Play();
+        }
+    }
     
 }

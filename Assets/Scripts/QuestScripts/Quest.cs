@@ -16,10 +16,12 @@ public class Quest : ScriptableObject
     [Header("Quest Complete Information")]
     public int FollowersReward;
     public int MoneyReward;
+    public int AcceptMoralPoints;
 
     [Header("Quest Decline Information")]
     public int FollowersDecrease;
     public int MoneyDecrease;
+    public int DeclineMoralPoints;
 
     [Header("Quest Goal")]
     public QuestGoal Goal;

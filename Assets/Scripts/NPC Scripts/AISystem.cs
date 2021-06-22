@@ -11,14 +11,16 @@ public class AISystem : StateMachine
     [SerializeField] public int CheckingRadius = 0;
 
     [HideInInspector] public QuestKeeper QuestKeeper;
+    [HideInInspector] public QuestManager QuestManager;
 
     [HideInInspector] public DialogueManager DialogueManager;
-    [SerializeField] public NpcInformation NpcInformation;
+    [SerializeField] public NPCInformation NpcInformation;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
+
     [HideInInspector] public Vector3 StartPos;
     [HideInInspector] public Quaternion StartAngle;
 
@@ -33,6 +35,7 @@ public class AISystem : StateMachine
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
 
         QuestKeeper = Player.GetComponent<QuestKeeper>();
+        QuestManager = GameObject.FindGameObjectWithTag("QuestManager").GetComponent<QuestManager>();
 
         InteractionPossible = true;
         SetState(new AIBehaviours(this));
@@ -109,10 +112,28 @@ public class AISystem : StateMachine
 
         if (QuestKeeper.Quest == null)
         {
+            //    if (NpcInformation.Quests.Length != 0)
+            //    {
+            //        if (NpcInformation.Quests[0].SideQuest != true)
+            //        {
+            //            if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
+            //            {
+            //                return false;
+            //            }
             if (NpcInformation.ConversationFinished == true)
             {
                 return false;
             }
+
+            //        }
+            //        else if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
+            //        {
+            //            if (NpcInformation.ConversationFinished == true)
+            //            {
+            //                return false;
+            //            }
+            //        }
+            //    }
         }
         return true;
     }

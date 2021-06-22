@@ -6,8 +6,6 @@ using UnityEngine;
 [System.Serializable]
 public class HairButtonCharacteristics
 {
-    public string Title;
-
     public HairTypes HairTypes;
 
     public Color ButtonColor;
@@ -15,7 +13,9 @@ public class HairButtonCharacteristics
 
 public enum HairTypes
 {
+    Wit,
     Blond, 
     Bruin,
+    Oranje,
     Donker
 }
