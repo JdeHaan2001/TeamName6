@@ -59,7 +59,7 @@ public class CharacterChooserScript : MonoBehaviour
     {
         if (_uiButtonFunctions.playerChosen == true)
         {
-             PlayerPrefs.SetInt("playerToPlay", getPlayer());
+            PlayerPrefs.SetInt("playerToPlay", getPlayer());
             _uiButtonFunctions.playerChosen = false;
         }
     }
@@ -162,12 +162,14 @@ public class CharacterChooserScript : MonoBehaviour
     {
         for (int i = 0; i < playerScript.Players.Length; i++)
         {
-            if (playerScript.Players[i].SkinTypes == _skinTypes)
+
+            if (playerScript.Players[i].HairTypes == _hairTypes)
             {
-                if (playerScript.Players[i].HairTypes == _hairTypes)
+                if (playerScript.Players[i].SkinTypes == _skinTypes)
                 {
                     return i;
                 }
+
             }
         }
         return 0;

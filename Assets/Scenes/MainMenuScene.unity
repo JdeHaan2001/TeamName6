@@ -877,7 +877,7 @@ MonoBehaviour:
   _sound:
     Name: 
     Clip: {fileID: 8300000, guid: 767f9324fd4fbac4092e6df634807f46, type: 3}
-    Loop: 0
+    Loop: 1
     Volume: 1
     Pitch: 1
     SpatialBlend: 0

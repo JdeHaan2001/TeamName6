@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: -8808752332173856447}
   - component: {fileID: 4670154668310101773}
   m_Layer: 0
-  m_Name: Skin1Hair4Player
+  m_Name: Skin1Hair1
   m_TagString: PlayerCharacter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1730,7 +1730,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e4d04557ddc1c746aa1556e6ec3cf45, type: 2}
+  - {fileID: 2100000, guid: f60cf9abc0fbe3e459f090b2d824f8e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

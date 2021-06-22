@@ -1572,31 +1572,79 @@ MonoBehaviour:
   Players:
   - Looks: {fileID: 902156417568634532, guid: 7f7c088efd79bd94897ee994884f1d03, type: 3}
     SkinTypes: 0
-    HairTypes: 0
+    HairTypes: 4
   - Looks: {fileID: 902156417568634532, guid: 29d3e895cc1eabf4e835294307c3161e, type: 3}
     SkinTypes: 0
-    HairTypes: 1
+    HairTypes: 2
   - Looks: {fileID: 902156417568634532, guid: 907e5f0e5f42cd04884052cd1b702c6b, type: 3}
     SkinTypes: 0
-    HairTypes: 2
-  - Looks: {fileID: 902156417568634532, guid: 7c6ed01f4f64c5648b866bbd4867a0b7, type: 3}
-    SkinTypes: 1
+    HairTypes: 1
+  - Looks: {fileID: 902156417568634532, guid: f24bbcdcfad6754499613e4401701c6f, type: 3}
+    SkinTypes: 0
     HairTypes: 0
+  - Looks: {fileID: 902156417568634532, guid: fa0ed99e8b09b4d46b7afad5733d4301, type: 3}
+    SkinTypes: 0
+    HairTypes: 3
+  - Looks: {fileID: 902156417568634532, guid: d7913c6efb0fd2141b07b97dee9a55ca, type: 3}
+    SkinTypes: 1
+    HairTypes: 4
   - Looks: {fileID: 902156417568634532, guid: 4bf1ba89bb411a84182bb4006e4f828d, type: 3}
     SkinTypes: 1
-    HairTypes: 1
-  - Looks: {fileID: 902156417568634532, guid: 8480ec37e8b7c9743ac3a2ccc9a89f41, type: 3}
-    SkinTypes: 1
     HairTypes: 2
+  - Looks: {fileID: 902156417568634532, guid: f87ba021a94ed394e9730d826cf8d3de, type: 3}
+    SkinTypes: 1
+    HairTypes: 1
+  - Looks: {fileID: 902156417568634532, guid: 1ab8d1c2969001a4eab2c5ac4921669a, type: 3}
+    SkinTypes: 1
+    HairTypes: 0
+  - Looks: {fileID: 902156417568634532, guid: 93075f70992ec794093008ce6ddd2ae1, type: 3}
+    SkinTypes: 1
+    HairTypes: 3
   - Looks: {fileID: 902156417568634532, guid: e94327b1ed8b704468ffdbf43b710bba, type: 3}
     SkinTypes: 2
-    HairTypes: 0
-  - Looks: {fileID: 902156417568634532, guid: 118ca26147faf6146af8300b7b130ef2, type: 3}
-    SkinTypes: 2
-    HairTypes: 1
-  - Looks: {fileID: 902156417568634532, guid: 750d7214d494b074daea1be63f8de4a1, type: 3}
+    HairTypes: 4
+  - Looks: {fileID: 902156417568634532, guid: 1042c0c124465b54c9c612c5fcf5f865, type: 3}
     SkinTypes: 2
     HairTypes: 2
+  - Looks: {fileID: 902156417568634532, guid: 750d7214d494b074daea1be63f8de4a1, type: 3}
+    SkinTypes: 2
+    HairTypes: 1
+  - Looks: {fileID: 902156417568634532, guid: cc56da937039a7843895c08aed5b5f32, type: 3}
+    SkinTypes: 2
+    HairTypes: 0
+  - Looks: {fileID: 902156417568634532, guid: 8e373c16a3a6a984d8b1c95e91a35d11, type: 3}
+    SkinTypes: 2
+    HairTypes: 3
+  - Looks: {fileID: 902156417568634532, guid: 286c9e1e7284fa24d9b5f3da439f535f, type: 3}
+    SkinTypes: 3
+    HairTypes: 4
+  - Looks: {fileID: 902156417568634532, guid: 46b114d41955b894c9a7430445ef5a47, type: 3}
+    SkinTypes: 3
+    HairTypes: 2
+  - Looks: {fileID: 902156417568634532, guid: 1d1df7a4dc1086a428d8e5a92036affb, type: 3}
+    SkinTypes: 3
+    HairTypes: 1
+  - Looks: {fileID: 902156417568634532, guid: f5f392c17d4686a40a64580b0603fa2d, type: 3}
+    SkinTypes: 3
+    HairTypes: 0
+  - Looks: {fileID: 902156417568634532, guid: c64f27dc2f008ce4e8438277f4476ed5, type: 3}
+    SkinTypes: 3
+    HairTypes: 3
+  - Looks: {fileID: 902156417568634532, guid: dff275318e8a74545ad18b0a9143b2b2, type: 3}
+    SkinTypes: 4
+    HairTypes: 4
+  - Looks: {fileID: 902156417568634532, guid: 58a77b4e91348f84d81416bf084a214c, type: 3}
+    SkinTypes: 4
+    HairTypes: 2
+  - Looks: {fileID: 902156417568634532, guid: 3620972b87ddd534e80dc5ca4fc59b2d, type: 3}
+    SkinTypes: 4
+    HairTypes: 1
+  - Looks: {fileID: 902156417568634532, guid: 1fba7fc109303c74b83479bc936d30db, type: 3}
+    SkinTypes: 4
+    HairTypes: 0
+  - Looks: {fileID: 902156417568634532, guid: 9670cb65712c43742b06f871371fae2b, type: 3}
+    SkinTypes: 4
+    HairTypes: 3
 --- !u!1 &706463889
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,7 +3462,7 @@ MonoBehaviour:
   _sound:
     Name: Backgroundmusic
     Clip: {fileID: 8300000, guid: 767f9324fd4fbac4092e6df634807f46, type: 3}
-    Loop: 0
+    Loop: 1
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
@@ -4584,8 +4632,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4286263552
+  m_fontColor: {r: 0, g: 0.19215688, b: 0.48235297, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4706,15 +4754,23 @@ MonoBehaviour:
   - SkinTypes: 0
     ButtonColor: {r: 0.9921569, g: 0.8078432, b: 0.7568628, a: 1}
   - SkinTypes: 1
-    ButtonColor: {r: 0.8352942, g: 0.60784316, b: 0.56078434, a: 1}
+    ButtonColor: {r: 0.8352942, g: 0.6627451, b: 0.63529414, a: 1}
   - SkinTypes: 2
-    ButtonColor: {r: 0.32941177, g: 0.227451, b: 0.22352943, a: 1}
+    ButtonColor: {r: 0.53333336, g: 0.36862746, b: 0.25882354, a: 1}
+  - SkinTypes: 3
+    ButtonColor: {r: 0.41176474, g: 0.23529413, b: 0.15294118, a: 1}
+  - SkinTypes: 4
+    ButtonColor: {r: 0.13725491, g: 0.09411766, b: 0.08627451, a: 1}
   HairTypesButton:
+  - HairTypes: 3
+    ButtonColor: {r: 0.9294118, g: 0.627451, b: 0.11764707, a: 1}
   - HairTypes: 0
     ButtonColor: {r: 0.882353, g: 0.7568628, b: 0.38823533, a: 1}
   - HairTypes: 1
     ButtonColor: {r: 0.34509805, g: 0.2627451, b: 0.2509804, a: 1}
   - HairTypes: 2
+    ButtonColor: {r: 0.15686275, g: 0.1254902, b: 0.10196079, a: 1}
+  - HairTypes: 4
     ButtonColor: {r: 0.11764707, g: 0.10980393, b: 0.10980393, a: 1}
 --- !u!1 &2098680493
 GameObject:
