@@ -23,7 +23,11 @@ public class Sound
     /// </summary>
     public static void PlaySound(AudioClip pAudioClip, GameObject pGameObject)
     {
-        AudioSource source = pGameObject.AddComponent<AudioSource>();
+        AudioSource source;
+        if (pGameObject.GetComponent<AudioSource>() == null)
+            source = pGameObject.AddComponent<AudioSource>();
+        else
+            source = pGameObject.GetComponent<AudioSource>();
 
         if (pAudioClip != null && pGameObject != null)
         {
