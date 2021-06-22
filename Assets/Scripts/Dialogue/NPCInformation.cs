@@ -12,6 +12,9 @@ public class NpcInformation : ScriptableObject
     public Sprite Picture;
     public TextAsset NpcDialogue;
 
+    [Header("VoiceOvers")]
+    public VoiceOvers voiceOvers;
+
     [Header("Quests")]
     public Quest[] Quests;
 

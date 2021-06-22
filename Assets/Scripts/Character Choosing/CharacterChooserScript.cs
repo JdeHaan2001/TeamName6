@@ -16,7 +16,6 @@ public class CharacterChooserScript : MonoBehaviour
     //Used determining which and where to spawn choosing buttons
     [HideInInspector] private ChoosingButtonManager _buttonManager;
     [HideInInspector] private GameObject _buttonTemplate;
-    [SerializeField] public Sprite ButtonBackground;
 
     [HideInInspector] private List<GameObject> _skinButtonsList = new List<GameObject>();
     [HideInInspector] private List<GameObject> _hairButtonsList = new List<GameObject>();
@@ -29,6 +28,7 @@ public class CharacterChooserScript : MonoBehaviour
 
     [SerializeField] public GameObject GOSkinButtons;
     [SerializeField] public GameObject GOHairButtons;
+    [SerializeField] public Color SelectedColor;
 
     [SerializeField] private UIButtonFunctions _uiButtonFunctions;
 
@@ -72,7 +72,7 @@ public class CharacterChooserScript : MonoBehaviour
             {
                 for (int i = 0; i < _buttonManager.SkinTypesButton.Length; i++)
                 {
-                    _buttonTemplate.GetComponent<Image>().color = _buttonManager.SkinTypesButton[i].ButtonColor;
+                    _buttonTemplate.GetComponentInChildren<Button>().GetComponent<Image>().color = _buttonManager.SkinTypesButton[i].ButtonColor;
                     var InstantiatedSkinButtons = Instantiate(_buttonTemplate);
 
                     _skinButtonsList.Add(InstantiatedSkinButtons);
@@ -82,7 +82,7 @@ public class CharacterChooserScript : MonoBehaviour
 
                 for (int i = 0; i < _buttonManager.HairTypesButton.Length; i++)
                 {
-                    _buttonTemplate.GetComponent<Image>().color = _buttonManager.HairTypesButton[i].ButtonColor;
+                    _buttonTemplate.GetComponentInChildren<Button>().GetComponent<Image>().color = _buttonManager.HairTypesButton[i].ButtonColor;
                     var InstantiatedHairButtons = Instantiate(_buttonTemplate);
 
                     _hairButtonsList.Add(InstantiatedHairButtons);
@@ -92,6 +92,7 @@ public class CharacterChooserScript : MonoBehaviour
             }
         }
         _buttonTemplate.SetActive(false);
+
     }
 
     private void buttonEvents()
@@ -101,9 +102,9 @@ public class CharacterChooserScript : MonoBehaviour
             for (int i = 0; i < _skinButtonsList.Count; i++)
             {
                 int buttonToShow = i;
-                _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => skinButtonClicked(buttonToShow));
-                _skinButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => changeSkinButtonState(buttonToShow));
+                _skinButtonsList[buttonToShow].GetComponentInChildren<Button>().onClick.RemoveAllListeners();
+                _skinButtonsList[buttonToShow].GetComponentInChildren<Button>().onClick.AddListener(() => skinButtonClicked(buttonToShow));
+                _skinButtonsList[buttonToShow].GetComponentInChildren<Button>().onClick.AddListener(() => changeSkinButtonState(buttonToShow));
             }
         }
 
@@ -112,9 +113,9 @@ public class CharacterChooserScript : MonoBehaviour
             for (int i = 0; i < _hairButtonsList.Count; i++)
             {
                 int buttonToShow = i;
-                _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.RemoveAllListeners();
-                _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => hairButtonClicked(buttonToShow));
-                _hairButtonsList[buttonToShow].GetComponent<Button>().onClick.AddListener(() => changeHairButtonState(buttonToShow));
+                _hairButtonsList[buttonToShow].GetComponentInChildren<Button>().onClick.RemoveAllListeners();
+                _hairButtonsList[buttonToShow].GetComponentInChildren<Button>().onClick.AddListener(() => hairButtonClicked(buttonToShow));
+                _hairButtonsList[buttonToShow].GetComponentInChildren<Button>().onClick.AddListener(() => changeHairButtonState(buttonToShow));
             }
         }
     }
@@ -137,10 +138,10 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_currentSkinType != buttonNumber)
             {
-                _skinButtonsList[_currentSkinType].GetComponent<Image>().color = _buttonManager.SkinTypesButton[_currentSkinType].ButtonColor;
+                _skinButtonsList[_currentSkinType].GetComponentInChildren<Image>().color = Color.white;
             }
         }
-        _skinButtonsList[buttonNumber].GetComponent<Image>().color = Color.green;
+        _skinButtonsList[buttonNumber].GetComponentInChildren<Image>().color = SelectedColor;
         _currentSkinType = buttonNumber;
     }
 
@@ -150,10 +151,10 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_currentHairType != buttonNumber)
             {
-                _hairButtonsList[_currentHairType].GetComponent<Image>().color = _buttonManager.HairTypesButton[_currentHairType].ButtonColor;
+                _hairButtonsList[_currentHairType].GetComponentInChildren<Image>().color = Color.white;
             }
         }
-        _hairButtonsList[buttonNumber].GetComponent<Image>().color = Color.green;
+        _hairButtonsList[buttonNumber].GetComponentInChildren<Image>().color = SelectedColor;
         _currentHairType = buttonNumber;
     }
 
