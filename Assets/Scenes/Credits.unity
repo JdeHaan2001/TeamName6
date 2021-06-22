@@ -155,7 +155,7 @@ MonoBehaviour:
   _sound:
     Name: Credits Audio
     Clip: {fileID: 8300000, guid: 98b2a2905fe68de48892378ef958194c, type: 3}
-    Loop: 0
+    Loop: 1
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
@@ -1443,6 +1443,7 @@ GameObject:
   - component: {fileID: 708305585}
   - component: {fileID: 708305584}
   - component: {fileID: 708305587}
+  - component: {fileID: 708305588}
   m_Layer: 5
   m_Name: Homebutton
   m_TagString: Untagged
@@ -1514,7 +1515,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 708305585}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 708305588}
+        m_TargetAssemblyTypeName: UIButtonFunctions, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: MainMenuScene
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &708305585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1574,6 +1587,19 @@ MonoBehaviour:
     SpatialBlend: 0
     Source: {fileID: 0}
   _playEvent: 2
+--- !u!114 &708305588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708305582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa15bcaf0078654438c600dd38066772, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerChosen: 0
 --- !u!1 &715567533
 GameObject:
   m_ObjectHideFlags: 0
