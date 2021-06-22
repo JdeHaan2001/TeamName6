@@ -5,11 +5,11 @@ using UnityEngine;
 public class QuestGiver : MonoBehaviour
 {
     #region Variables
-    [SerializeField] private DialogueManager _dialogueManager;
-    [SerializeField] private QuestKeeper _questKeeper;
+    [HideInInspector] private DialogueManager _dialogueManager;
+    [HideInInspector] private QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
     [HideInInspector] private QuestManager _questManager;
-    [SerializeField] public NpcInformation Npc;
+    [HideInInspector] public NpcInformation Npc;
 
     [HideInInspector] private GameObject _questWindow;
     [HideInInspector] private Waypoint _waypoint;

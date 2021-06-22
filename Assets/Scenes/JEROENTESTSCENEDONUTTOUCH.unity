@@ -937,6 +937,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 6fc35bf92ed2ba44fbb723453e53a90a, type: 3}
+    - target: {fileID: 5414147727946296710, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: _statusIcons.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: badbacea106baff47b2e75b46576fc3a, type: 3}
+    - target: {fileID: 5414147727946296710, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: _statusIcons.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: 00b94e0506d7c3c41ab63720df846bed, type: 3}
+    - target: {fileID: 5414147727946296710, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: _statusIcons.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 3f556124a93b7c3458ce3513bfee7d85, type: 3}
+    - target: {fileID: 5414147727946296710, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
+      propertyPath: _statusIcons.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: ed693deb43302a94b819b82c45d720ae, type: 3}
     - target: {fileID: 5414147728359561084, guid: 6167533676684464f9c05089ee81e0f4, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1062,8 +1078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sound:
     Name: Test
-    Clip: {fileID: 8300000, guid: 98b2a2905fe68de48892378ef958194c, type: 3}
-    Loop: 0
+    Clip: {fileID: 8300000, guid: 24cb69af24cb3864caeaae1d45a6ce28, type: 3}
+    Loop: 1
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
