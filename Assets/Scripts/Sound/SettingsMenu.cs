@@ -7,12 +7,48 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public AudioMixer audioMixer;
+    [SerializeField] private Button _SFXButton;
+    [SerializeField] private Button _MusicButton;
+    [SerializeField] private Button _VoiceOverButton;
+    [Space()]
+    [SerializeField] private AudioMixer audioMixer;
+    [Space()]
+    [SerializeField] private AudioMixerGroup _SFXGroup;
+    [SerializeField] private AudioMixerGroup _MusicGroup;
+    [SerializeField] private AudioMixerGroup _VoiceOverGroup;
 
+    private float _volume;
+    
     public void SetVolume(float pVolume)
     {
-        audioMixer.SetFloat("Volume", pVolume);
-        Debug.Log(pVolume);
+        _volume = pVolume;
+        audioMixer.SetFloat("MainVolume", _volume);
+    }
+
+    private void Awake()
+    {
+        _SFXButton.onClick.AddListener(delegate { SetActive(_SFXGroup, _SFXButton); });
+        _MusicButton.onClick.AddListener(delegate { SetActive(_MusicGroup, _MusicButton); });
+        _VoiceOverButton.onClick.AddListener(delegate { SetActive(_VoiceOverGroup, _VoiceOverButton); });
+    }
+
+    private void SetActive(AudioMixerGroup pMixerGroup, Button pButton)
+    {
+        GameObject imageObj = pButton.transform.GetChild(0).gameObject;
+
+        if (imageObj != null)
+        {
+            if (imageObj.activeInHierarchy)
+            {
+                imageObj.SetActive(false);
+                pMixerGroup.audioMixer.SetFloat($"{pMixerGroup.name}Volume", -80f);
+            }
+            else
+            {
+                imageObj.SetActive(true);
+                pMixerGroup.audioMixer.SetFloat($"{pMixerGroup.name}Volume", 0f);
+            }
+        }
     }
     #region old Settings
     //    FMOD.Studio.Bus _master;
