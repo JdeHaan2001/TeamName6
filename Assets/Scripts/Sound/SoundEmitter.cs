@@ -11,8 +11,11 @@ public class SoundEmitter : MonoBehaviour
     }
 
     [SerializeField] private Sound _sound = null;
+    [SerializeField] private Camera _cam = null;
 
     [SerializeField] private playEvent _playEvent;
+
+    
 
     private void Awake()
     {
@@ -26,25 +29,53 @@ public class SoundEmitter : MonoBehaviour
 
     private void Update()
     {
-        switch (_playEvent)
+        if (Input.GetMouseButtonDown(0))
         {
-            case (playEvent)1:
-                if (EventSystem.current.IsPointerOverGameObject())
-                {
-                    if(!_sound.Source.isPlaying)
-                        _sound.Source.Play();
-                    break;
-                }
-                break;
-            case (playEvent)2:
-                if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
-                {
-                    if (!_sound.Source.isPlaying)
-                        _sound.Source.Play();
-                    break;
-                }
-                break;
+            mouseCheck(gameObject);
+            Debug.Log("Clicks mouse");
         }
+        #region comments
+        //switch (_playEvent)
+        //{
+        //    case (playEvent)1:
+        //        if (mouseCheck(gameObject))
+        //        {
+        //            if (!_sound.Source.isPlaying)
+        //            {
+        //                Debug.Log($"{EventSystem.current.currentSelectedGameObject.name}");
+        //                _sound.Source.Play();
+        //            }
+        //            break;
+        //        }
+        //        break;
+        //    case (playEvent)2:
+        //        if (Input.GetMouseButtonDown(0))
+        //        {
+        //            if (mouseCheck(gameObject))
+        //            {
+        //                if (!_sound.Source.isPlaying)
+        //                    _sound.Source.Play();
+        //            }
+        //            break;
+        //        }
+        //        break;
+        //}
+        #endregion
+    }
+
+    private bool mouseCheck(GameObject pObj)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //EventSystem.current.IsPointerOverGameObject(,);
+        RaycastHit hit;
+        Debug.Log("Gets in mouseCheck()");
+        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
+        {
+            Debug.Log(hit.transform.name);
+            return true;
+        }
+        else
+            return false;
     }
 
     private void setSourceValues()
