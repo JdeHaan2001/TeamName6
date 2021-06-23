@@ -159,6 +159,7 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: -5945235710867411810, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
   _playEvent: 3
 --- !u!4 &73581315
@@ -1585,6 +1586,7 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
   _playEvent: 2
 --- !u!114 &708305588
