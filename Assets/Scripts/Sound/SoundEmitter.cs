@@ -19,7 +19,8 @@ public class SoundEmitter : MonoBehaviour
         setSourceValues();
         if (_playEvent == playEvent.Awake)
         {
-            _sound.Source.Play();
+            if(!_sound.Source.isPlaying)
+                _sound.Source.Play();
         }
     }
 
@@ -51,8 +52,9 @@ public class SoundEmitter : MonoBehaviour
         _sound.Source = gameObject.AddComponent<AudioSource>();
         _sound.Source.clip = _sound.Clip;
 
+        _sound.Source.outputAudioMixerGroup = _sound.MixerGroup;
+
         _sound.Source.loop = _sound.Loop;
-        //_sound.Source.playOnAwake = _sound.PlayOnAwake;
         _sound.Source.volume = _sound.Volume;
         _sound.Source.pitch = _sound.Pitch;
         _sound.Source.spatialBlend = _sound.SpatialBlend;
