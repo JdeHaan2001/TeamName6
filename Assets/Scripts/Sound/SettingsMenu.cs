@@ -7,6 +7,14 @@ using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
+    public AudioMixer audioMixer;
+
+    public void SetVolume(float pVolume)
+    {
+        audioMixer.SetFloat("Volume", pVolume);
+        Debug.Log(pVolume);
+    }
+    #region old Settings
     //    FMOD.Studio.Bus _master;
     //    FMOD.Studio.Bus _music;
     //    FMOD.Studio.Bus _SFX;
@@ -67,4 +75,5 @@ public class SettingsMenu : MonoBehaviour
     //            _readAloud.setMute(true);
     //        }
     //    }
+    #endregion
 }
