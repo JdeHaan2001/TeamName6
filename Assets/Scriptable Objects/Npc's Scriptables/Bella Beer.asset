@@ -14,5 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Picture: {fileID: 21300000, guid: aa2ee01dfbca0ad42bd6af69104c5358, type: 3}
   NpcDialogue: {fileID: 4900000, guid: fd2403d8ddf00914ebd00220846a1ff7, type: 3}
+  voiceOvers:
+    NpcClips:
+    - {fileID: 8300000, guid: 25e1921e8630644408accfb8933daf37, type: 3}
+    - {fileID: 8300000, guid: ae101ddb24b4123449187192900b392d, type: 3}
+    - {fileID: 8300000, guid: 0e3ce1939cc895d4fb37ef6b06fe3072, type: 3}
+    - {fileID: 8300000, guid: f5b1a5f0c1b4c4f4481bbff37c842532, type: 3}
+    PlayerClips:
+    - {fileID: 8300000, guid: c11a6ca7083d09d44b72ff5ebaef56e4, type: 3}
+    - {fileID: 8300000, guid: 6d528fc51648bca48b09787556ba8b0c, type: 3}
+    - {fileID: 8300000, guid: 1680571379cefe844b05ed62fcc0f6b2, type: 3}
   Quests: []
   ConversationFinished: 0
