@@ -375,6 +375,7 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
   _playEvent: 3
 --- !u!4 &1587085504
@@ -759,9 +760,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1574968512925202293, guid: aa6097711b0d220419a9257aeed65916, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574968512925202293, guid: aa6097711b0d220419a9257aeed65916, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574968512925202293, guid: aa6097711b0d220419a9257aeed65916, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 1574968512925202295, guid: aa6097711b0d220419a9257aeed65916, type: 3}
       propertyPath: m_Name
       value: Canvas_Total_Moral_Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1574968512925202295, guid: aa6097711b0d220419a9257aeed65916, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: aa6097711b0d220419a9257aeed65916, type: 3}
@@ -772,9 +789,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5047275811550364272, guid: ab2ed49c7191a874981fc23da40391b6, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047275811550364272, guid: ab2ed49c7191a874981fc23da40391b6, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047275811550364272, guid: ab2ed49c7191a874981fc23da40391b6, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5047275811550364274, guid: ab2ed49c7191a874981fc23da40391b6, type: 3}
       propertyPath: m_Name
       value: Canvas_Good_Moral_Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 5047275811550364274, guid: ab2ed49c7191a874981fc23da40391b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5047275811550364278, guid: ab2ed49c7191a874981fc23da40391b6, type: 3}
       propertyPath: m_Pivot.x
@@ -957,6 +990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_Your_Rank
       objectReference: {fileID: 0}
+    - target: {fileID: 8200214583906835333, guid: 94128a33be6a75b408ecb3237c06afca, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94128a33be6a75b408ecb3237c06afca, type: 3}
 --- !u!1001 &9221247285505176771
@@ -966,9 +1003,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9221247284750490341, guid: cb5312b6e12691a4d8e9694794517d98, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221247284750490341, guid: cb5312b6e12691a4d8e9694794517d98, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221247284750490341, guid: cb5312b6e12691a4d8e9694794517d98, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 9221247284750490343, guid: cb5312b6e12691a4d8e9694794517d98, type: 3}
       propertyPath: m_Name
       value: Canvas_Bad_Moral_Screen
+      objectReference: {fileID: 0}
+    - target: {fileID: 9221247284750490343, guid: cb5312b6e12691a4d8e9694794517d98, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9221247284750490347, guid: cb5312b6e12691a4d8e9694794517d98, type: 3}
       propertyPath: m_Pivot.x

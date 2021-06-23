@@ -2,8 +2,8 @@
     "Name": "Bella Beer",
 
   "Dialogue": [
-    "Misschien bedenk je je nog!",
-    "Dankjewel! Iets leuks doen voor anderen voelt goed om te doen!"
+    "Dankjewel! Iets leuks doen voor anderen voelt goed om te doen! 1",
+    "Misschien bedenk je je nog! 1"
 
   ],
 
@@ -16,6 +16,6 @@
   "NewDialogueFile": [ "nothing" ],
   "WhenToShowNewDialogue": [ -1 ],
     "ChoosingDialogue": "true",
-    "ToBeReplaced": [
+    "ToBeReplaced": [1
         ]
 }

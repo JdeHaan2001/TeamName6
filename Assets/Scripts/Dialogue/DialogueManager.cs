@@ -358,6 +358,7 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
+            Npc.ConversationFinished = true;
             if(Npc.Quests.Length == 0)
             {
                 Npc.ConversationFinished = true;

@@ -30,7 +30,7 @@ public class QuestGiver : MonoBehaviour
 
     public void Update()
     {
-        if(_dialogueManager.IsTalking == true)
+        if (_dialogueManager.IsTalking == true)
         {
             if (Npc == null)
             {
@@ -47,9 +47,12 @@ public class QuestGiver : MonoBehaviour
 
             if (_dialogueManager.CurrentNpcDialogue != null)
             {
-                if (Npc.Quests.Length != 0)
+                if (_dialogueManager.GetNPC().NpcInformation.Quests.Length != 0)
                 {
-                    _quest = _dialogueManager.GetNPC().NpcInformation.Quests[_questNumber];
+                    if (_questNumber != -1)
+                    {
+                        _quest = _dialogueManager.GetNPC().NpcInformation.Quests[_questNumber];
+                    }
                 }
             }
 
@@ -61,7 +64,7 @@ public class QuestGiver : MonoBehaviour
             {
                 _questWindow.SetActive(false);
             }
-        }        
+        }
     }
 
     /// <summary>
@@ -96,7 +99,7 @@ public class QuestGiver : MonoBehaviour
 
         _questWindow.SetActive(false);
         _dialogueManager.EndDialogue();
-        if(_quest.SideQuest == true)
+        if (_quest.SideQuest == true)
         {
             Npc.ConversationFinished = true;
         }

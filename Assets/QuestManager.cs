@@ -56,7 +56,7 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
-        return null;
+        return _questConnections[0].CurrentQuest;
     }
     private void getScene()
     {
@@ -64,7 +64,7 @@ public class QuestManager : MonoBehaviour
         {
             if (_questConnections[i].CurrentQuest == _quest)
             {
-                if(_quest.IsActive == false)
+                if (_quest.IsActive == false)
                 {
                     if (_questConnections[i].NextQuest == null)
                     {
@@ -82,24 +82,30 @@ public class QuestManager : MonoBehaviour
 
         if (_quest != null)
         {
-            if (_quest.Goal.goalType == GoalType.Talking || _quest.Goal.goalType == GoalType.TakingPicture || _quest.Goal.goalType == GoalType.Giving)
-            {
-                GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
+            GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
 
+
+            if (_quest.IsActive != true)
+            {
                 for (int i = 0; i < Npc.Length; i++)
                 {
-                    if (_quest.IsActive != true)
+                    for (int j = 0; j < Npc[i].GetComponent<AISystem>().NpcInformation.Quests.Length; j++)
                     {
-                        for (int j = 0; j < Npc[i].GetComponent<AISystem>().NpcInformation.Quests.Length; j++)
+                        if (Npc[i].GetComponent<AISystem>().NpcInformation.Quests[j] == _quest)
                         {
-                            if (Npc[i].GetComponent<AISystem>().NpcInformation.Quests[j].name == _quest.name)
-                            {
-                                _wayPoint.SetActive(true);
-                                _wayPointScript.GetWayPoint(Npc[i]);
-                            }
+                            _wayPoint.SetActive(true);
+                            _wayPointScript.GetWayPoint(Npc[i]);
                         }
                     }
-                    else if (_quest.IsActive == true)
+
+                }
+            }
+            else if (_quest.IsActive == true)
+            {
+
+                if (_quest.Goal.goalType == GoalType.Talking || _quest.Goal.goalType == GoalType.TakingPicture || _quest.Goal.goalType == GoalType.Giving)
+                {
+                    for (int i = 0; i < Npc.Length; i++)
                     {
                         if (Npc[i].gameObject.name == _quest.Goal.NpcToInteractWith.gameObject.name)
                         {
@@ -107,6 +113,23 @@ public class QuestManager : MonoBehaviour
                             _wayPointScript.GetWayPoint(Npc[i]);
                         }
                     }
+                }
+                else if (_quest.Goal.goalType == GoalType.Picking)
+                {
+                    if (_quest.Title == "Helpende Hand")
+                    {
+                        GameObject[] FinalPickUps = GameObject.FindGameObjectsWithTag("FinalQuestPickup");
+
+                        for (int j = 0; j < FinalPickUps.Length; j++)
+                        {
+                            if (FinalPickUps[j].activeInHierarchy == true)
+                            {
+                                _wayPoint.SetActive(true);
+                                _wayPointScript.GetWayPoint(FinalPickUps[j]);
+                            }
+                        }
+                    }
+
                 }
             }
         }
