@@ -5,6 +5,10 @@ using UnityEngine.Audio;
 [System.Serializable]
 public class Sound
 {
+    public enum MusicType {
+        Music = 1, SFX, VoiceOver
+    }
+
     public string Name = "";
 
     public AudioClip Clip = null;
@@ -15,6 +19,8 @@ public class Sound
     [Range(0f, 1f)] public float Volume = 1f;
     [Range(-3f, 3f)] public float Pitch = 1f;
     [Range(0f, 1f)] public float SpatialBlend = 0f;
+    public AudioMixerGroup MixerGroup = null;
+    //public static MusicType musicType = MusicType.Music;
 
     [HideInInspector] public AudioSource Source = null;
 
@@ -32,6 +38,7 @@ public class Sound
         if (pAudioClip != null && pGameObject != null)
         {
             source.clip = pAudioClip;
+
             if (!source.isPlaying)
                 source.Play();
         }
