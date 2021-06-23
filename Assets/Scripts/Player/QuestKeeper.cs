@@ -9,6 +9,7 @@ public class QuestKeeper : MonoBehaviour
 
     [HideInInspector] public int Followers;
     [HideInInspector] public int Money;
+    [HideInInspector] public int Moral;
 
     public void UpdateQuest()
     {
@@ -40,6 +41,7 @@ public class QuestKeeper : MonoBehaviour
                 {
                     Followers += Quest.FollowersReward;
                     Money += Quest.MoneyReward;
+                    Moral += Quest.AcceptMoralPoints;
                     Quest.Complete();
                     Quest.IsActive = false;
                     Quest = null;                    

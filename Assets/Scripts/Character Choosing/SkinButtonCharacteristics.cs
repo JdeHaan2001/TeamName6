@@ -6,8 +6,6 @@ using UnityEngine;
 [System.Serializable]
 public class SkinButtonCharacteristics
 {
-    public string Title;
-
     public SkinTypes SkinTypes;
 
     public Color ButtonColor;
@@ -15,8 +13,10 @@ public class SkinButtonCharacteristics
 
 public enum SkinTypes
 {
-    Pale,
-    Fair,
-    Tan,
+    Wit,
+    LichtWit,
+    Getint,
+    Bruin,
+    Zwart
 }
 
