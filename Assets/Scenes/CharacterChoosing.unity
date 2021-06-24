@@ -3466,9 +3466,10 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
-    MixerGroup: {fileID: 0}
+    MixerGroup: {fileID: -5945235710867411810, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
-  _playEvent: 3
+  _cam: {fileID: 382906582}
+  _playEvent: 0
 --- !u!4 &1560536463
 Transform:
   m_ObjectHideFlags: 0
@@ -3829,6 +3830,18 @@ MonoBehaviour:
           m_StringArgument: LoadGameScene
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1654949400}
+        m_TargetAssemblyTypeName: SoundEmitter, Assembly-CSharp
+        m_MethodName: SoundButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 23100b69a83503041bd3e386357fa79d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1654949398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3886,8 +3899,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
-    MixerGroup: {fileID: 0}
+    MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 382906582}
   _playEvent: 2
 --- !u!1001 &1699572347
 PrefabInstance:
