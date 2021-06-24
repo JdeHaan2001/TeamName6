@@ -11,6 +11,8 @@ public class QuestKeeper : MonoBehaviour
     [HideInInspector] public int Money;
     [HideInInspector] public int Moral;
 
+    [HideInInspector] public bool questIsDone;
+
     public void UpdateQuest()
     {
         if (Quest != null)
@@ -37,14 +39,20 @@ public class QuestKeeper : MonoBehaviour
                     Quest.Goal.TalkedToNPC();
                 }
 
-                if (Quest.Goal.IsReached())
+                if (Quest.Goal.IsReached() || questIsDone == true)
                 {
+                    Debug.Log(Quest.Title + " is completed!");
+
                     Followers += Quest.FollowersReward;
                     Money += Quest.MoneyReward;
                     Moral += Quest.AcceptMoralPoints;
-                    Quest.Complete();
                     Quest.IsActive = false;
-                    Quest = null;                    
+                    Quest = null;
+
+                    if(questIsDone == true)
+                    {
+                        questIsDone = false;
+                    }
                 }
             }
         }

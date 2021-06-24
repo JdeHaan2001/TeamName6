@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//Made by: Jorrit Bos
 public class PlayerToPlay : MonoBehaviour
 {
     [HideInInspector] private PlayerVariants _playerScript;
@@ -19,7 +20,6 @@ public class PlayerToPlay : MonoBehaviour
 
         instantiatedPlayer.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform, false);
 
-        //InstantiatedPlayer.transform.position = new Vector3(0, 0, 0);
         instantiatedPlayer.transform.rotation = new Quaternion(0, GameObject.FindGameObjectWithTag("Player").transform.position.y - 90, 0, 1);
     }
 

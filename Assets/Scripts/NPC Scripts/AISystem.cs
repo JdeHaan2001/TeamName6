@@ -180,11 +180,15 @@ public class AISystem : StateMachine
         NpcInformation.ConversationFinished = false;
         for (int i = 0; i < NpcInformation.Quests.Length; i++)
         {
-            if(NpcInformation.Quests[i].IsActive == true)
+            if (NpcInformation.Quests[i] != null)
             {
-                NpcInformation.Quests[i].IsActive = false;
+                if (NpcInformation.Quests[i].IsActive == true)
+                {
+                    NpcInformation.Quests[i].IsActive = false;
+                }
+
+                NpcInformation.Quests[i].Goal.CurrentAmount = 0;
             }
-            NpcInformation.Quests[i].Goal.CurrentAmount = 0;
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 //Made by: Jorrit Bos
 [Serializable]
@@ -20,19 +21,26 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private QuestConnection[] _questConnections;
 
     [HideInInspector] private GameObject _wayPoint;
-    [SerializeField] private Waypoint _wayPointScript;
+    [HideInInspector] private Waypoint _wayPointScript;
+    [SerializeField] private GameObject _phoneUI;
+    [SerializeField] private TextMeshProUGUI _screenMessage;
 
     public void Awake()
     {
         _wayPoint = DontDestroyUI.UIInstance.UIGameObjects[4];
         _wayPointScript = DontDestroyUI.UIInstance.UIGameObjects[4].GetComponent<Waypoint>();
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+
+        _phoneUI.SetActive(false);
+        _screenMessage.text = "";
     }
 
     public void Update()
     {
         getScene();
+        getUnlocks();
         checkWayPoint();
+        screenMessage();
     }
 
     public Quest QuestChecker()
@@ -73,6 +81,29 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void getUnlocks()
+    {
+        if (_questConnections[0].CurrentQuest.Goal.IsReached())
+        {
+            _phoneUI.SetActive(true);
+        }
+    }
+
+    void screenMessage()
+    {
+        if (QuestChecker().Goal.IsReached())
+        {
+            _screenMessage.text = QuestChecker().Title + " is completed!";
+            Invoke("deleteScreenMessage", 4f);
+        }
+    }
+
+    public void deleteScreenMessage()
+    {
+        _screenMessage.text = "";
+
     }
 
     #region WayPoint
