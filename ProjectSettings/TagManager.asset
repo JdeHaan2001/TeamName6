@@ -21,6 +21,7 @@ TagManager:
   - QuestManager
   - FinalQuestPickup
   - PiggyBank
+  - InteractionText
   layers:
   - Default
   - TransparentFX

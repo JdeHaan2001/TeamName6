@@ -361,9 +361,9 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
-            if(_questKeeper.Quest != null)
+            if (_questKeeper.Quest != null)
             {
-                if(_questKeeper.Quest.Goal.goalType == GoalType.Talking)
+                if (_questKeeper.Quest.Goal.goalType == GoalType.Talking)
                 {
                     if (_questKeeper.Quest.Goal.NpcToInteractWith.GetComponent<AISystem>().NpcInformation.name == Npc.name)
                     {
@@ -371,8 +371,7 @@ public class DialogueManager : MonoBehaviour
                     }
                 }
             }
-
-            if(Npc.Quests.Length == 0)
+            if (Npc.Quests.Length == 0)
             {
                 Npc.ConversationFinished = true;
             }

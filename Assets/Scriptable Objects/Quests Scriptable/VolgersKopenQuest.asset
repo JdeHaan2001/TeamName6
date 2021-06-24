@@ -15,7 +15,7 @@ MonoBehaviour:
   IsActive: 0
   Title: Volgers Kopen
   Description: Koop volgers
-  SideQuest: 0
+  SideQuest: 1
   FollowersReward: 10000
   MoneyReward: -10
   AcceptMoralPoints: -10

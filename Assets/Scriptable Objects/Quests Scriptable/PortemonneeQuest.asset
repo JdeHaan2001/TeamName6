@@ -15,7 +15,7 @@ MonoBehaviour:
   IsActive: 0
   Title: Portemonnee
   Description: Houd je de portemonnee of niet?
-  SideQuest: 0
+  SideQuest: 1
   FollowersReward: 0
   MoneyReward: 1000
   AcceptMoralPoints: -10

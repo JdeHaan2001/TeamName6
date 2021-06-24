@@ -15,7 +15,7 @@ MonoBehaviour:
   IsActive: 0
   Title: Trash Talker
   Description: Je moet overwegen of trashtalken wel of niet een goed idee is.
-  SideQuest: 0
+  SideQuest: 1
   FollowersReward: 10000
   MoneyReward: 0
   AcceptMoralPoints: 0

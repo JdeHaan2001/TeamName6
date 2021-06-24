@@ -15,7 +15,7 @@ MonoBehaviour:
   IsActive: 0
   Title: Goed Doel
   Description: Ben je bereid om een deel van je geld af te staan aan het goede doel?
-  SideQuest: 0
+  SideQuest: 1
   FollowersReward: 10000
   MoneyReward: 50
   AcceptMoralPoints: 0
@@ -23,7 +23,7 @@ MonoBehaviour:
   MoneyDecrease: 0
   DeclineMoralPoints: 0
   Goal:
-    goalType: 2
+    goalType: 1
     RequiredAmount: 1
     CurrentAmount: 0
     ItemToGet: 

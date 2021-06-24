@@ -17,6 +17,7 @@ public class AISystem : StateMachine
     [SerializeField] public NPCInformation NpcInformation;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
+    [HideInInspector] public GameObject InteractText;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
@@ -33,6 +34,7 @@ public class AISystem : StateMachine
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
+        InteractText = GameObject.FindGameObjectWithTag("InteractionText");
 
         QuestKeeper = Player.GetComponent<QuestKeeper>();
         QuestManager = GameObject.FindGameObjectWithTag("QuestManager").GetComponent<QuestManager>();
@@ -70,6 +72,7 @@ public class AISystem : StateMachine
                 else if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
                 {
                     StartCoroutine(State.Interact());
+                    InteractText.SetActive(true);
                 }
             }
             else
@@ -78,12 +81,14 @@ public class AISystem : StateMachine
                 {
                     StartCoroutine(State.Return());
                 }
-                StartCoroutine(State.Idle());
+                StartCoroutine(State.Idle()); 
+                InteractText.SetActive(false);
             }
         }
         else if (interactionPossible == false)
         {
             InteractIcon.SetActive(false);
+            InteractText.SetActive(false);
 
             if (transform.position != StartPos)
             {

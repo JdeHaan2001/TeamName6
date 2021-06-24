@@ -37,6 +37,8 @@ public class QuestManager : MonoBehaviour
 
     public void Update()
     {
+        _quest = QuestChecker();
+
         getScene();
         getUnlocks();
         checkWayPoint();
@@ -45,6 +47,11 @@ public class QuestManager : MonoBehaviour
 
     public Quest QuestChecker()
     {
+        if (_currentTrackedQuest == null)
+        {
+            _currentTrackedQuest = _questConnections[0].CurrentQuest;
+        }
+
         if (_questKeeper.Quest != null)
         {
             _currentTrackedQuest = _questKeeper.Quest;
@@ -64,7 +71,7 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
-        return _questConnections[0].CurrentQuest;
+        return _currentTrackedQuest;
     }
     private void getScene()
     {
@@ -93,28 +100,29 @@ public class QuestManager : MonoBehaviour
 
     void screenMessage()
     {
-        if (QuestChecker().Goal.IsReached())
+        if (_questKeeper.Quest != null)
         {
-            _screenMessage.text = QuestChecker().Title + " is completed!";
-            Invoke("deleteScreenMessage", 4f);
+            if (_questKeeper.Quest.Goal.IsReached())
+            {
+                _screenMessage.text = QuestChecker().Title + " is completed!";
+                Invoke("deleteScreenMessage", 4f);
+            }
         }
     }
 
     public void deleteScreenMessage()
     {
         _screenMessage.text = "";
-
     }
 
     #region WayPoint
     private void checkWayPoint()
     {
-        _quest = QuestChecker();
+        Debug.Log(_quest);
 
         if (_quest != null)
         {
             GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
-
 
             if (_quest.IsActive != true)
             {
@@ -133,7 +141,6 @@ public class QuestManager : MonoBehaviour
             }
             else if (_quest.IsActive == true)
             {
-
                 if (_quest.Goal.goalType == GoalType.Talking || _quest.Goal.goalType == GoalType.TakingPicture || _quest.Goal.goalType == GoalType.Giving)
                 {
                     for (int i = 0; i < Npc.Length; i++)

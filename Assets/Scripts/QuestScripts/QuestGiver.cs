@@ -85,36 +85,42 @@ public class QuestGiver : MonoBehaviour
 
     public void AcceptQuest()
     {
-        _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
-
-        _questKeeper.Quest = _quest;
-
-        _quest.IsActive = true;
+        setQuestActive(true);
 
         _dialogueManager.EndDialogue();
         _questWindow.SetActive(false);
-
-        if(_questKeeper.Quest.Goal.NpcToInteractWith.name == _dialogueManager.GetNPC().gameObject.name)
-        {
-            _questKeeper.questIsDone = true;
-        }
     }
 
     public void DeclineQuest()
-    {
-        _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
-
-        _questKeeper.Quest = _quest;
-        _questKeeper.Quest.IsActive = true;
+    {  
+        setQuestActive(false);
 
         _dialogueManager.EndDialogue();
         _questWindow.SetActive(false);
+    }
 
-        _questKeeper.Followers = -_quest.FollowersDecrease;
-        _questKeeper.Money = -_quest.MoneyDecrease;
-        _questKeeper.Moral = _quest.DeclineMoralPoints;
+    private void setQuestActive(bool accepted)
+    {
+        _questKeeper.Quest = _quest;
 
-        _questKeeper.Quest.IsActive = false;
-        _questKeeper.Quest = null;
+        if (accepted == true)
+        {
+            _questKeeper.Quest.IsActive = true;
+            _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
+        }
+        else if (accepted == false)
+        {
+            if (_quest.SideQuest == true)
+            {
+                _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
+
+                _questKeeper.Followers = -_quest.FollowersDecrease;
+                _questKeeper.Money = -_quest.MoneyDecrease;
+                _questKeeper.Moral = _quest.DeclineMoralPoints;
+            }
+
+            _questKeeper.Quest.IsActive = false;
+        }
+            _questKeeper.UpdateQuest();
     }
 }
