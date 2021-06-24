@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &172038836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +752,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &457122082
 GameObject:
@@ -1020,6 +1021,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: -5945235710867411810, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 3
 --- !u!4 &847213875
 Transform:
@@ -1486,6 +1488,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &1040317923
 GameObject:
@@ -1962,6 +1965,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &1153563253
 GameObject:
@@ -2587,6 +2591,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!114 &1822234513
 MonoBehaviour:
