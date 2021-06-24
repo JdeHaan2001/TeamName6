@@ -17,7 +17,7 @@ MonoBehaviour:
   Description: Houd je de portemonnee of niet?
   SideQuest: 0
   FollowersReward: 0
-  MoneyReward: 1000
+  MoneyReward: 95
   AcceptMoralPoints: -10
   FollowersDecrease: -1000
   MoneyDecrease: 0

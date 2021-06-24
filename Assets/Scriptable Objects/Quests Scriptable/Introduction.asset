@@ -17,9 +17,11 @@ MonoBehaviour:
   Description: Haal de telefoon op bij Boris Ballon, zodat je avontuur kan beginnen!
   SideQuest: 0
   FollowersReward: 100
-  MoneyReward: 0
+  MoneyReward: 10
+  AcceptMoralPoints: 0
   FollowersDecrease: 0
   MoneyDecrease: 0
+  DeclineMoralPoints: 0
   Goal:
     goalType: 1
     RequiredAmount: 1

@@ -19,8 +19,8 @@ MonoBehaviour:
   FollowersReward: 10000
   MoneyReward: -10
   AcceptMoralPoints: -10
-  FollowersDecrease: 0
-  MoneyDecrease: 100
+  FollowersDecrease: 1000
+  MoneyDecrease: 0
   DeclineMoralPoints: 10
   Goal:
     goalType: 1

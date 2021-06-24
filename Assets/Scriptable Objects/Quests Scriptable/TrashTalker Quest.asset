@@ -17,11 +17,11 @@ MonoBehaviour:
   Description: Je moet overwegen of trashtalken wel of niet een goed idee is.
   SideQuest: 0
   FollowersReward: 10000
-  MoneyReward: 0
-  AcceptMoralPoints: 0
+  MoneyReward: 75
+  AcceptMoralPoints: -5
   FollowersDecrease: 0
   MoneyDecrease: 0
-  DeclineMoralPoints: 0
+  DeclineMoralPoints: 5
   Goal:
     goalType: 1
     RequiredAmount: 1
