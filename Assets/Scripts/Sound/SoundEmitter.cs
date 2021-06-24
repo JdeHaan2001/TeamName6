@@ -7,10 +7,11 @@ public class SoundEmitter : MonoBehaviour
 {
     public enum playEvent
     {
-        MouseHover = 1, MouseClick, Awake
+        Awake
     }
 
     [SerializeField] private Sound _sound = null;
+    [SerializeField] private Camera _cam = null;
 
     [SerializeField] private playEvent _playEvent;
 
@@ -19,31 +20,8 @@ public class SoundEmitter : MonoBehaviour
         setSourceValues();
         if (_playEvent == playEvent.Awake)
         {
-            if(!_sound.Source.isPlaying)
+            if (!_sound.Source.isPlaying)
                 _sound.Source.Play();
-        }
-    }
-
-    private void Update()
-    {
-        switch (_playEvent)
-        {
-            case (playEvent)1:
-                if (EventSystem.current.IsPointerOverGameObject())
-                {
-                    if(!_sound.Source.isPlaying)
-                        _sound.Source.Play();
-                    break;
-                }
-                break;
-            case (playEvent)2:
-                if (EventSystem.current.IsPointerOverGameObject() && Input.GetMouseButtonDown(0))
-                {
-                    if (!_sound.Source.isPlaying)
-                        _sound.Source.Play();
-                    break;
-                }
-                break;
         }
     }
 
@@ -58,5 +36,12 @@ public class SoundEmitter : MonoBehaviour
         _sound.Source.volume = _sound.Volume;
         _sound.Source.pitch = _sound.Pitch;
         _sound.Source.spatialBlend = _sound.SpatialBlend;
+    }
+
+    public void SoundButton(AudioClip pAudioClip)
+    {
+        _sound.Clip = pAudioClip;
+        setSourceValues();
+        _sound.Source.Play();
     }
 }
