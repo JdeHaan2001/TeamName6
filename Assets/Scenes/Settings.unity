@@ -309,7 +309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -492,6 +492,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: -5945235710867411810, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 3
 --- !u!4 &80417323
 Transform:
@@ -1126,7 +1127,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &346964677
 GameObject:
@@ -1269,7 +1272,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &418924894
 GameObject:
@@ -1632,7 +1637,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1872,7 +1877,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &1379127151
 GameObject:
@@ -2144,7 +2151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2532,7 +2539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2575,7 +2582,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1 &2053409440
 GameObject:
@@ -2882,7 +2891,6 @@ GameObject:
   - component: {fileID: 2130880209}
   - component: {fileID: 2130880211}
   - component: {fileID: 2130880210}
-  - component: {fileID: 2130880212}
   m_Layer: 5
   m_Name: Image_MusicBox
   m_TagString: Untagged
@@ -2924,7 +2932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

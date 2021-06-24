@@ -11,9 +11,13 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 208d828dfa51687489549ec702a59180, type: 3}
+    - target: {fileID: 2601734892801421475, guid: 050a4aa5bd357da44955f24038ef6a35, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4545772972769989829, guid: 050a4aa5bd357da44955f24038ef6a35, type: 3}
       propertyPath: m_Name
-      value: PointsResultscreenGood
+      value: PointsResultscreenGood Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4794344169609656940, guid: 050a4aa5bd357da44955f24038ef6a35, type: 3}
       propertyPath: m_Pivot.x
