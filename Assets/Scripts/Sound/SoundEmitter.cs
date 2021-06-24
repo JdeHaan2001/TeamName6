@@ -7,7 +7,7 @@ public class SoundEmitter : MonoBehaviour
 {
     public enum playEvent
     {
-        MouseHover = 1, MouseClick, Awake
+        Awake
     }
 
     [SerializeField] private Sound _sound = null;
@@ -15,67 +15,14 @@ public class SoundEmitter : MonoBehaviour
 
     [SerializeField] private playEvent _playEvent;
 
-    
-
     private void Awake()
     {
         setSourceValues();
         if (_playEvent == playEvent.Awake)
         {
-            if(!_sound.Source.isPlaying)
+            if (!_sound.Source.isPlaying)
                 _sound.Source.Play();
         }
-    }
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            mouseCheck(gameObject);
-            Debug.Log("Clicks mouse");
-        }
-        #region comments
-        //switch (_playEvent)
-        //{
-        //    case (playEvent)1:
-        //        if (mouseCheck(gameObject))
-        //        {
-        //            if (!_sound.Source.isPlaying)
-        //            {
-        //                Debug.Log($"{EventSystem.current.currentSelectedGameObject.name}");
-        //                _sound.Source.Play();
-        //            }
-        //            break;
-        //        }
-        //        break;
-        //    case (playEvent)2:
-        //        if (Input.GetMouseButtonDown(0))
-        //        {
-        //            if (mouseCheck(gameObject))
-        //            {
-        //                if (!_sound.Source.isPlaying)
-        //                    _sound.Source.Play();
-        //            }
-        //            break;
-        //        }
-        //        break;
-        //}
-        #endregion
-    }
-
-    private bool mouseCheck(GameObject pObj)
-    {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        //EventSystem.current.IsPointerOverGameObject(,);
-        RaycastHit hit;
-        Debug.Log("Gets in mouseCheck()");
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity))
-        {
-            Debug.Log(hit.transform.name);
-            return true;
-        }
-        else
-            return false;
     }
 
     private void setSourceValues()
@@ -89,5 +36,12 @@ public class SoundEmitter : MonoBehaviour
         _sound.Source.volume = _sound.Volume;
         _sound.Source.pitch = _sound.Pitch;
         _sound.Source.spatialBlend = _sound.SpatialBlend;
+    }
+
+    public void SoundButton(AudioClip pAudioClip)
+    {
+        _sound.Clip = pAudioClip;
+        setSourceValues();
+        _sound.Source.Play();
     }
 }
