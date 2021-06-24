@@ -18,8 +18,10 @@ MonoBehaviour:
   SideQuest: 0
   FollowersReward: 10000
   MoneyReward: 50
+  AcceptMoralPoints: 0
   FollowersDecrease: 5000
   MoneyDecrease: 0
+  DeclineMoralPoints: 0
   Goal:
     goalType: 2
     RequiredAmount: 1

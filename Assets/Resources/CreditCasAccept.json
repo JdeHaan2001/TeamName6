@@ -2,14 +2,14 @@
     "Name": "Creditcard Cas",
 
     "Dialogue": [
-                "Bedankt voor je aankoop!",
+                "Bedankt voor je aankoop! 1",
 
-                "Mijn aanbod blijft altijd staan!"
+                "Mijn aanbod blijft altijd staan! 1"
             ],
 
     "PlayerDialogue": [
                 "Goede deal, ik doe het!",
-        "Nee, heb ik niet nodig!"
+                "Nee, heb ik niet nodig!"
 
 
             ],

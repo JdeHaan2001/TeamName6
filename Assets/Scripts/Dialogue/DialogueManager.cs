@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] private GameObject _playerDialoguePanel;
     [HideInInspector] private GameObject _player;
     [SerializeField] public MonoBehaviour Camera;
+    [HideInInspector] public QuestKeeper _questKeeper;
     [HideInInspector] private DialogueTextKeeper _dialogueTextKeeper;
 
     [HideInInspector] private List<GameObject> _playerResponsesList = new List<GameObject>();
@@ -39,6 +40,8 @@ public class DialogueManager : MonoBehaviour
         _playerDialoguePanel = DontDestroyUI.UIInstance.UIGameObjects[1];
         _playerDialogue = DontDestroyUI.UIInstance.UIGameObjects[2];
         _dialogueTextKeeper = DontDestroyUI.UIInstance.UIGameObjects[0].GetComponent<DialogueTextKeeper>();
+
+        _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
 
         _dialogueUI.SetActive(false);
     }
@@ -358,6 +361,17 @@ public class DialogueManager : MonoBehaviour
     {
         try
         {
+            if(_questKeeper.Quest != null)
+            {
+                if(_questKeeper.Quest.Goal.goalType == GoalType.Talking)
+                {
+                    if (_questKeeper.Quest.Goal.NpcToInteractWith.GetComponent<AISystem>().NpcInformation.name == Npc.name)
+                    {
+                        Npc.ConversationFinished = true;
+                    }
+                }
+            }
+
             if(Npc.Quests.Length == 0)
             {
                 Npc.ConversationFinished = true;
@@ -376,7 +390,6 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("Could not properly end the dialogue.");
         }
     }
-
 
     public void OnApplicationQuit()
     {
