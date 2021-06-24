@@ -17,11 +17,11 @@ MonoBehaviour:
   Description: Maak een foto van een ander persoon.
   SideQuest: 1
   FollowersReward: 5000
-  MoneyReward: 1000
-  AcceptMoralPoints: 0
+  MoneyReward: 50
+  AcceptMoralPoints: -5
   FollowersDecrease: 0
   MoneyDecrease: 0
-  DeclineMoralPoints: 0
+  DeclineMoralPoints: 5
   Goal:
     goalType: 1
     RequiredAmount: 1

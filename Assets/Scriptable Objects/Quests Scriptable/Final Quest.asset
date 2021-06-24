@@ -17,11 +17,11 @@ MonoBehaviour:
   Description: Help snikkende sara met vinden wie onaardig tegen haar was. Je moet
     3 dingen vinden om hierachter te komen.
   SideQuest: 0
-  FollowersReward: 10000
+  FollowersReward: 30000
   MoneyReward: 100
   AcceptMoralPoints: 10
-  FollowersDecrease: 1000
-  MoneyDecrease: 10
+  FollowersDecrease: 10000
+  MoneyDecrease: 50
   DeclineMoralPoints: -10
   Goal:
     goalType: 0
