@@ -1179,6 +1179,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1112145869}
     - target: {fileID: 312530650010777810, guid: 26031acde20506944b04723290a45ebb, type: 3}
+      propertyPath: _inputFieldObj
+      value: 
+      objectReference: {fileID: 1636044683}
+    - target: {fileID: 312530650010777810, guid: 26031acde20506944b04723290a45ebb, type: 3}
       propertyPath: SelectedColor.a
       value: 1
       objectReference: {fileID: 0}
@@ -3466,7 +3470,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 3
 --- !u!4 &1560536463
 Transform:
@@ -3630,7 +3636,19 @@ MonoBehaviour:
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1782087212}
+        m_TargetAssemblyTypeName: CharacterChooserScript, Assembly-CSharp
+        m_MethodName: setPlayerName
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnSubmit:
     m_PersistentCalls:
       m_Calls: []
@@ -3885,7 +3903,9 @@ MonoBehaviour:
     Volume: 1
     Pitch: 1
     SpatialBlend: 0
+    MixerGroup: {fileID: 0}
     Source: {fileID: 0}
+  _cam: {fileID: 0}
   _playEvent: 2
 --- !u!1001 &1699572347
 PrefabInstance:
@@ -4089,6 +4109,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 161225908827179386, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6be3d213e6f805c48a85678a5881a85d, type: 3}
+--- !u!114 &1782087212 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 312530650010777810, guid: 26031acde20506944b04723290a45ebb, type: 3}
+  m_PrefabInstance: {fileID: 562854452}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938c01f597b022f499039d4239950420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1886046001
 GameObject:
   m_ObjectHideFlags: 0

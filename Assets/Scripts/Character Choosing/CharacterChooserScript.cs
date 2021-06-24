@@ -55,6 +55,12 @@ public class CharacterChooserScript : MonoBehaviour
         whenChoosingPlayer();
     }
 
+    public void SetPlayerName(string pName)
+    {
+        PlayerPrefs.SetString("playerName", pName);
+        Debug.Log(pName);
+    }
+
     private void whenChoosingPlayer()
     {
         if (_uiButtonFunctions.playerChosen == true)
