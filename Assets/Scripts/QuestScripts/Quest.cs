@@ -25,10 +25,4 @@ public class Quest : ScriptableObject
 
     [Header("Quest Goal")]
     public QuestGoal Goal;
-
-    public void Complete()
-    {
-        IsActive = false;
-        Debug.Log(Title + " is completed!");        
-    }
 }

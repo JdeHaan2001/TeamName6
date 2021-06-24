@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 //Made by: Jorrit Bos
 [Serializable]
@@ -20,19 +21,26 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private QuestConnection[] _questConnections;
 
     [HideInInspector] private GameObject _wayPoint;
-    [SerializeField] private Waypoint _wayPointScript;
+    [HideInInspector] private Waypoint _wayPointScript;
+    [SerializeField] private GameObject _phoneUI;
+    [SerializeField] private TextMeshProUGUI _screenMessage;
 
     public void Awake()
     {
         _wayPoint = DontDestroyUI.UIInstance.UIGameObjects[4];
         _wayPointScript = DontDestroyUI.UIInstance.UIGameObjects[4].GetComponent<Waypoint>();
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
+
+        _phoneUI.SetActive(false);
+        _screenMessage.text = "";
     }
 
     public void Update()
     {
         getScene();
+        getUnlocks();
         checkWayPoint();
+        screenMessage();
     }
 
     public Quest QuestChecker()
@@ -56,7 +64,7 @@ public class QuestManager : MonoBehaviour
                 }
             }
         }
-        return null;
+        return _questConnections[0].CurrentQuest;
     }
     private void getScene()
     {
@@ -64,7 +72,7 @@ public class QuestManager : MonoBehaviour
         {
             if (_questConnections[i].CurrentQuest == _quest)
             {
-                if(_quest.IsActive == false)
+                if (_quest.IsActive == false)
                 {
                     if (_questConnections[i].NextQuest == null)
                     {
@@ -75,6 +83,29 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    private void getUnlocks()
+    {
+        if (_questConnections[0].CurrentQuest.Goal.IsReached())
+        {
+            _phoneUI.SetActive(true);
+        }
+    }
+
+    void screenMessage()
+    {
+        if (QuestChecker().Goal.IsReached())
+        {
+            _screenMessage.text = QuestChecker().Title + " is completed!";
+            Invoke("deleteScreenMessage", 4f);
+        }
+    }
+
+    public void deleteScreenMessage()
+    {
+        _screenMessage.text = "";
+
+    }
+
     #region WayPoint
     private void checkWayPoint()
     {
@@ -82,24 +113,30 @@ public class QuestManager : MonoBehaviour
 
         if (_quest != null)
         {
-            if (_quest.Goal.goalType == GoalType.Talking || _quest.Goal.goalType == GoalType.TakingPicture || _quest.Goal.goalType == GoalType.Giving)
-            {
-                GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
+            GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");
 
+
+            if (_quest.IsActive != true)
+            {
                 for (int i = 0; i < Npc.Length; i++)
                 {
-                    if (_quest.IsActive != true)
+                    for (int j = 0; j < Npc[i].GetComponent<AISystem>().NpcInformation.Quests.Length; j++)
                     {
-                        for (int j = 0; j < Npc[i].GetComponent<AISystem>().NpcInformation.Quests.Length; j++)
+                        if (Npc[i].GetComponent<AISystem>().NpcInformation.Quests[j] == _quest)
                         {
-                            if (Npc[i].GetComponent<AISystem>().NpcInformation.Quests[j].name == _quest.name)
-                            {
-                                _wayPoint.SetActive(true);
-                                _wayPointScript.GetWayPoint(Npc[i]);
-                            }
+                            _wayPoint.SetActive(true);
+                            _wayPointScript.GetWayPoint(Npc[i]);
                         }
                     }
-                    else if (_quest.IsActive == true)
+
+                }
+            }
+            else if (_quest.IsActive == true)
+            {
+
+                if (_quest.Goal.goalType == GoalType.Talking || _quest.Goal.goalType == GoalType.TakingPicture || _quest.Goal.goalType == GoalType.Giving)
+                {
+                    for (int i = 0; i < Npc.Length; i++)
                     {
                         if (Npc[i].gameObject.name == _quest.Goal.NpcToInteractWith.gameObject.name)
                         {
@@ -107,6 +144,23 @@ public class QuestManager : MonoBehaviour
                             _wayPointScript.GetWayPoint(Npc[i]);
                         }
                     }
+                }
+                else if (_quest.Goal.goalType == GoalType.Picking)
+                {
+                    if (_quest.Title == "Helpende Hand")
+                    {
+                        GameObject[] FinalPickUps = GameObject.FindGameObjectsWithTag("FinalQuestPickup");
+
+                        for (int j = 0; j < FinalPickUps.Length; j++)
+                        {
+                            if (FinalPickUps[j].activeInHierarchy == true)
+                            {
+                                _wayPoint.SetActive(true);
+                                _wayPointScript.GetWayPoint(FinalPickUps[j]);
+                            }
+                        }
+                    }
+
                 }
             }
         }

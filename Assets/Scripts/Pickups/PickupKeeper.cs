@@ -11,15 +11,18 @@ public class PickupKeeper : MonoBehaviour
     {
         Quest = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>().Quest;
 
-        //if (Quest != null)
-        //{
-        //    Pickups[0].SetActive(true);
-        //    Pickups[1].SetActive(true);
-        //}
-        //else
-        //{
-        //    Pickups[0].SetActive(false);
-        //    Pickups[1].SetActive(true);
-        //}
+        if (Quest != null)
+        {
+            if(Quest.Goal.goalType == GoalType.Picking)
+            {
+                for(int i = 0; i < Pickups.Length; i++)
+                {
+                    if(Pickups[i].tag == Quest.Goal.ItemToGet)
+                    {
+                        Pickups[i].GetComponent<PickupBehaviour>().IsPickable = true;
+                    }
+                }
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Made by: Jorrit
 public class QuestGiver : MonoBehaviour
 {
     #region Variables
@@ -30,7 +31,7 @@ public class QuestGiver : MonoBehaviour
 
     public void Update()
     {
-        if(_dialogueManager.IsTalking == true)
+        if (_dialogueManager.IsTalking == true)
         {
             if (Npc == null)
             {
@@ -47,9 +48,12 @@ public class QuestGiver : MonoBehaviour
 
             if (_dialogueManager.CurrentNpcDialogue != null)
             {
-                if (Npc.Quests.Length != 0)
+                if (_dialogueManager.GetNPC().NpcInformation.Quests.Length != 0)
                 {
-                    _quest = _dialogueManager.GetNPC().NpcInformation.Quests[_questNumber];
+                    if (_questNumber != -1)
+                    {
+                        _quest = _dialogueManager.GetNPC().NpcInformation.Quests[_questNumber];
+                    }
                 }
             }
 
@@ -61,7 +65,7 @@ public class QuestGiver : MonoBehaviour
             {
                 _questWindow.SetActive(false);
             }
-        }        
+        }
     }
 
     /// <summary>
@@ -81,24 +85,36 @@ public class QuestGiver : MonoBehaviour
 
     public void AcceptQuest()
     {
+        _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
+
         _questKeeper.Quest = _quest;
+
         _quest.IsActive = true;
+
         _dialogueManager.EndDialogue();
         _questWindow.SetActive(false);
-        Npc.ConversationFinished = true;
+
+        if(_questKeeper.Quest.Goal.NpcToInteractWith.name == _dialogueManager.GetNPC().gameObject.name)
+        {
+            _questKeeper.questIsDone = true;
+        }
     }
 
     public void DeclineQuest()
     {
+        _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
+
+        _questKeeper.Quest = _quest;
+        _questKeeper.Quest.IsActive = true;
+
+        _dialogueManager.EndDialogue();
+        _questWindow.SetActive(false);
+
         _questKeeper.Followers = -_quest.FollowersDecrease;
         _questKeeper.Money = -_quest.MoneyDecrease;
         _questKeeper.Moral = _quest.DeclineMoralPoints;
 
-        _questWindow.SetActive(false);
-        _dialogueManager.EndDialogue();
-        if(_quest.SideQuest == true)
-        {
-            Npc.ConversationFinished = true;
-        }
+        _questKeeper.Quest.IsActive = false;
+        _questKeeper.Quest = null;
     }
 }

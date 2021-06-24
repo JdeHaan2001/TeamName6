@@ -31,6 +31,7 @@ public class CharacterChooserScript : MonoBehaviour
     [SerializeField] public Color SelectedColor;
 
     [SerializeField] private UIButtonFunctions _uiButtonFunctions;
+    [SerializeField] private TMP_InputField _inputField;
 
     [HideInInspector] public int playerToShow;
 
@@ -60,6 +61,7 @@ public class CharacterChooserScript : MonoBehaviour
         if (_uiButtonFunctions.playerChosen == true)
         {
             PlayerPrefs.SetInt("playerToPlay", getPlayer());
+            PlayerPrefs.SetString("playerName", getPlayerName());
             _uiButtonFunctions.playerChosen = false;
         }
     }
@@ -162,7 +164,6 @@ public class CharacterChooserScript : MonoBehaviour
     {
         for (int i = 0; i < playerScript.Players.Length; i++)
         {
-
             if (playerScript.Players[i].HairTypes == _hairTypes)
             {
                 if (playerScript.Players[i].SkinTypes == _skinTypes)
@@ -173,6 +174,15 @@ public class CharacterChooserScript : MonoBehaviour
             }
         }
         return 0;
+    }
+
+    private string getPlayerName()
+    {
+        if (_inputField.text == "@ Typ hier je naam")
+        {
+            return "Unknown";
+        }
+        return _inputField.text;
     }
 
     private void spawnOtherPlayer()
