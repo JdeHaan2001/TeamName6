@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &172038836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -597,7 +597,7 @@ GameObject:
   - component: {fileID: 374736018}
   - component: {fileID: 374736022}
   m_Layer: 5
-  m_Name: ChooseCharacterButton
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,6 +693,18 @@ MonoBehaviour:
           m_StringArgument: CharacterChoosing
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 374736022}
+        m_TargetAssemblyTypeName: SoundEmitter, Assembly-CSharp
+        m_MethodName: SoundButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 23100b69a83503041bd3e386357fa79d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &374736020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,7 +764,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
-  _cam: {fileID: 0}
+  _cam: {fileID: 1291225982}
   _playEvent: 2
 --- !u!1 &457122082
 GameObject:
@@ -1021,8 +1033,8 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: -5945235710867411810, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
-  _cam: {fileID: 0}
-  _playEvent: 3
+  _cam: {fileID: 1291225982}
+  _playEvent: 0
 --- !u!4 &847213875
 Transform:
   m_ObjectHideFlags: 0
@@ -1429,6 +1441,18 @@ MonoBehaviour:
           m_StringArgument: Settings
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 936349821}
+        m_TargetAssemblyTypeName: SoundEmitter, Assembly-CSharp
+        m_MethodName: SoundButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 23100b69a83503041bd3e386357fa79d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &936349819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1488,7 +1512,7 @@ MonoBehaviour:
     SpatialBlend: 0
     MixerGroup: {fileID: 8595512480704857554, guid: e3d1e21cb44a7a7498cf8a2e2e9360d5, type: 2}
     Source: {fileID: 0}
-  _cam: {fileID: 0}
+  _cam: {fileID: 1291225982}
   _playEvent: 2
 --- !u!1 &1040317923
 GameObject:
@@ -1904,6 +1928,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: CharacterChoosing
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1151167443}
+        m_TargetAssemblyTypeName: SoundEmitter, Assembly-CSharp
+        m_MethodName: SoundButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 23100b69a83503041bd3e386357fa79d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1151167441
@@ -2660,6 +2696,18 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: Credits
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1822234512}
+        m_TargetAssemblyTypeName: SoundEmitter, Assembly-CSharp
+        m_MethodName: SoundButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 23100b69a83503041bd3e386357fa79d, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1822234515
