@@ -6,7 +6,7 @@ using UnityEngine;
 public class QuestKeeper : MonoBehaviour
 {
     public Quest Quest;
-
+    public FollowerCount FollowerAmount;
     [HideInInspector] public int Followers;
     [HideInInspector] public int Money;
     [HideInInspector] public int Moral;
@@ -44,6 +44,7 @@ public class QuestKeeper : MonoBehaviour
                     Followers += Quest.FollowersReward;
                     Money += Quest.MoneyReward;
                     Moral += Quest.AcceptMoralPoints;
+                    FollowerAmount.AddFollowers(Quest.FollowersReward);
 
                     Quest.IsFinished = true;
                     Quest.IsActive = false;
@@ -61,6 +62,8 @@ public class QuestKeeper : MonoBehaviour
                         Followers += Quest.FollowersDecrease;
                         Money += Quest.MoneyDecrease;
                         Moral += Quest.DeclineMoralPoints;
+                        FollowerAmount.AddFollowers(Quest.FollowersDecrease);
+
                         Quest.IsFinished = true;
                     }
                     else if(Quest.SideQuest != true)

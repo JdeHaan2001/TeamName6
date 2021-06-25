@@ -41,7 +41,7 @@ public class LeaderBoard : MonoBehaviour
 
     private void readFile()
     {
-        StreamReader reader = new StreamReader($"{Application.dataPath}/LeaderBoard.txt");
+        StreamReader reader = new StreamReader($"{Application.dataPath}/StreamingAssets/LeaderBoard.txt");
 
         string scoreString = reader.ReadLine();
         int scoreText = scoreString != null ? int.Parse(scoreString) : -1;
