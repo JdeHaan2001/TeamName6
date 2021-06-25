@@ -19,6 +19,9 @@ TagManager:
   - WayPoint
   - Canvas
   - QuestManager
+  - FinalQuestPickup
+  - PiggyBank
+  - InteractionText
   layers:
   - Default
   - TransparentFX

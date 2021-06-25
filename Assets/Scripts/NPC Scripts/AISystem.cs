@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //Made by: Jorrit Bos
 public class AISystem : StateMachine
@@ -100,40 +101,44 @@ public class AISystem : StateMachine
     {
         if (QuestKeeper.Quest != null)
         {
-            if (gameObject.name != QuestKeeper.Quest.Goal.NpcToInteractWith.gameObject.name)
+            if (QuestKeeper.Quest.Goal.goalType == GoalType.Talking)
             {
-                if (NpcInformation.ConversationFinished == true)
+                if (gameObject.name != QuestKeeper.Quest.Goal.NpcToInteractWith.gameObject.name)
                 {
+
                     return false;
                 }
-                return false;
             }
         }
 
         if (QuestKeeper.Quest == null)
         {
-            //    if (NpcInformation.Quests.Length != 0)
-            //    {
-            //        if (NpcInformation.Quests[0].SideQuest != true)
-            //        {
-            //            if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
-            //            {
-            //                return false;
-            //            }
+            if (NpcInformation.Quests != null)
+            {
+                if (NpcInformation.Quests.Length != 0)
+                {
+                    for (int i = 0; i < NpcInformation.Quests.Length; i++)
+                    {
+                        if (NpcInformation.Quests[i] != QuestManager.QuestChecker())
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            if (NpcInformation.Quests.Length == 0)
+            {
+                if (NpcInformation.ConversationFinished == true)
+                {
+                    return false;
+                }
+            }
+
             if (NpcInformation.ConversationFinished == true)
             {
                 return false;
             }
-
-            //        }
-            //        else if (NpcInformation.Quests[0].name != QuestManager.QuestChecker().name)
-            //        {
-            //            if (NpcInformation.ConversationFinished == true)
-            //            {
-            //                return false;
-            //            }
-            //        }
-            //    }
         }
         return true;
     }
@@ -176,8 +181,48 @@ public class AISystem : StateMachine
         NpcInformation.ConversationFinished = false;
         for (int i = 0; i < NpcInformation.Quests.Length; i++)
         {
-            NpcInformation.Quests[i].IsActive = false;
-            NpcInformation.Quests[i].Goal.CurrentAmount = 0;
+            if (NpcInformation.Quests[i] != null)
+            {
+                if (NpcInformation.Quests[i].IsActive == true)
+                {
+                    NpcInformation.Quests[i].IsActive = false;
+                }
+                if (NpcInformation.Quests[i].IsFinished == true)
+                {
+                    NpcInformation.Quests[i].IsFinished = false;
+                }
+                if (NpcInformation.Quests[i].Goal.IsDeclined == true)
+                {
+                    NpcInformation.Quests[i].Goal.IsDeclined = false;
+                }
+
+                NpcInformation.Quests[i].Goal.CurrentAmount = 0;
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        NpcInformation.ConversationFinished = false;
+        for (int i = 0; i < NpcInformation.Quests.Length; i++)
+        {
+            if (NpcInformation.Quests[i] != null)
+            {
+                if (NpcInformation.Quests[i].IsActive == true)
+                {
+                    NpcInformation.Quests[i].IsActive = false;
+                }
+                if (NpcInformation.Quests[i].IsFinished == true)
+                {
+                    NpcInformation.Quests[i].IsFinished = false;
+                }
+                if (NpcInformation.Quests[i].Goal.IsDeclined == true)
+                {
+                    NpcInformation.Quests[i].Goal.IsDeclined = false;
+                }
+
+                NpcInformation.Quests[i].Goal.CurrentAmount = 0;
+            }
         }
     }
 }

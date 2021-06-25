@@ -15,13 +15,18 @@ public class UIButtonFunctions : MonoBehaviour
     {
         playerChosen = true;
 
-        Invoke(methodName, 1);        
+        Invoke(methodName, 1);
     }
 
     //This is part of the Invoke.
     public void LoadGameScene()
     {
-        SceneManager.LoadScene("Outside");
+        SceneManager.LoadScene("GameControlsExplanation");
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void LoadScene(string sceneName)
@@ -33,5 +38,4 @@ public class UIButtonFunctions : MonoBehaviour
     {
         Application.Quit();
     }
-
 }

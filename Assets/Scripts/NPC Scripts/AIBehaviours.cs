@@ -57,14 +57,6 @@ public class AIBehaviours : State
         {
             _system.DialogueManager.EndDialogue();
             _system.IsInteracting = false;
-            
-            if(_system.QuestKeeper.Quest != null)
-            {
-                if(_system.QuestKeeper.Quest.Goal.goalType == GoalType.Talking)
-                {
-                    _system.QuestKeeper.UpdateQuest();
-                }
-            }
         }
         yield break;
     }

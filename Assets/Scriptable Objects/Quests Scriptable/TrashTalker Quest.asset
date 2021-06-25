@@ -13,16 +13,20 @@ MonoBehaviour:
   m_Name: TrashTalker Quest
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Trash Talker
   Description: Je moet overwegen of trashtalken wel of niet een goed idee is.
-  SideQuest: 0
+  SideQuest: 1
   FollowersReward: 10000
-  MoneyReward: 0
+  MoneyReward: 75
+  AcceptMoralPoints: -5
   FollowersDecrease: 0
   MoneyDecrease: 0
+  DeclineMoralPoints: 5
   Goal:
     goalType: 1
     RequiredAmount: 1
     CurrentAmount: 0
     ItemToGet: 
-    NpcToInteractWith: {fileID: 2507521769677028806, guid: c44c1d0c6c28d104b8ca13548e81a02c, type: 3}
+    NpcToInteractWith: {fileID: 6414688119359196859, guid: 69bf45f7399c76f439e3f5f4eb52b81c, type: 3}
+    IsDeclined: 0

@@ -16,6 +16,7 @@ public class Scores : MonoBehaviour
         _questGetter = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
 
     }
+
     void Update()
     {
         _followerText.text = _questGetter.Followers.ToString();

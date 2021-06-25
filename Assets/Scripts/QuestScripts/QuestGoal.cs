@@ -12,6 +12,7 @@ public class QuestGoal
     public int CurrentAmount;
     public string ItemToGet;
     public GameObject NpcToInteractWith;
+    public bool IsDeclined;
 
     public bool IsReached()
     {

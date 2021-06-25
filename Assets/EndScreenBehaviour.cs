@@ -20,7 +20,6 @@ public class EndScreenBehaviour : MonoBehaviour
     [Header("Moral Panel")]
     [SerializeField] private GameObject _goodBackground;
     [SerializeField] private GameObject _badBackground;
-    [SerializeField] private TextMeshProUGUI _moralStatus;
     [SerializeField] private TextMeshProUGUI _moralPoints;
 
     [Header("Outro VoiceOvers")]
@@ -35,7 +34,7 @@ public class EndScreenBehaviour : MonoBehaviour
         _questKeeper = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
 
         //Follower Panel
-        _followerAmount.text = _questKeeper.Followers.ToString();
+        _followerAmount.text = _questKeeper.Followers.ToString() + " Followers";
 
         _eenzaamIcon.SetActive(false);
         _bekendIcon.SetActive(false);

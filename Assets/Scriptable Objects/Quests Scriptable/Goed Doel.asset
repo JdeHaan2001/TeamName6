@@ -13,16 +13,20 @@ MonoBehaviour:
   m_Name: Goed Doel
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Goed Doel
   Description: Ben je bereid om een deel van je geld af te staan aan het goede doel?
-  SideQuest: 0
+  SideQuest: 1
   FollowersReward: 10000
   MoneyReward: 50
+  AcceptMoralPoints: 10
   FollowersDecrease: 5000
   MoneyDecrease: 0
+  DeclineMoralPoints: -10
   Goal:
-    goalType: 2
+    goalType: 1
     RequiredAmount: 1
     CurrentAmount: 0
     ItemToGet: 
     NpcToInteractWith: {fileID: 3655815330273433291, guid: 92c08d13dc9f56b49b8071293d3bddae, type: 3}
+    IsDeclined: 0

@@ -39,12 +39,36 @@ public class QuestKeeper : MonoBehaviour
 
                 if (Quest.Goal.IsReached())
                 {
+                    Debug.Log(Quest.Title + " is completed!");
+
                     Followers += Quest.FollowersReward;
                     Money += Quest.MoneyReward;
                     Moral += Quest.AcceptMoralPoints;
-                    Quest.Complete();
+
+                    Quest.IsFinished = true;
                     Quest.IsActive = false;
-                    Quest = null;                    
+                    Quest = null;
+                }
+            }
+            else if (Quest.IsActive == false)
+            {
+                if(Quest.Goal.IsDeclined == true)
+                {
+                    Debug.Log(Quest.Title + " is Declined!");
+
+                    if (Quest.SideQuest == true)
+                    {
+                        Followers += Quest.FollowersDecrease;
+                        Money += Quest.MoneyDecrease;
+                        Moral += Quest.DeclineMoralPoints;
+                        Quest.IsFinished = true;
+                    }
+                    else if(Quest.SideQuest != true)
+                    {
+                        Quest.Goal.IsDeclined = false;
+                    }
+
+                    Quest = null;
                 }
             }
         }

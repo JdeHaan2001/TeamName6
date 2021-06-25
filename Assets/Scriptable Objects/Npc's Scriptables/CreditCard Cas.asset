@@ -24,5 +24,6 @@ MonoBehaviour:
     - {fileID: 8300000, guid: e12af6f353a80054f9c0851fba496c7f, type: 3}
     - {fileID: 8300000, guid: 90858b868fb1b0042b0f2cfcc7974a89, type: 3}
     - {fileID: 8300000, guid: 4c985647cbc4af44da7eba62f4d637ce, type: 3}
-  Quests: []
+  Quests:
+  - {fileID: 11400000, guid: 1a20d8ae5bfdb1c4e80728d7a2fd89bb, type: 2}
   ConversationFinished: 0

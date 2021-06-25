@@ -29,6 +29,7 @@ public class PickupBehaviour : MonoBehaviour
             if (collision.collider.tag == "Player")  //Destroys gameobject when collision with Player
             {
                 _questKeeper.UpdateQuest();
+                gameObject.SetActive(false);
             }
         }
     }

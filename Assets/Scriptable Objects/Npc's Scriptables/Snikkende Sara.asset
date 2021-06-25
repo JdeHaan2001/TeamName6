@@ -22,5 +22,6 @@ MonoBehaviour:
     PlayerClips:
     - {fileID: 8300000, guid: 7ab5ebc427746334ab920706ddbb51f0, type: 3}
     - {fileID: 8300000, guid: e12af6f353a80054f9c0851fba496c7f, type: 3}
-  Quests: []
+  Quests:
+  - {fileID: 11400000, guid: 32a913528f038994ebee23a3d13d1f63, type: 2}
   ConversationFinished: 0
