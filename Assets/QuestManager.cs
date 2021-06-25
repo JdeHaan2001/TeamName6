@@ -25,6 +25,8 @@ public class QuestManager : MonoBehaviour
     [SerializeField] private GameObject _phoneUI;
     [SerializeField] private TextMeshProUGUI _screenMessage;
 
+    private bool gameFinished;
+
     public void Awake()
     {
         _wayPoint = DontDestroyUI.UIInstance.UIGameObjects[4];
@@ -33,6 +35,7 @@ public class QuestManager : MonoBehaviour
 
         _phoneUI.SetActive(false);
         _screenMessage.text = "";
+        gameFinished = false;
     }
 
     public void Update()
@@ -80,11 +83,15 @@ public class QuestManager : MonoBehaviour
         {
             if (_questConnections[i].CurrentQuest == _quest)
             {
-                if (_quest.IsFinished == false)
+                if (_quest.IsFinished == true)
                 {
                     if (_questConnections[i].NextQuest == null)
                     {
-                        SceneManager.LoadScene("ResultScreen");
+                        if(gameFinished == false)
+                        {
+                            SceneManager.LoadScene("ResultScreen");
+                            gameFinished = true;
+                        }
                     }
                 }
             }
@@ -119,8 +126,6 @@ public class QuestManager : MonoBehaviour
     #region WayPoint
     private void checkWayPoint()
     {
-        Debug.Log(_quest);
-
         if (_quest != null)
         {
             GameObject[] Npc = GameObject.FindGameObjectsWithTag("NPC");

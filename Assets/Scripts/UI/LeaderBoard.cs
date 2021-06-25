@@ -29,7 +29,7 @@ public class LeaderBoard : MonoBehaviour
     {
         _questGetter = GameObject.FindGameObjectWithTag("Player").GetComponent<QuestKeeper>();
         _score = _questGetter.Moral;
-        _name = PlayerPrefs.GetString("playerName", "ERROR_NO_NAME_FOUND");
+        _name = PlayerPrefs.GetString("playerName", "Gast");
     }
 
     private void Start()

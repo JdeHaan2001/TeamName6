@@ -29,4 +29,4 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 6f562453e05789a428d11a59dbf5e742, type: 3}
   Quests:
   - {fileID: 11400000, guid: 0cf23e202ce26744ea655e7df5c24d4f, type: 2}
-  ConversationFinished: 1
+  ConversationFinished: 0

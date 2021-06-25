@@ -56,13 +56,18 @@ public class QuestKeeper : MonoBehaviour
                 {
                     Debug.Log(Quest.Title + " is Declined!");
 
-                    if(Quest.SideQuest == true)
+                    if (Quest.SideQuest == true)
                     {
                         Followers += Quest.FollowersDecrease;
                         Money += Quest.MoneyDecrease;
                         Moral += Quest.DeclineMoralPoints;
                         Quest.IsFinished = true;
                     }
+                    else if(Quest.SideQuest != true)
+                    {
+                        Quest.Goal.IsDeclined = false;
+                    }
+
                     Quest = null;
                 }
             }

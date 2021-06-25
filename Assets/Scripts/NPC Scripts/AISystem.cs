@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //Made by: Jorrit Bos
 public class AISystem : StateMachine
@@ -17,7 +18,6 @@ public class AISystem : StateMachine
     [SerializeField] public NPCInformation NpcInformation;
     [HideInInspector] public QuestGiver QuestGiver;
     [SerializeField] public GameObject InteractIcon;
-    [HideInInspector] public GameObject InteractText;
 
     [HideInInspector] public bool InteractionPossible;
     [HideInInspector] public bool IsInteracting;
@@ -34,7 +34,6 @@ public class AISystem : StateMachine
     {
         Player = GameObject.FindGameObjectWithTag("Player");
         QuestGiver = GameObject.FindGameObjectWithTag("NPCManager").GetComponent<QuestGiver>();
-        InteractText = GameObject.FindGameObjectWithTag("InteractionText");
 
         QuestKeeper = Player.GetComponent<QuestKeeper>();
         QuestManager = GameObject.FindGameObjectWithTag("QuestManager").GetComponent<QuestManager>();
@@ -72,7 +71,6 @@ public class AISystem : StateMachine
                 else if (Vector3.Distance(transform.position, Player.transform.position) < 10f)
                 {
                     StartCoroutine(State.Interact());
-                    InteractText.SetActive(true);
                 }
             }
             else
@@ -81,14 +79,12 @@ public class AISystem : StateMachine
                 {
                     StartCoroutine(State.Return());
                 }
-                StartCoroutine(State.Idle()); 
-                InteractText.SetActive(false);
+                StartCoroutine(State.Idle());
             }
         }
         else if (interactionPossible == false)
         {
             InteractIcon.SetActive(false);
-            InteractText.SetActive(false);
 
             if (transform.position != StartPos)
             {
@@ -105,7 +101,7 @@ public class AISystem : StateMachine
     {
         if (QuestKeeper.Quest != null)
         {
-            if(QuestKeeper.Quest.Goal.goalType == GoalType.Talking)
+            if (QuestKeeper.Quest.Goal.goalType == GoalType.Talking)
             {
                 if (gameObject.name != QuestKeeper.Quest.Goal.NpcToInteractWith.gameObject.name)
                 {
@@ -194,6 +190,35 @@ public class AISystem : StateMachine
                 if (NpcInformation.Quests[i].IsFinished == true)
                 {
                     NpcInformation.Quests[i].IsFinished = false;
+                }
+                if (NpcInformation.Quests[i].Goal.IsDeclined == true)
+                {
+                    NpcInformation.Quests[i].Goal.IsDeclined = false;
+                }
+
+                NpcInformation.Quests[i].Goal.CurrentAmount = 0;
+            }
+        }
+    }
+
+    private void OnDisable()
+    {
+        NpcInformation.ConversationFinished = false;
+        for (int i = 0; i < NpcInformation.Quests.Length; i++)
+        {
+            if (NpcInformation.Quests[i] != null)
+            {
+                if (NpcInformation.Quests[i].IsActive == true)
+                {
+                    NpcInformation.Quests[i].IsActive = false;
+                }
+                if (NpcInformation.Quests[i].IsFinished == true)
+                {
+                    NpcInformation.Quests[i].IsFinished = false;
+                }
+                if (NpcInformation.Quests[i].Goal.IsDeclined == true)
+                {
+                    NpcInformation.Quests[i].Goal.IsDeclined = false;
                 }
 
                 NpcInformation.Quests[i].Goal.CurrentAmount = 0;

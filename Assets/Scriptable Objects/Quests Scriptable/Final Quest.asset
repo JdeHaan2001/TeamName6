@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Final Quest
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Helpende Hand
   Description: Help snikkende sara met vinden wie onaardig tegen haar was. Je moet
     3 dingen vinden om hierachter te komen.
@@ -29,3 +30,4 @@ MonoBehaviour:
     CurrentAmount: 0
     ItemToGet: FinalQuestPickup
     NpcToInteractWith: {fileID: 0}
+    IsDeclined: 0

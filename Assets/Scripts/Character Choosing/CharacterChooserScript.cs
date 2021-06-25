@@ -67,7 +67,6 @@ public class CharacterChooserScript : MonoBehaviour
         if (_uiButtonFunctions.playerChosen == true)
         {
             PlayerPrefs.SetInt("playerToPlay", getPlayer());
-            PlayerPrefs.SetString("playerName", getPlayerName());
             _uiButtonFunctions.playerChosen = false;
         }
     }
@@ -180,15 +179,6 @@ public class CharacterChooserScript : MonoBehaviour
             }
         }
         return 0;
-    }
-
-    private string getPlayerName()
-    {
-        if (_inputField.text == "@ Typ hier je naam")
-        {
-            return "Unknown";
-        }
-        return _inputField.text;
     }
 
     private void spawnOtherPlayer()

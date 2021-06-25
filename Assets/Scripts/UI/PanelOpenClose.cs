@@ -18,7 +18,10 @@ public class PanelOpenClose : MonoBehaviour {
         if (Panel != null)
         {
             if (Panel.activeInHierarchy)
+            {
                 Panel.SetActive(false);
+                Time.timeScale = 1;
+            }               
         }
     }
 }
