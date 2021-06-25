@@ -173,7 +173,12 @@ public class QuestManager : MonoBehaviour
                             }
                         }
                     }
-
+                    if(_quest.Title == "Portemonnee")
+                    {
+                       GameObject piggy = GameObject.FindGameObjectWithTag("PiggyBank");
+                        _wayPoint.SetActive(true);
+                        _wayPointScript.GetWayPoint(piggy);
+                    }
                 }
             }
         }

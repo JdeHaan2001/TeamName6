@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: PortemonneeQuest
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Portemonnee
   Description: Houd je de portemonnee of niet?
   SideQuest: 1
@@ -26,5 +27,6 @@ MonoBehaviour:
     goalType: 0
     RequiredAmount: 1
     CurrentAmount: 0
-    ItemToGet: SpaarPot
+    ItemToGet: PiggyBank
     NpcToInteractWith: {fileID: 0}
+    IsDeclined: 0

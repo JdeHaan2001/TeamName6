@@ -1192,11 +1192,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 312530650010777810, guid: 26031acde20506944b04723290a45ebb, type: 3}
       propertyPath: SelectedColor.g
-      value: 0
+      value: 0.41509432
       objectReference: {fileID: 0}
     - target: {fileID: 312530650010777810, guid: 26031acde20506944b04723290a45ebb, type: 3}
       propertyPath: SelectedColor.r
-      value: 1
+      value: 0.039338518
       objectReference: {fileID: 0}
     - target: {fileID: 312530650010777810, guid: 26031acde20506944b04723290a45ebb, type: 3}
       propertyPath: _uiButtonFunctions

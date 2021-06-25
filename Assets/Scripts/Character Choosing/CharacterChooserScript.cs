@@ -41,6 +41,8 @@ public class CharacterChooserScript : MonoBehaviour
         _buttonTemplate = GameObject.FindGameObjectWithTag("ChoosingButtonTemplate");
         playerToShow = 0;
 
+        _buttonTemplate.SetActive(false);
+
         SpawnButtons();
     }
 
@@ -77,6 +79,7 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_buttonManager.SkinTypesButton.Length != 0)
             {
+                _buttonTemplate.SetActive(true);
                 for (int i = 0; i < _buttonManager.SkinTypesButton.Length; i++)
                 {
                     _buttonTemplate.GetComponentInChildren<Button>().GetComponent<Image>().color = _buttonManager.SkinTypesButton[i].ButtonColor;
@@ -145,7 +148,7 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_currentSkinType != buttonNumber)
             {
-                _skinButtonsList[_currentSkinType].GetComponentInChildren<Image>().color = Color.white;
+                _skinButtonsList[_currentSkinType].GetComponentInChildren<Image>().color = _buttonManager.SkinTypesButton[_currentSkinType].ButtonColor;
             }
         }
         _skinButtonsList[buttonNumber].GetComponentInChildren<Image>().color = SelectedColor;
@@ -158,7 +161,7 @@ public class CharacterChooserScript : MonoBehaviour
         {
             if (_currentHairType != buttonNumber)
             {
-                _hairButtonsList[_currentHairType].GetComponentInChildren<Image>().color = Color.white;
+                _hairButtonsList[_currentHairType].GetComponentInChildren<Image>().color = _buttonManager.HairTypesButton[_currentHairType].ButtonColor;
             }
         }
         _hairButtonsList[buttonNumber].GetComponentInChildren<Image>().color = SelectedColor;
