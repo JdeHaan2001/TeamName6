@@ -18,6 +18,7 @@ MonoBehaviour:
     NpcClips:
     - {fileID: 8300000, guid: 7c23fc90bd4f9b44fbef8f20ff25fc18, type: 3}
     - {fileID: 8300000, guid: 2a0e5ed5f68eba74e87124b882fb4c7c, type: 3}
+    - {fileID: 8300000, guid: 2a0e5ed5f68eba74e87124b882fb4c7c, type: 3}
     - {fileID: 8300000, guid: 770003349b7ddc84d9b55cae5d118497, type: 3}
     - {fileID: 8300000, guid: 851f7a737eac5bf4f8b57d37527b6762, type: 3}
     - {fileID: 8300000, guid: 136684f25f741b44cbc7f090cc5ed85b, type: 3}
