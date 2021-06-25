@@ -11,11 +11,20 @@ public class PauseScreenOpenClose : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            if (pauseMenu.activeInHierarchy)
-                Time.timeScale = 0;
+            if (!pauseMenu.activeInHierarchy)
+            {
+                pauseMenu.gameObject.SetActive(true);
+                Time.timeScale = 0.0f;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
             else
+            {
+                pauseMenu.gameObject.SetActive(false);
                 Time.timeScale = 1;
-            pauseMenu.gameObject.SetActive(!pauseMenu.gameObject.activeSelf);
+                Cursor.visible = false;
+                Cursor.lockState = CursorLockMode.Locked;
+            }
         }
     }
 }

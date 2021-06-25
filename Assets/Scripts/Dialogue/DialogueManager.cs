@@ -383,6 +383,7 @@ public class DialogueManager : MonoBehaviour
 
             Cursor.visible = false;
             Cursor.lockState = CursorLockMode.Locked;
+            _questKeeper.UpdateQuest();
         }
         catch
         {

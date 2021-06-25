@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Goed Doel
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Goed Doel
   Description: Ben je bereid om een deel van je geld af te staan aan het goede doel?
   SideQuest: 1
@@ -28,3 +29,4 @@ MonoBehaviour:
     CurrentAmount: 0
     ItemToGet: 
     NpcToInteractWith: {fileID: 3655815330273433291, guid: 92c08d13dc9f56b49b8071293d3bddae, type: 3}
+    IsDeclined: 0

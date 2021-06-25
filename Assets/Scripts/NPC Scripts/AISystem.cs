@@ -105,13 +105,13 @@ public class AISystem : StateMachine
     {
         if (QuestKeeper.Quest != null)
         {
-            if (gameObject.name != QuestKeeper.Quest.Goal.NpcToInteractWith.gameObject.name)
+            if(QuestKeeper.Quest.Goal.goalType == GoalType.Talking)
             {
-                if (NpcInformation.ConversationFinished == true)
+                if (gameObject.name != QuestKeeper.Quest.Goal.NpcToInteractWith.gameObject.name)
                 {
+
                     return false;
                 }
-                return false;
             }
         }
 
@@ -190,6 +190,10 @@ public class AISystem : StateMachine
                 if (NpcInformation.Quests[i].IsActive == true)
                 {
                     NpcInformation.Quests[i].IsActive = false;
+                }
+                if (NpcInformation.Quests[i].IsFinished == true)
+                {
+                    NpcInformation.Quests[i].IsFinished = false;
                 }
 
                 NpcInformation.Quests[i].Goal.CurrentAmount = 0;

@@ -112,14 +112,10 @@ public class QuestGiver : MonoBehaviour
         {
             if (_quest.SideQuest == true)
             {
+                _questKeeper.Quest.Goal.IsDeclined = true;
+                _questKeeper.Quest.IsActive = false;
                 _dialogueManager.GetNPC().NpcInformation.ConversationFinished = true;
-
-                _questKeeper.Followers = -_quest.FollowersDecrease;
-                _questKeeper.Money = -_quest.MoneyDecrease;
-                _questKeeper.Moral = _quest.DeclineMoralPoints;
             }
-
-            _questKeeper.Quest.IsActive = false;
         }
             _questKeeper.UpdateQuest();
     }

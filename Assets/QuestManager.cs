@@ -17,7 +17,7 @@ public class QuestManager : MonoBehaviour
 {
     [HideInInspector] private QuestKeeper _questKeeper;
     [HideInInspector] private Quest _quest;
-    [HideInInspector] private Quest _currentTrackedQuest;
+    [HideInInspector] public Quest _CurrentTrackedQuest;
     [SerializeField] private QuestConnection[] _questConnections;
 
     [HideInInspector] private GameObject _wayPoint;
@@ -47,31 +47,32 @@ public class QuestManager : MonoBehaviour
 
     public Quest QuestChecker()
     {
-        if (_currentTrackedQuest == null)
+        if (_CurrentTrackedQuest == null)
         {
-            _currentTrackedQuest = _questConnections[0].CurrentQuest;
+            _CurrentTrackedQuest = _questConnections[0].CurrentQuest;
         }
 
         if (_questKeeper.Quest != null)
         {
-            _currentTrackedQuest = _questKeeper.Quest;
+            _CurrentTrackedQuest = _questKeeper.Quest;
         }
 
         for (int i = 0; i < _questConnections.Length; i++)
         {
-            if (_questConnections[i].CurrentQuest == _currentTrackedQuest)
+            if (_questConnections[i].CurrentQuest == _CurrentTrackedQuest)
             {
-                if (_currentTrackedQuest.IsActive == true)
+                if (_CurrentTrackedQuest.IsFinished != true)
                 {
                     return _questConnections[i].CurrentQuest;
                 }
-                else if (_currentTrackedQuest.IsActive != true)
+                else if (_CurrentTrackedQuest.IsFinished == true)
                 {
-                    return _questConnections[i].NextQuest;
+                    _CurrentTrackedQuest = _questConnections[i].NextQuest;
+                    return _CurrentTrackedQuest;
                 }
             }
         }
-        return _currentTrackedQuest;
+        return _CurrentTrackedQuest;
     }
     private void getScene()
     {
@@ -79,7 +80,7 @@ public class QuestManager : MonoBehaviour
         {
             if (_questConnections[i].CurrentQuest == _quest)
             {
-                if (_quest.IsActive == false)
+                if (_quest.IsFinished == false)
                 {
                     if (_questConnections[i].NextQuest == null)
                     {

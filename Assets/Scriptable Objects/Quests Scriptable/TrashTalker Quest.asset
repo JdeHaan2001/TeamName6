@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TrashTalker Quest
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Trash Talker
   Description: Je moet overwegen of trashtalken wel of niet een goed idee is.
   SideQuest: 1
@@ -28,3 +29,4 @@ MonoBehaviour:
     CurrentAmount: 0
     ItemToGet: 
     NpcToInteractWith: {fileID: 6414688119359196859, guid: 69bf45f7399c76f439e3f5f4eb52b81c, type: 3}
+    IsDeclined: 0

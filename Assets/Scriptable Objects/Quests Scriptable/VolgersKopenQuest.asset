@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: VolgersKopenQuest
   m_EditorClassIdentifier: 
   IsActive: 0
+  IsFinished: 0
   Title: Volgers Kopen
   Description: Koop volgers
   SideQuest: 1
@@ -25,6 +26,7 @@ MonoBehaviour:
   Goal:
     goalType: 1
     RequiredAmount: 1
-    CurrentAmount: 0
+    CurrentAmount: 1
     ItemToGet: 
     NpcToInteractWith: {fileID: 2765390626081034495, guid: 8992743a920e6704d9ed1d90ee8b8b37, type: 3}
+    IsDeclined: 0
