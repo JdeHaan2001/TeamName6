@@ -1252,8 +1252,6 @@ MonoBehaviour:
   - {fileID: 1169060572}
   - {fileID: 1732992966}
   _scoreText: {fileID: 153084938}
-  testScore: 9
-  testName: Klaas
 --- !u!1 &763910316
 GameObject:
   m_ObjectHideFlags: 0
